@@ -1,0 +1,6 @@
+#summary Put any research related materials here
+#labels Research
+
+= Research Papers on various Augmented Reality Topics =
+
+[http://www.icg.tu-graz.ac.at/Members/daniel/Publications/HandheldAR_ISWC03final.pdf *First steps towards handheld augmented reality*]
