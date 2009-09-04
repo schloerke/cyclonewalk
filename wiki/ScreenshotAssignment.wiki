@@ -1,0 +1,15 @@
+#summary Keep adding to this list as you think of more scenarios
+
+= Scenarios =
+
+||SS||Description||Assigned To||
+||1.||Main menu of app (Welcome screen / options)|| ||
+||2.||Getting from one building to another building|| ||
+||3.||Tagged pictures taken by others of building you are currently looking at|| ||
+||4.||Switching from one view to another (camera -> googlemap)|| ||
+||5.||Rolladex view that popout/popin that has list of options/features to activate/deactivate|| ||
+
+
+=Milestone=
+
+The due date is September 14. We will all plan to have our part done for FRIDAY, SEPTEMBER 11.
