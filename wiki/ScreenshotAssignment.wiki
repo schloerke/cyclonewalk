@@ -2,7 +2,7 @@
 
 = Scenarios =
 
-||SS||Description||Assigned To||Status
+||SS||Description||Assigned To||Status||
 ||1.||Main menu of app (Welcome screen / options)|| || ||
 ||2.||Getting from one building to another building|| || ||
 ||3.||Tagged pictures taken by others of building you are currently looking at|| || ||
