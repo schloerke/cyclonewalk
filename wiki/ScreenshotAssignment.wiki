@@ -7,7 +7,7 @@
 ||2.||Getting from one building to another building|| || ||
 ||3.||Tagged pictures taken by others of building you are currently looking at|| || ||
 ||4.||Switching from one view to another (camera -> googlemap)|| || ||
-||5.||Rolladex view that popout/popin that has list of options/features to activate/deactivate|| || ||
+||5.||Rolladex menu with popout/popin functionality that has a list of options/features to activate/deactivate|| || ||
 
 
 =Milestone=
