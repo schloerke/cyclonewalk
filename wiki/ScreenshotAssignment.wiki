@@ -20,8 +20,8 @@ The due date is September 14 (Monday) at Midnight.
 ==Actors:== 
 -IPhone User -> map view, camera view
 -Admin -> Controls info, data, access
-       -> Telemetry data view
-       ->Reviews new points submitted by users
+       -> Telemetry data view ***
+       ->Reviews new points submitted by users ***
 
 ==Views / Functionalities:==
 - Map view
@@ -29,6 +29,6 @@ The due date is September 14 (Monday) at Midnight.
 - Admin view
 
 ==CV Functionalities:==
-- Locate nearby buildings
-- View info of building X
-- Find building X
+- Locate nearby buildings ***
+- View info of building X ***
+- Find building X ***
