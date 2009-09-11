@@ -17,19 +17,18 @@ The due date is September 14 (Monday) at Midnight.
 
 =Meeting Minutes (September 11, 2009)=
 
-Actors: 
-
+==Actors:== 
 -IPhone User -> map view, camera view
 -Admin -> Controls info, data, access
        -> Telemetry data view
        ->Reviews new points submitted by users
 
-Views / Functionalities:
+==Views / Functionalities:==
 - Map view
 - Camera view
 - Admin view
 
-CV Functionalities:
+==CV Functionalities:==
 - Locate nearby buildings
 - View info of building X
 - Find building X
