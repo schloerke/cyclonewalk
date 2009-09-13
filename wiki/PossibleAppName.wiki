@@ -2,19 +2,19 @@
 
 = Names =
 
-AP: '*'
+==AP:==
 
-CyHub (central database for isu campus info) '*'
-Cyclone Walk
-CyWalk
-CyTour
-Walk It Out
-CyZone
+  *CyHub (central database for isu campus info)
+  *Cyclone Walk
+  *CyWalk
+  *CyTour
+  *Walk It Out
+  *CyZone
 
-EO:
-
-
-HG:
+==EO:==
 
 
-BS:
+==HG:==
+
+
+==BS:==
