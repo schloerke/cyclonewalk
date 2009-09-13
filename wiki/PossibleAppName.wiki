@@ -4,11 +4,11 @@
 
 ==AP:==
 
-  * CyHub (central database for isu campus info)
-  * Cyclone Walk
+  * CyHub(central database for isu campus info)
+  * CycloneWalk
   * CyWalk
   * CyTour
-  * Walk It Out
+  * WalkItOut
   * CyZone
 
 ==EO:==
