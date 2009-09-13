@@ -4,7 +4,7 @@
 
 AP: '*'
 
-CyHub (central database for isu campus info)
+CyHub (central database for isu campus info) '*'
 Cyclone Walk
 CyWalk
 CyTour
