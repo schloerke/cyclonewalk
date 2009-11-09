@@ -44,16 +44,16 @@
 /*
  Takes the slider value and changes it to feet.
  */
--(NSInteger) convertSliderValueToFeet
+-(CGFloat) convertSliderValueToFeet
 {
-	return nil;
+	return  [self convertValueToFeet:slider.value];
 }
 
 /*
  Public function to convert a slider value to feet.
  Used for consistency
  */
-+(CGFloat ) convertValueToFeet:(CGFloat ) i
+-(CGFloat ) convertValueToFeet:(float ) i
 {
 	//	0% - 15 feet
 	//25% - 50 yards
@@ -85,7 +85,7 @@
 - (IBAction) setSliderlabel
 {
 	
-	
+	proximityLabel.text = [self convertFeetToString:[self convertSliderValueToFeet]];
 }
 
 
@@ -93,15 +93,22 @@
  Public function to convert feet to string according to the scale above.  
  Used for consistency.
  */
--(NSString*) convertFeetToString:(int) feet
+-(NSString*) convertFeetToString:(CGFloat) feet
 {
 	
 	NSString *returnString = @"";
 	
 	if (feet < 150) {
-		returnString = [returnString stringByAppendingFormat:@"%d ft.", feet];
+		returnString = [returnString stringByAppendingFormat:@"%d feet", feet];
 	} else if (feet < 5280) {
-		;
+		feet = feet / 3;
+		returnString = [returnString stringByAppendingFormat:@"%d yards", feet];
+	} else if (feet < 5280 * 50) {
+		feet = feet / 5280;
+		returnString = [returnString stringByAppendingFormat:@"%d miles", feet];
+	}
+	else {
+		returnString = @"Infinity";
 	}
 	
 	return returnString;

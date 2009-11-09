@@ -1,0 +1,449 @@
+Trandomwalk
+v7
+r0
+t279223168.683228
+cCheck dependencies
+cProcessInfoPlistFile /Users/barret/cyclonewalk/randomwalk/build/Debug-iphonesimulator/randomwalk.app/Info.plist randomwalk-Info.plist
+cCompileXIB /Users/barret/cyclonewalk/randomwalk/MainWindow.xib
+cCompileXIB /Users/barret/cyclonewalk/randomwalk/RootViewController.xib
+cCompileXIB /Users/barret/cyclonewalk/randomwalk/Classes/Settings.xib
+cCompileXIB /Users/barret/cyclonewalk/randomwalk/Classes/asdf.xib
+cProcessPCH /var/folders/Ke/KelkGmsJE-eNQMXzYVwckk+++TI/-Caches-/com.apple.Xcode.501/SharedPrecompiledHeaders/randomwalk_Prefix-cuotcqgisabnplfpyxgkcqcszome/randomwalk_Prefix.pch.gch randomwalk_Prefix.pch normal i386 objective-c com.apple.compilers.gcc.4_2
+cDataModelCompile /Users/barret/cyclonewalk/randomwalk/build/Debug-iphonesimulator/randomwalk.app/randomwalk.mom /Users/barret/cyclonewalk/randomwalk/randomwalk.xcdatamodel
+cCompileC build/randomwalk.build/Debug-iphonesimulator/randomwalk.build/Objects-normal/i386/main.o /Users/barret/cyclonewalk/randomwalk/main.m normal i386 objective-c com.apple.compilers.gcc.4_2
+cCompileC build/randomwalk.build/Debug-iphonesimulator/randomwalk.build/Objects-normal/i386/randomwalkAppDelegate.o /Users/barret/cyclonewalk/randomwalk/Classes/randomwalkAppDelegate.m normal i386 objective-c com.apple.compilers.gcc.4_2
+cCompileC build/randomwalk.build/Debug-iphonesimulator/randomwalk.build/Objects-normal/i386/RootViewController.o /Users/barret/cyclonewalk/randomwalk/Classes/RootViewController.m normal i386 objective-c com.apple.compilers.gcc.4_2
+cCompileC build/randomwalk.build/Debug-iphonesimulator/randomwalk.build/Objects-normal/i386/Compass.o /Users/barret/cyclonewalk/randomwalk/Classes/Compass.m normal i386 objective-c com.apple.compilers.gcc.4_2
+cCompileC build/randomwalk.build/Debug-iphonesimulator/randomwalk.build/Objects-normal/i386/Settings.o /Users/barret/cyclonewalk/randomwalk/Classes/Settings.m normal i386 objective-c com.apple.compilers.gcc.4_2
+cCompileC build/randomwalk.build/Debug-iphonesimulator/randomwalk.build/Objects-normal/i386/asdf.o /Users/barret/cyclonewalk/randomwalk/Classes/asdf.m normal i386 objective-c com.apple.compilers.gcc.4_2
+
+N/Developer/Platforms/iPhoneSimulator.platform/Developer/SDKs/iPhoneSimulator3.1.sdk
+c000000004AB3C63900000000000000EE
+t1253295673
+s238
+
+N/Developer/Platforms/iPhoneSimulator.platform/Developer/SDKs/iPhoneSimulator3.1.sdk/System/Library/Frameworks/CoreData.framework/CoreData
+c000000004A7651F30000000000185440
+t1249268211
+s1594432
+
+N/Developer/Platforms/iPhoneSimulator.platform/Developer/SDKs/iPhoneSimulator3.1.sdk/System/Library/Frameworks/CoreData.framework/Headers/CoreData.h
+c000000004A7651EA000000000000046B
+t1249268202
+s1131
+
+N/Developer/Platforms/iPhoneSimulator.platform/Developer/SDKs/iPhoneSimulator3.1.sdk/System/Library/Frameworks/CoreGraphics.framework/CoreGraphics
+c000000004A821911000000000026EE30
+t1250040081
+s2551344
+
+N/Developer/Platforms/iPhoneSimulator.platform/Developer/SDKs/iPhoneSimulator3.1.sdk/System/Library/Frameworks/Foundation.framework/Foundation
+c000000004A765094000000000027E880
+t1249267860
+s2615424
+
+N/Developer/Platforms/iPhoneSimulator.platform/Developer/SDKs/iPhoneSimulator3.1.sdk/System/Library/Frameworks/Foundation.framework/Headers/Foundation.h
+c000000004A7650820000000000001355
+t1249267842
+s4949
+
+N/Developer/Platforms/iPhoneSimulator.platform/Developer/SDKs/iPhoneSimulator3.1.sdk/System/Library/Frameworks/UIKit.framework/Headers/UIKit.h
+c000000004A7C6E970000000000000788
+t1249668759
+s1928
+
+N/Developer/Platforms/iPhoneSimulator.platform/Developer/SDKs/iPhoneSimulator3.1.sdk/System/Library/Frameworks/UIKit.framework/UIKit
+c000000004A7C6F5900000000016721E0
+t1249668953
+s23536096
+
+N/Developer/Platforms/iPhoneSimulator.platform/Developer/SDKs/iPhoneSimulator3.1.sdk/usr/include/Availability.h
+c000000004A7653D100000000000019F9
+t1249268689
+s6649
+
+N/Users/barret/cyclonewalk/randomwalk/Classes/Compass.h
+c000000004AF4624500000000000002D4
+t1257529925
+s724
+i<UIKit/UIKit.h>
+
+N/Users/barret/cyclonewalk/randomwalk/Classes/Compass.m
+c000000004AF45751000000000000055C
+t1257527121
+s1372
+i"Compass.h"
+
+N/Users/barret/cyclonewalk/randomwalk/Classes/Compass.xib
+c000000004AF457510000000000001850
+t1257527121
+s6224
+
+N/Users/barret/cyclonewalk/randomwalk/Classes/RootViewController.h
+c000000004AF44D710000000000000205
+t1257524593
+s517
+
+N/Users/barret/cyclonewalk/randomwalk/Classes/RootViewController.m
+c000000004AF44D710000000000002636
+t1257524593
+s9782
+i"RootViewController.h"
+
+N/Users/barret/cyclonewalk/randomwalk/Classes/Settings.h
+c000000004AF463F90000000000000148
+t1257530361
+s328
+i<UIKit/UIKit.h>
+
+N/Users/barret/cyclonewalk/randomwalk/Classes/Settings.m
+c000000004AF46297000000000000055F
+t1257530007
+s1375
+i"Settings.h"
+
+N/Users/barret/cyclonewalk/randomwalk/Classes/Settings.xib
+c000000004AF462970000000000001853
+t1257530007
+s6227
+
+N/Users/barret/cyclonewalk/randomwalk/Classes/asdf.h
+c000000004AF463D700000000000000D8
+t1257530327
+s216
+i<UIKit/UIKit.h>
+
+N/Users/barret/cyclonewalk/randomwalk/Classes/asdf.m
+c000000004AF463D7000000000000106C
+t1257530327
+s4204
+i"asdf.h"
+
+N/Users/barret/cyclonewalk/randomwalk/Classes/asdf.xib
+c000000004AF463D70000000000001C57
+t1257530327
+s7255
+
+N/Users/barret/cyclonewalk/randomwalk/Classes/randomwalkAppDelegate.h
+c000000004AF44D7100000000000003A4
+t1257524593
+s932
+
+N/Users/barret/cyclonewalk/randomwalk/Classes/randomwalkAppDelegate.m
+c000000004AF44D7100000000000012EE
+t1257524593
+s4846
+i"randomwalkAppDelegate.h"
+i"RootViewController.h"
+
+N/Users/barret/cyclonewalk/randomwalk/Classes/untitled.h
+c000000004AF4628400000000000000DB
+t1257529988
+s219
+i<UIKit/UIKit.h>
+
+N/Users/barret/cyclonewalk/randomwalk/Classes/untitled.m
+c000000004AF46284000000000000055F
+t1257529988
+s1375
+i"untitled.h"
+
+N/Users/barret/cyclonewalk/randomwalk/Classes/untitled.xib
+c000000004AF462840000000000001853
+t1257529988
+s6227
+
+N/Users/barret/cyclonewalk/randomwalk/MainWindow.xib
+c000000004AF44D710000000000002D4E
+t1257524593
+s11598
+
+N/Users/barret/cyclonewalk/randomwalk/RootViewController.xib
+c000000004AF44D710000000000004324
+t1257524593
+s17188
+
+N/Users/barret/cyclonewalk/randomwalk/build/Debug-iphonesimulator/randomwalk.app
+t2
+s0
+
+N/Users/barret/cyclonewalk/randomwalk/build/Debug-iphonesimulator/randomwalk.app.dSYM
+t2
+s0
+
+N/Users/barret/cyclonewalk/randomwalk/build/Debug-iphonesimulator/randomwalk.app/Compass.nib
+t2
+s0
+
+N/Users/barret/cyclonewalk/randomwalk/build/Debug-iphonesimulator/randomwalk.app/Info.plist
+t1257530365
+s574
+
+N/Users/barret/cyclonewalk/randomwalk/build/Debug-iphonesimulator/randomwalk.app/MainWindow.nib
+t1257530365
+s1493
+
+N/Users/barret/cyclonewalk/randomwalk/build/Debug-iphonesimulator/randomwalk.app/PkgInfo
+t1257530365
+s8
+
+N/Users/barret/cyclonewalk/randomwalk/build/Debug-iphonesimulator/randomwalk.app/RootViewController.nib
+t1257530365
+s984
+
+N/Users/barret/cyclonewalk/randomwalk/build/Debug-iphonesimulator/randomwalk.app/Settings.nib
+t1257530366
+s769
+
+N/Users/barret/cyclonewalk/randomwalk/build/Debug-iphonesimulator/randomwalk.app/asdf.nib
+t1257530366
+s984
+
+N/Users/barret/cyclonewalk/randomwalk/build/Debug-iphonesimulator/randomwalk.app/randomwalk
+t2
+s0
+
+N/Users/barret/cyclonewalk/randomwalk/build/Debug-iphonesimulator/randomwalk.app/randomwalk.mom
+t1257530368
+s1216
+
+N/Users/barret/cyclonewalk/randomwalk/build/Debug-iphonesimulator/randomwalk.app/untitled.nib
+t2
+s0
+
+N/Users/barret/cyclonewalk/randomwalk/build/randomwalk.build/Debug-iphonesimulator/randomwalk.build/Objects-normal/i386/Compass.o
+t2
+s0
+
+N/Users/barret/cyclonewalk/randomwalk/build/randomwalk.build/Debug-iphonesimulator/randomwalk.build/Objects-normal/i386/RootViewController.o
+t1257530368
+s50708
+
+N/Users/barret/cyclonewalk/randomwalk/build/randomwalk.build/Debug-iphonesimulator/randomwalk.build/Objects-normal/i386/Settings.o
+t2
+s0
+
+N/Users/barret/cyclonewalk/randomwalk/build/randomwalk.build/Debug-iphonesimulator/randomwalk.build/Objects-normal/i386/asdf.o
+t1257530368
+s32400
+
+N/Users/barret/cyclonewalk/randomwalk/build/randomwalk.build/Debug-iphonesimulator/randomwalk.build/Objects-normal/i386/main.o
+t1257530368
+s5940
+
+N/Users/barret/cyclonewalk/randomwalk/build/randomwalk.build/Debug-iphonesimulator/randomwalk.build/Objects-normal/i386/randomwalk.LinkFileList
+c000000004AF463FC000000000000031A
+t1257530364
+s794
+
+N/Users/barret/cyclonewalk/randomwalk/build/randomwalk.build/Debug-iphonesimulator/randomwalk.build/Objects-normal/i386/randomwalkAppDelegate.o
+t1257530368
+s51188
+
+N/Users/barret/cyclonewalk/randomwalk/build/randomwalk.build/Debug-iphonesimulator/randomwalk.build/Objects-normal/i386/untitled.o
+t2
+s0
+
+N/Users/barret/cyclonewalk/randomwalk/main.m
+c000000004AF44D710000000000000170
+t1257524593
+s368
+i<UIKit/UIKit.h>
+
+N/Users/barret/cyclonewalk/randomwalk/randomwalk.xcdatamodel
+c000000004AF44D710000000000000088
+t1257524593
+s136
+
+N/Users/barret/cyclonewalk/randomwalk/randomwalk_Prefix.pch
+c000000004AF44D710000000000000169
+t1257524593
+s361
+i<Availability.h>
+i<Foundation/Foundation.h>
+i<UIKit/UIKit.h>
+i<CoreData/CoreData.h>
+
+N/var/folders/Ke/KelkGmsJE-eNQMXzYVwckk+++TI/-Caches-/com.apple.Xcode.501/SharedPrecompiledHeaders/randomwalk_Prefix-cuotcqgisabnplfpyxgkcqcszome/randomwalk_Prefix.pch.gch
+t1257530367
+s13887728
+
+Nrandomwalk-Info.plist
+c000000004AF44D71000000000000038D
+t1257524593
+s909
+
+CCheck dependencies
+r0
+lSLF07#2@18"Check dependencies279223164#279223164#0(0"0(0#1#0"7947009927035180032#0"0#
+
+CCompileC build/randomwalk.build/Debug-iphonesimulator/randomwalk.build/Objects-normal/i386/Compass.o /Users/barret/cyclonewalk/randomwalk/Classes/Compass.m normal i386 objective-c com.apple.compilers.gcc.4_2
+s279223168.535910
+e279223168.610644
+r0
+xCompileC
+xbuild/randomwalk.build/Debug-iphonesimulator/randomwalk.build/Objects-normal/i386/Compass.o
+x/Users/barret/cyclonewalk/randomwalk/Classes/Compass.m
+xnormal
+xi386
+xobjective-c
+xcom.apple.compilers.gcc.4_2
+oIn file included from /Users/barret/cyclonewalk/randomwalk/Classes/Compass.m:9:
+o/Users/barret/cyclonewalk/randomwalk/Classes/Compass.h:30: error: can not use an object as parameter to a method
+o/Users/barret/cyclonewalk/randomwalk/Classes/Compass.m:57: warning: incomplete implementation of class 'Compass'
+o/Users/barret/cyclonewalk/randomwalk/Classes/Compass.m:57: warning: method definition for '-getDirectionFacing' not found
+o/Users/barret/cyclonewalk/randomwalk/Classes/Compass.m:57: warning: method definition for '-updateLabel:' not found
+o/Users/barret/cyclonewalk/randomwalk/Classes/Compass.m:57: warning: method definition for '-getDegreeFacing' not found
+lSLF07#2@62"Compile /Users/barret/cyclonewalk/randomwalk/Classes/Compass.m279223168#279223168#0(663"In file included from /Users/barret/cyclonewalk/randomwalk/Classes/Compass.m:9:/Users/barret/cyclonewalk/randomwalk/Classes/Compass.h:30: error: can not use an object as parameter to a method/Users/barret/cyclonewalk/randomwalk/Classes/Compass.m:57: warning: incomplete implementation of class 'Compass'/Users/barret/cyclonewalk/randomwalk/Classes/Compass.m:57: warning: method definition for '-getDirectionFacing' not found/Users/barret/cyclonewalk/randomwalk/Classes/Compass.m:57: warning: method definition for '-updateLabel:' not found/Users/barret/cyclonewalk/randomwalk/Classes/Compass.m:57: warning: method definition for '-getDegreeFacing' not found5(4@46"Can not use an object as parameter to a method279223168#80#113#2(7@76"In file included from /Users/barret/cyclonewalk/randomwalk/Classes/Compass.m279223168#18446744073709551615#0#0(6@54"/Users/barret/cyclonewalk/randomwalk/Classes/Compass.m279219921#9#0#9#0#0"0(13@104"Can not use an object as parameter to a method in /Users/barret/cyclonewalk/randomwalk/Classes/Compass.h279223168#18446744073709551615#0#0(6@54"/Users/barret/cyclonewalk/randomwalk/Classes/Compass.h279222725#30#0#30#0#0"0(6@54"/Users/barret/cyclonewalk/randomwalk/Classes/Compass.h279222725#30#0#30#0#0"0(22@44"Incomplete implementation of class 'Compass'279223168#193#113#0(6@54"/Users/barret/cyclonewalk/randomwalk/Classes/Compass.m279219921#57#0#57#0#38"incomplete implementation of class '*'0(22@53"Method definition for '-getDirectionFacing' not found279223168#306#122#0(6@54"/Users/barret/cyclonewalk/randomwalk/Classes/Compass.m279219921#57#0#57#0#35"method definition for '*' not found0(22@47"Method definition for '-updateLabel:' not found279223168#428#116#0(6@54"/Users/barret/cyclonewalk/randomwalk/Classes/Compass.m279219921#57#0#57#0#35"method definition for '*' not found0(22@50"Method definition for '-getDegreeFacing' not found279223168#544#119#0(6@54"/Users/barret/cyclonewalk/randomwalk/Classes/Compass.m279219921#57#0#57#0#35"method definition for '*' not found0(0#0#54"/Users/barret/cyclonewalk/randomwalk/Classes/Compass.m4300882208#1909"    cd /Users/barret/cyclonewalk/randomwalk    setenv LANG en_US.US-ASCII    setenv PATH "/Developer/Platforms/iPhoneSimulator.platform/Developer/usr/bin:/Developer/usr/bin:/usr/bin:/bin:/usr/sbin:/sbin"    /Developer/Platforms/iPhoneSimulator.platform/Developer/usr/bin/gcc-4.2 -x objective-c -arch i386 -fmessage-length=0 -pipe -std=c99 -Wno-trigraphs -fpascal-strings -fasm-blocks -O0 -Wreturn-type -Wunused-variable -D__IPHONE_OS_VERSION_MIN_REQUIRED=30000 -isysroot /Developer/Platforms/iPhoneSimulator.platform/Developer/SDKs/iPhoneSimulator3.1.sdk -fvisibility=hidden -mmacosx-version-min=10.5 -gdwarf-2 -iquote /Users/barret/cyclonewalk/randomwalk/build/randomwalk.build/Debug-iphonesimulator/randomwalk.build/randomwalk-generated-files.hmap -I/Users/barret/cyclonewalk/randomwalk/build/randomwalk.build/Debug-iphonesimulator/randomwalk.build/randomwalk-own-target-headers.hmap -I/Users/barret/cyclonewalk/randomwalk/build/randomwalk.build/Debug-iphonesimulator/randomwalk.build/randomwalk-all-target-headers.hmap -iquote /Users/barret/cyclonewalk/randomwalk/build/randomwalk.build/Debug-iphonesimulator/randomwalk.build/randomwalk-project-headers.hmap -F/Users/barret/cyclonewalk/randomwalk/build/Debug-iphonesimulator -I/Users/barret/cyclonewalk/randomwalk/build/Debug-iphonesimulator/include -I/Users/barret/cyclonewalk/randomwalk/build/randomwalk.build/Debug-iphonesimulator/randomwalk.build/DerivedSources/i386 -I/Users/barret/cyclonewalk/randomwalk/build/randomwalk.build/Debug-iphonesimulator/randomwalk.build/DerivedSources -include /var/folders/Ke/KelkGmsJE-eNQMXzYVwckk+++TI/-Caches-/com.apple.Xcode.501/SharedPrecompiledHeaders/randomwalk_Prefix-cuotcqgisabnplfpyxgkcqcszome/randomwalk_Prefix.pch -c /Users/barret/cyclonewalk/randomwalk/Classes/Compass.m -o /Users/barret/cyclonewalk/randomwalk/build/randomwalk.build/Debug-iphonesimulator/randomwalk.build/Objects-normal/i386/Compass.o1#
+
+CCompileC build/randomwalk.build/Debug-iphonesimulator/randomwalk.build/Objects-normal/i386/RootViewController.o /Users/barret/cyclonewalk/randomwalk/Classes/RootViewController.m normal i386 objective-c com.apple.compilers.gcc.4_2
+s279223168.399333
+e279223168.537437
+r1
+xCompileC
+xbuild/randomwalk.build/Debug-iphonesimulator/randomwalk.build/Objects-normal/i386/RootViewController.o
+x/Users/barret/cyclonewalk/randomwalk/Classes/RootViewController.m
+xnormal
+xi386
+xobjective-c
+xcom.apple.compilers.gcc.4_2
+lSLF07#2@73"Compile /Users/barret/cyclonewalk/randomwalk/Classes/RootViewController.m279223168#279223168#0(0"0(0#0#65"/Users/barret/cyclonewalk/randomwalk/Classes/RootViewController.m4300882208#1931"    cd /Users/barret/cyclonewalk/randomwalk    setenv LANG en_US.US-ASCII    setenv PATH "/Developer/Platforms/iPhoneSimulator.platform/Developer/usr/bin:/Developer/usr/bin:/usr/bin:/bin:/usr/sbin:/sbin"    /Developer/Platforms/iPhoneSimulator.platform/Developer/usr/bin/gcc-4.2 -x objective-c -arch i386 -fmessage-length=0 -pipe -std=c99 -Wno-trigraphs -fpascal-strings -fasm-blocks -O0 -Wreturn-type -Wunused-variable -D__IPHONE_OS_VERSION_MIN_REQUIRED=30000 -isysroot /Developer/Platforms/iPhoneSimulator.platform/Developer/SDKs/iPhoneSimulator3.1.sdk -fvisibility=hidden -mmacosx-version-min=10.5 -gdwarf-2 -iquote /Users/barret/cyclonewalk/randomwalk/build/randomwalk.build/Debug-iphonesimulator/randomwalk.build/randomwalk-generated-files.hmap -I/Users/barret/cyclonewalk/randomwalk/build/randomwalk.build/Debug-iphonesimulator/randomwalk.build/randomwalk-own-target-headers.hmap -I/Users/barret/cyclonewalk/randomwalk/build/randomwalk.build/Debug-iphonesimulator/randomwalk.build/randomwalk-all-target-headers.hmap -iquote /Users/barret/cyclonewalk/randomwalk/build/randomwalk.build/Debug-iphonesimulator/randomwalk.build/randomwalk-project-headers.hmap -F/Users/barret/cyclonewalk/randomwalk/build/Debug-iphonesimulator -I/Users/barret/cyclonewalk/randomwalk/build/Debug-iphonesimulator/include -I/Users/barret/cyclonewalk/randomwalk/build/randomwalk.build/Debug-iphonesimulator/randomwalk.build/DerivedSources/i386 -I/Users/barret/cyclonewalk/randomwalk/build/randomwalk.build/Debug-iphonesimulator/randomwalk.build/DerivedSources -include /var/folders/Ke/KelkGmsJE-eNQMXzYVwckk+++TI/-Caches-/com.apple.Xcode.501/SharedPrecompiledHeaders/randomwalk_Prefix-cuotcqgisabnplfpyxgkcqcszome/randomwalk_Prefix.pch -c /Users/barret/cyclonewalk/randomwalk/Classes/RootViewController.m -o /Users/barret/cyclonewalk/randomwalk/build/randomwalk.build/Debug-iphonesimulator/randomwalk.build/Objects-normal/i386/RootViewController.o0#
+
+CCompileC build/randomwalk.build/Debug-iphonesimulator/randomwalk.build/Objects-normal/i386/Settings.o /Users/barret/cyclonewalk/randomwalk/Classes/Settings.m normal i386 objective-c com.apple.compilers.gcc.4_2
+s279223168.537531
+e279223168.608710
+r0
+xCompileC
+xbuild/randomwalk.build/Debug-iphonesimulator/randomwalk.build/Objects-normal/i386/Settings.o
+x/Users/barret/cyclonewalk/randomwalk/Classes/Settings.m
+xnormal
+xi386
+xobjective-c
+xcom.apple.compilers.gcc.4_2
+oIn file included from /Users/barret/cyclonewalk/randomwalk/Classes/Settings.m:9:
+o/Users/barret/cyclonewalk/randomwalk/Classes/Settings.h:12: error: expected identifier or '(' before ',' token
+o/Users/barret/cyclonewalk/randomwalk/Classes/Settings.m:57: warning: incomplete implementation of class 'Settings'
+o/Users/barret/cyclonewalk/randomwalk/Classes/Settings.m:57: warning: method definition for '-setRangeBySliderValue' not found
+o/Users/barret/cyclonewalk/randomwalk/Classes/Settings.m:57: warning: method definition for '-pushSettingsView' not found
+lSLF07#2@63"Compile /Users/barret/cyclonewalk/randomwalk/Classes/Settings.m279223168#279223168#0(554"In file included from /Users/barret/cyclonewalk/randomwalk/Classes/Settings.m:9:/Users/barret/cyclonewalk/randomwalk/Classes/Settings.h:12: error: expected identifier or '(' before ',' token/Users/barret/cyclonewalk/randomwalk/Classes/Settings.m:57: warning: incomplete implementation of class 'Settings'/Users/barret/cyclonewalk/randomwalk/Classes/Settings.m:57: warning: method definition for '-setRangeBySliderValue' not found/Users/barret/cyclonewalk/randomwalk/Classes/Settings.m:57: warning: method definition for '-pushSettingsView' not found4(4@43"Expected identifier or '(' before ',' token279223168#81#111#2(7@77"In file included from /Users/barret/cyclonewalk/randomwalk/Classes/Settings.m279223168#18446744073709551615#0#0(6@55"/Users/barret/cyclonewalk/randomwalk/Classes/Settings.m279222807#9#0#9#0#0"0(13@102"Expected identifier or '(' before ',' token in /Users/barret/cyclonewalk/randomwalk/Classes/Settings.h279223168#18446744073709551615#0#0(6@55"/Users/barret/cyclonewalk/randomwalk/Classes/Settings.h279223161#12#0#12#0#0"0(6@55"/Users/barret/cyclonewalk/randomwalk/Classes/Settings.h279223161#12#0#12#0#19"expected * before *0(22@45"Incomplete implementation of class 'Settings'279223168#192#115#0(6@55"/Users/barret/cyclonewalk/randomwalk/Classes/Settings.m279222807#57#0#57#0#38"incomplete implementation of class '*'0(22@56"Method definition for '-setRangeBySliderValue' not found279223168#307#126#0(6@55"/Users/barret/cyclonewalk/randomwalk/Classes/Settings.m279222807#57#0#57#0#35"method definition for '*' not found0(22@51"Method definition for '-pushSettingsView' not found279223168#433#121#0(6@55"/Users/barret/cyclonewalk/randomwalk/Classes/Settings.m279222807#57#0#57#0#35"method definition for '*' not found0(0#0#55"/Users/barret/cyclonewalk/randomwalk/Classes/Settings.m4300882208#1911"    cd /Users/barret/cyclonewalk/randomwalk    setenv LANG en_US.US-ASCII    setenv PATH "/Developer/Platforms/iPhoneSimulator.platform/Developer/usr/bin:/Developer/usr/bin:/usr/bin:/bin:/usr/sbin:/sbin"    /Developer/Platforms/iPhoneSimulator.platform/Developer/usr/bin/gcc-4.2 -x objective-c -arch i386 -fmessage-length=0 -pipe -std=c99 -Wno-trigraphs -fpascal-strings -fasm-blocks -O0 -Wreturn-type -Wunused-variable -D__IPHONE_OS_VERSION_MIN_REQUIRED=30000 -isysroot /Developer/Platforms/iPhoneSimulator.platform/Developer/SDKs/iPhoneSimulator3.1.sdk -fvisibility=hidden -mmacosx-version-min=10.5 -gdwarf-2 -iquote /Users/barret/cyclonewalk/randomwalk/build/randomwalk.build/Debug-iphonesimulator/randomwalk.build/randomwalk-generated-files.hmap -I/Users/barret/cyclonewalk/randomwalk/build/randomwalk.build/Debug-iphonesimulator/randomwalk.build/randomwalk-own-target-headers.hmap -I/Users/barret/cyclonewalk/randomwalk/build/randomwalk.build/Debug-iphonesimulator/randomwalk.build/randomwalk-all-target-headers.hmap -iquote /Users/barret/cyclonewalk/randomwalk/build/randomwalk.build/Debug-iphonesimulator/randomwalk.build/randomwalk-project-headers.hmap -F/Users/barret/cyclonewalk/randomwalk/build/Debug-iphonesimulator -I/Users/barret/cyclonewalk/randomwalk/build/Debug-iphonesimulator/include -I/Users/barret/cyclonewalk/randomwalk/build/randomwalk.build/Debug-iphonesimulator/randomwalk.build/DerivedSources/i386 -I/Users/barret/cyclonewalk/randomwalk/build/randomwalk.build/Debug-iphonesimulator/randomwalk.build/DerivedSources -include /var/folders/Ke/KelkGmsJE-eNQMXzYVwckk+++TI/-Caches-/com.apple.Xcode.501/SharedPrecompiledHeaders/randomwalk_Prefix-cuotcqgisabnplfpyxgkcqcszome/randomwalk_Prefix.pch -c /Users/barret/cyclonewalk/randomwalk/Classes/Settings.m -o /Users/barret/cyclonewalk/randomwalk/build/randomwalk.build/Debug-iphonesimulator/randomwalk.build/Objects-normal/i386/Settings.o1#
+
+CCompileC build/randomwalk.build/Debug-iphonesimulator/randomwalk.build/Objects-normal/i386/asdf.o /Users/barret/cyclonewalk/randomwalk/Classes/asdf.m normal i386 objective-c com.apple.compilers.gcc.4_2
+s279223168.609049
+e279223168.683121
+r1
+xCompileC
+xbuild/randomwalk.build/Debug-iphonesimulator/randomwalk.build/Objects-normal/i386/asdf.o
+x/Users/barret/cyclonewalk/randomwalk/Classes/asdf.m
+xnormal
+xi386
+xobjective-c
+xcom.apple.compilers.gcc.4_2
+lSLF07#2@59"Compile /Users/barret/cyclonewalk/randomwalk/Classes/asdf.m279223168#279223168#0(0"0(0#0#51"/Users/barret/cyclonewalk/randomwalk/Classes/asdf.m7953763964904300544#1903"    cd /Users/barret/cyclonewalk/randomwalk    setenv LANG en_US.US-ASCII    setenv PATH "/Developer/Platforms/iPhoneSimulator.platform/Developer/usr/bin:/Developer/usr/bin:/usr/bin:/bin:/usr/sbin:/sbin"    /Developer/Platforms/iPhoneSimulator.platform/Developer/usr/bin/gcc-4.2 -x objective-c -arch i386 -fmessage-length=0 -pipe -std=c99 -Wno-trigraphs -fpascal-strings -fasm-blocks -O0 -Wreturn-type -Wunused-variable -D__IPHONE_OS_VERSION_MIN_REQUIRED=30000 -isysroot /Developer/Platforms/iPhoneSimulator.platform/Developer/SDKs/iPhoneSimulator3.1.sdk -fvisibility=hidden -mmacosx-version-min=10.5 -gdwarf-2 -iquote /Users/barret/cyclonewalk/randomwalk/build/randomwalk.build/Debug-iphonesimulator/randomwalk.build/randomwalk-generated-files.hmap -I/Users/barret/cyclonewalk/randomwalk/build/randomwalk.build/Debug-iphonesimulator/randomwalk.build/randomwalk-own-target-headers.hmap -I/Users/barret/cyclonewalk/randomwalk/build/randomwalk.build/Debug-iphonesimulator/randomwalk.build/randomwalk-all-target-headers.hmap -iquote /Users/barret/cyclonewalk/randomwalk/build/randomwalk.build/Debug-iphonesimulator/randomwalk.build/randomwalk-project-headers.hmap -F/Users/barret/cyclonewalk/randomwalk/build/Debug-iphonesimulator -I/Users/barret/cyclonewalk/randomwalk/build/Debug-iphonesimulator/include -I/Users/barret/cyclonewalk/randomwalk/build/randomwalk.build/Debug-iphonesimulator/randomwalk.build/DerivedSources/i386 -I/Users/barret/cyclonewalk/randomwalk/build/randomwalk.build/Debug-iphonesimulator/randomwalk.build/DerivedSources -include /var/folders/Ke/KelkGmsJE-eNQMXzYVwckk+++TI/-Caches-/com.apple.Xcode.501/SharedPrecompiledHeaders/randomwalk_Prefix-cuotcqgisabnplfpyxgkcqcszome/randomwalk_Prefix.pch -c /Users/barret/cyclonewalk/randomwalk/Classes/asdf.m -o /Users/barret/cyclonewalk/randomwalk/build/randomwalk.build/Debug-iphonesimulator/randomwalk.build/Objects-normal/i386/asdf.o0#
+
+CCompileC build/randomwalk.build/Debug-iphonesimulator/randomwalk.build/Objects-normal/i386/main.o /Users/barret/cyclonewalk/randomwalk/main.m normal i386 objective-c com.apple.compilers.gcc.4_2
+s279223168.025002
+e279223168.394907
+r1
+xCompileC
+xbuild/randomwalk.build/Debug-iphonesimulator/randomwalk.build/Objects-normal/i386/main.o
+x/Users/barret/cyclonewalk/randomwalk/main.m
+xnormal
+xi386
+xobjective-c
+xcom.apple.compilers.gcc.4_2
+lSLF07#2@51"Compile /Users/barret/cyclonewalk/randomwalk/main.m279223168#279223168#0(0"0(0#0#43"/Users/barret/cyclonewalk/randomwalk/main.m4300882208#1895"    cd /Users/barret/cyclonewalk/randomwalk    setenv LANG en_US.US-ASCII    setenv PATH "/Developer/Platforms/iPhoneSimulator.platform/Developer/usr/bin:/Developer/usr/bin:/usr/bin:/bin:/usr/sbin:/sbin"    /Developer/Platforms/iPhoneSimulator.platform/Developer/usr/bin/gcc-4.2 -x objective-c -arch i386 -fmessage-length=0 -pipe -std=c99 -Wno-trigraphs -fpascal-strings -fasm-blocks -O0 -Wreturn-type -Wunused-variable -D__IPHONE_OS_VERSION_MIN_REQUIRED=30000 -isysroot /Developer/Platforms/iPhoneSimulator.platform/Developer/SDKs/iPhoneSimulator3.1.sdk -fvisibility=hidden -mmacosx-version-min=10.5 -gdwarf-2 -iquote /Users/barret/cyclonewalk/randomwalk/build/randomwalk.build/Debug-iphonesimulator/randomwalk.build/randomwalk-generated-files.hmap -I/Users/barret/cyclonewalk/randomwalk/build/randomwalk.build/Debug-iphonesimulator/randomwalk.build/randomwalk-own-target-headers.hmap -I/Users/barret/cyclonewalk/randomwalk/build/randomwalk.build/Debug-iphonesimulator/randomwalk.build/randomwalk-all-target-headers.hmap -iquote /Users/barret/cyclonewalk/randomwalk/build/randomwalk.build/Debug-iphonesimulator/randomwalk.build/randomwalk-project-headers.hmap -F/Users/barret/cyclonewalk/randomwalk/build/Debug-iphonesimulator -I/Users/barret/cyclonewalk/randomwalk/build/Debug-iphonesimulator/include -I/Users/barret/cyclonewalk/randomwalk/build/randomwalk.build/Debug-iphonesimulator/randomwalk.build/DerivedSources/i386 -I/Users/barret/cyclonewalk/randomwalk/build/randomwalk.build/Debug-iphonesimulator/randomwalk.build/DerivedSources -include /var/folders/Ke/KelkGmsJE-eNQMXzYVwckk+++TI/-Caches-/com.apple.Xcode.501/SharedPrecompiledHeaders/randomwalk_Prefix-cuotcqgisabnplfpyxgkcqcszome/randomwalk_Prefix.pch -c /Users/barret/cyclonewalk/randomwalk/main.m -o /Users/barret/cyclonewalk/randomwalk/build/randomwalk.build/Debug-iphonesimulator/randomwalk.build/Objects-normal/i386/main.o0#
+
+CCompileC build/randomwalk.build/Debug-iphonesimulator/randomwalk.build/Objects-normal/i386/randomwalkAppDelegate.o /Users/barret/cyclonewalk/randomwalk/Classes/randomwalkAppDelegate.m normal i386 objective-c com.apple.compilers.gcc.4_2
+s279223168.395055
+e279223168.535792
+r1
+xCompileC
+xbuild/randomwalk.build/Debug-iphonesimulator/randomwalk.build/Objects-normal/i386/randomwalkAppDelegate.o
+x/Users/barret/cyclonewalk/randomwalk/Classes/randomwalkAppDelegate.m
+xnormal
+xi386
+xobjective-c
+xcom.apple.compilers.gcc.4_2
+lSLF07#2@76"Compile /Users/barret/cyclonewalk/randomwalk/Classes/randomwalkAppDelegate.m279223168#279223168#0(0"0(0#0#68"/Users/barret/cyclonewalk/randomwalk/Classes/randomwalkAppDelegate.m4300882208#1937"    cd /Users/barret/cyclonewalk/randomwalk    setenv LANG en_US.US-ASCII    setenv PATH "/Developer/Platforms/iPhoneSimulator.platform/Developer/usr/bin:/Developer/usr/bin:/usr/bin:/bin:/usr/sbin:/sbin"    /Developer/Platforms/iPhoneSimulator.platform/Developer/usr/bin/gcc-4.2 -x objective-c -arch i386 -fmessage-length=0 -pipe -std=c99 -Wno-trigraphs -fpascal-strings -fasm-blocks -O0 -Wreturn-type -Wunused-variable -D__IPHONE_OS_VERSION_MIN_REQUIRED=30000 -isysroot /Developer/Platforms/iPhoneSimulator.platform/Developer/SDKs/iPhoneSimulator3.1.sdk -fvisibility=hidden -mmacosx-version-min=10.5 -gdwarf-2 -iquote /Users/barret/cyclonewalk/randomwalk/build/randomwalk.build/Debug-iphonesimulator/randomwalk.build/randomwalk-generated-files.hmap -I/Users/barret/cyclonewalk/randomwalk/build/randomwalk.build/Debug-iphonesimulator/randomwalk.build/randomwalk-own-target-headers.hmap -I/Users/barret/cyclonewalk/randomwalk/build/randomwalk.build/Debug-iphonesimulator/randomwalk.build/randomwalk-all-target-headers.hmap -iquote /Users/barret/cyclonewalk/randomwalk/build/randomwalk.build/Debug-iphonesimulator/randomwalk.build/randomwalk-project-headers.hmap -F/Users/barret/cyclonewalk/randomwalk/build/Debug-iphonesimulator -I/Users/barret/cyclonewalk/randomwalk/build/Debug-iphonesimulator/include -I/Users/barret/cyclonewalk/randomwalk/build/randomwalk.build/Debug-iphonesimulator/randomwalk.build/DerivedSources/i386 -I/Users/barret/cyclonewalk/randomwalk/build/randomwalk.build/Debug-iphonesimulator/randomwalk.build/DerivedSources -include /var/folders/Ke/KelkGmsJE-eNQMXzYVwckk+++TI/-Caches-/com.apple.Xcode.501/SharedPrecompiledHeaders/randomwalk_Prefix-cuotcqgisabnplfpyxgkcqcszome/randomwalk_Prefix.pch -c /Users/barret/cyclonewalk/randomwalk/Classes/randomwalkAppDelegate.m -o /Users/barret/cyclonewalk/randomwalk/build/randomwalk.build/Debug-iphonesimulator/randomwalk.build/Objects-normal/i386/randomwalkAppDelegate.o0#
+
+CCompileC build/randomwalk.build/Debug-iphonesimulator/randomwalk.build/Objects-normal/i386/untitled.o /Users/barret/cyclonewalk/randomwalk/Classes/untitled.m normal i386 objective-c com.apple.compilers.gcc.4_2
+r0
+
+CCompileXIB /Users/barret/cyclonewalk/randomwalk/Classes/Compass.xib
+r0
+
+CCompileXIB /Users/barret/cyclonewalk/randomwalk/Classes/Settings.xib
+s279223165.926868
+e279223166.254601
+r1
+xCompileXIB
+x/Users/barret/cyclonewalk/randomwalk/Classes/Settings.xib
+lSLF07#2@31"CompileXIB Classes/Settings.xib279223165#279223166#0(0"0(0#0#57"/Users/barret/cyclonewalk/randomwalk/Classes/Settings.xib4300882208#481"    cd /Users/barret/cyclonewalk/randomwalk    setenv IBC_MINIMUM_COMPATIBILITY_VERSION 3.1    setenv PATH "/Developer/Platforms/iPhoneSimulator.platform/Developer/usr/bin:/Developer/usr/bin:/usr/bin:/bin:/usr/sbin:/sbin"    /Developer/usr/bin/ibtool --errors --warnings --notices --output-format human-readable-text --compile /Users/barret/cyclonewalk/randomwalk/build/Debug-iphonesimulator/randomwalk.app/Settings.nib /Users/barret/cyclonewalk/randomwalk/Classes/Settings.xib0#
+
+CCompileXIB /Users/barret/cyclonewalk/randomwalk/Classes/asdf.xib
+s279223165.928380
+e279223166.261641
+r1
+xCompileXIB
+x/Users/barret/cyclonewalk/randomwalk/Classes/asdf.xib
+lSLF07#2@27"CompileXIB Classes/asdf.xib279223165#279223166#0(0"0(0#0#53"/Users/barret/cyclonewalk/randomwalk/Classes/asdf.xib4300882208#473"    cd /Users/barret/cyclonewalk/randomwalk    setenv IBC_MINIMUM_COMPATIBILITY_VERSION 3.1    setenv PATH "/Developer/Platforms/iPhoneSimulator.platform/Developer/usr/bin:/Developer/usr/bin:/usr/bin:/bin:/usr/sbin:/sbin"    /Developer/usr/bin/ibtool --errors --warnings --notices --output-format human-readable-text --compile /Users/barret/cyclonewalk/randomwalk/build/Debug-iphonesimulator/randomwalk.app/asdf.nib /Users/barret/cyclonewalk/randomwalk/Classes/asdf.xib0#
+
+CCompileXIB /Users/barret/cyclonewalk/randomwalk/Classes/untitled.xib
+r0
+
+CCompileXIB /Users/barret/cyclonewalk/randomwalk/MainWindow.xib
+s279223165.010441
+e279223165.928298
+r1
+xCompileXIB
+x/Users/barret/cyclonewalk/randomwalk/MainWindow.xib
+lSLF07#2@25"CompileXIB MainWindow.xib279223165#279223165#0(0"0(0#0#51"/Users/barret/cyclonewalk/randomwalk/MainWindow.xib4300882208#477"    cd /Users/barret/cyclonewalk/randomwalk    setenv IBC_MINIMUM_COMPATIBILITY_VERSION 3.1    setenv PATH "/Developer/Platforms/iPhoneSimulator.platform/Developer/usr/bin:/Developer/usr/bin:/usr/bin:/bin:/usr/sbin:/sbin"    /Developer/usr/bin/ibtool --errors --warnings --notices --output-format human-readable-text --compile /Users/barret/cyclonewalk/randomwalk/build/Debug-iphonesimulator/randomwalk.app/MainWindow.nib /Users/barret/cyclonewalk/randomwalk/MainWindow.xib0#
+
+CCompileXIB /Users/barret/cyclonewalk/randomwalk/RootViewController.xib
+s279223165.057783
+e279223165.925694
+r1
+xCompileXIB
+x/Users/barret/cyclonewalk/randomwalk/RootViewController.xib
+lSLF07#2@33"CompileXIB RootViewController.xib279223165#279223165#0(0"0(0#0#59"/Users/barret/cyclonewalk/randomwalk/RootViewController.xib4300882208#493"    cd /Users/barret/cyclonewalk/randomwalk    setenv IBC_MINIMUM_COMPATIBILITY_VERSION 3.1    setenv PATH "/Developer/Platforms/iPhoneSimulator.platform/Developer/usr/bin:/Developer/usr/bin:/usr/bin:/bin:/usr/sbin:/sbin"    /Developer/usr/bin/ibtool --errors --warnings --notices --output-format human-readable-text --compile /Users/barret/cyclonewalk/randomwalk/build/Debug-iphonesimulator/randomwalk.app/RootViewController.nib /Users/barret/cyclonewalk/randomwalk/RootViewController.xib0#
+
+CDataModelCompile /Users/barret/cyclonewalk/randomwalk/build/Debug-iphonesimulator/randomwalk.app/randomwalk.mom /Users/barret/cyclonewalk/randomwalk/randomwalk.xcdatamodel
+s279223168.023712
+e279223168.399194
+r1
+xDataModelCompile
+x/Users/barret/cyclonewalk/randomwalk/build/Debug-iphonesimulator/randomwalk.app/randomwalk.mom
+x/Users/barret/cyclonewalk/randomwalk/randomwalk.xcdatamodel
+lSLF07#2@67"Compile /Users/barret/cyclonewalk/randomwalk/randomwalk.xcdatamodel279223168#279223168#0(0"0(0#0#59"/Users/barret/cyclonewalk/randomwalk/randomwalk.xcdatamodel4300882208#387"    cd /Users/barret/cyclonewalk/randomwalk    setenv PATH "/Developer/Platforms/iPhoneSimulator.platform/Developer/usr/bin:/Developer/usr/bin:/usr/bin:/bin:/usr/sbin:/sbin"    /Developer/usr/bin/momc -XD_MOMC_TARGET_VERSION=10.5 /Users/barret/cyclonewalk/randomwalk/randomwalk.xcdatamodel /Users/barret/cyclonewalk/randomwalk/build/Debug-iphonesimulator/randomwalk.app/randomwalk.mom0#
+
+CGenerateDSYMFile /Users/barret/cyclonewalk/randomwalk/build/Debug-iphonesimulator/randomwalk.app.dSYM /Users/barret/cyclonewalk/randomwalk/build/Debug-iphonesimulator/randomwalk.app/randomwalk
+r0
+
+CLd /Users/barret/cyclonewalk/randomwalk/build/Debug-iphonesimulator/randomwalk.app/randomwalk normal i386
+r0
+
+CProcessInfoPlistFile /Users/barret/cyclonewalk/randomwalk/build/Debug-iphonesimulator/randomwalk.app/Info.plist randomwalk-Info.plist
+s279223164.955522
+e279223165.010319
+r1
+xProcessInfoPlistFile
+x/Users/barret/cyclonewalk/randomwalk/build/Debug-iphonesimulator/randomwalk.app/Info.plist
+xrandomwalk-Info.plist
+lSLF07#2@29"Process randomwalk-Info.plist279223164#279223165#0(0"0(0#0#58"/Users/barret/cyclonewalk/randomwalk/randomwalk-Info.plist31525648366108776#482"    cd /Users/barret/cyclonewalk/randomwalk    setenv PATH "/Developer/Platforms/iPhoneSimulator.platform/Developer/usr/bin:/Developer/usr/bin:/usr/bin:/bin:/usr/sbin:/sbin"    builtin-infoPlistUtility randomwalk-Info.plist -genpkginfo /Users/barret/cyclonewalk/randomwalk/build/Debug-iphonesimulator/randomwalk.app/PkgInfo -expandbuildsettings -format binary -platform iphonesimulator -o /Users/barret/cyclonewalk/randomwalk/build/Debug-iphonesimulator/randomwalk.app/Info.plist0#
+
+CProcessPCH /var/folders/Ke/KelkGmsJE-eNQMXzYVwckk+++TI/-Caches-/com.apple.Xcode.501/SharedPrecompiledHeaders/randomwalk_Prefix-cuotcqgisabnplfpyxgkcqcszome/randomwalk_Prefix.pch.gch randomwalk_Prefix.pch normal i386 objective-c com.apple.compilers.gcc.4_2
+s279223166.261910
+e279223168.023544
+r1
+xProcessPCH
+x/var/folders/Ke/KelkGmsJE-eNQMXzYVwckk+++TI/-Caches-/com.apple.Xcode.501/SharedPrecompiledHeaders/randomwalk_Prefix-cuotcqgisabnplfpyxgkcqcszome/randomwalk_Prefix.pch.gch
+xrandomwalk_Prefix.pch
+xnormal
+xi386
+xobjective-c
+xcom.apple.compilers.gcc.4_2
+lSLF07#2@32"Precompile randomwalk_Prefix.pch279223166#279223168#0(0"0(0#0#58"/Users/barret/cyclonewalk/randomwalk/randomwalk_Prefix.pch4300882208#1786"    cd /Users/barret/cyclonewalk/randomwalk    setenv LANG en_US.US-ASCII    setenv PATH "/Developer/Platforms/iPhoneSimulator.platform/Developer/usr/bin:/Developer/usr/bin:/usr/bin:/bin:/usr/sbin:/sbin"    /Developer/Platforms/iPhoneSimulator.platform/Developer/usr/bin/gcc-4.2 -x objective-c-header -arch i386 -fmessage-length=0 -pipe -std=c99 -Wno-trigraphs -fpascal-strings -fasm-blocks -O0 -Wreturn-type -Wunused-variable -D__IPHONE_OS_VERSION_MIN_REQUIRED=30000 -isysroot /Developer/Platforms/iPhoneSimulator.platform/Developer/SDKs/iPhoneSimulator3.1.sdk -fvisibility=hidden -mmacosx-version-min=10.5 -gdwarf-2 -iquote /Users/barret/cyclonewalk/randomwalk/build/randomwalk.build/Debug-iphonesimulator/randomwalk.build/randomwalk-generated-files.hmap -I/Users/barret/cyclonewalk/randomwalk/build/randomwalk.build/Debug-iphonesimulator/randomwalk.build/randomwalk-own-target-headers.hmap -I/Users/barret/cyclonewalk/randomwalk/build/randomwalk.build/Debug-iphonesimulator/randomwalk.build/randomwalk-all-target-headers.hmap -iquote /Users/barret/cyclonewalk/randomwalk/build/randomwalk.build/Debug-iphonesimulator/randomwalk.build/randomwalk-project-headers.hmap -F/Users/barret/cyclonewalk/randomwalk/build/Debug-iphonesimulator -I/Users/barret/cyclonewalk/randomwalk/build/Debug-iphonesimulator/include -I/Users/barret/cyclonewalk/randomwalk/build/randomwalk.build/Debug-iphonesimulator/randomwalk.build/DerivedSources/i386 -I/Users/barret/cyclonewalk/randomwalk/build/randomwalk.build/Debug-iphonesimulator/randomwalk.build/DerivedSources -c /Users/barret/cyclonewalk/randomwalk/randomwalk_Prefix.pch -o /var/folders/Ke/KelkGmsJE-eNQMXzYVwckk+++TI/-Caches-/com.apple.Xcode.501/SharedPrecompiledHeaders/randomwalk_Prefix-cuotcqgisabnplfpyxgkcqcszome/randomwalk_Prefix.pch.gch0#
+
+CTouch /Users/barret/cyclonewalk/randomwalk/build/Debug-iphonesimulator/randomwalk.app
+r0
+

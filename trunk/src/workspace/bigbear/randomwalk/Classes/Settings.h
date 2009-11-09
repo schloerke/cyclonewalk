@@ -10,8 +10,9 @@
 
 
 @interface Settings : UIViewController {
-	NSInteger *proximity;
-	UISlider *slider;
+	CGFloat proximity;
+	IBOutlet UILabel *proximityLabel;
+	IBOutlet UISlider *slider;
 }
 
 
@@ -40,13 +41,13 @@ Pushes the Settings view on top of the navigation stack, for a given walk
 /*
  Takes the slider value and changes it to feet.
  */
--(NSInteger) convertSliderValueToFeet;
+-(CGFloat) convertSliderValueToFeet;
 
 /*
  Public function to convert a slider value to feet.
  Used for consistency
  */
-+(CGFloat) convertValueToFeet:(CGFloat) i;
+-(CGFloat) convertValueToFeet:(float) i;
 
 /*
  sets the label next to the slider with the value of the converted string.
@@ -58,7 +59,7 @@ Pushes the Settings view on top of the navigation stack, for a given walk
  Public function to convert feet to string according to the scale above.  
  Used for consistency.
  */
--(NSString*) convertFeetToString:(int) feet;
+-(NSString*) convertFeetToString:(CGFloat) feet;
 
 
 @end
