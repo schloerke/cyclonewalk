@@ -1,0 +1,14 @@
+/Users/harshg/Documents/randomwalktest/Accel_Controller.m:1:23: error: Controller.h: No such file or directory
+/Users/harshg/Documents/randomwalktest/Accel_Controller.m:8: warning: cannot find interface declaration for 'Accel_Controller'
+/Users/harshg/Documents/randomwalktest/Accel_Controller.m: In function '-[Accel_Controller viewDidLoad]':
+/Users/harshg/Documents/randomwalktest/Accel_Controller.m:9: error: no super class declared in @interface for 'Accel_Controller'
+/Users/harshg/Documents/randomwalktest/Accel_Controller.m:11: error: request for member 'accelerometer' in something not a structure or union
+/Users/harshg/Documents/randomwalktest/Accel_Controller.m:12: error: request for member 'accelerometer' in something not a structure or union
+/Users/harshg/Documents/randomwalktest/Accel_Controller.m:13: error: request for member 'accelerometer' in something not a structure or union
+/Users/harshg/Documents/randomwalktest/Accel_Controller.m: In function '-[Accel_Controller accelerometer:didAccelerate:]':
+/Users/harshg/Documents/randomwalktest/Accel_Controller.m:17: error: 'xLabel' undeclared (first use in this function)
+/Users/harshg/Documents/randomwalktest/Accel_Controller.m:17: error: (Each undeclared identifier is reported only once
+/Users/harshg/Documents/randomwalktest/Accel_Controller.m:17: error: for each function it appears in.)
+/Users/harshg/Documents/randomwalktest/Accel_Controller.m:18: error: 'yLabel' undeclared (first use in this function)
+/Users/harshg/Documents/randomwalktest/Accel_Controller.m:19: error: 'zLabel' undeclared (first use in this function)
+/Users/harshg/Documents/randomwalktest/Accel_Controller.m:26: error: 'orientationLabel' undeclared (first use in this function)
