@@ -7,9 +7,71 @@
 //
 
 #import "Compass.h"
-
+//#import "CLLocation.h"
 
 @implementation Compass
+
+
+/*
+ Direction values are measured in degrees starting at due north and continue clockwise around the compass. Thus, north is 0 degrees, east is 90 degrees, south is 180 degrees, and so on. A negative value indicates an invalid direction.
+ */
+- (double) getDegreeFacing
+{
+	return CLLocation.CLLocationDirection;	
+}
+
+/*
+ Makes the label text value the value of 
+ */
+-(IBAction) updateLabel:(id) sender
+{
+	double d = [self getDegreeFacing];
+	directionFacing.text = [NSString stringWithFormat:@"%d", d];
+}
+
+/*
+ Calls the getDegreeFacing and returns a character value of the direction facing. i.e. N,NE,E,SE,S,SW,W,NW
+ */
+-(NSString*) getDirectionFacing
+{
+	double direction = [self getDegreeFacing];
+	
+	
+	// N  == 337.5 <= direction || direction < 22.5
+	// NE == 22.5 <= direction < 67.5
+	// E  == 67.5 <= direction < 112.5
+	// SE == 112.5 <= direction < 157.5
+	// S  == 157.5 <= direction < 202.5
+	// SW == 202.5 <= direction < 247.5
+	// W  == 247.5 <= direction < 292.5
+	// NW == 292.5 <= direction < 337.5
+	
+	if (direction < 67.5 && direction >= 22.5) 
+		return @"NE";
+	
+	else if (direction < 112.5) 
+		return @"E";
+
+	else if (direction < 157.5) 
+		return @"SE";
+	
+	else if (direction < 202.5) 
+		return @"S";
+	
+	else if (direction < 247.5) 
+		return @"SW";
+	
+	else if (direction < 292.5) 
+		return @"W";
+	
+	else if (direction < 337.5) 
+		return @"NW";
+	
+	else 
+		return @"N";
+}
+
+
 
 /*
  // The designated initializer.  Override if you create the controller programmatically and want to perform customization that is not appropriate for viewDidLoad.
@@ -46,6 +108,7 @@
 - (void)viewDidUnload {
 	// Release any retained subviews of the main view.
 	// e.g. self.myOutlet = nil;
+	
 }
 
 

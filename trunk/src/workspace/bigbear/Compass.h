@@ -10,6 +10,7 @@
 
 
 @interface Compass : UIViewController {
+	UILabel *directionFacing;
 
 }
 
