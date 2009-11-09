@@ -11,21 +11,19 @@
 
 @interface WalkSettings : UITableViewController {
 	UIColor *color;
-	NSString *walk;
-	NSInteger *proximity;
-	// WALK STUFF!!!!!
+	WalkData *walkData;
 }
 
 
 /*
  Initializes the walk with a particular walk.  The settings will be filled in accordingly.
  */
--(IBAction) initWithWalk:(NSString *)walkP;
+-(IBAction) initWithWalk:(WalkData *)walkDataP;
 
 /*
  Initializes the walk without a particular walk.  The settings will be blank.
  */
--(IBAction) initWithWalk:(NSString *)walkP;
+-(IBAction) initNewWalk;
 
 /*
  Sets the color of the walk.

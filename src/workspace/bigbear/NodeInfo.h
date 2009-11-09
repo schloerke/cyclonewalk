@@ -10,19 +10,14 @@
 
 
 @interface NodeInfo : UITableViewController {
-	NSString *node;
-	
-	/*
-	 Node object info stuff!!!!
-	 */ 
-	
+	NodeData *nodeData;
 }
 
 
 /* 
  Initializes the view and objects with the node information.
  */
--(void) initWithNode:(NSString *)nodeName;
+-(void) initWithNode:(NodeData *)nodeDataP;
 
 /*
  Initializes the view with blank information

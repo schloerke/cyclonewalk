@@ -12,14 +12,13 @@
 @interface Settings : UIViewController {
 	NSInteger *proximity;
 	UISlider *slider;
-	NSString *walkName;
 }
 
 
 /*
 Pushes the Settings view on top of the navigation stack, for a given walk
  */
--(void) initWithWalkName:(NSString *) walkNameP;
+-(void) initSettings;
 
 /*
  When this function is run, it will call the walkDataController to delete the corresponding node.
@@ -47,7 +46,7 @@ Pushes the Settings view on top of the navigation stack, for a given walk
  Public function to convert a slider value to feet.
  Used for consistency
  */
-+(NSInteger) convertValueToFeet:(NSInteger *) i;
++(CGFloat) convertValueToFeet:(CGFloat) i;
 
 /*
  sets the label next to the slider with the value of the converted string.
@@ -59,7 +58,7 @@ Pushes the Settings view on top of the navigation stack, for a given walk
  Public function to convert feet to string according to the scale above.  
  Used for consistency.
  */
--(NSString*) convertFeetToString:(NSInteger *) feet;
+-(NSString*) convertFeetToString:(int) feet;
 
 
 @end
