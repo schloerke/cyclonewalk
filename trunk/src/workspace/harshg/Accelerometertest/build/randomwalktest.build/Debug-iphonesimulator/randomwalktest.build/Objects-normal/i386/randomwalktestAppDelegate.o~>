@@ -1,0 +1,10 @@
+/Users/harshg/Documents/randomwalktest/Classes/randomwalktestAppDelegate.m:9:41: error: AccelerometertestAppDelegate.h: No such file or directory
+/Users/harshg/Documents/randomwalktest/Classes/randomwalktestAppDelegate.m:13: warning: cannot find interface declaration for 'AccelerometertestAppDelegate'
+/Users/harshg/Documents/randomwalktest/Classes/randomwalktestAppDelegate.m:13: error: no declaration of property 'window' found in the interface
+/Users/harshg/Documents/randomwalktest/Classes/randomwalktestAppDelegate.m: In function '-[AccelerometertestAppDelegate applicationDidFinishLaunching:]':
+/Users/harshg/Documents/randomwalktest/Classes/randomwalktestAppDelegate.m:19: error: 'window' undeclared (first use in this function)
+/Users/harshg/Documents/randomwalktest/Classes/randomwalktestAppDelegate.m:19: error: (Each undeclared identifier is reported only once
+/Users/harshg/Documents/randomwalktest/Classes/randomwalktestAppDelegate.m:19: error: for each function it appears in.)
+/Users/harshg/Documents/randomwalktest/Classes/randomwalktestAppDelegate.m: In function '-[AccelerometertestAppDelegate dealloc]':
+/Users/harshg/Documents/randomwalktest/Classes/randomwalktestAppDelegate.m:24: error: 'window' undeclared (first use in this function)
+/Users/harshg/Documents/randomwalktest/Classes/randomwalktestAppDelegate.m:25: error: no super class declared in @interface for 'AccelerometertestAppDelegate'
