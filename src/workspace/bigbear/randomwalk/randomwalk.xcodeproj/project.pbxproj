@@ -25,6 +25,9 @@
 		ABAD5D2410A4A31900B14D2B /* NodeInfo.xib in Resources */ = {isa = PBXBuildFile; fileRef = ABAD5D2210A4A31900B14D2B /* NodeInfo.xib */; };
 		ABAD5D2910A4A50A00B14D2B /* WalkSettings.m in Sources */ = {isa = PBXBuildFile; fileRef = ABAD5D2710A4A50A00B14D2B /* WalkSettings.m */; };
 		ABAD5D2A10A4A50A00B14D2B /* WalkSettings.xib in Resources */ = {isa = PBXBuildFile; fileRef = ABAD5D2810A4A50A00B14D2B /* WalkSettings.xib */; };
+		ABC9F05E10A9C03C00877555 /* NodeData.m in Sources */ = {isa = PBXBuildFile; fileRef = ABC9F05D10A9C03C00877555 /* NodeData.m */; };
+		ABC9F0DB10A9CB9000877555 /* WalkData.m in Sources */ = {isa = PBXBuildFile; fileRef = ABC9F0DA10A9CB9000877555 /* WalkData.m */; };
+		ABC9F0DE10A9CCB100877555 /* MasterBin.m in Sources */ = {isa = PBXBuildFile; fileRef = ABC9F0DD10A9CCB100877555 /* MasterBin.m */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -56,6 +59,12 @@
 		ABAD5D2610A4A50A00B14D2B /* WalkSettings.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = WalkSettings.h; sourceTree = "<group>"; };
 		ABAD5D2710A4A50A00B14D2B /* WalkSettings.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = WalkSettings.m; sourceTree = "<group>"; };
 		ABAD5D2810A4A50A00B14D2B /* WalkSettings.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = WalkSettings.xib; sourceTree = "<group>"; };
+		ABC9F05C10A9C03C00877555 /* NodeData.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = NodeData.h; sourceTree = "<group>"; };
+		ABC9F05D10A9C03C00877555 /* NodeData.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = NodeData.m; sourceTree = "<group>"; };
+		ABC9F0D910A9CB9000877555 /* WalkData.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = WalkData.h; sourceTree = "<group>"; };
+		ABC9F0DA10A9CB9000877555 /* WalkData.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = WalkData.m; sourceTree = "<group>"; };
+		ABC9F0DC10A9CCB100877555 /* MasterBin.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = MasterBin.h; sourceTree = "<group>"; };
+		ABC9F0DD10A9CCB100877555 /* MasterBin.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = MasterBin.m; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -76,6 +85,12 @@
 		080E96DDFE201D6D7F000001 /* Classes */ = {
 			isa = PBXGroup;
 			children = (
+				ABC9F0DC10A9CCB100877555 /* MasterBin.h */,
+				ABC9F0DD10A9CCB100877555 /* MasterBin.m */,
+				ABC9F0D910A9CB9000877555 /* WalkData.h */,
+				ABC9F0DA10A9CB9000877555 /* WalkData.m */,
+				ABC9F05C10A9C03C00877555 /* NodeData.h */,
+				ABC9F05D10A9C03C00877555 /* NodeData.m */,
 				ABAD5D2610A4A50A00B14D2B /* WalkSettings.h */,
 				ABAD5D2710A4A50A00B14D2B /* WalkSettings.m */,
 				ABAD5D2810A4A50A00B14D2B /* WalkSettings.xib */,
@@ -221,6 +236,9 @@
 				ABAD5CFF10A49E8D00B14D2B /* DescriptionDialog.m in Sources */,
 				ABAD5D2310A4A31900B14D2B /* NodeInfo.m in Sources */,
 				ABAD5D2910A4A50A00B14D2B /* WalkSettings.m in Sources */,
+				ABC9F05E10A9C03C00877555 /* NodeData.m in Sources */,
+				ABC9F0DB10A9CB9000877555 /* WalkData.m in Sources */,
+				ABC9F0DE10A9CCB100877555 /* MasterBin.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};

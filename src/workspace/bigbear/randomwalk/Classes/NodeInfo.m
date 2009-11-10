@@ -7,9 +7,77 @@
 //
 
 #import "NodeInfo.h"
+#import "NodeData.h"
+
+#define kStdButtonWidth		106.0
+#define kStdButtonHeight	40.0
+
+#define kViewTag			1		// for tagging our embedded controls for removal at cell recycle time
+
+static NSString *kSectionTitleKey = @"sectionTitleKey";
+static NSString *kLabelKey = @"labelKey";
+static NSString *kSourceKey = @"sourceKey";
+static NSString *kViewKey = @"viewKey";
+
 
 
 @implementation NodeInfo
+
+@synthesize name, description, address, phoneNumber, latitude, longitude, photo, contactInfo;
+@synthesize viewArray;
+
+/* 
+ Initializes the view and objects with the node information.
+ */
+-(id) initWithNode:(id)nodeDataP
+{
+	
+	NodeData *nodeDataNew = (NodeData *) nodeDataP;
+	
+	self = [super init];
+	
+	self.name = nodeDataNew.name;
+	self.description = nodeDataNew.description;
+	self.address = nodeDataNew.address;
+	self.phoneNumber = nodeDataNew.phoneNumber;
+	self.latitude = nodeDataNew.latitude;
+	self.longitude = nodeDataNew.longitude;
+	self.photo = nodeDataNew.photo;
+	self.contactInfo = nodeDataNew.contactInfo;
+	
+	return self;
+	
+}
+
+/*
+ Initializes the view with blank information
+ */
+-(id) initNewNode
+{
+	self = [super init];
+	
+	return self;	
+}
+
+
+
+/*
+ If the node detail view was initialized with a node, when the view disappears, the said node's info will be replaced.
+ */
+-(void) replaceNodeInfo
+{
+	
+}
+
+/*
+ If the node detail view was NOT initialized with a node, when the view disappears, a new node will be added to the node data.
+ */
+-(void) addNewNode
+{
+	
+}
+
+
 
 /*
 - (id)initWithStyle:(UITableViewStyle)style {
@@ -20,14 +88,134 @@
 }
 */
 
-/*
++ (UIButton *)buttonWithTitle:	(NSString *)title
+					   target:(id)target
+					 selector:(SEL)selector
+						frame:(CGRect)frame
+						image:(UIImage *)image
+				 imagePressed:(UIImage *)imagePressed
+				darkTextColor:(BOOL)darkTextColor
+{	
+	UIButton *button = [[UIButton alloc] initWithFrame:frame];
+	// or you can do this:
+	//		UIButton *button = [[UIButton buttonWithType:UIButtonTypeCustom] retain];
+	//		button.frame = frame;
+	
+	button.contentVerticalAlignment = UIControlContentVerticalAlignmentCenter;
+	button.contentHorizontalAlignment = UIControlContentHorizontalAlignmentCenter;
+	
+	[button setTitle:title forState:UIControlStateNormal];	
+	if (darkTextColor)
+	{
+		[button setTitleColor:[UIColor blackColor] forState:UIControlStateNormal];
+	}
+	else
+	{
+		[button setTitleColor:[UIColor whiteColor] forState:UIControlStateNormal];
+	}
+	
+	UIImage *newImage = [image stretchableImageWithLeftCapWidth:12.0 topCapHeight:0.0];
+	[button setBackgroundImage:newImage forState:UIControlStateNormal];
+	
+	UIImage *newPressedImage = [imagePressed stretchableImageWithLeftCapWidth:12.0 topCapHeight:0.0];
+	[button setBackgroundImage:newPressedImage forState:UIControlStateHighlighted];
+	
+	[button addTarget:target action:selector forControlEvents:UIControlEventTouchUpInside];
+	
+    // in case the parent view draws with a custom color or gradient, use a transparent color
+	button.backgroundColor = [UIColor clearColor];
+	
+	return button;
+}
+
+- (UIButton *)imageButton
+{	
+	if (imageButton == nil)
+	{
+		// create a UIButton with just an image instead of a title
+		
+		UIImage *buttonBackground = [UIImage imageNamed:@"whiteButton.png"];
+		UIImage *buttonBackgroundPressed = [UIImage imageNamed:@"blueButton.png"];
+		
+		CGRect frame = CGRectMake(182.0, 5.0, kStdButtonWidth, kStdButtonHeight);
+		
+		imageButton = [NodeInfo buttonWithTitle:@""
+													  target:self
+													selector:@selector(action:)
+													   frame:frame
+													   image:buttonBackground
+												imagePressed:buttonBackgroundPressed
+											   darkTextColor:YES];
+		
+		[imageButton setImage:[UIImage imageNamed:@"UIButton_custom.png"] forState:UIControlStateNormal];
+		
+		// Add an accessibility label to the image.
+		[imageButton setAccessibilityLabel:NSLocalizedString(@"ArrowButton", @"")];
+		
+		imageButton.tag = kViewTag;	// tag this view for later so we can remove it from recycled table cells
+	}
+	return imageButton;
+}
+
+
 - (void)viewDidLoad {
     [super viewDidLoad];
 
-    // Uncomment the following line to display an Edit button in the navigation bar for this view controller.
-    // self.navigationItem.rightBarButtonItem = self.editButtonItem;
+	self.title = NSLocalizedString(@"ButtonsTitle", @"");
+	
+	self.viewArray = [NSArray arrayWithObjects:
+/*							[NSDictionary dictionaryWithObjectsAndKeys:
+							 @"UIButton", kSectionTitleKey,
+							 @"Background Image", kLabelKey,
+							 @"ButtonsViewController.m:\r(UIButton *)grayButton", kSourceKey,
+							 self.grayButton, kViewKey,
+							 nil],
+*/							
+							[NSDictionary dictionaryWithObjectsAndKeys:
+							 @"UIButton", kSectionTitleKey,
+							 @"Button with Image", kLabelKey,
+							 @"ButtonsViewController.m:\r(UIButton *)imageButton", kSourceKey,
+							 self.imageButton, kViewKey,
+							 nil] ,
+							
+/*							[NSDictionary dictionaryWithObjectsAndKeys:
+							 @"UIButtonTypeRoundedRect", kSectionTitleKey,
+							 @"Rounded Button", kLabelKey,
+							 @"ButtonsViewController.m:\r(UIButton *)roundedButtonType", kSourceKey,
+							 self.roundedButtonType, kViewKey,
+							 nil],
+							
+							[NSDictionary dictionaryWithObjectsAndKeys:
+							 @"UIButtonTypeDetailDisclosure", kSectionTitleKey,
+							 @"Detail Disclosure", kLabelKey,
+							 @"ButtonsViewController.m:\r(UIButton *)detailDisclosureButton", kSourceKey,
+							 self.detailDisclosureButtonType, kViewKey,
+							 nil],
+							
+							[NSDictionary dictionaryWithObjectsAndKeys:
+							 @"UIButtonTypeInfoLight", kSectionTitleKey,
+							 @"Info Light", kLabelKey,
+							 @"ButtonsViewController.m:\r(UIButton *)infoLightButtonType", kSourceKey,
+							 self.infoLightButtonType, kViewKey,
+							 nil],
+							
+							[NSDictionary dictionaryWithObjectsAndKeys:
+							 @"UIButtonTypeInfoDark", kSectionTitleKey,
+							 @"Info Dark", kLabelKey,
+							 @"ButtonsViewController.m:\r(UIButton *)infoDarkButtonType", kSourceKey,
+							 self.infoDarkButtonType, kViewKey,
+							 nil],
+							
+							[NSDictionary dictionaryWithObjectsAndKeys:
+							 @"UIButtonTypeContactAdd", kSectionTitleKey,
+							 @"Contact Add", kLabelKey,
+							 @"ButtonsViewController.m:\r(UIButton *)contactAddButtonType", kSourceKey,
+							 self.contactAddButtonType, kViewKey,
+							 nil],*/
+							nil];
+	
 }
-*/
+
 
 /*
 - (void)viewWillAppear:(BOOL)animated {

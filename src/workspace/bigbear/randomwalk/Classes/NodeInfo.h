@@ -10,19 +10,42 @@
 
 
 @interface NodeInfo : UITableViewController {
-	NodeData *nodeData;
+	NSObject *nodeData;
+	NSArray *viewArray;
+
+	IBOutlet NSString *name;
+	IBOutlet NSString *description;
+	IBOutlet NSString *address;
+	IBOutlet NSString *phoneNumber;
+	IBOutlet CGFloat latitude;
+	IBOutlet CGFloat	longitude;
+	IBOutlet UIImage *photo;
+	IBOutlet NSString *contactInfo;
+	
+	IBOutlet UIButton *imageButton;
 }
+
+@property (nonatomic, retain) NSString *name;
+@property (nonatomic, retain) NSString *description;
+@property (nonatomic, retain) NSString *address;
+@property (nonatomic, retain) NSString *phoneNumber;
+@property (nonatomic, retain) NSString *contactInfo;
+@property (nonatomic) CGFloat latitude;
+@property (nonatomic) CGFloat longitude;
+@property (nonatomic, retain) UIImage *photo;
+@property (nonatomic, retain) NSArray *viewArray;
+
 
 
 /* 
  Initializes the view and objects with the node information.
  */
--(void) initWithNode:(NodeData *)nodeDataP;
+-(id) initWithNode:(id)nodeDataP;
 
 /*
  Initializes the view with blank information
  */
--(void) initNewNode;
+-(id) initNewNode;
 
 
 /*
