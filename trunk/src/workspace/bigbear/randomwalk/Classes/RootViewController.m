@@ -7,7 +7,8 @@
 //
 
 #import "RootViewController.h"
-
+#import "NodeData.h"
+#import "NodeInfo.h"
 
 @implementation RootViewController
 
@@ -38,6 +39,28 @@
 		NSLog(@"Unresolved error %@, %@", error, [error userInfo]);
 		abort();
 	}
+	
+	NodeData *nodeData = [NodeData alloc];
+	nodeData.name = @"Bob";
+	nodeData.phoneNumber = @"123-456-789";
+	nodeData.description = @"My Description";
+	nodeData.address = @"123 Nowhere Lane\nAmes, IA 50010";
+	nodeData.longitude = 45;	
+	nodeData.latitude = (CGFloat) 46 ;
+	nodeData.contactInfo = @"Barret Schloerke";
+	nodeData.photo = nil;
+		
+	
+	NodeInfo *nodeDetail = [[NodeInfo alloc] initWithNode:nodeData];
+							
+	
+							
+							
+	NSLog(@"Pushing the PrevFunctionViewer");
+    [self.navigationController pushViewController:nodeDetail animated:YES];
+    [nodeDetail release];
+	
+	NSLog(@"Done Pushing FuncView");
 }
 
 /*
