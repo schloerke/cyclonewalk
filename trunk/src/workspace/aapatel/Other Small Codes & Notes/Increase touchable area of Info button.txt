@@ -1,0 +1,4 @@
+CGRect newInfoButtonRect = CGRectMake(infoButton.frame.origin.x-25, 
+	infoButton.frame.origin.y-25, infoButton.frame.size.width+50, 
+	infoButton.frame.size.height+50);
+[infoButton setFrame:newInfoButtonRect];

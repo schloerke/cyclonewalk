@@ -1,0 +1,18 @@
+AudioServicesPlaySystemSound(kSystemSoundID_Vibrate);
+
+
+
+or
+
+
+Custom sound:
+
+SystemSoundID pmph;
+id sndpath = [[NSBundle mainBundle] 
+	pathForResource:@"mySound" 
+	ofType:@"wav" 
+	inDirectory:@"/"];
+CFURLRef baseURL = (CFURLRef) [[NSURL alloc] initFileURLWithPath:sndpath];
+AudioServicesCreateSystemSoundID (baseURL, &pmph);
+AudioServicesPlaySystemSound(pmph);	
+[baseURL release];

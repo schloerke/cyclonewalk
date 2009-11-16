@@ -1,0 +1,22 @@
+//Create the new thread:
+
+[NSThread detachNewThreadSelector:@selector(myMethod) 
+		toTarget:self 
+		withObject:nil];
+			
+//Create the method that is called by the new thread:
+
+- (void)myMethod {
+	NSAutoreleasePool *pool = [[NSAutoreleasePool alloc] init];
+				    
+	*** code that should be run in the new thread goes here ***
+				   
+	[pool release];
+}
+			
+//What if you need to do something to the main thread from inside your new thread (for example, show a loading symbol)? 
+//Use performSelectorOnMainThread.
+
+[self performSelectorOnMainThread:@selector(myMethod) 
+	withObject:nil 
+	waitUntilDone:false];
