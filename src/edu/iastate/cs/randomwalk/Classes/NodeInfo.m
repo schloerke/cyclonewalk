@@ -287,7 +287,7 @@ static NSString *kViewKey = @"viewKey";
     return cell;
 }
 
-- (UITableViewCell *)tableView:(UITableView *)tableView cellForRowAtIndexPath:(NSIndexPath *)indexPath
+/*- (UITableViewCell *)tableView:(UITableView *)tableView cellForRowAtIndexPath:(NSIndexPath *)indexPath
 {
 	UITableViewCell *cell = nil;
 	
@@ -336,7 +336,7 @@ static NSString *kViewKey = @"viewKey";
 	
 	return cell;
 }
-
+*/
 
 
 - (void)tableView:(UITableView *)tableView didSelectRowAtIndexPath:(NSIndexPath *)indexPath {
