@@ -54,7 +54,9 @@
 		
 	
 	NodeInfo *nodeInfo = [[NodeInfo alloc] initWithNode:nodeData];
-							
+	
+	//initially hide navigation bar
+	self.navigationController.navigationBarHidden = YES;						
 	
 							
 							
@@ -71,6 +73,9 @@
 	
 
 }
+
+
+
 
 /*
 - (void)viewWillAppear:(BOOL)animated {
