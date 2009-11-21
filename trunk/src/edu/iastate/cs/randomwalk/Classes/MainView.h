@@ -9,15 +9,18 @@
 #import <UIKit/UIKit.h>
 
 
-@interface MainView : UIViewController {
+
+@interface MainView : UIViewController <UITableViewDelegate, UITableViewDataSource> {
 	
 	IBOutlet UIButton *selectAll;
 	IBOutlet UIButton *unselectAll;
 	IBOutlet UIButton *launch;
 	NSArray *walks;
-
+	IBOutlet UITableView *walkTableView;
 }
 
+
+- (void)tableView:(UITableView *)theTableView didSelectRowAtIndexPath:(NSIndexPath *)newIndexPath;
 
 
 @end
