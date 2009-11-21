@@ -19,10 +19,11 @@
 }
 
 
-//
+// adds a walk to the data
+// walkP is of type 
 -(BOOL) addWalk:(id)walkP;
 
-//
+// 
 -(BOOL) deleteWalk:(id)walkP;
 
 
