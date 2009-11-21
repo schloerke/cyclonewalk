@@ -9,6 +9,7 @@
 #import "RootViewController.h"
 #import "NodeData.h"
 #import "NodeInfo.h"
+#import "MainView.h"
 
 @implementation RootViewController
 
@@ -57,11 +58,17 @@
 	
 							
 							
-	NSLog(@"Pushing the PrevFunctionViewer");
-    [self.navigationController pushViewController:nodeInfo animated:YES];
-    [nodeInfo release];
+	//	NSLog(@"Pushing the NodeView");
+	//    [self.navigationController pushViewController:nodeInfo animated:YES];
+	    [nodeInfo release];
+	//	NSLog(@"Done Pushing NodeView");
 	
-	NSLog(@"Done Pushing FuncView");
+	MainView *mview = [[MainView alloc] init];
+	NSLog(@"Pushing the NodeView");
+	[self.navigationController pushViewController:mview animated:NO];
+	[mview release];
+	NSLog(@"Done Pushing MainView");
+	
 
 }
 
