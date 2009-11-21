@@ -16,7 +16,6 @@
 	NSString *name;
 	UIColor *color;
 
-
 }
 
 -(BOOL) addNode:(id)nodeP;

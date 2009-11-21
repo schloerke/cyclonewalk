@@ -12,6 +12,12 @@
 @implementation MainView
 
 
+-(void) viewWillAppear:(BOOL)animated
+{
+	NSLog(@"F: viewWillAppear MainView");
+	self.navigationController.navigationBarHidden = YES;
+	
+}
 
 
 
