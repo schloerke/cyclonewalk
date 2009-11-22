@@ -11,9 +11,14 @@
 
 @implementation XMLParse
 
+@synthesize inNode, nodeName, nodeDescription, nodeAddress, nodePhoneNumber, nodeLatitude, nodeLongitude, nodePhoto, nodeContactInfo, nodeProximity, inWalk, walkName, walkColor, walkFavorite, walkSelected, walkProximity;
+
 
 - (void)startParsing {
-	NSURL *url = [[NSURL alloc] initWithString:@"http://sites.google.com/site/iphonesdktutorials/xml/Books.xml"];
+	//	NSURL *url = [[NSURL alloc] initWithString:@"http://sites.google.com/site/iphonesdktutorials/xml/Books.xml"];
+	//NSURL *url = [[NSURL alloc] initWithString:@"http://www.barretschloerke.com/ComS309/buildings.xml"];
+	NSURL *url = [[NSURL alloc] initWithString:@"http://www.barretschloerke.com/ComS309/buildingsSmall.xml"];
+
     NSXMLParser *parser = [[[NSXMLParser alloc] initWithContentsOfURL:url] autorelease];
     [parser setDelegate:self];
     [parser parse];
@@ -30,6 +35,46 @@
 	else
 		spaces = [spaces stringByAppendingString:@"  "];
     NSLog(@"%@Started %@", spaces, elementName);
+	
+	
+	if(inWalk)
+	{
+		if([elementName isEqualToString:@"Name"])
+		   walkName = YES;
+
+		if([elementName isEqualToString:@"proximity"])
+			walkProximity = YES;
+		
+		if([elementName isEqualToString:@"color"])
+			walkColor = YES;
+		
+		if(inNode)
+		{
+			
+			if([elementName isEqualToString:@"Name"])
+				nodeName = YES;
+			BOOL nodeDescription;
+			BOOL nodeAddress;
+			BOOL nodePhoneNumber;
+			BOOL nodeLatitude;
+			BOOL nodeLongitude;
+			BOOL nodePhoto;
+			BOOL nodeContactInfo;
+			BOOL nodeProximity;
+			
+			
+			
+		}
+		
+		
+		if([elementName isEqualToString:@"Node"])
+		   inNode = YES;
+	}
+	
+	if([elementName isEqualToString:@"Walk"])
+		inWalk = YES;
+	
+	
 }
 
 - (void)parser:(NSXMLParser *)parser 
@@ -51,13 +96,19 @@
 
 - (void)parser:(NSXMLParser *)parser foundCharacters:(NSString *)string { 
 	
-	if(!currentElementValue) 
+	
+	string = [string stringByTrimmingCharactersInSet:[NSCharacterSet whitespaceAndNewlineCharacterSet]]	;
+	
+	
+	if(currentElementValue == nil) 
 		currentElementValue = [[NSMutableString alloc] initWithString:string];
 	else
+	{
 		[currentElementValue appendString:string];
+		NSLog(@"  %@Processing Value: %@", spaces, currentElementValue);
+	}
 	
 	
-	NSLog(@"  %@Processing Value: %@", spaces, currentElementValue);
 	
 }
 

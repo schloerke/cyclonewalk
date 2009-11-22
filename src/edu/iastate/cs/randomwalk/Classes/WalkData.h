@@ -18,6 +18,7 @@
 	UIColor *color;
 	BOOL	favorite;
 	BOOL	selected;
+	CGFloat proximity;
 
 }
 
@@ -31,6 +32,7 @@
 @property (nonatomic, retain) UIColor *color;
 @property (nonatomic) BOOL favorite;
 @property (nonatomic) BOOL selected;
+@property (nonatomic) CGFloat proximity;
 
 
 @end

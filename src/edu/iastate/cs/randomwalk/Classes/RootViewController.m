@@ -57,7 +57,6 @@
 	NodeInfo *nodeInfo = [[NodeInfo alloc] initWithNode:nodeData];
 	
 	//initially hide navigation bar
-	self.navigationController.navigationBarHidden = YES;						
 	
 							
 							
@@ -69,8 +68,11 @@
 	MainView *mview = [[MainView alloc] init];
 	NSLog(@"Pushing the NodeView");
 	[self.navigationController pushViewController:mview animated:NO];
+	self.navigationController.navigationBarHidden = YES;						
+
 	[mview release];
 	NSLog(@"Done Pushing MainView");
+
 	
 	XMLParse *xmlPar = [[XMLParse alloc] init];
 	[xmlPar startParsing];
