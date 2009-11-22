@@ -10,6 +10,7 @@
 #import "NodeData.h"
 #import "NodeInfo.h"
 #import "MainView.h"
+#import "XMLParse.h"
 
 @implementation RootViewController
 
@@ -70,6 +71,9 @@
 	[self.navigationController pushViewController:mview animated:NO];
 	[mview release];
 	NSLog(@"Done Pushing MainView");
+	
+	XMLParse *xmlPar = [[XMLParse alloc] init];
+	[xmlPar startParsing];
 	
 
 }

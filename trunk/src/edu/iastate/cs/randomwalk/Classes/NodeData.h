@@ -17,8 +17,7 @@
 	CGFloat latitude;
 	CGFloat	longitude;
 	UIImage *photo;
-	NSString *contactInfo;
-	
+	NSString *contactInfo; // person to call, minus the phone number
 }
 
 @property (nonatomic, retain) NSString *name;

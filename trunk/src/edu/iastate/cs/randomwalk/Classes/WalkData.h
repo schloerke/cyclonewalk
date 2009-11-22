@@ -7,21 +7,30 @@
 //
 
 #import <Foundation/Foundation.h>
+#import "NodeData.h"
 
 
 @interface WalkData : NSObject {
 	
-	NSArray *nodeList;
+	NSMutableArray *nodeList;
 	
 	NSString *name;
 	UIColor *color;
+	BOOL	favorite;
+	BOOL	selected;
 
 }
 
--(BOOL) addNode:(id)nodeP;
+-(int) addNode:(NodeData *)nodeP;
 
--(BOOL) deleteNode:(id)nodeP;
+-(int) deleteNode:(NodeData *)nodeP;
 
+-(int) getNodePosition:(NodeData *) nodeP;
+
+@property (nonatomic, retain) NSString *name;
+@property (nonatomic, retain) UIColor *color;
+@property (nonatomic) BOOL favorite;
+@property (nonatomic) BOOL selected;
 
 
 @end
