@@ -13,7 +13,7 @@
 
 @implementation WalkData
 
-@synthesize name, color, favorite, selected;
+@synthesize name, color, favorite, selected, proximity;
 
 
 

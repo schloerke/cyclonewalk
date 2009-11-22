@@ -11,6 +11,6 @@
 
 @implementation NodeData
 
-@synthesize name, description, address, phoneNumber, latitude, longitude, photo, contactInfo;
+@synthesize name, description, address, phoneNumber, latitude, longitude, photo, contactInfo, proximity;
 
 @end
