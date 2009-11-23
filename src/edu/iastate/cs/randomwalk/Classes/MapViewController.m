@@ -1,28 +1,27 @@
-#import "MainViewController.h"
-#import "MainView.h"
-
+#import "MapViewController.h"
 
 @implementation MapViewController
 
 
--(id)initWithWalk: (WalkData*) walkData{
+-(void)initWithWalk:(WalkData *)walkData{
 	[self showNodes: walkData];
 }
 	 
 /**
  * Adds nodes to the MapView from the provided Walk
  */
--(void)showNodes: (WalkData*) walkData{
+-(void)showNodes:(WalkData *) walkData{
 	NSMutableArray *nodeList = [walkData nodeList];
+	MKPlacemark *temp;
 	//Add nodes to the mPlacemark array
 	for (int i=0; i<[nodeList count]; i++) {
 		CLLocationCoordinate2D tempLocation=mapView.userLocation.coordinate;
-		tempLocation.latitude = [nodeList latitude];
-		tempLocation.longitude = [nodeList longitude];
-		PlaceMark *temp = [[PlaceMark alloc] initWithCoordinate:tempLocation];
-		[mPlacemark addObject:temp]; 
+		tempLocation.latitude = [[nodeList objectAtIndex:i] latitude];
+		tempLocation.longitude = [[nodeList objectAtIndex:i] longitude];
+		temp = [[MKPlacemark alloc] initWithCoordinate:tempLocation];
+		[mPlacemarks addObject:temp]; 
 	}
-	[mapView addAnnotations:mPlacemark];
+	[mapView addAnnotations:mPlacemarks];
 }
 
 
@@ -109,11 +108,11 @@
 }
 
 
-- (IBAction)showInfo: (MKPlacemark *)sender{
+/*- (IBAction)showInfo: (MKPlacemark *)sender{
 	MKReverseGeocoder geocoder = [[MKReverseGeocoder alloc] initWithCoordinate:sender.coordinate];
 	geocoder.delegate = self;
 	[geocoder start];
-}
+}*/
 
  
 @end
