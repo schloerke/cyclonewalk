@@ -28,6 +28,12 @@
 
 -(int) getNodePosition:(NodeData *) nodeP;
 
+-(id) initNewWalk;
+
+-(void) select;
+-(void) deselect;
+
+@property (nonatomic, retain) NSMutableArray *nodeList;
 @property (nonatomic, retain) NSString *name;
 @property (nonatomic, retain) UIColor *color;
 @property (nonatomic) BOOL favorite;

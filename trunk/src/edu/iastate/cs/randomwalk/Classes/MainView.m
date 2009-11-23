@@ -12,14 +12,68 @@
 
 @implementation MainView
 
+@synthesize appData, walks;
+
+
+-(IBAction)selectAllRows{
+	int i,j;
+	for(j = 0; j < [walkTableView numberOfSections]; j++)
+	{
+		for (i=0; i < [walkTableView numberOfRowsInSection:j]; i++) {
+			NSLog(@"Selecting row:%d section:%d", i,j );
+			NSIndexPath *indexPath = [NSIndexPath indexPathForRow:i inSection:j];
+			UITableViewCell *cell = [walkTableView cellForRowAtIndexPath:indexPath];
+			cell.accessoryType = UITableViewCellAccessoryCheckmark;
+			[[walks objectAtIndex:indexPath.row] select];
+		}
+	}
+
+}
+
+-(IBAction)deselectAllRows{
+	
+	int i,j;
+	for(j = 0; j < [walkTableView numberOfSections]; j++)
+	{
+		for (i=0; i < [walkTableView numberOfRowsInSection:j]; i++) {
+			NSLog(@"Deselecting row:%d section:%d", i,j );
+			NSIndexPath *indexPath = [NSIndexPath indexPathForRow:i inSection:j];
+			UITableViewCell *cell = [walkTableView cellForRowAtIndexPath:indexPath];
+
+			cell.accessoryType = UITableViewCellAccessoryNone;
+			[[walks objectAtIndex:indexPath.row] deselect];
+		}
+	}
+	
+	
+}
+
+
+-(id) initWithAppData:(AppData *) aDat
+{
+	if(self != nil)
+	{
+		self.appData = aDat;
+		self.walks = self.appData.walkList;
+	}
+	
+	NSLog(@"Walk Size: %d", [self.walks count]);
+	
+	
+	return self;
+	
+}
+
 
 /**
  * Updates view and model upon item press to the walk table
  */
-- (void)tableView:(UITableView *)theTableView 
-		didSelectRowAtIndexPath:(NSIndexPath *)newIndexPath {
+- (void)tableView:(UITableView *)tableView 
+		didSelectRowAtIndexPath:(NSIndexPath *)indexPath {
+	NSLog(@"Selected row: %d Name: %@", indexPath.row, [[[tableView cellForRowAtIndexPath:indexPath] textLabel]text]);
 	
-    [theTableView deselectRowAtIndexPath:[theTableView indexPathForSelectedRow] animated:NO];
+    /*[theTableView deselectRowAtIndexPath:[theTableView indexPathForSelectedRow] animated:NO];
+	
     UITableViewCell *cell = [theTableView cellForRowAtIndexPath:newIndexPath];
     if (cell.accessoryType == UITableViewCellAccessoryNone) {
         // update view with walk selection
@@ -34,6 +88,24 @@
 		// update model with walk deselection
 		//TODO
     }
+	*/
+	
+	
+	UITableViewCell *cell = [tableView cellForRowAtIndexPath:indexPath];
+	
+	if(cell.accessoryType == UITableViewCellAccessoryNone)
+	{		
+		cell.accessoryType = UITableViewCellAccessoryCheckmark;
+		[[walks objectAtIndex:indexPath.row] select];
+	}
+	else
+	{	
+		cell.accessoryType = UITableViewCellAccessoryNone;
+		[[walks objectAtIndex:indexPath.row] deselect];
+	}
+	
+	[tableView deselectRowAtIndexPath:indexPath animated:YES];
+	
 }
 
 /**
@@ -42,8 +114,10 @@
 - (void)viewWillAppear {
 	walkTableView.autoresizingMask = UIViewAutoresizingFlexibleHeight|UIViewAutoresizingFlexibleWidth;
 	walkTableView.delegate = self;
-	walkTableView.dataSource = self;
+	//	walkTableView.dataSource = self;
 	
+	
+	NSLog(@"Loading Data");
 	// calls appropriate methods to set up
 	[walkTableView reloadData];
 }
@@ -63,9 +137,9 @@
 - (NSInteger)tableView:(UITableView *)tableView numberOfRowsInSection:(NSInteger)section {
     // Number of rows is the number of time zones in the region for the specified section.
 	if(section == 0) { // Application Walks
-		return 5;
+		return [appData getAppWalkCount];
 	} else { // User Generated Walks
-		return 5;
+		return [appData getUserWalkCount];
 	}
 }
 
@@ -86,16 +160,36 @@
  * 
  */
 - (UITableViewCell *)tableView:(UITableView *)tableView cellForRowAtIndexPath:(NSIndexPath *)indexPath {
-    static NSString *MyIdentifier = @"MyIdentifier";
-    UITableViewCell *cell = [tableView dequeueReusableCellWithIdentifier:MyIdentifier];
+    static NSString *MyIdentifier = @"Cell";
+    UITableViewCell *cell = [walkTableView dequeueReusableCellWithIdentifier:MyIdentifier];
    if (cell == nil) {
         cell = [[[UITableViewCell alloc] initWithStyle:UITableViewCellStyleDefault reuseIdentifier:MyIdentifier] autorelease];
     }
 	
+	//	WalkData *walk = [[walks objectAtIndex:indexPath.row] name];
 	// TODO
-    cell.textLabel.text = @"Walk's Name";
+    cell.textLabel.text = [[walks objectAtIndex:indexPath.row] name];
+	cell.accessoryType = UITableViewCellAccessoryCheckmark;
     return cell;
 }
+
+/*- (UITableViewCell *)tableView:(UITableView *)tableView cellForRowAtIndexPath:(NSIndexPath *)indexPath {
+    
+    static NSString *CellIdentifier = @"Cell";
+    
+    UITableViewCell *cell = [tableView dequeueReusableCellWithIdentifier:CellIdentifier];
+    if (cell == nil) {
+        cell = [[[UITableViewCell alloc] initWithFrame:CGRectZero reuseIdentifier:CellIdentifier] autorelease];
+    }
+	
+	Book *aBook = [appDelegate.books objectAtIndex:indexPath.row];
+	
+	cell.text = aBook.title;
+	cell.accessoryType = UITableViewCellAccessoryDisclosureIndicator;
+    
+    // Set up the cell
+    return cell;
+} */
 
 
 /*
@@ -112,7 +206,9 @@
 // Implement viewDidLoad to do additional setup after loading the view, typically from a nib.
 - (void)viewDidLoad {
     [super viewDidLoad];
+	[self viewWillAppear];
 }
+
 
 
 

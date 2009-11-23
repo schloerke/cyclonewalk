@@ -45,7 +45,8 @@
 
 	NodeData *nodeData = [NodeData alloc];
 	nodeData.name = @"Bob";
-	nodeData.phoneNumber = @"123-456-789";
+	[nodeData setPhoneNum:@"123-456-7890"];
+	 //	nodeData.phoneNumber = @"123-456-789";
 	nodeData.description = @"My Description";
 	nodeData.address = @"123 Nowhere Lane\nAmes, IA 50010";
 	nodeData.longitude = 45;	
@@ -65,17 +66,19 @@
 	    [nodeInfo release];
 	//	NSLog(@"Done Pushing NodeView");
 	
-	MainView *mview = [[MainView alloc] init];
-	NSLog(@"Pushing the NodeView");
-	[self.navigationController pushViewController:mview animated:NO];
-	self.navigationController.navigationBarHidden = YES;						
-
-	[mview release];
-	NSLog(@"Done Pushing MainView");
 
 	
 	XMLParse *xmlPar = [[XMLParse alloc] init];
-	[xmlPar startParsing];
+	appData = [xmlPar startParsing];
+
+	MainView *mview = [[MainView alloc] initWithAppData:appData];
+	NSLog(@"Pushing the NodeView");
+	[self.navigationController pushViewController:mview animated:NO];
+	self.navigationController.navigationBarHidden = YES;						
+	
+	[mview release];
+	NSLog(@"Done Pushing MainView");
+	
 	
 
 }

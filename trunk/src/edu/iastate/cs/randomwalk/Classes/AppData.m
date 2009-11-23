@@ -12,40 +12,54 @@
 
 @implementation AppData
 
+@synthesize walkList, proximity;
 
--(void) initSingleton
+
+-(id) initSingleton
 {
+	NSLog(@"calling initSingleton");
+	
+	
 	if (self != nil) {
 		NSLog(@"Initializing the AppData");
-		//init
+		self.walkList = [[NSMutableArray alloc] init];
+		self.proximity = 50;		
 	}
+	
+	return self;
 }
 
 // adds a walk to the data
 // walkP is of type walkData
 -(int) addWalk:(WalkData *)walkP
 {
-	NSLog(@"Adding a walk with name: %s", walkP.name);
-	[walkList addObject:walkP];
+	NSLog(@"Adding a walk with name: %@", walkP.name);
+	
+	[self.walkList addObject:walkP];
 	return [self getWalkPosition:walkP];
 }
 
 // walkP is of type WalkData
 -(int) deleteWalk:(WalkData *)walkP
 {
-	NSLog(@"Removing Walk: %s", walkP.name);
+	NSLog(@"Removing Walk: %@", walkP.name);
 	int pos = [self getWalkPosition:walkP];
-	[walkList removeObjectAtIndex:pos];
+	[self.walkList removeObjectAtIndex:pos];
 	return pos;
 }
 	 
 -(int) getWalkPosition:(WalkData *) walkP
 { 
 	int i = 0;
-	for (i =0; i< [walkList count]; i++) {
-		if([[[walkList objectAtIndex:i] name] isEqualToString:[walkP name]])
+	for (i =0; i< [self.walkList count]; i++) {
+		if([[[self.walkList objectAtIndex:i] name] isEqualToString:[walkP name]])
+		{
+			NSLog(@"Walk at Pos: %d", i);
 			return i;
+		}
 	}
+	
+	NSLog(@"WALK NOT FOUND!");
 	return -1;
 	
 }
@@ -57,15 +71,15 @@
 	int i = 0;
 	WalkData *tmpWalk;
 	WalkData *returnWalk;
-	for (i = 0; i < [walkList count] ; i++) {
-		tmpWalk = [walkList objectAtIndex:i];
+	for (i = 0; i < [self.walkList count] ; i++) {
+		tmpWalk = [self.walkList objectAtIndex:i];
 		if([name isEqualToString:tmpWalk.name])
 			returnWalk = tmpWalk;
 	}
 	
 	[tmpWalk release];
 	
-	NSLog(@"Returning Name: %s",  returnWalk.name);
+	NSLog(@"Returning Name: %@",  returnWalk.name);
 	
 	[returnWalk autorelease];
 	return returnWalk;
@@ -87,7 +101,7 @@
 	[tmpWalk release];
 	
 	for (i =0; i<[stringNames count]; i++) {
-		NSLog(@"Sting Name at %d: %s", i, [stringNames objectAtIndex:i]);
+		NSLog(@"Sting Name at %d: %@", i, [stringNames objectAtIndex:i]);
 	}
 	
 	

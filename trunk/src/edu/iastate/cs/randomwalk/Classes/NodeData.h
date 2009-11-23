@@ -13,10 +13,11 @@
 	NSString *name;
 	NSString *description;
 	NSString *address;
-	NSString *phoneNumber;
+	NSURL *phoneNumber;
 	CGFloat latitude;
 	CGFloat	longitude;
 	UIImage *photo;
+	NSURL *photoURL;
 	NSString *contactInfo; // person to call, minus the phone number
 	CGFloat proximity;
 }
@@ -24,14 +25,19 @@
 @property (nonatomic, retain) NSString *name;
 @property (nonatomic, retain) NSString *description;
 @property (nonatomic, retain) NSString *address;
-@property (nonatomic, retain) NSString *phoneNumber;
+@property (nonatomic, retain) NSURL *phoneNumber;
 @property (nonatomic, retain) NSString *contactInfo;
 @property (nonatomic) CGFloat latitude;
 @property (nonatomic) CGFloat longitude;
 @property (nonatomic) CGFloat proximity;
 @property (nonatomic, retain) UIImage *photo;
+@property (nonatomic, retain) NSURL *photoURL;
 
+-(void) setPhoneNum:(NSString *)phoneNumberString;
 
-		   
+-(UIImage *) getPhoto;   
+
+-(id) initNewNode;
+
 
 @end

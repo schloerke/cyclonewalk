@@ -19,8 +19,11 @@
 	
 }
 
+@property (nonatomic, retain) NSMutableArray *walkList;
+@property (nonatomic) CGFloat proximity;
+
 // init method
--(void) initSingleton;
+-(id) initSingleton;
 
 // adds a walk to the data
 // walkP is of type walkData
