@@ -28,7 +28,7 @@
 
 -(int) getNodePosition:(NodeData *) nodeP;
 
--(id) initNewWalk;
+-(WalkData *) initNewWalk;
 
 -(void) select;
 -(void) deselect;

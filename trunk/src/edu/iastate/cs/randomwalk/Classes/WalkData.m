@@ -9,8 +9,6 @@
 #import "WalkData.h"
 
 
-
-
 @implementation WalkData
 
 @synthesize name, color, favorite, selected, proximity, nodeList;
@@ -24,7 +22,7 @@
 }
 
 
--(id) initNewWalk
+-(WalkData *) initNewWalk
 {
 	self = [WalkData alloc];
 	self.name = @"";

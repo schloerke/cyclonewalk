@@ -7,7 +7,7 @@
 //
 
 #import "MainView.h"
-
+#import "MapViewController.h"
 
 
 @implementation MainView
@@ -15,8 +15,21 @@
 @synthesize appData, walks;
 
 
+-(IBAction)pushedStart
+{
+	NSLog(@"Calling Start");
+/*	MapViewController *mview = [[MapViewController alloc] initWithWalk:[walks objectAtIndex:0]];
+	NSLog(@"Pushing the Map View");
+	[self.navigationController pushViewController:mview animated:NO];
+	self.navigationController.navigationBarHidden = YES;
+ */
+}
+
 -(IBAction)selectAllRows{
 	int i,j;
+	
+	NSLog(@"Number of Sections: %d", [walkTableView numberOfSections]);
+	
 	for(j = 0; j < [walkTableView numberOfSections]; j++)
 	{
 		for (i=0; i < [walkTableView numberOfRowsInSection:j]; i++) {
@@ -94,7 +107,7 @@
 	UITableViewCell *cell = [tableView cellForRowAtIndexPath:indexPath];
 	
 	if(cell.accessoryType == UITableViewCellAccessoryNone)
-	{		
+	{
 		cell.accessoryType = UITableViewCellAccessoryCheckmark;
 		[[walks objectAtIndex:indexPath.row] select];
 	}
@@ -114,7 +127,7 @@
 - (void)viewWillAppear {
 	walkTableView.autoresizingMask = UIViewAutoresizingFlexibleHeight|UIViewAutoresizingFlexibleWidth;
 	walkTableView.delegate = self;
-	//	walkTableView.dataSource = self;
+	walkTableView.dataSource = self;
 	
 	
 	NSLog(@"Loading Data");
@@ -149,6 +162,8 @@
 - (NSString *)tableView:(UITableView *)tableView titleForHeaderInSection:(NSInteger)section {
     // The header for the section is the region name -- get this from the region at the section index.
     //Region *region = [regions objectAtIndex:section];
+	NSLog(@"Setting Table Headers");
+	
     if(section == 0) // Application Walks
 		return @"Random Walks";
 	else // User Generated Walks
@@ -164,7 +179,7 @@
 	NSLog(@"Loading Section: %d, Row: %d", indexPath.section, indexPath.row);
     
 	static NSString *MyIdentifier = @"Cell";
-    UITableViewCell *cell = [walkTableView dequeueReusableCellWithIdentifier:MyIdentifier];
+    UITableViewCell *cell = [tableView dequeueReusableCellWithIdentifier:MyIdentifier];
    if (cell == nil) {
         cell = [[[UITableViewCell alloc] initWithStyle:UITableViewCellStyleDefault reuseIdentifier:MyIdentifier] autorelease];
     }
