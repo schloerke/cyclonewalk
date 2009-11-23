@@ -39,7 +39,7 @@
 -(WalkData *) getWalkByName:(NSString *) name;
 
 // return a list of walk names
--(NSArray *) getWalkNames;
+-(NSArray *) getWalkNames:(BOOL)select;
 
 // return the position of the walk
 -(int) getWalkPosition:(WalkData *) walkP;

@@ -28,7 +28,7 @@
 {
 	self = [WalkData alloc];
 	self.name = @"";
-	self.color = nil;
+	self.color = [UIColor blackColor];
 	self.favorite = NO;
 	self.selected = NO;
 	self.proximity = -1;
