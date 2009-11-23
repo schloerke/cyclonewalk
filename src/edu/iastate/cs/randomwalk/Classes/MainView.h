@@ -28,6 +28,7 @@
 -(id)initWithAppData:(AppData *) aDat;
 -(IBAction)selectAllRows;
 -(IBAction)deselectAllRows;
+-(IBAction)pushedStart;
 
 /*- (void)walkTableView:(UITableView *)tableView didSelectRowAtIndexPath:(NSIndexPath *)indexPath;
 - (NSInteger)walkTableView:(UITableView *)tableView numberOfRowsInSection:(NSInteger)section;

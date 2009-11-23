@@ -27,7 +27,7 @@
 
 -(void) setPhoneNum:(NSString *)phoneNumberString
 {
-	self.phoneNumber = [NSURL URLWithString:[phoneNumberString stringByAppendingString:@"tel:"]];
+	self.phoneNumber = [NSURL URLWithString:[@"tel" stringByAppendingString:phoneNumberString]];
 }
 
 -(id) initNewNode
