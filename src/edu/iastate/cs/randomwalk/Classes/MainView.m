@@ -57,7 +57,7 @@
 		self.walks = self.appData.walkList;
 	}
 	
-	NSLog(@"Walk Size: %d", [self.walks count]);
+	NSLog(@"Walk Count: %d", [self.walks count]);
 	
 	
 	return self;
@@ -160,7 +160,10 @@
  * 
  */
 - (UITableViewCell *)tableView:(UITableView *)tableView cellForRowAtIndexPath:(NSIndexPath *)indexPath {
-    static NSString *MyIdentifier = @"Cell";
+
+	NSLog(@"Loading Section: %d, Row: %d", indexPath.section, indexPath.row);
+    
+	static NSString *MyIdentifier = @"Cell";
     UITableViewCell *cell = [walkTableView dequeueReusableCellWithIdentifier:MyIdentifier];
    if (cell == nil) {
         cell = [[[UITableViewCell alloc] initWithStyle:UITableViewCellStyleDefault reuseIdentifier:MyIdentifier] autorelease];
@@ -168,28 +171,19 @@
 	
 	//	WalkData *walk = [[walks objectAtIndex:indexPath.row] name];
 	// TODO
-    cell.textLabel.text = [[walks objectAtIndex:indexPath.row] name];
+	NSString *name;
+	if (indexPath.section == 0) {
+		// application default
+		name = [[appData getWalkNames:NO] objectAtIndex:indexPath.row];
+	}
+	else if (indexPath.section == 1) {
+		// user favorite
+		name = [[appData getWalkNames:YES] objectAtIndex:indexPath.row];
+	}
+    cell.textLabel.text = name;
 	cell.accessoryType = UITableViewCellAccessoryCheckmark;
     return cell;
 }
-
-/*- (UITableViewCell *)tableView:(UITableView *)tableView cellForRowAtIndexPath:(NSIndexPath *)indexPath {
-    
-    static NSString *CellIdentifier = @"Cell";
-    
-    UITableViewCell *cell = [tableView dequeueReusableCellWithIdentifier:CellIdentifier];
-    if (cell == nil) {
-        cell = [[[UITableViewCell alloc] initWithFrame:CGRectZero reuseIdentifier:CellIdentifier] autorelease];
-    }
-	
-	Book *aBook = [appDelegate.books objectAtIndex:indexPath.row];
-	
-	cell.text = aBook.title;
-	cell.accessoryType = UITableViewCellAccessoryDisclosureIndicator;
-    
-    // Set up the cell
-    return cell;
-} */
 
 
 /*

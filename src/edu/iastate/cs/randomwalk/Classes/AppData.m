@@ -87,21 +87,30 @@
 
 // return a list of walk names
 // @return NSArray
--(NSArray *) getWalkNames
+-(NSArray *) getWalkNames:(BOOL)appWalk
 {
 	NSMutableArray* stringNames = [[NSMutableArray alloc] init];
+
+	NSLog(@"Getting %@ walk names",(appWalk ? @"User Favorite" : @"Application Default") );
 	
 	int i = 0;
 	WalkData *tmpWalk;
+	NSLog(@"Walk Count: %d", [walkList count]);
 	for (i = 0; i < [walkList count] ; i++) {
+		NSLog(@"Getting Walk at Pos: %d", i);
 		tmpWalk = [walkList objectAtIndex:i];
-		[stringNames addObject:tmpWalk.name];
+		
+		NSLog(@"Walk Name: %@ Favorite: %@", tmpWalk.name, (tmpWalk.favorite ? @"YES" : @"NO"));
+		NSLog(@"Equal: %d", tmpWalk.favorite == appWalk);
+		if (tmpWalk.favorite == appWalk ) {
+			[stringNames addObject:tmpWalk.name];
+		}
 	}
 	
-	[tmpWalk release];
+	//	[tmpWalk release];
 	
 	for (i =0; i<[stringNames count]; i++) {
-		NSLog(@"Sting Name at %d: %@", i, [stringNames objectAtIndex:i]);
+		NSLog(@"String Name at %d: %@", i, [stringNames objectAtIndex:i]);
 	}
 	
 	
