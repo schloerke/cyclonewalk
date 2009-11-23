@@ -7,12 +7,17 @@
 //
 
 #import <Foundation/Foundation.h>
+#import "NodeData.h"
+#import "WalkData.h"
+#import "AppData.h"
 
 
 @interface XMLParse : NSObject {
+	AppData *appData;
 	NSMutableString *currentElementValue;
 	NSString *spaces;
 	
+	NodeData *node;
 	BOOL inNode;
 	BOOL nodeName;
 	BOOL nodeDescription;
@@ -24,6 +29,7 @@
 	BOOL nodeContactInfo;
 	BOOL nodeProximity;
 	
+	WalkData *walk;
 	BOOL inWalk;
 	BOOL walkName;
 	BOOL walkColor;
@@ -33,7 +39,7 @@
 
 }
 
--(void) startParsing;
+-(AppData *) startParsing;
 
 @property (nonatomic) BOOL  inNode;
 @property (nonatomic) BOOL  nodeName;

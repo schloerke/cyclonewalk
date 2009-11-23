@@ -7,7 +7,7 @@
 //
 
 #import <UIKit/UIKit.h>
-
+#import "AppData.h"
 
 
 @interface MainView : UIViewController <UITableViewDelegate, UITableViewDataSource> {
@@ -17,10 +17,23 @@
 	IBOutlet UIButton *launch;
 	NSArray *walks;
 	IBOutlet UITableView *walkTableView;
+	AppData *appData;
 }
 
 
-- (void)tableView:(UITableView *)theTableView didSelectRowAtIndexPath:(NSIndexPath *)newIndexPath;
+@property (nonatomic, retain) NSArray *walks;
+@property (nonatomic, retain) AppData *appData;
+
+
+-(id)initWithAppData:(AppData *) aDat;
+-(IBAction)selectAllRows;
+-(IBAction)deselectAllRows;
+
+/*- (void)walkTableView:(UITableView *)tableView didSelectRowAtIndexPath:(NSIndexPath *)indexPath;
+- (NSInteger)walkTableView:(UITableView *)tableView numberOfRowsInSection:(NSInteger)section;
+- (UITableViewCell *)walkTableView:(UITableView *)tableView cellForRowAtIndexPath:(NSIndexPath *)indexPath;
+- (NSInteger)walkTableView:(UITableView *)tableView numberOfRowsInSection:(NSInteger)section;
+ */
 
 
 @end
