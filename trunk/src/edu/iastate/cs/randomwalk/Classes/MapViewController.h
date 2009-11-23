@@ -1,8 +1,8 @@
-#import "FlipsideViewController.h"
-#import "ParkPlaceMark.h"
 #import <MapKit/MapKit.h>
 #import <MapKit/MKReverseGeocoder.h>
+#import <MapKit/MKPlacemark.h>
 #import <CoreLocation/CoreLocation.h>
+#import "WalkData.h"
 
 @interface MapViewController : UIViewController <MKMapViewDelegate, MKReverseGeocoderDelegate, CLLocationManagerDelegate> {
 	MKMapView *mapView;
@@ -27,6 +27,6 @@
  * Shows info about the selected placemark on screen. Uses the MapKit 
  * Reverse Geocoder which uses the Google Maps API
  */
--(IBAction)showInfo:(MKPlacemark *)sender;
+//-(IBAction)showInfo:(MKPlacemark *)sender;
 
 @end
