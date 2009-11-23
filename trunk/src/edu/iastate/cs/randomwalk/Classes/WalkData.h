@@ -39,7 +39,5 @@
 @property (nonatomic) BOOL favorite;
 @property (nonatomic) BOOL selected;
 @property (nonatomic) CGFloat proximity;
-@property (nonatomic, readonly) NSMutableArray *nodeList;
-
 
 @end
