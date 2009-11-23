@@ -1,49 +1,32 @@
-//
-//  MapViewController.h
-//  randomwalk
-//
-//  Created by Harsh Goel on 11/22/09.
-//  Copyright 2009 __MyCompanyName__. All rights reserved.
-//
-
-#import <Cocoa/Cocoa.h>
+#import "FlipsideViewController.h"
+#import "ParkPlaceMark.h"
 #import <MapKit/MapKit.h>
-#import <MapKit/MKAnnotation.h>
 #import <MapKit/MKReverseGeocoder.h>
+#import <CoreLocation/CoreLocation.h>
 
-
-/** 
- * MapViewController is the controller for the application’s Map                 
- * View
- */ 
-@interface MapViewController : UIViewController {
+@interface MapViewController : UIViewController <MKMapViewDelegate, MKReverseGeocoderDelegate, CLLocationManagerDelegate> {
 	MKMapView *mapView;
-	MKReverseGeocoder *geoCoder;
-	MKPlacemark *mPlacemark;
-	IBOutlet UISegmentedControl *mapType;
-	
+	NSMutableArray *mPlacemarks;
+	CLLocationCoordinate2D location; 	
 }
 
-/**
- *
- *
- */
--(IBAction)changeType: (id) sender;
 
 /**
- * Initializes the Camera View with the given Walk Data. The data can 
+ * Initializes the Map View with the given Walk Data. The data can 
  * be from multiple walks.
  */ 
-- (void) initWithWalk: (WalkData *) walkData;
+- (void) initWithWalk: (WalkData *) walkData; 
 
-/**
- * Controls the click on the touch screen.
- */
-- (IBAction) mapClicked: (id) sender;
 
 /**
  * Displays data points on top of MapKit for the given walkData
  */
 - (void) showNodes: (WalkData *) walkData;
-@end
 
+/**
+ * Shows info about the selected placemark on screen. Uses the MapKit 
+ * Reverse Geocoder which uses the Google Maps API
+ */
+-(IBAction)showInfo:(MKPlacemark *)sender;
+
+@end
