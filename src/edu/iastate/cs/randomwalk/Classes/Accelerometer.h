@@ -9,7 +9,7 @@
 #import <Foundation/Foundation.h>
 
 
-@interface Accelerometer : NSObject {
+@interface Accelerometer : NSObject<UIAccelerometerDelegate> {
 	double xValue;
 	double yValue;
 	double zValue;

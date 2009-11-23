@@ -12,34 +12,44 @@
 @implementation Accelerometer
 
 -(void) init{
-	self.accelerometer = [UIAccelerometer sharedAccelerometer];
-	self.accelerometer.updateInterval = .1;
-	self.accelerometer.delegate = self;
+	accelerometer = [UIAccelerometer sharedAccelerometer];
+	accelerometer.updateInterval = .1;
+	accelerometer.delegate = self;
 }
 
 -(NSArray *)getOrientation{
 	
 	NSArray *orientation;
 	
-	NSInteger forwardTilt, sidewaysTilt, compassDirection;
+	NSNumber *forwardTilt, *sidewaysTilt, *compassDirection;
 	
 	if (zValue<0) {
-		forwardTilt = (yValue+1)*90;
+		forwardTilt = [NSNumber numberWithInt:(yValue+1)*90];
 	}
 	else {
-		forwardTilt = 180 + (1-yValue)*90;
+		forwardTilt = [NSNumber numberWithInt:180 + (1-yValue)*90];
 	}
 	
 	if (yValue<0) {
-		sidewaysTilt = xValue>0? xValue*90 : 360+(xValue*90);
+		int side = xValue>0? xValue*90 : 360+(xValue*90);
+		sidewaysTilt = [NSNumber numberWithInt:side];
 	}
 	else {
-		sidewaysTilt = xValue>0? 180-(xValue*90) : 180-(xValue*90);
+		int side = xValue>0? 180-(xValue*90) : 180-(xValue*90);
+		sidewaysTilt = [NSNumber numberWithInt:side];
 	}
 
-	compassDirection = 0;
+	//TODO add Compass Direction
+	compassDirection = [NSNumber numberWithInt:0];
+	
+	
+//	orientation = [[NS
+	
+	orientation = [[NSMutableArray alloc] initWithCapacity:3];
+	orientation = [orientation arrayByAddingObject:forwardTilt];
+	orientation = [orientation arrayByAddingObject:sidewaysTilt];
+	orientation = [orientation arrayByAddingObject:compassDirection];
 
-	orientation = [[NSArray alloc] initWithObjects:forwardTilt, sidewaysTilt, compassDirection];
 	[orientation autorelease];
 	
 	return orientation;	
