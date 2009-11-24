@@ -10,18 +10,6 @@
 	mapView.delegate=self;
 	[self.view insertSubview:mapView atIndex:0];
 	
-	location.latitude = 42.025355;
-	location.longitude = -93.647116;
-	MKCoordinateRegion region;
-	region.center=location;
-	//Set Zoom level using Span
-	MKCoordinateSpan span;
-	span.latitudeDelta=.005;
-	span.longitudeDelta=.005;
-	region.span=span;
-	
-	[mapView setRegion:region animated:TRUE];
-	
 	if (self = [super initWithNibName:@"MapView" bundle:nil]) {
 		if(walkDataOrNil != nil)
 		{
@@ -41,6 +29,7 @@
 	for (int i=0; i<[nodeList count]; i++) {
 		
 		MapPin *pin = [[MapPin alloc] initWithNodeData:[nodeList objectAtIndex:i]];
+		
 		[mapView addAnnotation:pin];
 		[pin release];
 	}
@@ -60,6 +49,18 @@
 	
 	//location = [CLLocation initWithLatitude: 42.025355 longitude: -93.647116];
 	//One location is obtained.. just zoom to that location	
+	
+	location.latitude = 42.025355;
+	location.longitude = -93.647116;
+	MKCoordinateRegion region;
+	region.center=location;
+	//Set Zoom level using Span
+	MKCoordinateSpan span;
+	span.latitudeDelta=.005;
+	span.longitudeDelta=.005;
+	region.span=span;
+	
+	[mapView setRegion:region animated:TRUE];
 	
 }
 
@@ -97,8 +98,19 @@
 - (MKAnnotationView *)mapView:(MKMapView *)mapView viewForAnnotation:(id <MKAnnotation>)annotation{
 	NSLog(@"View for Annotation is called");
 	MKPinAnnotationView *test=[[MKPinAnnotationView alloc] initWithAnnotation:annotation reuseIdentifier:@"newAnnotation1"];
-	test.userInteractionEnabled=TRUE;
+	[test autorelease];
+	test.userInteractionEnabled=YES;
+	test.canShowCallout = YES;
 	[test setPinColor:MKPinAnnotationColorPurple];
+	//NSString* str = [[NSBundle mainBundle] pathForResource:@"map-pin-small.gif" ofType:nil inDirectory:@""];
+	//test.image = [UIImage imageWithContentsOfFile:str];
+	test.enabled = YES;
+	
+	//if([annotation isKindOfClass:[MapPin class]]){
+	//	NodeInfo *infoView = [[NodeInfo alloc] initWithNode:((MapPin *)annotation).nodeData];
+	//	test.leftCalloutAccessoryView = infoView.tableView;
+	//}
+	
 	return test;
 }
 
