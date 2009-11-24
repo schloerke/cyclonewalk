@@ -18,11 +18,11 @@
 -(IBAction)pushedStart
 {
 	NSLog(@"Calling Start");
-/*	MapViewController *mview = [[MapViewController alloc] initWithWalk:[walks objectAtIndex:0]];
+	MapViewController *mview = [[MapViewController alloc] initWithWalk:[walks objectAtIndex:0]];
 	NSLog(@"Pushing the Map View");
 	[self.navigationController pushViewController:mview animated:NO];
 	self.navigationController.navigationBarHidden = YES;
- */
+ 
 }
 
 -(IBAction)selectAllRows{

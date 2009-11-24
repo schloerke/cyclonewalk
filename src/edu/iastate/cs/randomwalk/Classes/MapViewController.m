@@ -3,8 +3,32 @@
 @implementation MapViewController
 
 
--(void)initWithWalk:(WalkData *)walkData{
-	[self showNodes: walkData];
+-(id)initWithWalk:(WalkData *)walkDataOrNil{
+	
+	mapView=[[MKMapView alloc] initWithFrame:self.view.frame];
+	mapView.showsUserLocation=TRUE;
+	mapView.delegate=self;
+	[self.view insertSubview:mapView atIndex:0];
+	
+	location.latitude = 42.025355;
+	location.longitude = -93.647116;
+	MKCoordinateRegion region;
+	region.center=location;
+	//Set Zoom level using Span
+	MKCoordinateSpan span;
+	span.latitudeDelta=.005;
+	span.longitudeDelta=.005;
+	region.span=span;
+	
+	[mapView setRegion:region animated:TRUE];
+	
+	if (self = [super initWithNibName:@"MapView" bundle:nil]) {
+		if(walkDataOrNil != nil)
+		{
+			[self showNodes: walkDataOrNil];
+		}
+    }
+	return self;
 }
 	 
 /**
@@ -12,40 +36,30 @@
  */
 -(void)showNodes:(WalkData *) walkData{
 	NSMutableArray *nodeList = [walkData nodeList];
-	MKPlacemark *temp;
+	
 	//Add nodes to the mPlacemark array
 	for (int i=0; i<[nodeList count]; i++) {
-		CLLocationCoordinate2D tempLocation=mapView.userLocation.coordinate;
-		tempLocation.latitude = [[nodeList objectAtIndex:i] latitude];
-		tempLocation.longitude = [[nodeList objectAtIndex:i] longitude];
-		temp = [[MKPlacemark alloc] initWithCoordinate:tempLocation];
-		[mPlacemarks addObject:temp]; 
+		
+		MapPin *pin = [[MapPin alloc] initWithNodeData:[nodeList objectAtIndex:i]];
+		[mapView addAnnotation:pin];
+		[pin release];
 	}
-	[mapView addAnnotations:mPlacemarks];
-}
-
-
-- (id)initWithNibName:(NSString *)nibNameOrNil bundle:(NSBundle *)nibBundleOrNil {
-    if (self = [super initWithNibName:nibNameOrNil bundle:nibBundleOrNil]) {
-        // Custom initialization
-    }
-    return self;
 }
 
 
 // Implement viewDidLoad to do additional setup after loading the view, typically from a nib.
 - (void)viewDidLoad {
 	[super viewDidLoad];
-	mapView=[[MKMapView alloc] initWithFrame:self.view.frame];
-	mapView.showsUserLocation=TRUE;
-	mapView.delegate=self;
-	[self.view insertSubview:mapView atIndex:0];
+	
 		
-	CLLocationManager *locationManager=[[CLLocationManager alloc] init];
+	/*CLLocationManager *locationManager=[[CLLocationManager alloc] init];
 	locationManager.delegate=self;
 	locationManager.desiredAccuracy=kCLLocationAccuracyNearestTenMeters;
 	
-	[locationManager startUpdatingLocation];
+	[locationManager startUpdatingLocation];*/
+	
+	//location = [CLLocation initWithLatitude: 42.025355 longitude: -93.647116];
+	//One location is obtained.. just zoom to that location	
 	
 }
 
@@ -64,6 +78,7 @@
 
 
 - (void)dealloc {
+	[mapView release];
     [super dealloc];
 }
 
@@ -81,7 +96,7 @@
 
 - (MKAnnotationView *)mapView:(MKMapView *)mapView viewForAnnotation:(id <MKAnnotation>)annotation{
 	NSLog(@"View for Annotation is called");
-	MKPinAnnotationView *test=[[MKPinAnnotationView alloc] initWithAnnotation:annotation reuseIdentifier:@"parkingloc"];
+	MKPinAnnotationView *test=[[MKPinAnnotationView alloc] initWithAnnotation:annotation reuseIdentifier:@"newAnnotation1"];
 	test.userInteractionEnabled=TRUE;
 	[test setPinColor:MKPinAnnotationColorPurple];
 	return test;
