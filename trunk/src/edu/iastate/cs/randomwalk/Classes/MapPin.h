@@ -21,6 +21,8 @@
 
 -(id) initWithNodeData: (NodeData *) data;
 -(id) initWithCoordinate: (CLLocationCoordinate2D) coord;
+-(NSString *)title;
+-(NSString *)subtitle;
 
 
 @end
