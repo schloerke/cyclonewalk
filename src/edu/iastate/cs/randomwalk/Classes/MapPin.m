@@ -33,6 +33,13 @@
 	return self;
 }
 
+-(NSString *)title{
+	return nodeData.name;
+}
+-(NSString *)subtitle{
+	return nil;
+}
+
 -(void) dealloc{
 	[nodeData release]; 
 	[super dealloc];
