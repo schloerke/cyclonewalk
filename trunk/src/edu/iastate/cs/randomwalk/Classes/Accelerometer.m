@@ -42,9 +42,7 @@
 	//TODO add Compass Direction
 	compassDirection = [NSNumber numberWithInt:0];
 	
-	
-//	orientation = [[NS
-	
+
 	orientation = [[NSMutableArray alloc] initWithCapacity:3];
 	orientation = [orientation arrayByAddingObject:forwardTilt];
 	orientation = [orientation arrayByAddingObject:sidewaysTilt];
