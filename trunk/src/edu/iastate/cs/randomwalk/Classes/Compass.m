@@ -17,7 +17,7 @@
  */
 - (double) getDegreeFacing
 {
-	//	return CLLocation.CLLocationDirection;	
+	//return CLLocation.CLLocationDirection;	
 	return 0;
 }
 

@@ -28,10 +28,10 @@
 		ABAD5CF010A49A1700B14D2B /* Settings.m in Sources */ = {isa = PBXBuildFile; fileRef = ABAD5CEE10A49A1700B14D2B /* Settings.m */; };
 		ABAD5CF110A49A1700B14D2B /* Settings.xib in Resources */ = {isa = PBXBuildFile; fileRef = ABAD5CEF10A49A1700B14D2B /* Settings.xib */; };
 		ABAD5CFF10A49E8D00B14D2B /* DescriptionDialog.m in Sources */ = {isa = PBXBuildFile; fileRef = ABAD5CFE10A49E8D00B14D2B /* DescriptionDialog.m */; };
-		ABAD5D2310A4A31900B14D2B /* NodeInfo.m in Sources */ = {isa = PBXBuildFile; fileRef = ABAD5D2110A4A31900B14D2B /* NodeInfo.m */; };
-		ABAD5D2410A4A31900B14D2B /* NodeInfo.xib in Resources */ = {isa = PBXBuildFile; fileRef = ABAD5D2210A4A31900B14D2B /* NodeInfo.xib */; };
 		ABAD5D2910A4A50A00B14D2B /* WalkSettings.m in Sources */ = {isa = PBXBuildFile; fileRef = ABAD5D2710A4A50A00B14D2B /* WalkSettings.m */; };
 		ABAD5D2A10A4A50A00B14D2B /* WalkSettings.xib in Resources */ = {isa = PBXBuildFile; fileRef = ABAD5D2810A4A50A00B14D2B /* WalkSettings.xib */; };
+		ABBA683310BC8CEE002EAB50 /* NodeDetail.m in Sources */ = {isa = PBXBuildFile; fileRef = ABBA683110BC8CEE002EAB50 /* NodeDetail.m */; };
+		ABBA683410BC8CEE002EAB50 /* NodeDetail.xib in Resources */ = {isa = PBXBuildFile; fileRef = ABBA683210BC8CEE002EAB50 /* NodeDetail.xib */; };
 		ABC9F05E10A9C03C00877555 /* NodeData.m in Sources */ = {isa = PBXBuildFile; fileRef = ABC9F05D10A9C03C00877555 /* NodeData.m */; };
 		ABC9F0DB10A9CB9000877555 /* WalkData.m in Sources */ = {isa = PBXBuildFile; fileRef = ABC9F0DA10A9CB9000877555 /* WalkData.m */; };
 		ABF39B3310AA21880098A457 /* AppData.m in Sources */ = {isa = PBXBuildFile; fileRef = ABF39B3210AA21880098A457 /* AppData.m */; };
@@ -73,12 +73,12 @@
 		ABAD5CEF10A49A1700B14D2B /* Settings.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = Settings.xib; sourceTree = "<group>"; };
 		ABAD5CFD10A49E8D00B14D2B /* DescriptionDialog.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = DescriptionDialog.h; sourceTree = "<group>"; wrapsLines = 1; };
 		ABAD5CFE10A49E8D00B14D2B /* DescriptionDialog.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = DescriptionDialog.m; sourceTree = "<group>"; };
-		ABAD5D2010A4A31900B14D2B /* NodeInfo.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = NodeInfo.h; sourceTree = "<group>"; };
-		ABAD5D2110A4A31900B14D2B /* NodeInfo.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = NodeInfo.m; sourceTree = "<group>"; };
-		ABAD5D2210A4A31900B14D2B /* NodeInfo.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = NodeInfo.xib; sourceTree = "<group>"; };
 		ABAD5D2610A4A50A00B14D2B /* WalkSettings.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = WalkSettings.h; sourceTree = "<group>"; };
 		ABAD5D2710A4A50A00B14D2B /* WalkSettings.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = WalkSettings.m; sourceTree = "<group>"; };
 		ABAD5D2810A4A50A00B14D2B /* WalkSettings.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = WalkSettings.xib; sourceTree = "<group>"; };
+		ABBA683010BC8CEE002EAB50 /* NodeDetail.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = NodeDetail.h; sourceTree = "<group>"; };
+		ABBA683110BC8CEE002EAB50 /* NodeDetail.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = NodeDetail.m; sourceTree = "<group>"; };
+		ABBA683210BC8CEE002EAB50 /* NodeDetail.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = NodeDetail.xib; sourceTree = "<group>"; };
 		ABC9F05C10A9C03C00877555 /* NodeData.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = NodeData.h; sourceTree = "<group>"; };
 		ABC9F05D10A9C03C00877555 /* NodeData.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = NodeData.m; sourceTree = "<group>"; };
 		ABC9F0D910A9CB9000877555 /* WalkData.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = WalkData.h; sourceTree = "<group>"; };
@@ -192,9 +192,10 @@
 		ABF39B2F10AA1E5C0098A457 /* View */ = {
 			isa = PBXGroup;
 			children = (
+				ABBA683210BC8CEE002EAB50 /* NodeDetail.xib */,
 				ABAD5D2810A4A50A00B14D2B /* WalkSettings.xib */,
-				ABAD5D2210A4A31900B14D2B /* NodeInfo.xib */,
 				ABF39B3B10AA28CF0098A457 /* MainView.xib */,
+				AB6445C210BC7717005185A9 /* MapView.xib */,
 				ABAD5CEF10A49A1700B14D2B /* Settings.xib */,
 			);
 			name = View;
@@ -203,6 +204,8 @@
 		ABF39B3010AA1E620098A457 /* Controller */ = {
 			isa = PBXGroup;
 			children = (
+				ABBA683010BC8CEE002EAB50 /* NodeDetail.h */,
+				ABBA683110BC8CEE002EAB50 /* NodeDetail.m */,
 				9E48996D10BA2FC000682D0D /* MapViewController.h */,
 				9E48996E10BA2FC000682D0D /* MapViewController.m */,
 				ABF39B3910AA28CF0098A457 /* MainView.h */,
@@ -211,15 +214,12 @@
 				AB6445BF10BC7717005185A9 /* Accelerometer.m */,
 				AB6445C010BC7717005185A9 /* MapPin.h */,
 				AB6445C110BC7717005185A9 /* MapPin.m */,
-				AB6445C210BC7717005185A9 /* MapView.xib */,
 				ABAD5CFD10A49E8D00B14D2B /* DescriptionDialog.h */,
 				ABAD5CFE10A49E8D00B14D2B /* DescriptionDialog.m */,
 				ABAD5CED10A49A1700B14D2B /* Settings.h */,
 				ABAD5CEE10A49A1700B14D2B /* Settings.m */,
 				ABAD5CDD10A48ED100B14D2B /* Compass.h */,
 				ABAD5CDE10A48ED100B14D2B /* Compass.m */,
-				ABAD5D2010A4A31900B14D2B /* NodeInfo.h */,
-				ABAD5D2110A4A31900B14D2B /* NodeInfo.m */,
 				ABAD5D2610A4A50A00B14D2B /* WalkSettings.h */,
 				ABAD5D2710A4A50A00B14D2B /* WalkSettings.m */,
 			);
@@ -281,10 +281,10 @@
 				28AD73600D9D9599002E5188 /* MainWindow.xib in Resources */,
 				2899E5600DE3E45000AC0155 /* RootViewController.xib in Resources */,
 				ABAD5CF110A49A1700B14D2B /* Settings.xib in Resources */,
-				ABAD5D2410A4A31900B14D2B /* NodeInfo.xib in Resources */,
 				ABAD5D2A10A4A50A00B14D2B /* WalkSettings.xib in Resources */,
 				ABF39B3D10AA28CF0098A457 /* MainView.xib in Resources */,
 				AB6445C510BC7717005185A9 /* MapView.xib in Resources */,
+				ABBA683410BC8CEE002EAB50 /* NodeDetail.xib in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -302,7 +302,6 @@
 				ABAD5CE010A48ED100B14D2B /* Compass.m in Sources */,
 				ABAD5CF010A49A1700B14D2B /* Settings.m in Sources */,
 				ABAD5CFF10A49E8D00B14D2B /* DescriptionDialog.m in Sources */,
-				ABAD5D2310A4A31900B14D2B /* NodeInfo.m in Sources */,
 				ABAD5D2910A4A50A00B14D2B /* WalkSettings.m in Sources */,
 				ABC9F05E10A9C03C00877555 /* NodeData.m in Sources */,
 				ABC9F0DB10A9CB9000877555 /* WalkData.m in Sources */,
@@ -312,6 +311,7 @@
 				9E48996F10BA2FC000682D0D /* MapViewController.m in Sources */,
 				AB6445C310BC7717005185A9 /* Accelerometer.m in Sources */,
 				AB6445C410BC7717005185A9 /* MapPin.m in Sources */,
+				ABBA683310BC8CEE002EAB50 /* NodeDetail.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
