@@ -37,6 +37,7 @@
 		ABF39B3310AA21880098A457 /* AppData.m in Sources */ = {isa = PBXBuildFile; fileRef = ABF39B3210AA21880098A457 /* AppData.m */; };
 		ABF39B3C10AA28CF0098A457 /* MainView.m in Sources */ = {isa = PBXBuildFile; fileRef = ABF39B3A10AA28CF0098A457 /* MainView.m */; };
 		ABF39B3D10AA28CF0098A457 /* MainView.xib in Resources */ = {isa = PBXBuildFile; fileRef = ABF39B3B10AA28CF0098A457 /* MainView.xib */; };
+		C7C4291010BDA3F5008988AC /* DeviceData.m in Sources */ = {isa = PBXBuildFile; fileRef = C7C4290F10BDA3F5008988AC /* DeviceData.m */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -88,6 +89,8 @@
 		ABF39B3910AA28CF0098A457 /* MainView.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = MainView.h; sourceTree = "<group>"; };
 		ABF39B3A10AA28CF0098A457 /* MainView.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = MainView.m; sourceTree = "<group>"; };
 		ABF39B3B10AA28CF0098A457 /* MainView.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = MainView.xib; sourceTree = "<group>"; };
+		C7C4290E10BDA3F5008988AC /* DeviceData.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = DeviceData.h; sourceTree = "<group>"; };
+		C7C4290F10BDA3F5008988AC /* DeviceData.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = DeviceData.m; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -185,6 +188,8 @@
 				ABC9F05D10A9C03C00877555 /* NodeData.m */,
 				ABF39B3110AA21880098A457 /* AppData.h */,
 				ABF39B3210AA21880098A457 /* AppData.m */,
+				C7C4290E10BDA3F5008988AC /* DeviceData.h */,
+				C7C4290F10BDA3F5008988AC /* DeviceData.m */,
 			);
 			name = Model;
 			sourceTree = "<group>";
@@ -312,6 +317,7 @@
 				AB6445C310BC7717005185A9 /* Accelerometer.m in Sources */,
 				AB6445C410BC7717005185A9 /* MapPin.m in Sources */,
 				ABBA683310BC8CEE002EAB50 /* NodeDetail.m in Sources */,
+				C7C4291010BDA3F5008988AC /* DeviceData.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
