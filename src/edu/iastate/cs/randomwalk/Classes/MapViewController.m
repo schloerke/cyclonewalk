@@ -124,9 +124,13 @@
 	test.enabled = YES;
 	if([annotation isKindOfClass:[MapPin class]]){
 		[test setImage:[((MapPin *)annotation) pinImage]];
-		UIButton *button = [UIButton buttonWithType: UIButtonTypeDetailDisclosure];
+
+		UIButton *button = [UIButton buttonWithType: UIButtonTypeInfoLight];
 		
-		
+		[button setTitleColor:[UIColor whiteColor] forState:UIControlEventTouchUpInside];
+
+		[button setTitleShadowColor:[UIColor blackColor] forState:UIControlEventAllEvents];
+
 		NodeData *nodeD = ((MapPin *)annotation).nodeData;
 		NSLog(@"Node Name: %@", nodeD.name);
 		NSLog(@"NodeListCount: %d", [nodeList count]);

@@ -100,7 +100,7 @@
 				nodeLatitude = YES;
 			if([elementName isEqualToString:@"longitude"])
 				nodeLongitude = YES;
-			if([elementName isEqualToString:@"photo"])
+			if([elementName isEqualToString:@"image"])
 				nodePhoto = YES;
 			if([elementName isEqualToString:@"contact"])
 				nodeContactInfo = YES;
@@ -172,7 +172,7 @@
 				nodeLatitude = NO;
 			if([elementName isEqualToString:@"longitude"])
 				nodeLongitude = NO;
-			if([elementName isEqualToString:@"photo"])
+			if([elementName isEqualToString:@"image"])
 				nodePhoto = NO;
 			if([elementName isEqualToString:@"contact"])
 				nodeContactInfo = NO;
@@ -343,8 +343,10 @@
 					node.description = currentElementValue;
 				if(nodeAddress)
 					node.address = currentElementValue;
-				if(nodePhoneNumber)
-					node.phoneNumber;
+				if(nodePhoneNumber){
+					[node setPhoneNum:currentElementValue];
+					node.phoneNumberString = currentElementValue;
+				}
 				if(nodeLatitude)
 					node.latitude = [currentElementValue floatValue];
 				if(nodeLongitude)
