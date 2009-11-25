@@ -49,11 +49,12 @@
 	
 	NSLog(@"Combined a walk with %d nodes", [comboWalk.nodeList count]);
 	
-/*	MapViewController *mview = [[MapViewController alloc] initWithWalk:[walks objectAtIndex:0]];
+	MapViewController *mview = [[MapViewController alloc] initWithWalk:comboWalk];
 	NSLog(@"Pushing the Map View");
 	[self.navigationController pushViewController:mview animated:NO];
 	self.navigationController.navigationBarHidden = YES;
- */
+	
+	[comboWalk release];
  
 }
 
