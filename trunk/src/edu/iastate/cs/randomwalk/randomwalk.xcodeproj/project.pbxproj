@@ -20,6 +20,9 @@
 		9E48996F10BA2FC000682D0D /* MapViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 9E48996E10BA2FC000682D0D /* MapViewController.m */; };
 		AB64459B10BC75FE005185A9 /* CoreLocation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = AB64459A10BC75FD005185A9 /* CoreLocation.framework */; };
 		AB64459D10BC75FE005185A9 /* MapKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = AB64459C10BC75FE005185A9 /* MapKit.framework */; };
+		AB6445C310BC7717005185A9 /* Accelerometer.m in Sources */ = {isa = PBXBuildFile; fileRef = AB6445BF10BC7717005185A9 /* Accelerometer.m */; };
+		AB6445C410BC7717005185A9 /* MapPin.m in Sources */ = {isa = PBXBuildFile; fileRef = AB6445C110BC7717005185A9 /* MapPin.m */; };
+		AB6445C510BC7717005185A9 /* MapView.xib in Resources */ = {isa = PBXBuildFile; fileRef = AB6445C210BC7717005185A9 /* MapView.xib */; };
 		AB9B88C110B8A37C00BD3F84 /* XMLParse.m in Sources */ = {isa = PBXBuildFile; fileRef = AB9B88C010B8A37C00BD3F84 /* XMLParse.m */; };
 		ABAD5CE010A48ED100B14D2B /* Compass.m in Sources */ = {isa = PBXBuildFile; fileRef = ABAD5CDE10A48ED100B14D2B /* Compass.m */; };
 		ABAD5CF010A49A1700B14D2B /* Settings.m in Sources */ = {isa = PBXBuildFile; fileRef = ABAD5CEE10A49A1700B14D2B /* Settings.m */; };
@@ -56,6 +59,11 @@
 		9E48996E10BA2FC000682D0D /* MapViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = MapViewController.m; sourceTree = "<group>"; };
 		AB64459A10BC75FD005185A9 /* CoreLocation.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = CoreLocation.framework; path = System/Library/Frameworks/CoreLocation.framework; sourceTree = SDKROOT; };
 		AB64459C10BC75FE005185A9 /* MapKit.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = MapKit.framework; path = System/Library/Frameworks/MapKit.framework; sourceTree = SDKROOT; };
+		AB6445BE10BC7717005185A9 /* Accelerometer.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = Accelerometer.h; sourceTree = "<group>"; };
+		AB6445BF10BC7717005185A9 /* Accelerometer.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = Accelerometer.m; sourceTree = "<group>"; };
+		AB6445C010BC7717005185A9 /* MapPin.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = MapPin.h; sourceTree = "<group>"; };
+		AB6445C110BC7717005185A9 /* MapPin.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = MapPin.m; sourceTree = "<group>"; };
+		AB6445C210BC7717005185A9 /* MapView.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = MapView.xib; sourceTree = "<group>"; };
 		AB9B88BF10B8A37C00BD3F84 /* XMLParse.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = XMLParse.h; sourceTree = "<group>"; };
 		AB9B88C010B8A37C00BD3F84 /* XMLParse.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = XMLParse.m; sourceTree = "<group>"; };
 		ABAD5CDD10A48ED100B14D2B /* Compass.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = Compass.h; sourceTree = "<group>"; wrapsLines = 1; };
@@ -199,6 +207,11 @@
 				9E48996E10BA2FC000682D0D /* MapViewController.m */,
 				ABF39B3910AA28CF0098A457 /* MainView.h */,
 				ABF39B3A10AA28CF0098A457 /* MainView.m */,
+				AB6445BE10BC7717005185A9 /* Accelerometer.h */,
+				AB6445BF10BC7717005185A9 /* Accelerometer.m */,
+				AB6445C010BC7717005185A9 /* MapPin.h */,
+				AB6445C110BC7717005185A9 /* MapPin.m */,
+				AB6445C210BC7717005185A9 /* MapView.xib */,
 				ABAD5CFD10A49E8D00B14D2B /* DescriptionDialog.h */,
 				ABAD5CFE10A49E8D00B14D2B /* DescriptionDialog.m */,
 				ABAD5CED10A49A1700B14D2B /* Settings.h */,
@@ -271,6 +284,7 @@
 				ABAD5D2410A4A31900B14D2B /* NodeInfo.xib in Resources */,
 				ABAD5D2A10A4A50A00B14D2B /* WalkSettings.xib in Resources */,
 				ABF39B3D10AA28CF0098A457 /* MainView.xib in Resources */,
+				AB6445C510BC7717005185A9 /* MapView.xib in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -296,6 +310,8 @@
 				ABF39B3C10AA28CF0098A457 /* MainView.m in Sources */,
 				AB9B88C110B8A37C00BD3F84 /* XMLParse.m in Sources */,
 				9E48996F10BA2FC000682D0D /* MapViewController.m in Sources */,
+				AB6445C310BC7717005185A9 /* Accelerometer.m in Sources */,
+				AB6445C410BC7717005185A9 /* MapPin.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
