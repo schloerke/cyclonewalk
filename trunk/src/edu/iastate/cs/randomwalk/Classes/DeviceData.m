@@ -15,7 +15,7 @@
 @synthesize locationManager;
 
 // determines if the device is a IPhone 3Gs
--(BOOL) isiPhone3Gs{
++(BOOL) isiPhone3Gs{
 	NSString *version = [self getSoftwareVersion];
 	if([version isEqualToString:@"iPhone2,1"]){		//device code for 3GS is "iPhone2,1"
 		return YES;
@@ -26,17 +26,18 @@
 }
 
 // Determines if the device has GPS functionality 
--(BOOL) hasGPS{
-	return [locationManager locationServicesEnabled];
++(BOOL) hasGPS{
+	return [[[CLLocationManager alloc] init] locationServicesEnabled];
+	
 }
 
 // Determines if the device has camera functionality 
--(BOOL) hasCamera{
++(BOOL) hasCamera{
 	return [UIImagePickerController isSourceTypeAvailable:UIImagePickerControllerSourceTypeCamera];
 }
 
 // Determines if the device has compass functionality
--(BOOL) hasCompass{
++(BOOL) hasCompass{
 	//only the IPhone 3GS supports a compass, thus check if the device is a 3Gs
 	return [self isiPhone3Gs];
 }
@@ -50,7 +51,7 @@
 //3GS iPhone == iPhone2,1
 //1st Gen iPod == iPod1,1
 //2nd Gen iPod == iPod2,1
--(NSString *) getSoftwareVersion{
++(NSString *) getSoftwareVersion{
 	size_t size;
 		
 	// Set 'oldp' parameter to NULL to get the size of the data
