@@ -16,7 +16,7 @@
 	IBOutlet UILabel *name;
 	IBOutlet UITextView *description;
 	IBOutlet UILabel *address;
-	IBOutlet UIButton *phoneNumber;
+	IBOutlet UITextView *phoneNumberT;
 	IBOutlet UILabel *latitude;
 	IBOutlet UILabel *longitude;
 	IBOutlet UILabel *contactInfo;
@@ -26,15 +26,6 @@
 
 @property (nonatomic, retain) NodeData *nodeData;
 
-/*@property (nonatomic, retain) UILabel *name;
- @property (nonatomic, retain) UILabel *description;
- @property (nonatomic, retain) UILabel *address;
- @property (nonatomic, retain) UILabel *phoneNumber;
- @property (nonatomic, retain) UILabel *contactInfo;
- @property (nonatomic, retain) UILabel *latitude;
- @property (nonatomic, retain) UILabel *longitude;
- @property (nonatomic, retain) UIImage *photo;
- */
 
 
 /* 
@@ -60,6 +51,6 @@
 
 
 -(void) setPhotoImage;
--(IBAction) makeCall;
+//-(IBAction) makeCall;
 
 @end

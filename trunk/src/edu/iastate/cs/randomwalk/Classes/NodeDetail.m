@@ -28,7 +28,9 @@
 
 -(void) setPhotoImage
 {
-	photoView = [[UIImageView alloc] initWithImage: photo];
+	NSLog(@"Trying to set the photo image");
+	NSLog(@"Photo URL: %@",[self.nodeData.photoURL absoluteString]);
+	photoView = [[UIImageView alloc] initWithImage:[self.nodeData getPhoto]];
 }
 
 /*
@@ -82,17 +84,21 @@
 	//	phoneNumber = [self.nodeData.phoneNumber relativeString];
 	latitude.text = [@"" stringByAppendingFormat:@"%f",  self.nodeData.latitude];
 	longitude.text =  [@"" stringByAppendingFormat:@"%f",  self.nodeData.longitude];
-	photo = [self.nodeData getPhoto];
+	//	photo = [self.nodeData getPhoto];
 	[self setPhotoImage];
 	contactInfo.text = self.nodeData.contactInfo;
 	
 	self.title = NSLocalizedString(self.nodeData.name , @"");
+	
+	phoneNumberT.text = self.nodeData.phoneNumberString;
+	NSLog(@"%@", [self.nodeData.phoneNumber absoluteString]);
 }
 
--(IBAction) makeCall
+/*-(IBAction) makeCall
 {
+	NSLog(@"Trying to make call to: %@", nodeData.phoneNumberString);
 	[[UIApplication sharedApplication] openURL:nodeData.phoneNumber];
-}
+}*/
 
 
 /*

@@ -14,6 +14,7 @@
 	NSString *description;
 	NSString *address;
 	NSURL *phoneNumber;
+	NSString *phoneNumberString;
 	CGFloat latitude;
 	CGFloat	longitude;
 	UIImage *photo;
@@ -32,6 +33,7 @@
 @property (nonatomic) CGFloat proximity;
 @property (nonatomic, retain) UIImage *photo;
 @property (nonatomic, retain) NSURL *photoURL;
+@property (nonatomic, retain) NSString *phoneNumberString;
 
 -(void) setPhoneNum:(NSString *)phoneNumberString;
 
