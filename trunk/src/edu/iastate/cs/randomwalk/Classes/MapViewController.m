@@ -16,6 +16,9 @@
 			}
 		}
     }
+	
+	self.title = @"Map View";
+	
 	return self;
 }
 	
