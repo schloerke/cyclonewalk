@@ -17,7 +17,8 @@
 - (AppData *)startParsing {
 	//	NSURL *url = [[NSURL alloc] initWithString:@"http://sites.google.com/site/iphonesdktutorials/xml/Books.xml"];
 	//NSURL *url = [[NSURL alloc] initWithString:@"http://www.barretschloerke.com/ComS309/buildings.xml"];
-	NSURL *url = [[NSURL alloc] initWithString:@"http://www.barretschloerke.com/ComS309/buildingsSmall.xml"];
+	//NSURL *url = [[NSURL alloc] initWithString:@"http://www.barretschloerke.com/ComS309/buildingsSmall.xml"];
+	NSURL *url = [[NSURL alloc] initWithString:@"http://www.barretschloerke.com/ComS309/buildingsXSmall.xml"];
 	
 	appData = [[AppData alloc] initSingleton];
 
@@ -31,6 +32,8 @@
 	// REMOVE LATER!!!
 	tmpWalk = [appData.walkList objectAtIndex:1];
 	tmpWalk.favorite = YES;
+	[appData.userWalks addObject:tmpWalk];
+	[appData.defaultWalks removeLastObject];
 	
 	
 	for (i = 0; i < [appData.walkList count]; i++) 

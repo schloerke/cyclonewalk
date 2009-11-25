@@ -12,7 +12,7 @@
 
 @implementation AppData
 
-@synthesize walkList, proximity;
+@synthesize walkList, proximity, userWalks, defaultWalks;
 
 
 -(id) initSingleton
@@ -20,11 +20,14 @@
 	NSLog(@"calling initSingleton");
 	
 	
-	if (self != nil) {
+	self = [[AppData alloc] init];
+	
 		NSLog(@"Initializing the AppData");
-		self.walkList = [[NSMutableArray alloc] init];
+	self.walkList = [[NSMutableArray alloc] init];
+	self.userWalks = [[NSMutableArray alloc] init];
+	self.defaultWalks = [[NSMutableArray alloc] init];
+	
 		self.proximity = 50;		
-	}
 	
 	return self;
 }
@@ -36,6 +39,12 @@
 	NSLog(@"Adding a walk with name: %@", walkP.name);
 	
 	[self.walkList addObject:walkP];
+	
+	if(walkP.favorite)
+		[self.userWalks addObject:walkP];
+	else {
+		[self.defaultWalks addObject:walkP];
+	}
 	return [self getWalkPosition:walkP];
 }
 
@@ -50,6 +59,34 @@
 	 
 -(int) getWalkPosition:(WalkData *) walkP
 { 
+	if (walkP.favorite) {
+		int i = 0;
+		for (i =0; i< [self.userWalks count]; i++) {
+			if([[[self.userWalks objectAtIndex:i] name] isEqualToString:[walkP name]])
+			{
+				NSLog(@"User Walk at Pos: %d", i);
+				return i;
+			}
+		}
+		
+	}
+	else if(!walkP.favorite)
+	{
+		int i = 0;
+		for (i =0; i< [self.defaultWalks count]; i++) {
+			if([[[self.defaultWalks objectAtIndex:i] name] isEqualToString:[walkP name]])
+			{
+				NSLog(@"Default Walk at Pos: %d", i);
+				return i;
+			}
+		}
+		
+	}
+	
+	
+	
+	
+	
 	int i = 0;
 	for (i =0; i< [self.walkList count]; i++) {
 		if([[[self.walkList objectAtIndex:i] name] isEqualToString:[walkP name]])
@@ -68,16 +105,42 @@
 // @return WalkData
 -(WalkData *) getWalkByName:(NSString *) name
 {
+	NSLog(@"GetwalkByName - 1");
 	int i = 0;
+	NSLog(@"GetwalkByName - 2");
 	WalkData *tmpWalk;
-	for (i = 0; i < [self.walkList count] ; i++) {
-		tmpWalk = [self.walkList objectAtIndex:i];
+	NSLog(@"GetwalkByName - 3");
+	for (i = 0; i < [self.walkList count] ; i++) 
+	{
+		NSLog(@"GetwalkByName - 4");
+		NSLog(@"Find Name: %@", name);
+		NSLog(@"WalkListSize: %d", [walkList count]);
+
+		NSUInteger pos;
+		
+		//		NSLog(@"i == %d", i);
+		[self.walkList objectAtIndex:i];
+		NSLog(@"GetwalkByName - 4a");
+		pos = i;
+		
+		[self.walkList objectAtIndex:pos];
+
+		NSLog(@"GetwalkByName - 4b");
+		tmpWalk = [self.walkList objectAtIndex:pos];
+		NSLog(@"WalkName: %@", tmpWalk.name);
+		NSLog(@"%d",[name isEqualToString:tmpWalk.name]);
+		NSLog(@"GetwalkByName - 5");
 		if([name isEqualToString:tmpWalk.name])
 		{
+			NSLog(@"GetwalkByName - 6");
 			NSLog(@"Returning Name: %@",  tmpWalk.name);
+			NSLog(@"GetwalkByName - 7");
 			[tmpWalk autorelease];
+			NSLog(@"GetwalkByName - 8");
 			return tmpWalk;
+			NSLog(@"GetwalkByName - 9");
 		}
+		NSLog(@"GetwalkByName - 10");
 	}
 	NSLog(@"Failed to return a walk");
 	return nil;

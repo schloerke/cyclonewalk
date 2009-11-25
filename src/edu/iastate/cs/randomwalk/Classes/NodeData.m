@@ -32,6 +32,9 @@
 
 -(id) initNewNode
 {
+	
+	self = [[NodeData alloc] init];
+	
 	self.name = @"";
 	self.description = @"";
 	self.address = @"";

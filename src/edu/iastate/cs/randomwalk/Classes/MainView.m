@@ -18,7 +18,42 @@
 -(IBAction)pushedStart
 {
 	NSLog(@"Calling Start");
+<<<<<<< HEAD:src/edu/iastate/cs/randomwalk/Classes/MainView.m
 	MapViewController *mview = [[MapViewController alloc] initWithWalk:[walks objectAtIndex:0]];
+=======
+	
+	int i,j;
+	WalkData *comboWalk = [[WalkData alloc] initNewWalk];
+	WalkData *tmpWalk;
+	NSLog(@"Default Pos 0 Node Count: %d", [[[appData.defaultWalks objectAtIndex:0] nodeList]count]);
+	NSLog(@"User Pos 0 Node Count: %d", [[[appData.userWalks objectAtIndex:0] nodeList] count]);
+	for (j =0; j < [walkTableView numberOfSections]; j++) {
+		for (i = 0; i < [walkTableView numberOfRowsInSection:j]; i++) {
+			
+			NSIndexPath *indexPath = [NSIndexPath indexPathForRow:i inSection:j];
+			UITableViewCell *cell = [walkTableView cellForRowAtIndexPath:indexPath];
+			
+			if (cell.accessoryType == UITableViewCellAccessoryCheckmark ) {
+				NSLog(@"Checked cell name: %@", cell.textLabel.text);
+				
+				if(j == 0)
+					tmpWalk = [appData.defaultWalks objectAtIndex:i];
+				if(j == 1)
+					tmpWalk = [appData.userWalks objectAtIndex:i];
+				
+				NSLog(@"TmpWalk node count: %d", [tmpWalk.nodeList count]);
+				int k; 
+				for (k = 0; k < [tmpWalk.nodeList count]; k++) {
+					[comboWalk addNode:[tmpWalk.nodeList objectAtIndex:k]];
+				}
+			}
+		}
+	}
+	
+	NSLog(@"Combined a walk with %d nodes", [comboWalk.nodeList count]);
+	
+/*	MapViewController *mview = [[MapViewController alloc] initWithWalk:[walks objectAtIndex:0]];
+>>>>>>> Set up the start button:src/edu/iastate/cs/randomwalk/Classes/MainView.m
 	NSLog(@"Pushing the Map View");
 	[self.navigationController pushViewController:mview animated:NO];
 	self.navigationController.navigationBarHidden = YES;
@@ -37,7 +72,11 @@
 			NSIndexPath *indexPath = [NSIndexPath indexPathForRow:i inSection:j];
 			UITableViewCell *cell = [walkTableView cellForRowAtIndexPath:indexPath];
 			cell.accessoryType = UITableViewCellAccessoryCheckmark;
-			[[walks objectAtIndex:indexPath.row] select];
+			
+			if(j == 0)
+				[[self.appData.defaultWalks objectAtIndex:indexPath.row] select];
+			if(j== 1)
+				[[self.appData.userWalks objectAtIndex:indexPath.row] select];
 		}
 	}
 
@@ -64,11 +103,11 @@
 
 -(id) initWithAppData:(AppData *) aDat
 {
-	if(self != nil)
-	{
-		self.appData = aDat;
-		self.walks = self.appData.walkList;
-	}
+
+	self = [[MainView alloc] init];
+	
+	self.appData = aDat;
+	self.walks = self.appData.walkList;
 	
 	NSLog(@"Walk Count: %d", [self.walks count]);
 	
@@ -103,30 +142,62 @@
     }
 	*/
 	
-	
+	NSLog(@"1");
 	UITableViewCell *cell = [tableView cellForRowAtIndexPath:indexPath];
+	NSLog(@"2");
 	
 	if(cell.accessoryType == UITableViewCellAccessoryNone)
 	{
+		NSLog(@"3a");
 		cell.accessoryType = UITableViewCellAccessoryCheckmark;
-		[[appData getWalkByName:cell.textLabel.text] select];
+		NSLog(@"3b");
+		//		[[appData getWalkByName:cell.textLabel.text] select];
+		//[appData getWalkByName:cell.textLabel.text].selected = YES;
+		NSLog(@"Default Pos 0 Node Count: %d", [[[appData.defaultWalks objectAtIndex:0] nodeList] count]);
+		NSLog(@"User Pos 0 Node Count: %d", [[[appData.userWalks objectAtIndex:0] nodeList] count]);
+		NSLog(@"3c");
+		
+
+		
+		if(indexPath.section == 0)
+			[[appData.defaultWalks objectAtIndex:indexPath.row] select];
+		if(indexPath.section == 1)
+			[[appData.userWalks objectAtIndex:indexPath.row] select];
+		
 	}
 	else
 	{	
+		NSLog(@"4a");
 		cell.accessoryType = UITableViewCellAccessoryNone;
-		[[appData getWalkByName:cell.textLabel.text] deselect];
+		//[[appData getWalkByName:cell.textLabel.text] deselect];
+		//		[appData getWalkByName:cell.textLabel.text].selected = NO;
+		if(indexPath.section == 0)
+			[[appData.defaultWalks objectAtIndex:indexPath.row] deselect];
+		if(indexPath.section == 1)
+			[[appData.userWalks objectAtIndex:indexPath.row] deselect];
+		
+		NSLog(@"4b");
 	}
+	NSLog(@"5");
 	
 	[tableView deselectRowAtIndexPath:indexPath animated:YES];
+	NSLog(@"6");
 	
 	
-	int i;
-	WalkData *tmpWalk;
-	for (i = 0; i < [walks count]; i++) {
-		 tmpWalk = [walks objectAtIndex:i];
+	//	int i;
+	NSLog(@"7");
+	//	WalkData *tmpWalk;
+	NSLog(@"8");
+	/*	for (i = 0; i < [appData.walkList count]; i++) {
+		NSLog(@"9");
+		 tmpWalk = [appData.walkList objectAtIndex:i];
+		NSLog(@"10");
 		NSLog(@"%@ Selected: %d", tmpWalk.name, tmpWalk.selected);
-	}
-	[tmpWalk release];
+		NSLog(@"11");
+	}*/
+	NSLog(@"12");
+	//	[tmpWalk release];
+	NSLog(@"13");
 	
 }
 
@@ -199,13 +270,26 @@
 	if (indexPath.section == 0) {
 		// application default
 		name = [[appData getWalkNames:NO] objectAtIndex:indexPath.row];
+
 	}
 	else if (indexPath.section == 1) {
 		// user favorite
 		name = [[appData getWalkNames:YES] objectAtIndex:indexPath.row];
+		
+
 	}
+	
+	NSLog(@"Getting Walk By Name");
+	if ([appData getWalkByName:name].selected) 
+		cell.accessoryType = UITableViewCellAccessoryCheckmark;
+	else 
+		cell.accessoryType = UITableViewCellAccessoryNone;
+	
+
+	
+	
+	
     cell.textLabel.text = name;
-	cell.accessoryType = UITableViewCellAccessoryCheckmark;
     return cell;
 }
 

@@ -11,6 +11,46 @@
 
 @implementation WalkSettings
 
+-(IBAction) initWithWalk:(id)walkDataP
+{
+	
+}
+
+/*
+ Initializes the walk without a particular walk.  The settings will be blank.
+ */
+-(IBAction) initNewWalk
+{
+	
+}
+
+/*
+ Sets the color of the walk.
+ */
+-(IBAction) setColorOfWalk
+{
+	
+}
+
+/*
+ when the slider value has changed, the value of the slider will be sent to the proximity range, after being converted properly.
+ 0% - 15 feet
+ 25% - 50 yards
+ 50% - 100 yards
+ 75% - 1 mile
+ 95% - 50 miles
+ 100% - All
+ */
+-(IBAction) setProximityRangeFromSlider
+{
+	
+}
+
+
+
+
+
+
 /*
 - (id)initWithStyle:(UITableViewStyle)style {
     // Override initWithStyle: if you create the controller programmatically and want to perform customization that is not appropriate for viewDidLoad.
