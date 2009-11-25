@@ -70,19 +70,17 @@
 {
 	int i = 0;
 	WalkData *tmpWalk;
-	WalkData *returnWalk;
 	for (i = 0; i < [self.walkList count] ; i++) {
 		tmpWalk = [self.walkList objectAtIndex:i];
 		if([name isEqualToString:tmpWalk.name])
-			returnWalk = tmpWalk;
+		{
+			NSLog(@"Returning Name: %@",  tmpWalk.name);
+			[tmpWalk autorelease];
+			return tmpWalk;
+		}
 	}
-	
-	[tmpWalk release];
-	
-	NSLog(@"Returning Name: %@",  returnWalk.name);
-	
-	[returnWalk autorelease];
-	return returnWalk;
+	NSLog(@"Failed to return a walk");
+	return nil;
 }
 
 // return a list of walk names

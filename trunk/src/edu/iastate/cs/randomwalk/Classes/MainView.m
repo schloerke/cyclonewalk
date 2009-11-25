@@ -109,15 +109,24 @@
 	if(cell.accessoryType == UITableViewCellAccessoryNone)
 	{
 		cell.accessoryType = UITableViewCellAccessoryCheckmark;
-		[[walks objectAtIndex:indexPath.row] select];
+		[[appData getWalkByName:cell.textLabel.text] select];
 	}
 	else
 	{	
 		cell.accessoryType = UITableViewCellAccessoryNone;
-		[[walks objectAtIndex:indexPath.row] deselect];
+		[[appData getWalkByName:cell.textLabel.text] deselect];
 	}
 	
 	[tableView deselectRowAtIndexPath:indexPath animated:YES];
+	
+	
+	int i;
+	WalkData *tmpWalk;
+	for (i = 0; i < [walks count]; i++) {
+		 tmpWalk = [walks objectAtIndex:i];
+		NSLog(@"%@ Selected: %d", tmpWalk.name, tmpWalk.selected);
+	}
+	[tmpWalk release];
 	
 }
 

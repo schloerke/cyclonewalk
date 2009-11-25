@@ -1,0 +1,350 @@
+TXML
+v7
+r0
+t280700561.642092
+cCheck dependencies
+cProcessInfoPlistFile /Users/barret/Downloads/XML/build/Debug-iphonesimulator/XML.app/Info.plist Info.plist
+cCompileXIB /Users/barret/Downloads/XML/MainWindow.xib
+cCompileXIB /Users/barret/Downloads/XML/RootViewController.xib
+cCompileXIB /Users/barret/Downloads/XML/BookDetailView.xib
+cProcessPCH /var/folders/Ke/KelkGmsJE-eNQMXzYVwckk+++TI/-Caches-/com.apple.Xcode.501/SharedPrecompiledHeaders/XML_Prefix-dpkdtsqihmvnbtftsydsbkbfmacl/XML_Prefix.pch.gch XML_Prefix.pch normal i386 objective-c com.apple.compilers.gcc.4_2
+cCompileC build/XML.build/Debug-iphonesimulator/XML.build/Objects-normal/i386/main.o /Users/barret/Downloads/XML/main.m normal i386 objective-c com.apple.compilers.gcc.4_2
+cCompileC build/XML.build/Debug-iphonesimulator/XML.build/Objects-normal/i386/XMLAppDelegate.o /Users/barret/Downloads/XML/Classes/XMLAppDelegate.m normal i386 objective-c com.apple.compilers.gcc.4_2
+cCompileC build/XML.build/Debug-iphonesimulator/XML.build/Objects-normal/i386/RootViewController.o /Users/barret/Downloads/XML/Classes/RootViewController.m normal i386 objective-c com.apple.compilers.gcc.4_2
+cCompileC build/XML.build/Debug-iphonesimulator/XML.build/Objects-normal/i386/Book.o /Users/barret/Downloads/XML/Classes/Book.m normal i386 objective-c com.apple.compilers.gcc.4_2
+cCompileC build/XML.build/Debug-iphonesimulator/XML.build/Objects-normal/i386/XMLParser.o /Users/barret/Downloads/XML/Classes/XMLParser.m normal i386 objective-c com.apple.compilers.gcc.4_2
+cCompileC build/XML.build/Debug-iphonesimulator/XML.build/Objects-normal/i386/BookDetailViewController.o /Users/barret/Downloads/XML/Classes/BookDetailViewController.m normal i386 objective-c com.apple.compilers.gcc.4_2
+cLd /Users/barret/Downloads/XML/build/Debug-iphonesimulator/XML.app/XML normal i386
+cGenerateDSYMFile /Users/barret/Downloads/XML/build/Debug-iphonesimulator/XML.app.dSYM /Users/barret/Downloads/XML/build/Debug-iphonesimulator/XML.app/XML
+cTouch /Users/barret/Downloads/XML/build/Debug-iphonesimulator/XML.app
+
+N/Developer/Platforms/iPhoneSimulator.platform/Developer/SDKs/iPhoneSimulator3.1.sdk
+c000000004AB3C63900000000000000EE
+t1253295673
+s238
+
+N/Developer/Platforms/iPhoneSimulator.platform/Developer/SDKs/iPhoneSimulator3.1.sdk/System/Library/Frameworks/CoreGraphics.framework/CoreGraphics
+c000000004A821911000000000026EE30
+t1250040081
+s2551344
+
+N/Developer/Platforms/iPhoneSimulator.platform/Developer/SDKs/iPhoneSimulator3.1.sdk/System/Library/Frameworks/Foundation.framework/Foundation
+c000000004A765094000000000027E880
+t1249267860
+s2615424
+
+N/Developer/Platforms/iPhoneSimulator.platform/Developer/SDKs/iPhoneSimulator3.1.sdk/System/Library/Frameworks/Foundation.framework/Headers/Foundation.h
+c000000004A7650820000000000001355
+t1249267842
+s4949
+
+N/Developer/Platforms/iPhoneSimulator.platform/Developer/SDKs/iPhoneSimulator3.1.sdk/System/Library/Frameworks/UIKit.framework/Headers/UIKit.h
+c000000004A7C6E970000000000000788
+t1249668759
+s1928
+
+N/Developer/Platforms/iPhoneSimulator.platform/Developer/SDKs/iPhoneSimulator3.1.sdk/System/Library/Frameworks/UIKit.framework/UIKit
+c000000004A7C6F5900000000016721E0
+t1249668953
+s23536096
+
+N/Users/barret/Downloads/XML/BookDetailView.xib
+c00000000492A51BF0000000000001F13
+t1227510207
+s7955
+
+N/Users/barret/Downloads/XML/Classes/Book.h
+c00000000492A07E1000000000000022E
+t1227491297
+s558
+i<UIKit/UIKit.h>
+
+N/Users/barret/Downloads/XML/Classes/Book.m
+c00000000492A0256000000000000013B
+t1227489878
+s315
+i"Book.h"
+
+N/Users/barret/Downloads/XML/Classes/BookDetailViewController.h
+c00000000492A51800000000000000156
+t1227510144
+s342
+i<UIKit/UIKit.h>
+
+N/Users/barret/Downloads/XML/Classes/BookDetailViewController.m
+c000000004B0AEF0E0000000000000C60
+t1259007758
+s3168
+i"BookDetailViewController.h"
+i"Book.h"
+
+N/Users/barret/Downloads/XML/Classes/RootViewController.h
+c00000000492A4E86000000000000015E
+t1227509382
+s350
+i<UIKit/UIKit.h>
+
+N/Users/barret/Downloads/XML/Classes/RootViewController.m
+c000000004B0AECF700000000000010DC
+t1259007223
+s4316
+i"RootViewController.h"
+i"XMLAppDelegate.h"
+i"Book.h"
+i"BookDetailViewController.h"
+
+N/Users/barret/Downloads/XML/Classes/XMLAppDelegate.h
+c00000000492A04B50000000000000212
+t1227490485
+s530
+i<UIKit/UIKit.h>
+
+N/Users/barret/Downloads/XML/Classes/XMLAppDelegate.m
+c000000004B09C24C00000000000004B1
+t1258930764
+s1201
+i"XMLAppDelegate.h"
+i"RootViewController.h"
+i"XMLParser.h"
+
+N/Users/barret/Downloads/XML/Classes/XMLParser.h
+c00000000494866510000000000000158
+t1229481553
+s344
+i<UIKit/UIKit.h>
+
+N/Users/barret/Downloads/XML/Classes/XMLParser.m
+c00000000494C3C2E0000000000000808
+t1229732910
+s2056
+i"XMLParser.h"
+i"XMLAppDelegate.h"
+i"Book.h"
+
+N/Users/barret/Downloads/XML/MainWindow.xib
+c00000000492A01FD0000000000002A08
+t1227489789
+s10760
+
+N/Users/barret/Downloads/XML/RootViewController.xib
+c00000000492A01FD0000000000001D71
+t1227489789
+s7537
+
+N/Users/barret/Downloads/XML/XML_Prefix.pch
+c00000000492A01FD00000000000000AF
+t1227489789
+s175
+i<Foundation/Foundation.h>
+i<UIKit/UIKit.h>
+
+N/Users/barret/Downloads/XML/build/Debug-iphonesimulator/XML.app
+t1259007761
+s272
+
+N/Users/barret/Downloads/XML/build/Debug-iphonesimulator/XML.app.dSYM
+t1259007761
+s102
+
+N/Users/barret/Downloads/XML/build/Debug-iphonesimulator/XML.app/BookDetailView.nib
+t1227510210
+s1589
+
+N/Users/barret/Downloads/XML/build/Debug-iphonesimulator/XML.app/Info.plist
+t1227489967
+s907
+
+N/Users/barret/Downloads/XML/build/Debug-iphonesimulator/XML.app/MainWindow.nib
+t1227489968
+s1991
+
+N/Users/barret/Downloads/XML/build/Debug-iphonesimulator/XML.app/PkgInfo
+t1227489967
+s8
+
+N/Users/barret/Downloads/XML/build/Debug-iphonesimulator/XML.app/RootViewController.nib
+t1227489968
+s1467
+
+N/Users/barret/Downloads/XML/build/Debug-iphonesimulator/XML.app/XML
+t1259007761
+s29796
+
+N/Users/barret/Downloads/XML/build/XML.build/Debug-iphonesimulator/XML.build/Objects-normal/i386/Book.o
+t1258842289
+s10040
+
+N/Users/barret/Downloads/XML/build/XML.build/Debug-iphonesimulator/XML.build/Objects-normal/i386/BookDetailViewController.o
+t1259007761
+s41932
+
+N/Users/barret/Downloads/XML/build/XML.build/Debug-iphonesimulator/XML.build/Objects-normal/i386/RootViewController.o
+t1259007227
+s42280
+
+N/Users/barret/Downloads/XML/build/XML.build/Debug-iphonesimulator/XML.build/Objects-normal/i386/XML.LinkFileList
+c000000004B0868AF000000000000029B
+t1258842287
+s667
+
+N/Users/barret/Downloads/XML/build/XML.build/Debug-iphonesimulator/XML.build/Objects-normal/i386/XMLAppDelegate.o
+t1258931240
+s42420
+
+N/Users/barret/Downloads/XML/build/XML.build/Debug-iphonesimulator/XML.build/Objects-normal/i386/XMLParser.o
+t1258842289
+s39968
+
+N/Users/barret/Downloads/XML/build/XML.build/Debug-iphonesimulator/XML.build/Objects-normal/i386/main.o
+t1258842289
+s5920
+
+N/Users/barret/Downloads/XML/main.m
+c00000000492A026F0000000000000160
+t1227489903
+s352
+i<UIKit/UIKit.h>
+
+N/var/folders/Ke/KelkGmsJE-eNQMXzYVwckk+++TI/-Caches-/com.apple.Xcode.501/SharedPrecompiledHeaders/XML_Prefix-dpkdtsqihmvnbtftsydsbkbfmacl/XML_Prefix.pch.gch
+t1258842288
+s13034960
+
+NInfo.plist
+c00000000492A01FD0000000000000381
+t1227489789
+s897
+
+CCheck dependencies
+r0
+lSLF07#2@18"Check dependencies280700561#280700561#0(0"0(0#1#0"4300882208#0"0#
+
+CCompileC build/XML.build/Debug-iphonesimulator/XML.build/Objects-normal/i386/Book.o /Users/barret/Downloads/XML/Classes/Book.m normal i386 objective-c com.apple.compilers.gcc.4_2
+s280535089.113676
+e280535089.216632
+r1
+xCompileC
+xbuild/XML.build/Debug-iphonesimulator/XML.build/Objects-normal/i386/Book.o
+x/Users/barret/Downloads/XML/Classes/Book.m
+xnormal
+xi386
+xobjective-c
+xcom.apple.compilers.gcc.4_2
+lSLF07#2@50"Compile /Users/barret/Downloads/XML/Classes/Book.m280535089#280535089#0(0"0(0#0#42"/Users/barret/Downloads/XML/Classes/Book.m4300882208#1664"    cd /Users/barret/Downloads/XML    setenv LANG en_US.US-ASCII    setenv PATH "/Developer/Platforms/iPhoneSimulator.platform/Developer/usr/bin:/Developer/usr/bin:/usr/bin:/bin:/usr/sbin:/sbin"    /Developer/Platforms/iPhoneSimulator.platform/Developer/usr/bin/gcc-4.2 -x objective-c -arch i386 -fmessage-length=0 -pipe -std=c99 -Wno-trigraphs -fpascal-strings -fasm-blocks -O0 -Wreturn-type -Wunused-variable -D__IPHONE_OS_VERSION_MIN_REQUIRED=30000 -isysroot /Developer/Platforms/iPhoneSimulator.platform/Developer/SDKs/iPhoneSimulator3.1.sdk -fvisibility=hidden -mmacosx-version-min=10.5 -gdwarf-2 -iquote /Users/barret/Downloads/XML/build/XML.build/Debug-iphonesimulator/XML.build/XML-generated-files.hmap -I/Users/barret/Downloads/XML/build/XML.build/Debug-iphonesimulator/XML.build/XML-own-target-headers.hmap -I/Users/barret/Downloads/XML/build/XML.build/Debug-iphonesimulator/XML.build/XML-all-target-headers.hmap -iquote /Users/barret/Downloads/XML/build/XML.build/Debug-iphonesimulator/XML.build/XML-project-headers.hmap -F/Users/barret/Downloads/XML/build/Debug-iphonesimulator -I/Users/barret/Downloads/XML/build/Debug-iphonesimulator/include -I/Users/barret/Downloads/XML/build/XML.build/Debug-iphonesimulator/XML.build/DerivedSources/i386 -I/Users/barret/Downloads/XML/build/XML.build/Debug-iphonesimulator/XML.build/DerivedSources -include /var/folders/Ke/KelkGmsJE-eNQMXzYVwckk+++TI/-Caches-/com.apple.Xcode.501/SharedPrecompiledHeaders/XML_Prefix-dpkdtsqihmvnbtftsydsbkbfmacl/XML_Prefix.pch -c /Users/barret/Downloads/XML/Classes/Book.m -o /Users/barret/Downloads/XML/build/XML.build/Debug-iphonesimulator/XML.build/Objects-normal/i386/Book.o0#
+
+CCompileC build/XML.build/Debug-iphonesimulator/XML.build/Objects-normal/i386/BookDetailViewController.o /Users/barret/Downloads/XML/Classes/BookDetailViewController.m normal i386 objective-c com.apple.compilers.gcc.4_2
+s280700561.396556
+e280700561.590650
+r1
+xCompileC
+xbuild/XML.build/Debug-iphonesimulator/XML.build/Objects-normal/i386/BookDetailViewController.o
+x/Users/barret/Downloads/XML/Classes/BookDetailViewController.m
+xnormal
+xi386
+xobjective-c
+xcom.apple.compilers.gcc.4_2
+lSLF07#2@70"Compile /Users/barret/Downloads/XML/Classes/BookDetailViewController.m280700561#280700561#0(0"0(0#0#62"/Users/barret/Downloads/XML/Classes/BookDetailViewController.m4300882208#1704"    cd /Users/barret/Downloads/XML    setenv LANG en_US.US-ASCII    setenv PATH "/Developer/Platforms/iPhoneSimulator.platform/Developer/usr/bin:/Developer/usr/bin:/usr/bin:/bin:/usr/sbin:/sbin"    /Developer/Platforms/iPhoneSimulator.platform/Developer/usr/bin/gcc-4.2 -x objective-c -arch i386 -fmessage-length=0 -pipe -std=c99 -Wno-trigraphs -fpascal-strings -fasm-blocks -O0 -Wreturn-type -Wunused-variable -D__IPHONE_OS_VERSION_MIN_REQUIRED=30000 -isysroot /Developer/Platforms/iPhoneSimulator.platform/Developer/SDKs/iPhoneSimulator3.1.sdk -fvisibility=hidden -mmacosx-version-min=10.5 -gdwarf-2 -iquote /Users/barret/Downloads/XML/build/XML.build/Debug-iphonesimulator/XML.build/XML-generated-files.hmap -I/Users/barret/Downloads/XML/build/XML.build/Debug-iphonesimulator/XML.build/XML-own-target-headers.hmap -I/Users/barret/Downloads/XML/build/XML.build/Debug-iphonesimulator/XML.build/XML-all-target-headers.hmap -iquote /Users/barret/Downloads/XML/build/XML.build/Debug-iphonesimulator/XML.build/XML-project-headers.hmap -F/Users/barret/Downloads/XML/build/Debug-iphonesimulator -I/Users/barret/Downloads/XML/build/Debug-iphonesimulator/include -I/Users/barret/Downloads/XML/build/XML.build/Debug-iphonesimulator/XML.build/DerivedSources/i386 -I/Users/barret/Downloads/XML/build/XML.build/Debug-iphonesimulator/XML.build/DerivedSources -include /var/folders/Ke/KelkGmsJE-eNQMXzYVwckk+++TI/-Caches-/com.apple.Xcode.501/SharedPrecompiledHeaders/XML_Prefix-dpkdtsqihmvnbtftsydsbkbfmacl/XML_Prefix.pch -c /Users/barret/Downloads/XML/Classes/BookDetailViewController.m -o /Users/barret/Downloads/XML/build/XML.build/Debug-iphonesimulator/XML.build/Objects-normal/i386/BookDetailViewController.o0#
+
+CCompileC build/XML.build/Debug-iphonesimulator/XML.build/Objects-normal/i386/RootViewController.o /Users/barret/Downloads/XML/Classes/RootViewController.m normal i386 objective-c com.apple.compilers.gcc.4_2
+s280700027.460198
+e280700027.736137
+r1
+xCompileC
+xbuild/XML.build/Debug-iphonesimulator/XML.build/Objects-normal/i386/RootViewController.o
+x/Users/barret/Downloads/XML/Classes/RootViewController.m
+xnormal
+xi386
+xobjective-c
+xcom.apple.compilers.gcc.4_2
+lSLF07#2@64"Compile /Users/barret/Downloads/XML/Classes/RootViewController.m280700027#280700027#0(0"0(0#0#56"/Users/barret/Downloads/XML/Classes/RootViewController.m4841172019522270208#1692"    cd /Users/barret/Downloads/XML    setenv LANG en_US.US-ASCII    setenv PATH "/Developer/Platforms/iPhoneSimulator.platform/Developer/usr/bin:/Developer/usr/bin:/usr/bin:/bin:/usr/sbin:/sbin"    /Developer/Platforms/iPhoneSimulator.platform/Developer/usr/bin/gcc-4.2 -x objective-c -arch i386 -fmessage-length=0 -pipe -std=c99 -Wno-trigraphs -fpascal-strings -fasm-blocks -O0 -Wreturn-type -Wunused-variable -D__IPHONE_OS_VERSION_MIN_REQUIRED=30000 -isysroot /Developer/Platforms/iPhoneSimulator.platform/Developer/SDKs/iPhoneSimulator3.1.sdk -fvisibility=hidden -mmacosx-version-min=10.5 -gdwarf-2 -iquote /Users/barret/Downloads/XML/build/XML.build/Debug-iphonesimulator/XML.build/XML-generated-files.hmap -I/Users/barret/Downloads/XML/build/XML.build/Debug-iphonesimulator/XML.build/XML-own-target-headers.hmap -I/Users/barret/Downloads/XML/build/XML.build/Debug-iphonesimulator/XML.build/XML-all-target-headers.hmap -iquote /Users/barret/Downloads/XML/build/XML.build/Debug-iphonesimulator/XML.build/XML-project-headers.hmap -F/Users/barret/Downloads/XML/build/Debug-iphonesimulator -I/Users/barret/Downloads/XML/build/Debug-iphonesimulator/include -I/Users/barret/Downloads/XML/build/XML.build/Debug-iphonesimulator/XML.build/DerivedSources/i386 -I/Users/barret/Downloads/XML/build/XML.build/Debug-iphonesimulator/XML.build/DerivedSources -include /var/folders/Ke/KelkGmsJE-eNQMXzYVwckk+++TI/-Caches-/com.apple.Xcode.501/SharedPrecompiledHeaders/XML_Prefix-dpkdtsqihmvnbtftsydsbkbfmacl/XML_Prefix.pch -c /Users/barret/Downloads/XML/Classes/RootViewController.m -o /Users/barret/Downloads/XML/build/XML.build/Debug-iphonesimulator/XML.build/Objects-normal/i386/RootViewController.o0#
+
+CCompileC build/XML.build/Debug-iphonesimulator/XML.build/Objects-normal/i386/XMLAppDelegate.o /Users/barret/Downloads/XML/Classes/XMLAppDelegate.m normal i386 objective-c com.apple.compilers.gcc.4_2
+s280624040.781610
+e280624040.940417
+r1
+xCompileC
+xbuild/XML.build/Debug-iphonesimulator/XML.build/Objects-normal/i386/XMLAppDelegate.o
+x/Users/barret/Downloads/XML/Classes/XMLAppDelegate.m
+xnormal
+xi386
+xobjective-c
+xcom.apple.compilers.gcc.4_2
+lSLF07#2@60"Compile /Users/barret/Downloads/XML/Classes/XMLAppDelegate.m280624040#280624040#0(0"0(0#0#52"/Users/barret/Downloads/XML/Classes/XMLAppDelegate.m4300882208#1684"    cd /Users/barret/Downloads/XML    setenv LANG en_US.US-ASCII    setenv PATH "/Developer/Platforms/iPhoneSimulator.platform/Developer/usr/bin:/Developer/usr/bin:/usr/bin:/bin:/usr/sbin:/sbin"    /Developer/Platforms/iPhoneSimulator.platform/Developer/usr/bin/gcc-4.2 -x objective-c -arch i386 -fmessage-length=0 -pipe -std=c99 -Wno-trigraphs -fpascal-strings -fasm-blocks -O0 -Wreturn-type -Wunused-variable -D__IPHONE_OS_VERSION_MIN_REQUIRED=30000 -isysroot /Developer/Platforms/iPhoneSimulator.platform/Developer/SDKs/iPhoneSimulator3.1.sdk -fvisibility=hidden -mmacosx-version-min=10.5 -gdwarf-2 -iquote /Users/barret/Downloads/XML/build/XML.build/Debug-iphonesimulator/XML.build/XML-generated-files.hmap -I/Users/barret/Downloads/XML/build/XML.build/Debug-iphonesimulator/XML.build/XML-own-target-headers.hmap -I/Users/barret/Downloads/XML/build/XML.build/Debug-iphonesimulator/XML.build/XML-all-target-headers.hmap -iquote /Users/barret/Downloads/XML/build/XML.build/Debug-iphonesimulator/XML.build/XML-project-headers.hmap -F/Users/barret/Downloads/XML/build/Debug-iphonesimulator -I/Users/barret/Downloads/XML/build/Debug-iphonesimulator/include -I/Users/barret/Downloads/XML/build/XML.build/Debug-iphonesimulator/XML.build/DerivedSources/i386 -I/Users/barret/Downloads/XML/build/XML.build/Debug-iphonesimulator/XML.build/DerivedSources -include /var/folders/Ke/KelkGmsJE-eNQMXzYVwckk+++TI/-Caches-/com.apple.Xcode.501/SharedPrecompiledHeaders/XML_Prefix-dpkdtsqihmvnbtftsydsbkbfmacl/XML_Prefix.pch -c /Users/barret/Downloads/XML/Classes/XMLAppDelegate.m -o /Users/barret/Downloads/XML/build/XML.build/Debug-iphonesimulator/XML.build/Objects-normal/i386/XMLAppDelegate.o0#
+
+CCompileC build/XML.build/Debug-iphonesimulator/XML.build/Objects-normal/i386/XMLParser.o /Users/barret/Downloads/XML/Classes/XMLParser.m normal i386 objective-c com.apple.compilers.gcc.4_2
+s280535089.217046
+e280535089.339851
+r1
+xCompileC
+xbuild/XML.build/Debug-iphonesimulator/XML.build/Objects-normal/i386/XMLParser.o
+x/Users/barret/Downloads/XML/Classes/XMLParser.m
+xnormal
+xi386
+xobjective-c
+xcom.apple.compilers.gcc.4_2
+lSLF07#2@55"Compile /Users/barret/Downloads/XML/Classes/XMLParser.m280535089#280535089#0(0"0(0#0#47"/Users/barret/Downloads/XML/Classes/XMLParser.m4300882208#1674"    cd /Users/barret/Downloads/XML    setenv LANG en_US.US-ASCII    setenv PATH "/Developer/Platforms/iPhoneSimulator.platform/Developer/usr/bin:/Developer/usr/bin:/usr/bin:/bin:/usr/sbin:/sbin"    /Developer/Platforms/iPhoneSimulator.platform/Developer/usr/bin/gcc-4.2 -x objective-c -arch i386 -fmessage-length=0 -pipe -std=c99 -Wno-trigraphs -fpascal-strings -fasm-blocks -O0 -Wreturn-type -Wunused-variable -D__IPHONE_OS_VERSION_MIN_REQUIRED=30000 -isysroot /Developer/Platforms/iPhoneSimulator.platform/Developer/SDKs/iPhoneSimulator3.1.sdk -fvisibility=hidden -mmacosx-version-min=10.5 -gdwarf-2 -iquote /Users/barret/Downloads/XML/build/XML.build/Debug-iphonesimulator/XML.build/XML-generated-files.hmap -I/Users/barret/Downloads/XML/build/XML.build/Debug-iphonesimulator/XML.build/XML-own-target-headers.hmap -I/Users/barret/Downloads/XML/build/XML.build/Debug-iphonesimulator/XML.build/XML-all-target-headers.hmap -iquote /Users/barret/Downloads/XML/build/XML.build/Debug-iphonesimulator/XML.build/XML-project-headers.hmap -F/Users/barret/Downloads/XML/build/Debug-iphonesimulator -I/Users/barret/Downloads/XML/build/Debug-iphonesimulator/include -I/Users/barret/Downloads/XML/build/XML.build/Debug-iphonesimulator/XML.build/DerivedSources/i386 -I/Users/barret/Downloads/XML/build/XML.build/Debug-iphonesimulator/XML.build/DerivedSources -include /var/folders/Ke/KelkGmsJE-eNQMXzYVwckk+++TI/-Caches-/com.apple.Xcode.501/SharedPrecompiledHeaders/XML_Prefix-dpkdtsqihmvnbtftsydsbkbfmacl/XML_Prefix.pch -c /Users/barret/Downloads/XML/Classes/XMLParser.m -o /Users/barret/Downloads/XML/build/XML.build/Debug-iphonesimulator/XML.build/Objects-normal/i386/XMLParser.o0#
+
+CCompileC build/XML.build/Debug-iphonesimulator/XML.build/Objects-normal/i386/main.o /Users/barret/Downloads/XML/main.m normal i386 objective-c com.apple.compilers.gcc.4_2
+s280535089.001078
+e280535089.078801
+r1
+xCompileC
+xbuild/XML.build/Debug-iphonesimulator/XML.build/Objects-normal/i386/main.o
+x/Users/barret/Downloads/XML/main.m
+xnormal
+xi386
+xobjective-c
+xcom.apple.compilers.gcc.4_2
+lSLF07#2@42"Compile /Users/barret/Downloads/XML/main.m280535089#280535089#0(0"0(0#0#34"/Users/barret/Downloads/XML/main.m4300882208#1656"    cd /Users/barret/Downloads/XML    setenv LANG en_US.US-ASCII    setenv PATH "/Developer/Platforms/iPhoneSimulator.platform/Developer/usr/bin:/Developer/usr/bin:/usr/bin:/bin:/usr/sbin:/sbin"    /Developer/Platforms/iPhoneSimulator.platform/Developer/usr/bin/gcc-4.2 -x objective-c -arch i386 -fmessage-length=0 -pipe -std=c99 -Wno-trigraphs -fpascal-strings -fasm-blocks -O0 -Wreturn-type -Wunused-variable -D__IPHONE_OS_VERSION_MIN_REQUIRED=30000 -isysroot /Developer/Platforms/iPhoneSimulator.platform/Developer/SDKs/iPhoneSimulator3.1.sdk -fvisibility=hidden -mmacosx-version-min=10.5 -gdwarf-2 -iquote /Users/barret/Downloads/XML/build/XML.build/Debug-iphonesimulator/XML.build/XML-generated-files.hmap -I/Users/barret/Downloads/XML/build/XML.build/Debug-iphonesimulator/XML.build/XML-own-target-headers.hmap -I/Users/barret/Downloads/XML/build/XML.build/Debug-iphonesimulator/XML.build/XML-all-target-headers.hmap -iquote /Users/barret/Downloads/XML/build/XML.build/Debug-iphonesimulator/XML.build/XML-project-headers.hmap -F/Users/barret/Downloads/XML/build/Debug-iphonesimulator -I/Users/barret/Downloads/XML/build/Debug-iphonesimulator/include -I/Users/barret/Downloads/XML/build/XML.build/Debug-iphonesimulator/XML.build/DerivedSources/i386 -I/Users/barret/Downloads/XML/build/XML.build/Debug-iphonesimulator/XML.build/DerivedSources -include /var/folders/Ke/KelkGmsJE-eNQMXzYVwckk+++TI/-Caches-/com.apple.Xcode.501/SharedPrecompiledHeaders/XML_Prefix-dpkdtsqihmvnbtftsydsbkbfmacl/XML_Prefix.pch -c /Users/barret/Downloads/XML/main.m -o /Users/barret/Downloads/XML/build/XML.build/Debug-iphonesimulator/XML.build/Objects-normal/i386/main.o0#
+
+CCompileXIB /Users/barret/Downloads/XML/BookDetailView.xib
+r0
+
+CCompileXIB /Users/barret/Downloads/XML/MainWindow.xib
+r0
+
+CCompileXIB /Users/barret/Downloads/XML/RootViewController.xib
+r0
+
+CGenerateDSYMFile /Users/barret/Downloads/XML/build/Debug-iphonesimulator/XML.app.dSYM /Users/barret/Downloads/XML/build/Debug-iphonesimulator/XML.app/XML
+s280700561.617616
+e280700561.638906
+r1
+xGenerateDSYMFile
+x/Users/barret/Downloads/XML/build/Debug-iphonesimulator/XML.app.dSYM
+x/Users/barret/Downloads/XML/build/Debug-iphonesimulator/XML.app/XML
+lSLF07#2@97"GenerateDSYMFile build/Debug-iphonesimulator/XML.app.dSYM build/Debug-iphonesimulator/XML.app/XML280700561#280700561#0(0"0(0#0#67"/Users/barret/Downloads/XML/build/Debug-iphonesimulator/XML.app/XML4300882208#338"    cd /Users/barret/Downloads/XML    setenv PATH "/Developer/Platforms/iPhoneSimulator.platform/Developer/usr/bin:/Developer/usr/bin:/usr/bin:/bin:/usr/sbin:/sbin"    /Developer/usr/bin/dsymutil /Users/barret/Downloads/XML/build/Debug-iphonesimulator/XML.app/XML -o /Users/barret/Downloads/XML/build/Debug-iphonesimulator/XML.app.dSYM0#
+
+CLd /Users/barret/Downloads/XML/build/Debug-iphonesimulator/XML.app/XML normal i386
+s280700561.590766
+e280700561.617483
+r1
+xLd
+x/Users/barret/Downloads/XML/build/Debug-iphonesimulator/XML.app/XML
+xnormal
+xi386
+lSLF07#2@72"Link /Users/barret/Downloads/XML/build/Debug-iphonesimulator/XML.app/XML280700561#280700561#0(0"0(0#0#0"4300882208#787"    cd /Users/barret/Downloads/XML    setenv MACOSX_DEPLOYMENT_TARGET 10.5    setenv PATH "/Developer/Platforms/iPhoneSimulator.platform/Developer/usr/bin:/Developer/usr/bin:/usr/bin:/bin:/usr/sbin:/sbin"    /Developer/Platforms/iPhoneSimulator.platform/Developer/usr/bin/gcc-4.2 -arch i386 -isysroot /Developer/Platforms/iPhoneSimulator.platform/Developer/SDKs/iPhoneSimulator3.1.sdk -L/Users/barret/Downloads/XML/build/Debug-iphonesimulator -F/Users/barret/Downloads/XML/build/Debug-iphonesimulator -filelist /Users/barret/Downloads/XML/build/XML.build/Debug-iphonesimulator/XML.build/Objects-normal/i386/XML.LinkFileList -mmacosx-version-min=10.5 -framework Foundation -framework UIKit -framework CoreGraphics -o /Users/barret/Downloads/XML/build/Debug-iphonesimulator/XML.app/XML0#
+
+CProcessInfoPlistFile /Users/barret/Downloads/XML/build/Debug-iphonesimulator/XML.app/Info.plist Info.plist
+r0
+
+CProcessPCH /var/folders/Ke/KelkGmsJE-eNQMXzYVwckk+++TI/-Caches-/com.apple.Xcode.501/SharedPrecompiledHeaders/XML_Prefix-dpkdtsqihmvnbtftsydsbkbfmacl/XML_Prefix.pch.gch XML_Prefix.pch normal i386 objective-c com.apple.compilers.gcc.4_2
+s280535087.825072
+e280535089.000905
+r1
+xProcessPCH
+x/var/folders/Ke/KelkGmsJE-eNQMXzYVwckk+++TI/-Caches-/com.apple.Xcode.501/SharedPrecompiledHeaders/XML_Prefix-dpkdtsqihmvnbtftsydsbkbfmacl/XML_Prefix.pch.gch
+xXML_Prefix.pch
+xnormal
+xi386
+xobjective-c
+xcom.apple.compilers.gcc.4_2
+lSLF07#2@25"Precompile XML_Prefix.pch280535087#280535089#0(0"0(0#0#42"/Users/barret/Downloads/XML/XML_Prefix.pch4300882208#1563"    cd /Users/barret/Downloads/XML    setenv LANG en_US.US-ASCII    setenv PATH "/Developer/Platforms/iPhoneSimulator.platform/Developer/usr/bin:/Developer/usr/bin:/usr/bin:/bin:/usr/sbin:/sbin"    /Developer/Platforms/iPhoneSimulator.platform/Developer/usr/bin/gcc-4.2 -x objective-c-header -arch i386 -fmessage-length=0 -pipe -std=c99 -Wno-trigraphs -fpascal-strings -fasm-blocks -O0 -Wreturn-type -Wunused-variable -D__IPHONE_OS_VERSION_MIN_REQUIRED=30000 -isysroot /Developer/Platforms/iPhoneSimulator.platform/Developer/SDKs/iPhoneSimulator3.1.sdk -fvisibility=hidden -mmacosx-version-min=10.5 -gdwarf-2 -iquote /Users/barret/Downloads/XML/build/XML.build/Debug-iphonesimulator/XML.build/XML-generated-files.hmap -I/Users/barret/Downloads/XML/build/XML.build/Debug-iphonesimulator/XML.build/XML-own-target-headers.hmap -I/Users/barret/Downloads/XML/build/XML.build/Debug-iphonesimulator/XML.build/XML-all-target-headers.hmap -iquote /Users/barret/Downloads/XML/build/XML.build/Debug-iphonesimulator/XML.build/XML-project-headers.hmap -F/Users/barret/Downloads/XML/build/Debug-iphonesimulator -I/Users/barret/Downloads/XML/build/Debug-iphonesimulator/include -I/Users/barret/Downloads/XML/build/XML.build/Debug-iphonesimulator/XML.build/DerivedSources/i386 -I/Users/barret/Downloads/XML/build/XML.build/Debug-iphonesimulator/XML.build/DerivedSources -c /Users/barret/Downloads/XML/XML_Prefix.pch -o /var/folders/Ke/KelkGmsJE-eNQMXzYVwckk+++TI/-Caches-/com.apple.Xcode.501/SharedPrecompiledHeaders/XML_Prefix-dpkdtsqihmvnbtftsydsbkbfmacl/XML_Prefix.pch.gch0#
+
+CTouch /Users/barret/Downloads/XML/build/Debug-iphonesimulator/XML.app
+s280700561.639009
+e280700561.642042
+r1
+xTouch
+x/Users/barret/Downloads/XML/build/Debug-iphonesimulator/XML.app
+lSLF07#2@69"Touch /Users/barret/Downloads/XML/build/Debug-iphonesimulator/XML.app280700561#280700561#0(0"0(0#0#0"4300882208#252"    cd /Users/barret/Downloads/XML    setenv PATH "/Developer/Platforms/iPhoneSimulator.platform/Developer/usr/bin:/Developer/usr/bin:/usr/bin:/bin:/usr/sbin:/sbin"    /usr/bin/touch -c /Users/barret/Downloads/XML/build/Debug-iphonesimulator/XML.app0#
+
