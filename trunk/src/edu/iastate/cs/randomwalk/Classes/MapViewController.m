@@ -54,6 +54,7 @@
 	NSMutableArray *nodeList = [walkData nodeList];
 	for (int i=0; i<[nodeList count]; i++) {
 		MapPin *pin = [[MapPin alloc] initWithNodeData:[nodeList objectAtIndex:i] color: walkData.color];		
+		NSLog(@"Adding pin: %@", pin.nodeData.name);
 		[mapView addAnnotation:pin];
 		[pin release];
 	}
@@ -65,11 +66,11 @@
 	[super viewDidLoad];
 	
 		
-	/*CLLocationManager *locationManager=[[CLLocationManager alloc] init];
+	locationManager=[[CLLocationManager alloc] init];
 	locationManager.delegate=self;
 	locationManager.desiredAccuracy=kCLLocationAccuracyNearestTenMeters;
 	
-	[locationManager startUpdatingLocation];*/
+	//	[locationManager startUpdatingLocation];
 	
 	//location = [CLLocation initWithLatitude: 42.025355 longitude: -93.647116];
 	//One location is obtained.. just zoom to that location	
@@ -116,8 +117,9 @@
 	test.enabled = YES;
 	if([annotation isKindOfClass:[MapPin class]]){
 		[test setImage:[((MapPin *)annotation) pinImage]];
-		//NodeInfo *infoView = [[NodeInfo alloc] initWithNode:((MapPin *)annotation).nodeData];
+		NodeDetail *infoView = [[NodeDetail alloc] initWithNode:((MapPin *)annotation).nodeData];
 		//test.leftCalloutAccessoryView = infoView.tableView;
+		[infoView release];
 	}
 	[test autorelease];
 	return test;
@@ -125,15 +127,32 @@
 
 //location manager functions
 - (void)locationManager:(CLLocationManager *)manager didUpdateToLocation:(CLLocation *)newLocation fromLocation:(CLLocation *)oldLocation{
-	location=newLocation.coordinate;
+	NSLog(@"Moving the screen to a new location");
+	location = newLocation.coordinate;
 	//One location is obtained.. just zoom to that location
+	
+	//REMOVE!!!!
+/*	NSLog(@"1");
+	CLLocation *ames;
+	NSLog(@"2");
+	ames = [[CLLocation alloc] initWithLatitude:42.025355 longitude:-93.647116];
+	NSLog(@"3");
+	CLLocationCoordinate2D amesCoords;
+	NSLog(@"4");
+	amesCoords = ames.coordinate;
+	NSLog(@"5");
+	
+			location = amesCoords;
+	NSLog(@"6");
+ 
+	*/
 	
 	MKCoordinateRegion region;
 	region.center=location;
 	//Set Zoom level using Span
 	MKCoordinateSpan span;
-	span.latitudeDelta=.005;
-	span.longitudeDelta=.005;
+	span.latitudeDelta=.020;
+	span.longitudeDelta=.020;
 	region.span=span;
 	
 	[mapView setRegion:region animated:TRUE];

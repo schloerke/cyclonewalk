@@ -13,11 +13,12 @@
 #import <CoreLocation/CoreLocation.h>
 #import "WalkData.h"
 #import "MapPin.h"
-#import "NodeInfo.h"
+#import "NodeDetail.h"
 
 @interface MapViewController : UIViewController <MKMapViewDelegate, MKReverseGeocoderDelegate, CLLocationManagerDelegate> {
 	MKMapView *mapView;
 	CLLocationCoordinate2D location;
+	CLLocationManager *locationManager;
 }
 
 /**

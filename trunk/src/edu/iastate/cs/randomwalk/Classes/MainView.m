@@ -51,10 +51,61 @@
 	
 	MapViewController *mview = [[MapViewController alloc] initWithWalk:comboWalk];
 	NSLog(@"Pushing the Map View");
-	[self.navigationController pushViewController:mview animated:NO];
-	self.navigationController.navigationBarHidden = YES;
+	//[self.navigationController pushViewController:mview animated:NO];
+	//self.navigationController.navigationBarHidden = YES;
+	[mview release];
 	
 	[comboWalk release];
+	
+	/////////////////////////////////////////////////////////
+	/////////////////////////////////////////////////////////
+	/////////////////////////////////////////////////////////
+	/////////////////////////////////////////////////////////
+	/////////////////////////////////////////////////////////
+	NSMutableArray *selectedWalks = [[NSMutableArray alloc] init];
+	
+	for (j =0; j < [walkTableView numberOfSections]; j++) {
+		for (i = 0; i < [walkTableView numberOfRowsInSection:j]; i++) {
+			
+			NSIndexPath *indexPath = [NSIndexPath indexPathForRow:i inSection:j];
+			UITableViewCell *cell = [walkTableView cellForRowAtIndexPath:indexPath];
+			
+			if (cell.accessoryType == UITableViewCellAccessoryCheckmark ) {
+				NSLog(@"Checked cell name: %@", cell.textLabel.text);
+				
+				if(j == 0)
+					tmpWalk = [appData.defaultWalks objectAtIndex:i];
+				if(j == 1)
+					tmpWalk = [appData.userWalks objectAtIndex:i];
+				
+				NSLog(@"TmpWalk node count: %d", [tmpWalk.nodeList count]);
+				
+				[selectedWalks addObject:tmpWalk];
+				
+				int k; 
+				for (k = 0; k < [tmpWalk.nodeList count]; k++) {
+					NSLog(@"Node Name: %@",[[tmpWalk.nodeList objectAtIndex:k] name]);
+				}
+				
+			}
+		}
+	}
+	
+	
+	
+	NSLog(@"Combined %d walks", [selectedWalks count]);
+	
+	MapViewController *aview = [[MapViewController alloc] initWithWalkArray:selectedWalks];
+	NSLog(@"Pushing the Map View");
+	[self.navigationController pushViewController:aview animated:YES];
+	//self.navigationController.navigationBarHidden = YES;
+	[aview release];
+	
+	[selectedWalks release];
+	
+	
+	
+	
  
 }
 

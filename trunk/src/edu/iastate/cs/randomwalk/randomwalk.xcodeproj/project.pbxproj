@@ -23,6 +23,20 @@
 		AB6445C310BC7717005185A9 /* Accelerometer.m in Sources */ = {isa = PBXBuildFile; fileRef = AB6445BF10BC7717005185A9 /* Accelerometer.m */; };
 		AB6445C410BC7717005185A9 /* MapPin.m in Sources */ = {isa = PBXBuildFile; fileRef = AB6445C110BC7717005185A9 /* MapPin.m */; };
 		AB6445C510BC7717005185A9 /* MapView.xib in Resources */ = {isa = PBXBuildFile; fileRef = AB6445C210BC7717005185A9 /* MapView.xib */; };
+		AB9919F010BD9A7900146D11 /* black-pin.png in Resources */ = {isa = PBXBuildFile; fileRef = AB9919E210BD9A7900146D11 /* black-pin.png */; };
+		AB9919F110BD9A7A00146D11 /* blue-pin.png in Resources */ = {isa = PBXBuildFile; fileRef = AB9919E310BD9A7900146D11 /* blue-pin.png */; };
+		AB9919F210BD9A7A00146D11 /* brown-pin.png in Resources */ = {isa = PBXBuildFile; fileRef = AB9919E410BD9A7900146D11 /* brown-pin.png */; };
+		AB9919F310BD9A7A00146D11 /* cyan-pin.png in Resources */ = {isa = PBXBuildFile; fileRef = AB9919E510BD9A7900146D11 /* cyan-pin.png */; };
+		AB9919F410BD9A7A00146D11 /* darkGray-pin.png in Resources */ = {isa = PBXBuildFile; fileRef = AB9919E610BD9A7900146D11 /* darkGray-pin.png */; };
+		AB9919F510BD9A7A00146D11 /* gray-pin.png in Resources */ = {isa = PBXBuildFile; fileRef = AB9919E710BD9A7900146D11 /* gray-pin.png */; };
+		AB9919F610BD9A7A00146D11 /* green-pin.png in Resources */ = {isa = PBXBuildFile; fileRef = AB9919E810BD9A7900146D11 /* green-pin.png */; };
+		AB9919F710BD9A7A00146D11 /* lightGray-pin.png in Resources */ = {isa = PBXBuildFile; fileRef = AB9919E910BD9A7900146D11 /* lightGray-pin.png */; };
+		AB9919F810BD9A7A00146D11 /* magenta-pin.png in Resources */ = {isa = PBXBuildFile; fileRef = AB9919EA10BD9A7900146D11 /* magenta-pin.png */; };
+		AB9919F910BD9A7A00146D11 /* orange-pin.png in Resources */ = {isa = PBXBuildFile; fileRef = AB9919EB10BD9A7900146D11 /* orange-pin.png */; };
+		AB9919FA10BD9A7A00146D11 /* purple-pin.png in Resources */ = {isa = PBXBuildFile; fileRef = AB9919EC10BD9A7900146D11 /* purple-pin.png */; };
+		AB9919FB10BD9A7A00146D11 /* red-pin.png in Resources */ = {isa = PBXBuildFile; fileRef = AB9919ED10BD9A7900146D11 /* red-pin.png */; };
+		AB9919FC10BD9A7A00146D11 /* white-pin.png in Resources */ = {isa = PBXBuildFile; fileRef = AB9919EE10BD9A7900146D11 /* white-pin.png */; };
+		AB9919FD10BD9A7A00146D11 /* yellow-pin.png in Resources */ = {isa = PBXBuildFile; fileRef = AB9919EF10BD9A7900146D11 /* yellow-pin.png */; };
 		AB9B88C110B8A37C00BD3F84 /* XMLParse.m in Sources */ = {isa = PBXBuildFile; fileRef = AB9B88C010B8A37C00BD3F84 /* XMLParse.m */; };
 		ABAD5CE010A48ED100B14D2B /* Compass.m in Sources */ = {isa = PBXBuildFile; fileRef = ABAD5CDE10A48ED100B14D2B /* Compass.m */; };
 		ABAD5CF010A49A1700B14D2B /* Settings.m in Sources */ = {isa = PBXBuildFile; fileRef = ABAD5CEE10A49A1700B14D2B /* Settings.m */; };
@@ -65,6 +79,20 @@
 		AB6445C010BC7717005185A9 /* MapPin.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = MapPin.h; sourceTree = "<group>"; };
 		AB6445C110BC7717005185A9 /* MapPin.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = MapPin.m; sourceTree = "<group>"; };
 		AB6445C210BC7717005185A9 /* MapView.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = MapView.xib; sourceTree = "<group>"; };
+		AB9919E210BD9A7900146D11 /* black-pin.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "black-pin.png"; sourceTree = "<group>"; };
+		AB9919E310BD9A7900146D11 /* blue-pin.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "blue-pin.png"; sourceTree = "<group>"; };
+		AB9919E410BD9A7900146D11 /* brown-pin.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "brown-pin.png"; sourceTree = "<group>"; };
+		AB9919E510BD9A7900146D11 /* cyan-pin.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "cyan-pin.png"; sourceTree = "<group>"; };
+		AB9919E610BD9A7900146D11 /* darkGray-pin.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "darkGray-pin.png"; sourceTree = "<group>"; };
+		AB9919E710BD9A7900146D11 /* gray-pin.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "gray-pin.png"; sourceTree = "<group>"; };
+		AB9919E810BD9A7900146D11 /* green-pin.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "green-pin.png"; sourceTree = "<group>"; };
+		AB9919E910BD9A7900146D11 /* lightGray-pin.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "lightGray-pin.png"; sourceTree = "<group>"; };
+		AB9919EA10BD9A7900146D11 /* magenta-pin.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "magenta-pin.png"; sourceTree = "<group>"; };
+		AB9919EB10BD9A7900146D11 /* orange-pin.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "orange-pin.png"; sourceTree = "<group>"; };
+		AB9919EC10BD9A7900146D11 /* purple-pin.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "purple-pin.png"; sourceTree = "<group>"; };
+		AB9919ED10BD9A7900146D11 /* red-pin.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "red-pin.png"; sourceTree = "<group>"; };
+		AB9919EE10BD9A7900146D11 /* white-pin.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "white-pin.png"; sourceTree = "<group>"; };
+		AB9919EF10BD9A7900146D11 /* yellow-pin.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "yellow-pin.png"; sourceTree = "<group>"; };
 		AB9B88BF10B8A37C00BD3F84 /* XMLParse.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = XMLParse.h; sourceTree = "<group>"; };
 		AB9B88C010B8A37C00BD3F84 /* XMLParse.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = XMLParse.m; sourceTree = "<group>"; };
 		ABAD5CDD10A48ED100B14D2B /* Compass.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = Compass.h; sourceTree = "<group>"; wrapsLines = 1; };
@@ -135,6 +163,7 @@
 		29B97314FDCFA39411CA2CEA /* CustomTemplate */ = {
 			isa = PBXGroup;
 			children = (
+				AB9919E110BD9A7900146D11 /* Images */,
 				080E96DDFE201D6D7F000001 /* Classes */,
 				29B97315FDCFA39411CA2CEA /* Other Sources */,
 				29B97317FDCFA39411CA2CEA /* Resources */,
@@ -175,6 +204,28 @@
 				AB64459C10BC75FE005185A9 /* MapKit.framework */,
 			);
 			name = Frameworks;
+			sourceTree = "<group>";
+		};
+		AB9919E110BD9A7900146D11 /* Images */ = {
+			isa = PBXGroup;
+			children = (
+				AB9919E210BD9A7900146D11 /* black-pin.png */,
+				AB9919E310BD9A7900146D11 /* blue-pin.png */,
+				AB9919E410BD9A7900146D11 /* brown-pin.png */,
+				AB9919E510BD9A7900146D11 /* cyan-pin.png */,
+				AB9919E610BD9A7900146D11 /* darkGray-pin.png */,
+				AB9919E710BD9A7900146D11 /* gray-pin.png */,
+				AB9919E810BD9A7900146D11 /* green-pin.png */,
+				AB9919E910BD9A7900146D11 /* lightGray-pin.png */,
+				AB9919EA10BD9A7900146D11 /* magenta-pin.png */,
+				AB9919EB10BD9A7900146D11 /* orange-pin.png */,
+				AB9919EC10BD9A7900146D11 /* purple-pin.png */,
+				AB9919ED10BD9A7900146D11 /* red-pin.png */,
+				AB9919EE10BD9A7900146D11 /* white-pin.png */,
+				AB9919EF10BD9A7900146D11 /* yellow-pin.png */,
+			);
+			name = Images;
+			path = Classes/Images;
 			sourceTree = "<group>";
 		};
 		ABF39B2E10AA1E570098A457 /* Model */ = {
@@ -290,6 +341,20 @@
 				ABF39B3D10AA28CF0098A457 /* MainView.xib in Resources */,
 				AB6445C510BC7717005185A9 /* MapView.xib in Resources */,
 				ABBA683410BC8CEE002EAB50 /* NodeDetail.xib in Resources */,
+				AB9919F010BD9A7900146D11 /* black-pin.png in Resources */,
+				AB9919F110BD9A7A00146D11 /* blue-pin.png in Resources */,
+				AB9919F210BD9A7A00146D11 /* brown-pin.png in Resources */,
+				AB9919F310BD9A7A00146D11 /* cyan-pin.png in Resources */,
+				AB9919F410BD9A7A00146D11 /* darkGray-pin.png in Resources */,
+				AB9919F510BD9A7A00146D11 /* gray-pin.png in Resources */,
+				AB9919F610BD9A7A00146D11 /* green-pin.png in Resources */,
+				AB9919F710BD9A7A00146D11 /* lightGray-pin.png in Resources */,
+				AB9919F810BD9A7A00146D11 /* magenta-pin.png in Resources */,
+				AB9919F910BD9A7A00146D11 /* orange-pin.png in Resources */,
+				AB9919FA10BD9A7A00146D11 /* purple-pin.png in Resources */,
+				AB9919FB10BD9A7A00146D11 /* red-pin.png in Resources */,
+				AB9919FC10BD9A7A00146D11 /* white-pin.png in Resources */,
+				AB9919FD10BD9A7A00146D11 /* yellow-pin.png in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};

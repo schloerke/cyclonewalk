@@ -64,7 +64,7 @@
 		str = [[NSBundle mainBundle] pathForResource:@"red-pin.png" ofType:nil inDirectory:@""];
 	}
 	else if([color isEqual:[UIColor whiteColor]]){
-		str = [[NSBundle mainBundle] pathForResource:@"purple-pin.png" ofType:nil inDirectory:@""];
+		str = [[NSBundle mainBundle] pathForResource:@"white-pin.png" ofType:nil inDirectory:@""];
 	}
 	else if([color isEqual:[UIColor yellowColor]]){
 		str = [[NSBundle mainBundle] pathForResource:@"red-pin.png" ofType:nil inDirectory:@""];

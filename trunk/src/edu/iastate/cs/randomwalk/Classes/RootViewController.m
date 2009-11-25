@@ -63,8 +63,8 @@
 
 	MainView *mview = [[MainView alloc] initWithAppData:appData];
 	NSLog(@"Pushing the MainView");
-	//[self.navigationController pushViewController:mview animated:NO];
-	//self.navigationController.navigationBarHidden = YES;						
+	[self.navigationController pushViewController:mview animated:NO];
+	self.navigationController.navigationBarHidden = YES;						
 	
 	[mview release];
 	NSLog(@"Done Pushing MainView");
@@ -75,7 +75,7 @@
 	NodeDetail *nodeInfo = [[NodeDetail alloc] initWithNode:nodeData ];
 	[nodeData release];
 	NSLog(@"Pushing the NodeView");
-	[self.navigationController pushViewController:nodeInfo animated:YES];
+	//[self.navigationController pushViewController:nodeInfo animated:YES];
 	[nodeInfo release];
 	NSLog(@"Done Pushing NodeView");
 	
