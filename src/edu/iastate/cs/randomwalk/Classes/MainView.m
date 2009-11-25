@@ -98,7 +98,7 @@
 	MapViewController *aview = [[MapViewController alloc] initWithWalkArray:selectedWalks];
 	NSLog(@"Pushing the Map View");
 	[self.navigationController pushViewController:aview animated:YES];
-	//self.navigationController.navigationBarHidden = YES;
+	self.navigationController.navigationBarHidden = NO;
 	[aview release];
 	
 	[selectedWalks release];
@@ -292,6 +292,9 @@
     // The header for the section is the region name -- get this from the region at the section index.
     //Region *region = [regions objectAtIndex:section];
 	NSLog(@"Setting Table Headers");
+
+	self.navigationController.navigationBarHidden = YES;
+
 	
     if(section == 0) // Application Walks
 		return @"Random Walks";
