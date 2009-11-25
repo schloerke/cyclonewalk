@@ -29,12 +29,12 @@
 	int i, j;
 	WalkData *tmpWalk;
 
-	// REMOVE LATER!!!
-	tmpWalk = [appData.walkList objectAtIndex:1];
+/*	// REMOVE LATER!!!
+	//	tmpWalk = [appData.walkList objectAtIndex:1];
 	tmpWalk.favorite = YES;
 	[appData.userWalks addObject:tmpWalk];
 	[appData.defaultWalks removeLastObject];
-	
+*/	
 	
 	for (i = 0; i < [appData.walkList count]; i++) 
 	{
@@ -82,6 +82,9 @@
 		
 		if([elementName isEqualToString:@"color"])
 			walkColor = YES;
+
+		if([elementName isEqualToString:@"favorite"])
+			walkFavorite = YES;
 		
 		if(inNode)
 		{
@@ -150,6 +153,10 @@
 		
 		if([elementName isEqualToString:@"color"])
 			walkColor = NO;
+
+		if([elementName isEqualToString:@"favorite"])
+			walkFavorite = NO;
+
 		
 		if(inNode)
 		{
@@ -220,8 +227,21 @@
 			if(walkProximity)
 				walk.proximity = [currentElementValue floatValue];
 			
+			if(walkFavorite)
+			{
+				NSString *CEVlower = [currentElementValue lowercaseString];
+				if([CEVlower isEqualToString:@"yes"])
+					walk.favorite = YES;
+				else
+					walk.favorite = NO;
+
+
+				
+			}
+			
 			if(walkColor)
 			{	
+/*
 				// Separate into r, g, b substrings  000,000,000
 				NSRange range;  
 				range.location = 0;  
@@ -245,6 +265,71 @@
 									   green:((float) g / 255.0f)  
 										blue:((float) b / 255.0f)  
 									   alpha:1.0f];  
+*/				
+				
+				
+				NSString *CEVlower = [currentElementValue lowercaseString];
+				
+				if([CEVlower isEqualToString:@"black"]){
+					NSLog(@"Chose color: black");
+					walk.color = [UIColor blackColor];
+				}
+				else if([CEVlower isEqualToString:@"blue"]){
+					NSLog(@"Chose color: blue");
+					walk.color = [UIColor blueColor];
+				}
+				else if([CEVlower isEqualToString:@"brown"]){
+					NSLog(@"Chose color: brown");
+					walk.color = [UIColor brownColor];
+				}
+				else if([CEVlower isEqualToString:@"cyan"]){
+					NSLog(@"Chose color: cyan");
+					walk.color = [UIColor cyanColor];
+				}
+				else if([CEVlower isEqualToString:@"darkgray"]){
+					NSLog(@"Chose color: darkgray");
+					walk.color = [UIColor darkGrayColor];
+				}
+				else if([CEVlower isEqualToString:@"gray"]){
+					NSLog(@"Chose color: gray");
+					walk.color = [UIColor grayColor];
+				}
+				else if([CEVlower isEqualToString:@"green"]){
+					NSLog(@"Chose color: green");
+					walk.color = [UIColor greenColor];
+				}
+				else if([CEVlower isEqualToString:@"lightgray"]){
+					NSLog(@"Chose color: lightgray");
+					walk.color = [UIColor lightGrayColor];
+				}
+				else if([CEVlower isEqualToString:@"magenta"]){
+					NSLog(@"Chose color: magenta");
+					walk.color = [UIColor magentaColor];
+				}
+				else if([CEVlower isEqualToString:@"orange"]){
+					NSLog(@"Chose color: orange");
+					walk.color = [UIColor orangeColor];
+				}
+				else if([CEVlower isEqualToString:@"purple"]){
+					NSLog(@"Chose color: purple");
+					walk.color = [UIColor purpleColor];
+				}
+				else if([CEVlower isEqualToString:@"red"]){
+					NSLog(@"Chose color: red");
+					walk.color = [UIColor redColor];
+				}
+				else if([CEVlower isEqualToString:@"white"]){
+					NSLog(@"Chose color: white");
+					walk.color = [UIColor whiteColor];
+				}
+				else if([CEVlower isEqualToString:@"yellow"]){
+					NSLog(@"Chose color: yellow");
+					walk.color = [UIColor yellowColor];
+				}
+				else{ //default color is purple
+					NSLog(@"No color match.  Choosing purple");
+					walk.color = [UIColor purpleColor];
+				}
 				
 				
 				
