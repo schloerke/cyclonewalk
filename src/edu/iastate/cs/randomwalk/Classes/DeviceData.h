@@ -19,19 +19,19 @@
 
 // determines if the device a IPhone 3Gs (Calls hasGPS, hasCamera, hasCompass to determine if the device
 //is suitable. They must all return true) 
--(BOOL) isiPhone3Gs;
++(BOOL) isiPhone3Gs;
 
 // Determines if the device has GPS functionality 
--(BOOL) hasGPS;
++(BOOL) hasGPS;
 
 // Determines if the device has camera functionality 
--(BOOL) hasCamera;
++(BOOL) hasCamera;
 
 // Determines if the device has compass functionality
--(BOOL) hasCompass;
++(BOOL) hasCompass;
 
 // Gets the version of the iPhone software 
--(NSString *) getSoftwareVersion;
++(NSString *) getSoftwareVersion;
 
 
 
