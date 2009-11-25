@@ -19,7 +19,11 @@
 	MKMapView *mapView;
 	CLLocationCoordinate2D location;
 	CLLocationManager *locationManager;
+	NSMutableArray *nodeList;
 }
+
+@property (nonatomic, retain) 	NSMutableArray *nodeList;
+
 
 /**
  * Initializes the Map View with the given Walk Data Array. The data can 
@@ -30,7 +34,7 @@
 /**
  * Initializes the Map View with the given Walk Data.
  */ 
-- (id) initWithWalk: (WalkData *) walkData; 
+//- (id) initWithWalk: (WalkData *) walkData; 
 
 
 /**

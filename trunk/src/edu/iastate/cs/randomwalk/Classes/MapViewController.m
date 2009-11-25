@@ -2,6 +2,8 @@
 
 @implementation MapViewController
 
+@synthesize nodeList;
+
 -(id)initWithWalkArray: (NSArray *)walkArrayOrNil{
 	mapView=[[MKMapView alloc] initWithFrame:self.view.frame];
 	mapView.showsUserLocation=TRUE;
@@ -19,11 +21,13 @@
 	
 	self.title = @"Map View";
 	
+	nodeList = [[NSMutableArray alloc] init];
+	
 	return self;
 }
 	
 
--(id)initWithWalk:(WalkData *)walkDataOrNil{
+/*-(id)initWithWalk:(WalkData *)walkDataOrNil{
 	
 	mapView=[[MKMapView alloc] initWithFrame:self.view.frame];
 	mapView.showsUserLocation=TRUE;
@@ -48,15 +52,15 @@
 		}
     }
 	return self;
-}
+}*/
 	 
 /**
  * Adds nodes to the MapView from the provided Walk
  */
 -(void)showNodes:(WalkData *) walkData{
-	NSMutableArray *nodeList = [walkData nodeList];
-	for (int i=0; i<[nodeList count]; i++) {
-		MapPin *pin = [[MapPin alloc] initWithNodeData:[nodeList objectAtIndex:i] color: walkData.color];		
+	NSMutableArray *nList = [walkData nodeList];
+	for (int i=0; i<[nList count]; i++) {
+		MapPin *pin = [[MapPin alloc] initWithNodeData:[nList objectAtIndex:i] color: walkData.color];		
 		NSLog(@"Adding pin: %@", pin.nodeData.name);
 		[mapView addAnnotation:pin];
 		[pin release];
@@ -120,12 +124,32 @@
 	test.enabled = YES;
 	if([annotation isKindOfClass:[MapPin class]]){
 		[test setImage:[((MapPin *)annotation) pinImage]];
-		NodeDetail *infoView = [[NodeDetail alloc] initWithNode:((MapPin *)annotation).nodeData];
-		//test.leftCalloutAccessoryView = infoView.tableView;
-		[infoView release];
+		UIButton *button = [UIButton buttonWithType: UIButtonTypeDetailDisclosure];
+		
+		
+		NodeData *nodeD = ((MapPin *)annotation).nodeData;
+		NSLog(@"Node Name: %@", nodeD.name);
+		NSLog(@"NodeListCount: %d", [nodeList count]);
+		button.tag = [nodeList count];
+		[nodeList addObject:nodeD];
+		
+		
+		[button addTarget:self action:@selector(pushNodeDetail:) forControlEvents:UIControlEventTouchUpInside];
+		test.rightCalloutAccessoryView = button;
+		//[button autorelease];
 	}
 	[test autorelease];
 	return test;
+}
+
+-(void) pushNodeDetail:(id)sender
+{
+	NodeDetail *infoView = [[NodeDetail alloc] initWithNode:[nodeList objectAtIndex:[sender tag]]];
+	
+	NSLog(@"Pushing the NodeDetail: %@", infoView.nodeData.name);
+	[self.navigationController pushViewController:infoView animated:YES];
+	self.navigationController.navigationBarHidden = NO;
+	[infoView release];
 }
 
 //location manager functions
