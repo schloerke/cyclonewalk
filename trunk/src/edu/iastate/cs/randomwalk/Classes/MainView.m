@@ -18,9 +18,6 @@
 -(IBAction)pushedStart
 {
 	NSLog(@"Calling Start");
-<<<<<<< HEAD:src/edu/iastate/cs/randomwalk/Classes/MainView.m
-	MapViewController *mview = [[MapViewController alloc] initWithWalk:[walks objectAtIndex:0]];
-=======
 	
 	int i,j;
 	WalkData *comboWalk = [[WalkData alloc] initNewWalk];
@@ -53,10 +50,10 @@
 	NSLog(@"Combined a walk with %d nodes", [comboWalk.nodeList count]);
 	
 /*	MapViewController *mview = [[MapViewController alloc] initWithWalk:[walks objectAtIndex:0]];
->>>>>>> Set up the start button:src/edu/iastate/cs/randomwalk/Classes/MainView.m
 	NSLog(@"Pushing the Map View");
 	[self.navigationController pushViewController:mview animated:NO];
 	self.navigationController.navigationBarHidden = YES;
+ */
  
 }
 
