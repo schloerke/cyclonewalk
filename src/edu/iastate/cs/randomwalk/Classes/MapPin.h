@@ -14,12 +14,15 @@
 @interface MapPin : NSObject <MKAnnotation> {
 	CLLocationCoordinate2D coordinate;
 	NodeData *nodeData;
+	UIImage *pinImage;
 }
 
 @property (nonatomic, readonly) CLLocationCoordinate2D coordinate;
 @property (nonatomic, readonly) NodeData  *nodeData;
+@property (nonatomic, readonly) UIImage *pinImage;
 
--(id) initWithNodeData: (NodeData *) data;
+
+-(id) initWithNodeData: (NodeData *)data color:(UIColor*)color;
 -(id) initWithCoordinate: (CLLocationCoordinate2D) coord;
 -(NSString *)title;
 -(NSString *)subtitle;
