@@ -17,13 +17,17 @@
 
 @interface MapViewController : UIViewController <MKMapViewDelegate, MKReverseGeocoderDelegate, CLLocationManagerDelegate> {
 	MKMapView *mapView;
-	CLLocationCoordinate2D location; 	
+	CLLocationCoordinate2D location;
 }
 
+/**
+ * Initializes the Map View with the given Walk Data Array. The data can 
+ * be from multiple walks.
+ */ 
+- (id) initWithWalkArray : (NSArray *) walkArray;
 
 /**
- * Initializes the Map View with the given Walk Data. The data can 
- * be from multiple walks.
+ * Initializes the Map View with the given Walk Data.
  */ 
 - (id) initWithWalk: (WalkData *) walkData; 
 
