@@ -11,6 +11,7 @@
 #import "NodeDetail.h"
 #import "MainView.h"
 #import "XMLParse.h"
+#import "DeviceData.h"
 
 @implementation RootViewController
 
@@ -79,6 +80,14 @@
 	[nodeInfo release];
 	NSLog(@"Done Pushing NodeView");
 	
+	
+	
+	NSLog(@"\nCheck Device Parameters");
+	NSLog(@"%@",([DeviceData isiPhone3Gs] ? @"Is a iPhone3Gs" : @"Is NOT a iPhone3Gs"));
+	NSLog(@"%@",([DeviceData hasGPS] ? @"has a GPS unit" : @"has NO GPS unit"));
+	NSLog(@"%@",([DeviceData hasCamera] ? @"has a camera" : @"does NOT have a camera"));
+	NSLog(@"%@",([DeviceData isiPhone3Gs] ? @"has a compass" : @"does NOT have a compass"));
+	NSLog(@"%@",[DeviceData getSoftwareVersion]);
 
 }
 
