@@ -14,7 +14,6 @@
 //is suitable. They must all return true) 
 -(BOOL) isiPhone3Gs{
 	return NO;
-	
 }
 
 // Determines if the device has GPS functionality 
