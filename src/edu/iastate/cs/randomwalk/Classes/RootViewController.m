@@ -8,7 +8,7 @@
 
 #import "RootViewController.h"
 #import "NodeData.h"
-#import "NodeInfo.h"
+#import "NodeDetail.h"
 #import "MainView.h"
 #import "XMLParse.h"
 
@@ -52,19 +52,9 @@
 	nodeData.longitude = 45;	
 	nodeData.latitude = (CGFloat) 46 ;
 	nodeData.contactInfo = @"Barret Schloerke";
-	nodeData.photo = nil;
+	nodeData.photoURL = nil;
 		
 	
-	NodeInfo *nodeInfo = [[NodeInfo alloc] initWithNode:nodeData];
-	[nodeData release];
-	//initially hide navigation bar
-	
-							
-							
-	//	NSLog(@"Pushing the NodeView");
-	//    [self.navigationController pushViewController:nodeInfo animated:YES];
-	    [nodeInfo release];
-	//	NSLog(@"Done Pushing NodeView");
 	
 
 	
@@ -72,13 +62,22 @@
 	appData = [xmlPar startParsing];
 
 	MainView *mview = [[MainView alloc] initWithAppData:appData];
-	NSLog(@"Pushing the NodeView");
-	[self.navigationController pushViewController:mview animated:NO];
-	self.navigationController.navigationBarHidden = YES;						
+	NSLog(@"Pushing the MainView");
+	//[self.navigationController pushViewController:mview animated:NO];
+	//self.navigationController.navigationBarHidden = YES;						
 	
 	[mview release];
 	NSLog(@"Done Pushing MainView");
 	
+	nodeData = [[[appData.userWalks objectAtIndex:0] nodeList] objectAtIndex:0];
+	NSLog(@"Node Name: %@", nodeData.name);
+	
+	NodeDetail *nodeInfo = [[NodeDetail alloc] initWithNode:nodeData ];
+	[nodeData release];
+	NSLog(@"Pushing the NodeView");
+	[self.navigationController pushViewController:nodeInfo animated:YES];
+	[nodeInfo release];
+	NSLog(@"Done Pushing NodeView");
 	
 
 }
