@@ -12,6 +12,8 @@
 
 @interface AppData : NSObject {
 	NSMutableArray *walkList;
+	NSMutableArray *userWalks;
+	NSMutableArray *defaultWalks;
 	
 	// All global settings
 	CGFloat proximity;
@@ -20,6 +22,8 @@
 }
 
 @property (nonatomic, retain) NSMutableArray *walkList;
+@property (nonatomic, retain) NSMutableArray *userWalks;
+@property (nonatomic, retain) NSMutableArray *defaultWalks;
 @property (nonatomic) CGFloat proximity;
 
 // init method

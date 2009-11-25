@@ -17,7 +17,7 @@
 /*
  The walk data contains a field that has a description or instructions about the walk.  This initializes the Description Dialog with the supplied text and is displayed.
  */
--(void) initWithText:(NSString *)text;
+-(id) initWithText:(NSString *)text;
 
 
 

@@ -56,7 +56,7 @@
 		
 	
 	NodeInfo *nodeInfo = [[NodeInfo alloc] initWithNode:nodeData];
-	
+	[nodeData release];
 	//initially hide navigation bar
 	
 							

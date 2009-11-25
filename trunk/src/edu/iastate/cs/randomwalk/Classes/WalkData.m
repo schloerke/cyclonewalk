@@ -24,7 +24,7 @@
 
 -(WalkData *) initNewWalk
 {
-	self = [WalkData alloc];
+	self = [[WalkData alloc] init];
 	self.name = @"";
 	self.color = [UIColor blackColor];
 	self.favorite = NO;
@@ -55,8 +55,8 @@
 -(int) getNodePosition:(NodeData *) nodeP
 { 
 	int i = 0;
-	for (i =0; i< [nodeList count]; i++) {
-		if([[[nodeList objectAtIndex:i] name] isEqualToString:[nodeP name]])
+	for (i =0; i< [self.nodeList count]; i++) {
+		if([[[self.nodeList objectAtIndex:i] name] isEqualToString:[nodeP name]])
 		{
 			NSLog(@"Node found at Pos: %d", i);
 			return i;
