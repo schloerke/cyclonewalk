@@ -18,6 +18,8 @@
 		28AD73600D9D9599002E5188 /* MainWindow.xib in Resources */ = {isa = PBXBuildFile; fileRef = 28AD735F0D9D9599002E5188 /* MainWindow.xib */; };
 		28C286E10D94DF7D0034E888 /* RootViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 28C286E00D94DF7D0034E888 /* RootViewController.m */; };
 		9E48996F10BA2FC000682D0D /* MapViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 9E48996E10BA2FC000682D0D /* MapViewController.m */; };
+		AB64459B10BC75FE005185A9 /* CoreLocation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = AB64459A10BC75FD005185A9 /* CoreLocation.framework */; };
+		AB64459D10BC75FE005185A9 /* MapKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = AB64459C10BC75FE005185A9 /* MapKit.framework */; };
 		AB9B88C110B8A37C00BD3F84 /* XMLParse.m in Sources */ = {isa = PBXBuildFile; fileRef = AB9B88C010B8A37C00BD3F84 /* XMLParse.m */; };
 		ABAD5CE010A48ED100B14D2B /* Compass.m in Sources */ = {isa = PBXBuildFile; fileRef = ABAD5CDE10A48ED100B14D2B /* Compass.m */; };
 		ABAD5CF010A49A1700B14D2B /* Settings.m in Sources */ = {isa = PBXBuildFile; fileRef = ABAD5CEE10A49A1700B14D2B /* Settings.m */; };
@@ -52,6 +54,8 @@
 		8D1107310486CEB800E47090 /* randomwalk-Info.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; path = "randomwalk-Info.plist"; plistStructureDefinitionIdentifier = "com.apple.xcode.plist.structure-definition.iphone.info-plist"; sourceTree = "<group>"; };
 		9E48996D10BA2FC000682D0D /* MapViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = MapViewController.h; sourceTree = "<group>"; };
 		9E48996E10BA2FC000682D0D /* MapViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = MapViewController.m; sourceTree = "<group>"; };
+		AB64459A10BC75FD005185A9 /* CoreLocation.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = CoreLocation.framework; path = System/Library/Frameworks/CoreLocation.framework; sourceTree = SDKROOT; };
+		AB64459C10BC75FE005185A9 /* MapKit.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = MapKit.framework; path = System/Library/Frameworks/MapKit.framework; sourceTree = SDKROOT; };
 		AB9B88BF10B8A37C00BD3F84 /* XMLParse.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = XMLParse.h; sourceTree = "<group>"; };
 		AB9B88C010B8A37C00BD3F84 /* XMLParse.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = XMLParse.m; sourceTree = "<group>"; };
 		ABAD5CDD10A48ED100B14D2B /* Compass.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = Compass.h; sourceTree = "<group>"; wrapsLines = 1; };
@@ -87,6 +91,8 @@
 				1DF5F4E00D08C38300B7A737 /* UIKit.framework in Frameworks */,
 				2892E4100DC94CBA00A64D0F /* CoreGraphics.framework in Frameworks */,
 				28860BE50F44EE6400985440 /* CoreData.framework in Frameworks */,
+				AB64459B10BC75FE005185A9 /* CoreLocation.framework in Frameworks */,
+				AB64459D10BC75FE005185A9 /* MapKit.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -154,6 +160,8 @@
 				1D30AB110D05D00D00671497 /* Foundation.framework */,
 				2892E40F0DC94CBA00A64D0F /* CoreGraphics.framework */,
 				28860BE40F44EE6400985440 /* CoreData.framework */,
+				AB64459A10BC75FD005185A9 /* CoreLocation.framework */,
+				AB64459C10BC75FE005185A9 /* MapKit.framework */,
 			);
 			name = Frameworks;
 			sourceTree = "<group>";

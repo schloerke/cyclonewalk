@@ -205,7 +205,7 @@
 	29B97313FDCFA39411CA2CEA /* Project object */ = {
 		activeBuildConfigurationName = Debug;
 		activeExecutable = ABAD5CCA10A484F100B14D2B /* randomwalk */;
-		activeSDKPreference = iphoneos3.1;
+		activeSDKPreference = iphonesimulator3.1.2;
 		activeTarget = 1D6058900D05DD3D006BFB54 /* randomwalk */;
 		addToTargets = (
 			1D6058900D05DD3D006BFB54 /* randomwalk */,
@@ -440,9 +440,9 @@
 	};
 	9E48996D10BA2FC000682D0D /* MapViewController.h */ = {
 		uiCtxt = {
-			sepNavIntBoundsRect = "{{0, 0}, {1006, 442}}";
+			sepNavIntBoundsRect = "{{0, 0}, {1006, 481}}";
 			sepNavSelRange = "{388, 0}";
-			sepNavVisRange = "{26, 802}";
+			sepNavVisRange = "{3, 772}";
 		};
 	};
 	9E48996E10BA2FC000682D0D /* MapViewController.m */ = {
@@ -517,7 +517,7 @@
 		fRef = ABF39B3A10AA28CF0098A457 /* MainView.m */;
 		name = "MainView.m: 116";
 		rLen = 13;
-		rLoc = 4233;
+		rLoc = 3992;
 		rType = 0;
 		vrLen = 751;
 		vrLoc = 2661;
@@ -720,7 +720,7 @@
 		fRef = ABF39B3A10AA28CF0098A457 /* MainView.m */;
 		name = "MainView.m: 115";
 		rLen = 1;
-		rLoc = 4169;
+		rLoc = 3928;
 		rType = 0;
 		vrLen = 815;
 		vrLoc = 2661;
@@ -780,7 +780,7 @@
 		fRef = ABF39B3A10AA28CF0098A457 /* MainView.m */;
 		name = "MainView.m: 115";
 		rLen = 1;
-		rLoc = 4169;
+		rLoc = 3928;
 		rType = 0;
 		vrLen = 731;
 		vrLoc = 2661;
@@ -790,7 +790,7 @@
 		fRef = ABF39B3A10AA28CF0098A457 /* MainView.m */;
 		name = "MainView.m: 134";
 		rLen = 0;
-		rLoc = 5074;
+		rLoc = 4833;
 		rType = 0;
 		vrLen = 802;
 		vrLoc = 3059;
@@ -800,7 +800,7 @@
 		fRef = ABF39B3A10AA28CF0098A457 /* MainView.m */;
 		name = "MainView.m: 154";
 		rLen = 0;
-		rLoc = 5475;
+		rLoc = 5234;
 		rType = 0;
 		vrLen = 663;
 		vrLoc = 3661;
@@ -810,7 +810,7 @@
 		fRef = ABF39B3A10AA28CF0098A457 /* MainView.m */;
 		name = "MainView.m: 156";
 		rLen = 0;
-		rLoc = 5494;
+		rLoc = 5253;
 		rType = 0;
 		vrLen = 657;
 		vrLoc = 3677;
@@ -820,7 +820,7 @@
 		comments = "Unused variable 'i'";
 		fRef = ABF39B3A10AA28CF0098A457 /* MainView.m */;
 		rLen = 1;
-		rLoc = 182;
+		rLoc = 179;
 		rType = 1;
 	};
 	AB64440D10BC5F2B005185A9 /* PBXTextBookmark */ = {
@@ -828,7 +828,7 @@
 		fRef = ABF39B3A10AA28CF0098A457 /* MainView.m */;
 		name = "MainView.m: 172";
 		rLen = 0;
-		rLoc = 5202;
+		rLoc = 4961;
 		rType = 0;
 		vrLen = 525;
 		vrLoc = 4476;
@@ -838,7 +838,7 @@
 		fRef = ABF39B3A10AA28CF0098A457 /* MainView.m */;
 		name = "MainView.m: 45";
 		rLen = 0;
-		rLoc = 1415;
+		rLoc = 1251;
 		rType = 0;
 		vrLen = 944;
 		vrLoc = 276;
@@ -848,7 +848,7 @@
 		fRef = ABF39B3A10AA28CF0098A457 /* MainView.m */;
 		name = "MainView.m: 32";
 		rLen = 0;
-		rLoc = 993;
+		rLoc = 829;
 		rType = 0;
 		vrLen = 1002;
 		vrLoc = 276;
@@ -858,7 +858,7 @@
 		fRef = ABF39B3A10AA28CF0098A457 /* MainView.m */;
 		name = "MainView.m: 39";
 		rLen = 0;
-		rLoc = 1199;
+		rLoc = 1035;
 		rType = 0;
 		vrLen = 1031;
 		vrLoc = 316;
@@ -868,7 +868,7 @@
 		fRef = ABF39B3A10AA28CF0098A457 /* MainView.m */;
 		name = "MainView.m: 25";
 		rLen = 0;
-		rLoc = 400;
+		rLoc = 304;
 		rType = 0;
 		vrLen = 1084;
 		vrLoc = 306;
@@ -878,7 +878,7 @@
 		comments = "Unused variable 'i'";
 		fRef = ABF39B3A10AA28CF0098A457 /* MainView.m */;
 		rLen = 1;
-		rLoc = 182;
+		rLoc = 179;
 		rType = 1;
 	};
 	AB64442210BC6096005185A9 /* PBXTextBookmark */ = {
@@ -886,7 +886,7 @@
 		fRef = ABF39B3A10AA28CF0098A457 /* MainView.m */;
 		name = "MainView.m: 179";
 		rLen = 0;
-		rLoc = 5202;
+		rLoc = 4961;
 		rType = 0;
 		vrLen = 814;
 		vrLoc = 4261;
@@ -896,7 +896,7 @@
 		fRef = ABF39B3A10AA28CF0098A457 /* MainView.m */;
 		name = "MainView.m: 25";
 		rLen = 0;
-		rLoc = 400;
+		rLoc = 304;
 		rType = 0;
 		vrLen = 1084;
 		vrLoc = 306;
@@ -1016,7 +1016,7 @@
 		fRef = ABF39B3A10AA28CF0098A457 /* MainView.m */;
 		name = "MainView.m: 103";
 		rLen = 0;
-		rLoc = 2897;
+		rLoc = 2656;
 		rType = 0;
 		vrLen = 474;
 		vrLoc = 2598;
@@ -1026,7 +1026,7 @@
 		fRef = ABF39B3A10AA28CF0098A457 /* MainView.m */;
 		name = "MainView.m: 103";
 		rLen = 33;
-		rLoc = 2865;
+		rLoc = 2624;
 		rType = 0;
 		vrLen = 474;
 		vrLoc = 2598;
@@ -1096,7 +1096,7 @@
 		fRef = ABF39B3A10AA28CF0098A457 /* MainView.m */;
 		name = "MainView.m: 103";
 		rLen = 33;
-		rLoc = 2865;
+		rLoc = 2624;
 		rType = 0;
 		vrLen = 591;
 		vrLoc = 2525;
@@ -1106,7 +1106,7 @@
 		fRef = ABF39B3A10AA28CF0098A457 /* MainView.m */;
 		name = "MainView.m: 156";
 		rLen = 0;
-		rLoc = 4499;
+		rLoc = 4258;
 		rType = 0;
 		vrLen = 830;
 		vrLoc = 3822;
@@ -1116,7 +1116,7 @@
 		fRef = ABF39B3A10AA28CF0098A457 /* MainView.m */;
 		name = "MainView.m: 154";
 		rLen = 0;
-		rLoc = 4480;
+		rLoc = 4239;
 		rType = 0;
 		vrLen = 850;
 		vrLoc = 3871;
@@ -1126,7 +1126,7 @@
 		fRef = ABF39B3A10AA28CF0098A457 /* MainView.m */;
 		name = "MainView.m: 159";
 		rLen = 7;
-		rLoc = 4537;
+		rLoc = 4296;
 		rType = 0;
 		vrLen = 910;
 		vrLoc = 3871;
@@ -1223,7 +1223,7 @@
 		fRef = ABF39B3A10AA28CF0098A457 /* MainView.m */;
 		name = "MainView.m: 273";
 		rLen = 0;
-		rLoc = 7718;
+		rLoc = 7477;
 		rType = 0;
 		vrLen = 720;
 		vrLoc = 7250;
@@ -1283,7 +1283,7 @@
 		fRef = ABF39B3A10AA28CF0098A457 /* MainView.m */;
 		name = "MainView.m: 273";
 		rLen = 0;
-		rLoc = 7718;
+		rLoc = 7477;
 		rType = 0;
 		vrLen = 759;
 		vrLoc = 7228;
@@ -1293,7 +1293,7 @@
 		fRef = ABF39B3A10AA28CF0098A457 /* MainView.m */;
 		name = "MainView.m: 26";
 		rLen = 0;
-		rLoc = 530;
+		rLoc = 366;
 		rType = 0;
 		vrLen = 1061;
 		vrLoc = 278;
@@ -1303,7 +1303,7 @@
 		fRef = ABF39B3A10AA28CF0098A457 /* MainView.m */;
 		name = "MainView.m: 23";
 		rLen = 0;
-		rLoc = 368;
+		rLoc = 304;
 		rType = 0;
 		vrLen = 1110;
 		vrLoc = 306;
@@ -1313,7 +1313,7 @@
 		fRef = ABF39B3A10AA28CF0098A457 /* MainView.m */;
 		name = "MainView.m: 23";
 		rLen = 0;
-		rLoc = 368;
+		rLoc = 304;
 		rType = 0;
 		vrLen = 1208;
 		vrLoc = 306;
@@ -1323,7 +1323,7 @@
 		fRef = ABF39B3A10AA28CF0098A457 /* MainView.m */;
 		name = "MainView.m: 23";
 		rLen = 0;
-		rLoc = 368;
+		rLoc = 304;
 		rType = 0;
 		vrLen = 1208;
 		vrLoc = 306;
@@ -2107,7 +2107,7 @@
 		rLen = 0;
 		rLoc = 388;
 		rType = 0;
-		vrLen = 802;
+		vrLen = 756;
 		vrLoc = 26;
 	};
 	ABBF7BCD10BC570A0021ACFB /* PBXTextBookmark */ = {
@@ -2176,14 +2176,14 @@
 		uiCtxt = {
 			sepNavIntBoundsRect = "{{0, 0}, {1006, 533}}";
 			sepNavSelRange = "{188, 0}";
-			sepNavVisRange = "{168, 900}";
+			sepNavVisRange = "{144, 924}";
 		};
 	};
 	ABF39B3A10AA28CF0098A457 /* MainView.m */ = {
 		uiCtxt = {
-			sepNavIntBoundsRect = "{{0, 0}, {821, 4641}}";
-			sepNavSelRange = "{5202, 0}";
-			sepNavVisRange = "{4070, 1049}";
+			sepNavIntBoundsRect = "{{0, 0}, {1006, 4433}}";
+			sepNavSelRange = "{304, 0}";
+			sepNavVisRange = "{0, 864}";
 			sepNavWindowFrame = "{{19, 59}, {821, 714}}";
 		};
 	};
