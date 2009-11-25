@@ -294,8 +294,8 @@
 					PBXFileDataSource_Warnings_ColumnID,
 				);
 			};
-			PBXPerProjectTemplateStateSaveDate = 280866164;
-			PBXWorkspaceStateSaveDate = 280866164;
+			PBXPerProjectTemplateStateSaveDate = 280866736;
+			PBXWorkspaceStateSaveDate = 280866736;
 		};
 		perUserProjectItems = {
 			AB5745BB10BC546A003A3EC6 = AB5745BB10BC546A003A3EC6 /* PBXTextBookmark */;
@@ -355,6 +355,8 @@
 			AB991B3D10BDAD6B00146D11 = AB991B3D10BDAD6B00146D11 /* PBXTextBookmark */;
 			AB991B3E10BDAD6B00146D11 = AB991B3E10BDAD6B00146D11 /* PBXTextBookmark */;
 			AB991B4010BDAD6B00146D11 = AB991B4010BDAD6B00146D11 /* PBXTextBookmark */;
+			AB991B9410BDAFE800146D11 /* XCBuildMessageTextBookmark */ = AB991B9410BDAFE800146D11 /* XCBuildMessageTextBookmark */;
+			AB991B9510BDAFE800146D11 /* PBXTextBookmark */ = AB991B9510BDAFE800146D11 /* PBXTextBookmark */;
 			AB9B886B10B8976A00BD3F84 = AB9B886B10B8976A00BD3F84 /* PBXTextBookmark */;
 			AB9B88D010B8A47E00BD3F84 = AB9B88D010B8A47E00BD3F84 /* PBXTextBookmark */;
 			AB9B895310B8E99B00BD3F84 = AB9B895310B8E99B00BD3F84 /* PBXTextBookmark */;
@@ -390,15 +392,15 @@
 	9E48996D10BA2FC000682D0D /* MapViewController.h */ = {
 		uiCtxt = {
 			sepNavIntBoundsRect = "{{0, 0}, {1006, 546}}";
-			sepNavSelRange = "{565, 0}";
-			sepNavVisRange = "{151, 801}";
+			sepNavSelRange = "{792, 0}";
+			sepNavVisRange = "{151, 803}";
 		};
 	};
 	9E48996E10BA2FC000682D0D /* MapViewController.m */ = {
 		uiCtxt = {
-			sepNavIntBoundsRect = "{{0, 0}, {1006, 2431}}";
-			sepNavSelRange = "{150, 5}";
-			sepNavVisRange = "{0, 608}";
+			sepNavIntBoundsRect = "{{0, 0}, {1006, 2366}}";
+			sepNavSelRange = "{1167, 0}";
+			sepNavVisRange = "{756, 808}";
 		};
 	};
 	AB5745BB10BC546A003A3EC6 /* PBXTextBookmark */ = {
@@ -484,8 +486,8 @@
 	AB6445C110BC7717005185A9 /* MapPin.m */ = {
 		uiCtxt = {
 			sepNavIntBoundsRect = "{{0, 0}, {1006, 1365}}";
-			sepNavSelRange = "{2722, 0}";
-			sepNavVisRange = "{2528, 559}";
+			sepNavSelRange = "{2783, 0}";
+			sepNavVisRange = "{0, 552}";
 		};
 	};
 	AB73498310B9DF1D008126E3 /* PBXTextBookmark */ = {
@@ -948,7 +950,7 @@
 		fRef = ABF39B3A10AA28CF0098A457 /* MainView.m */;
 		name = "MainView.m: 87";
 		rLen = 0;
-		rLoc = 2855;
+		rLoc = 2864;
 		rType = 0;
 		vrLen = 852;
 		vrLoc = 2341;
@@ -1201,11 +1203,25 @@
 		name = UIView.h;
 		path = /Developer/Platforms/iPhoneSimulator.platform/Developer/SDKs/iPhoneSimulator3.1.2.sdk/System/Library/Frameworks/UIKit.framework/Headers/UIView.h;
 		sourceTree = "<absolute>";
-		uiCtxt = {
-			sepNavIntBoundsRect = "{{0, 0}, {1006, 2951}}";
-			sepNavSelRange = "{4403, 46}";
-			sepNavVisRange = "{3554, 1837}";
-		};
+	};
+	AB991B9410BDAFE800146D11 /* XCBuildMessageTextBookmark */ = {
+		isa = PBXTextBookmark;
+		comments = "(Messages without a matching method signature will be assumed to return 'id' and accept '...' as arguments.)";
+		fRef = ABF39B3A10AA28CF0098A457 /* MainView.m */;
+		fallbackIsa = XCBuildMessageTextBookmark;
+		rLen = 1;
+		rLoc = 51;
+		rType = 1;
+	};
+	AB991B9510BDAFE800146D11 /* PBXTextBookmark */ = {
+		isa = PBXTextBookmark;
+		fRef = ABF39B3A10AA28CF0098A457 /* MainView.m */;
+		name = "MainView.m: 53";
+		rLen = 0;
+		rLoc = 1504;
+		rType = 0;
+		vrLen = 1199;
+		vrLoc = 994;
 	};
 	AB9B882910B8904100BD3F84 /* NSString.h */ = {
 		isa = PBXFileReference;
@@ -1674,9 +1690,9 @@
 	};
 	ABF39B3A10AA28CF0098A457 /* MainView.m */ = {
 		uiCtxt = {
-			sepNavIntBoundsRect = "{{0, 0}, {1006, 5096}}";
-			sepNavSelRange = "{2855, 0}";
-			sepNavVisRange = "{2341, 852}";
+			sepNavIntBoundsRect = "{{0, 0}, {1006, 5148}}";
+			sepNavSelRange = "{1383, 0}";
+			sepNavVisRange = "{784, 984}";
 			sepNavWindowFrame = "{{19, 59}, {821, 714}}";
 		};
 	};
