@@ -10,9 +10,7 @@
 #import <CoreLocation/CoreLocation.h>
 
 @interface DeviceData : NSObject {
-	
 	CLLocationManager *locationManager;
-
 }
 
 @property(retain,nonatomic) CLLocationManager *locationManager;

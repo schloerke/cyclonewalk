@@ -12,6 +12,8 @@
 #import "MainView.h"
 #import "XMLParse.h"
 #import "DeviceData.h"
+#import "GPS.h"
+#import <CoreLocation/CoreLocation.h>
 
 @implementation RootViewController
 
@@ -86,9 +88,24 @@
 	NSLog(@"%@",([DeviceData isiPhone3Gs] ? @"Is a iPhone3Gs" : @"Is NOT a iPhone3Gs"));
 	NSLog(@"%@",([DeviceData hasGPS] ? @"has a GPS unit" : @"has NO GPS unit"));
 	NSLog(@"%@",([DeviceData hasCamera] ? @"has a camera" : @"does NOT have a camera"));
-	NSLog(@"%@",([DeviceData isiPhone3Gs] ? @"has a compass" : @"does NOT have a compass"));
+	NSLog(@"%@",([DeviceData hasCompass] ? @"has a compass" : @"does NOT have a compass"));
 	NSLog(@"%@",[DeviceData getSoftwareVersion]);
 
+	
+	NSLog(@"\n Check GPS ! Parameters");
+	CLLocation *point = [[CLLocation alloc] initWithLatitude:42.02091 longitude: -93.634946];
+	NSLog(@"Latitude: %lf \nLongitude: %lf \n", point.coordinate.latitude, point.coordinate.longitude);
+	//NSLog(@"DISTANCE FROM HERE TO HILTON: %lf", [GPS getDistance:point]);
+	//CLLocationCoordinate2D coord= [GPS getCurrentLocation];							<------UNCOMMENT THIS LINE!!!!!!
+	//NSLog(@"Current Location: Lat: %lf  Long:  %lf", [GPS getCurrentLocation].latitude, [GPS getCurrentLocation].longitude);
+	//CLLocation *test1 = [[CLLocation alloc] initWithLatitude:42.27818011 longitude: -71.39553308];
+	//CLLocation *test2 = [[CLLocation alloc] initWithLatitude:42.58618012 longitude: -70.39553308];
+	//double diff = 0;
+	//diff = [test1 getDistanceFrom:test2];
+	//NSLog(@"Distance: %lf", diff);
+	
+	
+	
 }
 
 
