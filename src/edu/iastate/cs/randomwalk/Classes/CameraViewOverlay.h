@@ -12,7 +12,9 @@
  * Custom Overlay for the 
  */
 @interface CameraViewOverlay : UIView {
-
+	CLLocationManager *locationManager;
+	CLLocationCoordinate2D location;
+	NSMutableArray *nodeList;
 }
 
 @end
