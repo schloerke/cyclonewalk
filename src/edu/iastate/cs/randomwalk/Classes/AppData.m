@@ -12,24 +12,34 @@
 
 @implementation AppData
 
-@synthesize walkList, proximity, userWalks, defaultWalks;
+@synthesize walkList, proximity, userWalks, defaultWalks, applicationSelectedWalks;
 
 
--(id) initSingleton
++(id) initSingleton
 {
 	NSLog(@"calling initSingleton");
 	
 	
-	self = [[AppData alloc] init];
+	static AppData *singltonAppData;
 	
-		NSLog(@"Initializing the AppData");
-	self.walkList = [[NSMutableArray alloc] init];
-	self.userWalks = [[NSMutableArray alloc] init];
-	self.defaultWalks = [[NSMutableArray alloc] init];
+	@synchronized(self) {
+		if(!singltonAppData) {
+ 			singltonAppData = [[AppData alloc] init];
+			
+			NSLog(@"Initializing the AppData");
+			singltonAppData.walkList = [[NSMutableArray alloc] init];
+			singltonAppData.userWalks = [[NSMutableArray alloc] init];
+			singltonAppData.defaultWalks = [[NSMutableArray alloc] init];
+			singltonAppData.applicationSelectedWalks = [[NSMutableArray alloc] init];
+			//singltonAppData.naviController = [[UINavigationController alloc] init];
+			
+			singltonAppData.proximity = 50;		
+			
+			
+		}
+	}
 	
-		self.proximity = 50;		
-	
-	return self;
+	return singltonAppData;
 }
 
 // adds a walk to the data

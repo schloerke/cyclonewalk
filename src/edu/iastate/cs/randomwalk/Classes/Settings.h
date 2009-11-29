@@ -7,6 +7,7 @@
 //
 
 #import <UIKit/UIKit.h>
+#import "AppData.h"
 
 
 @interface Settings : UIViewController {
@@ -14,12 +15,12 @@
 	IBOutlet UILabel *proximityLabel;
 	IBOutlet UISlider *slider;
 }
-
+@property ( nonatomic) CGFloat proximity;
 
 /*
 Pushes the Settings view on top of the navigation stack, for a given walk
  */
--(void) initSettings;
+-(id) initSettings;
 
 /*
  When this function is run, it will call the walkDataController to delete the corresponding node.

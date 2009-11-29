@@ -8,9 +8,13 @@
 
 #import <UIKit/UIKit.h>
 #import "AppData.h"
+#import "MapViewController.h"
+#import "CameraViewController.h"
+#import "Settings.h"
 
 
-@interface MainView : UIViewController <UITableViewDelegate, UITableViewDataSource> {
+
+@interface MainView : UIViewController <UITableViewDelegate, UITableViewDataSource, UITabBarControllerDelegate> {
 	
 	IBOutlet UIButton *selectAll;
 	IBOutlet UIButton *unselectAll;
@@ -25,7 +29,7 @@
 @property (nonatomic, retain) AppData *appData;
 
 
--(id)initWithAppData:(AppData *) aDat;
+-(id)initWithAppData;
 -(IBAction)selectAllRows;
 -(IBAction)deselectAllRows;
 -(IBAction)pushedStart;

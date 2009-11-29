@@ -9,6 +9,20 @@
 
 @implementation CameraViewController
 
+@synthesize walkArray;
+@synthesize picker;
+@synthesize cameraView;
+
+-(id)initWithWalkArray: (NSMutableArray *)walkArrayP
+{
+	self = [[CameraViewController alloc] init];
+	self.walkArray = walkArrayP;
+	[self startCamera:cameraView];
+	
+	self.title = @"Camera";
+	return self;
+}
+
 
 /**
  * Launches Camera Display with overlay 
@@ -20,14 +34,14 @@
 	
 	NSLog(@"Attempting to launch Camera");
 	if((![UIImagePickerController isSourceTypeAvailable:UIImagePickerControllerSourceTypeCamera])) // Verify that camera is available
-		 return NO;
+		return NO;
 	
-    picker = [[UIImagePickerController alloc] init];
-    picker.sourceType = UIImagePickerControllerSourceTypeCamera;
-    picker.delegate = self;
-	picker.showsCameraControls = NO; // Hide Camera Controls
-    picker.allowsEditing = YES; // user is allowed to edit a selected still image
-	picker.cameraOverlayView = cameraOverlayView;
+    self.picker = [[UIImagePickerController alloc] init];
+    self.picker.sourceType = UIImagePickerControllerSourceTypeCamera;
+    self.picker.delegate = self;
+	self.picker.showsCameraControls = NO; // Hide Camera Controls
+    self.picker.allowsEditing = YES; // user is allowed to edit a selected still image
+	self.picker.cameraOverlayView = cameraOverlayView;
 	
     [self presentModalViewController:picker animated:YES];
 	NSLog(@"Camera launched successfully!");
@@ -43,7 +57,7 @@
 				  editingInfo:(NSDictionary *)editingInfo
 {
     [self useImage:image];
-	[self imagePickerControllerDidCancel:picker];
+	[self imagePickerControllerDidCancel:self.picker];
 }
 
 /**
@@ -52,8 +66,8 @@
 - (void)imagePickerControllerDidCancel:(UIImagePickerController *)picker
 {
 	// Remove the picker interface and release the picker object.
-    [[picker parentViewController] dismissModalViewControllerAnimated:YES];
-    [picker release];
+    [[self.picker parentViewController] dismissModalViewControllerAnimated:YES];
+    [self.picker release];
 }
 
 

@@ -18,11 +18,15 @@
 		28AD73600D9D9599002E5188 /* MainWindow.xib in Resources */ = {isa = PBXBuildFile; fileRef = 28AD735F0D9D9599002E5188 /* MainWindow.xib */; };
 		28C286E10D94DF7D0034E888 /* RootViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 28C286E00D94DF7D0034E888 /* RootViewController.m */; };
 		9E48996F10BA2FC000682D0D /* MapViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 9E48996E10BA2FC000682D0D /* MapViewController.m */; };
+		AB0B6EC510C31C5800F68A68 /* MainView.xib in Resources */ = {isa = PBXBuildFile; fileRef = AB0B6EC010C31C5800F68A68 /* MainView.xib */; };
+		AB0B6EC610C31C5800F68A68 /* MapView.xib in Resources */ = {isa = PBXBuildFile; fileRef = AB0B6EC110C31C5800F68A68 /* MapView.xib */; };
+		AB0B6EC710C31C5800F68A68 /* NodeDetail.xib in Resources */ = {isa = PBXBuildFile; fileRef = AB0B6EC210C31C5800F68A68 /* NodeDetail.xib */; };
+		AB0B6EC810C31C5800F68A68 /* Settings.xib in Resources */ = {isa = PBXBuildFile; fileRef = AB0B6EC310C31C5800F68A68 /* Settings.xib */; };
+		AB0B6EC910C31C5800F68A68 /* WalkSettings.xib in Resources */ = {isa = PBXBuildFile; fileRef = AB0B6EC410C31C5800F68A68 /* WalkSettings.xib */; };
 		AB64459B10BC75FE005185A9 /* CoreLocation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = AB64459A10BC75FD005185A9 /* CoreLocation.framework */; };
 		AB64459D10BC75FE005185A9 /* MapKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = AB64459C10BC75FE005185A9 /* MapKit.framework */; };
 		AB6445C310BC7717005185A9 /* Accelerometer.m in Sources */ = {isa = PBXBuildFile; fileRef = AB6445BF10BC7717005185A9 /* Accelerometer.m */; };
 		AB6445C410BC7717005185A9 /* MapPin.m in Sources */ = {isa = PBXBuildFile; fileRef = AB6445C110BC7717005185A9 /* MapPin.m */; };
-		AB6445C510BC7717005185A9 /* MapView.xib in Resources */ = {isa = PBXBuildFile; fileRef = AB6445C210BC7717005185A9 /* MapView.xib */; };
 		AB9919F010BD9A7900146D11 /* black-pin.png in Resources */ = {isa = PBXBuildFile; fileRef = AB9919E210BD9A7900146D11 /* black-pin.png */; };
 		AB9919F110BD9A7A00146D11 /* blue-pin.png in Resources */ = {isa = PBXBuildFile; fileRef = AB9919E310BD9A7900146D11 /* blue-pin.png */; };
 		AB9919F210BD9A7A00146D11 /* brown-pin.png in Resources */ = {isa = PBXBuildFile; fileRef = AB9919E410BD9A7900146D11 /* brown-pin.png */; };
@@ -41,22 +45,15 @@
 		ABA45E5D10C18EBE00F38C8B /* CameraViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = ABA45E5810C18EBE00F38C8B /* CameraViewController.m */; };
 		ABA45E5E10C18EBE00F38C8B /* CameraViewOverlay.m in Sources */ = {isa = PBXBuildFile; fileRef = ABA45E5A10C18EBE00F38C8B /* CameraViewOverlay.m */; };
 		ABA45E5F10C18EBE00F38C8B /* GPS.m in Sources */ = {isa = PBXBuildFile; fileRef = ABA45E5C10C18EBE00F38C8B /* GPS.m */; };
-		ABA45F2010C1A32200F38C8B /* CameraView.xib in Resources */ = {isa = PBXBuildFile; fileRef = ABA45F1F10C1A32200F38C8B /* CameraView.xib */; };
-		ABA45F4F10C1A59900F38C8B /* CameraMapSettings.m in Sources */ = {isa = PBXBuildFile; fileRef = ABA45F4D10C1A59900F38C8B /* CameraMapSettings.m */; };
-		ABA45F5010C1A59900F38C8B /* CameraMapSettings.xib in Resources */ = {isa = PBXBuildFile; fileRef = ABA45F4E10C1A59900F38C8B /* CameraMapSettings.xib */; };
 		ABAD5CE010A48ED100B14D2B /* Compass.m in Sources */ = {isa = PBXBuildFile; fileRef = ABAD5CDE10A48ED100B14D2B /* Compass.m */; };
 		ABAD5CF010A49A1700B14D2B /* Settings.m in Sources */ = {isa = PBXBuildFile; fileRef = ABAD5CEE10A49A1700B14D2B /* Settings.m */; };
-		ABAD5CF110A49A1700B14D2B /* Settings.xib in Resources */ = {isa = PBXBuildFile; fileRef = ABAD5CEF10A49A1700B14D2B /* Settings.xib */; };
 		ABAD5CFF10A49E8D00B14D2B /* DescriptionDialog.m in Sources */ = {isa = PBXBuildFile; fileRef = ABAD5CFE10A49E8D00B14D2B /* DescriptionDialog.m */; };
 		ABAD5D2910A4A50A00B14D2B /* WalkSettings.m in Sources */ = {isa = PBXBuildFile; fileRef = ABAD5D2710A4A50A00B14D2B /* WalkSettings.m */; };
-		ABAD5D2A10A4A50A00B14D2B /* WalkSettings.xib in Resources */ = {isa = PBXBuildFile; fileRef = ABAD5D2810A4A50A00B14D2B /* WalkSettings.xib */; };
 		ABBA683310BC8CEE002EAB50 /* NodeDetail.m in Sources */ = {isa = PBXBuildFile; fileRef = ABBA683110BC8CEE002EAB50 /* NodeDetail.m */; };
-		ABBA683410BC8CEE002EAB50 /* NodeDetail.xib in Resources */ = {isa = PBXBuildFile; fileRef = ABBA683210BC8CEE002EAB50 /* NodeDetail.xib */; };
 		ABC9F05E10A9C03C00877555 /* NodeData.m in Sources */ = {isa = PBXBuildFile; fileRef = ABC9F05D10A9C03C00877555 /* NodeData.m */; };
 		ABC9F0DB10A9CB9000877555 /* WalkData.m in Sources */ = {isa = PBXBuildFile; fileRef = ABC9F0DA10A9CB9000877555 /* WalkData.m */; };
 		ABF39B3310AA21880098A457 /* AppData.m in Sources */ = {isa = PBXBuildFile; fileRef = ABF39B3210AA21880098A457 /* AppData.m */; };
 		ABF39B3C10AA28CF0098A457 /* MainView.m in Sources */ = {isa = PBXBuildFile; fileRef = ABF39B3A10AA28CF0098A457 /* MainView.m */; };
-		ABF39B3D10AA28CF0098A457 /* MainView.xib in Resources */ = {isa = PBXBuildFile; fileRef = ABF39B3B10AA28CF0098A457 /* MainView.xib */; };
 		C7C4291010BDA3F5008988AC /* DeviceData.m in Sources */ = {isa = PBXBuildFile; fileRef = C7C4290F10BDA3F5008988AC /* DeviceData.m */; };
 /* End PBXBuildFile section */
 
@@ -78,13 +75,17 @@
 		8D1107310486CEB800E47090 /* randomwalk-Info.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; path = "randomwalk-Info.plist"; plistStructureDefinitionIdentifier = "com.apple.xcode.plist.structure-definition.iphone.info-plist"; sourceTree = "<group>"; };
 		9E48996D10BA2FC000682D0D /* MapViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = MapViewController.h; sourceTree = "<group>"; };
 		9E48996E10BA2FC000682D0D /* MapViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = MapViewController.m; sourceTree = "<group>"; };
+		AB0B6EC010C31C5800F68A68 /* MainView.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = MainView.xib; sourceTree = "<group>"; };
+		AB0B6EC110C31C5800F68A68 /* MapView.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = MapView.xib; sourceTree = "<group>"; };
+		AB0B6EC210C31C5800F68A68 /* NodeDetail.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = NodeDetail.xib; sourceTree = "<group>"; };
+		AB0B6EC310C31C5800F68A68 /* Settings.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = Settings.xib; sourceTree = "<group>"; };
+		AB0B6EC410C31C5800F68A68 /* WalkSettings.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = WalkSettings.xib; sourceTree = "<group>"; };
 		AB64459A10BC75FD005185A9 /* CoreLocation.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = CoreLocation.framework; path = System/Library/Frameworks/CoreLocation.framework; sourceTree = SDKROOT; };
 		AB64459C10BC75FE005185A9 /* MapKit.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = MapKit.framework; path = System/Library/Frameworks/MapKit.framework; sourceTree = SDKROOT; };
 		AB6445BE10BC7717005185A9 /* Accelerometer.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = Accelerometer.h; sourceTree = "<group>"; };
 		AB6445BF10BC7717005185A9 /* Accelerometer.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = Accelerometer.m; sourceTree = "<group>"; };
 		AB6445C010BC7717005185A9 /* MapPin.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = MapPin.h; sourceTree = "<group>"; };
 		AB6445C110BC7717005185A9 /* MapPin.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = MapPin.m; sourceTree = "<group>"; };
-		AB6445C210BC7717005185A9 /* MapView.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = MapView.xib; sourceTree = "<group>"; };
 		AB9919E210BD9A7900146D11 /* black-pin.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "black-pin.png"; sourceTree = "<group>"; };
 		AB9919E310BD9A7900146D11 /* blue-pin.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "blue-pin.png"; sourceTree = "<group>"; };
 		AB9919E410BD9A7900146D11 /* brown-pin.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "brown-pin.png"; sourceTree = "<group>"; };
@@ -107,23 +108,16 @@
 		ABA45E5A10C18EBE00F38C8B /* CameraViewOverlay.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = CameraViewOverlay.m; sourceTree = "<group>"; };
 		ABA45E5B10C18EBE00F38C8B /* GPS.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = GPS.h; sourceTree = "<group>"; };
 		ABA45E5C10C18EBE00F38C8B /* GPS.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = GPS.m; sourceTree = "<group>"; };
-		ABA45F1F10C1A32200F38C8B /* CameraView.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = CameraView.xib; sourceTree = "<group>"; };
-		ABA45F4C10C1A59900F38C8B /* CameraMapSettings.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = CameraMapSettings.h; sourceTree = "<group>"; };
-		ABA45F4D10C1A59900F38C8B /* CameraMapSettings.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = CameraMapSettings.m; sourceTree = "<group>"; };
-		ABA45F4E10C1A59900F38C8B /* CameraMapSettings.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = CameraMapSettings.xib; sourceTree = "<group>"; };
 		ABAD5CDD10A48ED100B14D2B /* Compass.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = Compass.h; sourceTree = "<group>"; wrapsLines = 1; };
 		ABAD5CDE10A48ED100B14D2B /* Compass.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = Compass.m; sourceTree = "<group>"; };
 		ABAD5CED10A49A1700B14D2B /* Settings.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = Settings.h; sourceTree = "<group>"; wrapsLines = 1; };
 		ABAD5CEE10A49A1700B14D2B /* Settings.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = Settings.m; sourceTree = "<group>"; };
-		ABAD5CEF10A49A1700B14D2B /* Settings.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = Settings.xib; sourceTree = "<group>"; };
 		ABAD5CFD10A49E8D00B14D2B /* DescriptionDialog.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = DescriptionDialog.h; sourceTree = "<group>"; wrapsLines = 1; };
 		ABAD5CFE10A49E8D00B14D2B /* DescriptionDialog.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = DescriptionDialog.m; sourceTree = "<group>"; };
 		ABAD5D2610A4A50A00B14D2B /* WalkSettings.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = WalkSettings.h; sourceTree = "<group>"; };
 		ABAD5D2710A4A50A00B14D2B /* WalkSettings.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = WalkSettings.m; sourceTree = "<group>"; };
-		ABAD5D2810A4A50A00B14D2B /* WalkSettings.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = WalkSettings.xib; sourceTree = "<group>"; };
 		ABBA683010BC8CEE002EAB50 /* NodeDetail.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = NodeDetail.h; sourceTree = "<group>"; };
 		ABBA683110BC8CEE002EAB50 /* NodeDetail.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = NodeDetail.m; sourceTree = "<group>"; };
-		ABBA683210BC8CEE002EAB50 /* NodeDetail.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = NodeDetail.xib; sourceTree = "<group>"; };
 		ABC9F05C10A9C03C00877555 /* NodeData.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = NodeData.h; sourceTree = "<group>"; };
 		ABC9F05D10A9C03C00877555 /* NodeData.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = NodeData.m; sourceTree = "<group>"; };
 		ABC9F0D910A9CB9000877555 /* WalkData.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = WalkData.h; sourceTree = "<group>"; };
@@ -132,7 +126,6 @@
 		ABF39B3210AA21880098A457 /* AppData.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = AppData.m; sourceTree = "<group>"; };
 		ABF39B3910AA28CF0098A457 /* MainView.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = MainView.h; sourceTree = "<group>"; };
 		ABF39B3A10AA28CF0098A457 /* MainView.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = MainView.m; sourceTree = "<group>"; };
-		ABF39B3B10AA28CF0098A457 /* MainView.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = MainView.xib; sourceTree = "<group>"; };
 		C7C4290E10BDA3F5008988AC /* DeviceData.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = DeviceData.h; sourceTree = "<group>"; };
 		C7C4290F10BDA3F5008988AC /* DeviceData.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = DeviceData.m; sourceTree = "<group>"; };
 /* End PBXFileReference section */
@@ -157,8 +150,8 @@
 		080E96DDFE201D6D7F000001 /* Classes */ = {
 			isa = PBXGroup;
 			children = (
+				AB0B6ECA10C31C6100F68A68 /* View */,
 				ABF39B3010AA1E620098A457 /* Controller */,
-				ABF39B2F10AA1E5C0098A457 /* View */,
 				ABF39B2E10AA1E570098A457 /* Model */,
 				28C286DF0D94DF7D0034E888 /* RootViewController.h */,
 				28C286E00D94DF7D0034E888 /* RootViewController.m */,
@@ -222,6 +215,18 @@
 			name = Frameworks;
 			sourceTree = "<group>";
 		};
+		AB0B6ECA10C31C6100F68A68 /* View */ = {
+			isa = PBXGroup;
+			children = (
+				AB0B6EC010C31C5800F68A68 /* MainView.xib */,
+				AB0B6EC110C31C5800F68A68 /* MapView.xib */,
+				AB0B6EC210C31C5800F68A68 /* NodeDetail.xib */,
+				AB0B6EC310C31C5800F68A68 /* Settings.xib */,
+				AB0B6EC410C31C5800F68A68 /* WalkSettings.xib */,
+			);
+			name = View;
+			sourceTree = "<group>";
+		};
 		AB9919E110BD9A7900146D11 /* Images */ = {
 			isa = PBXGroup;
 			children = (
@@ -263,27 +268,11 @@
 			name = Model;
 			sourceTree = "<group>";
 		};
-		ABF39B2F10AA1E5C0098A457 /* View */ = {
-			isa = PBXGroup;
-			children = (
-				ABA45F4E10C1A59900F38C8B /* CameraMapSettings.xib */,
-				ABBA683210BC8CEE002EAB50 /* NodeDetail.xib */,
-				ABAD5D2810A4A50A00B14D2B /* WalkSettings.xib */,
-				ABF39B3B10AA28CF0098A457 /* MainView.xib */,
-				AB6445C210BC7717005185A9 /* MapView.xib */,
-				ABAD5CEF10A49A1700B14D2B /* Settings.xib */,
-			);
-			name = View;
-			sourceTree = "<group>";
-		};
 		ABF39B3010AA1E620098A457 /* Controller */ = {
 			isa = PBXGroup;
 			children = (
 				ABA45E5710C18EBE00F38C8B /* CameraViewController.h */,
 				ABA45E5810C18EBE00F38C8B /* CameraViewController.m */,
-				ABA45F1F10C1A32200F38C8B /* CameraView.xib */,
-				ABA45F4C10C1A59900F38C8B /* CameraMapSettings.h */,
-				ABA45F4D10C1A59900F38C8B /* CameraMapSettings.m */,
 				ABA45E5910C18EBE00F38C8B /* CameraViewOverlay.h */,
 				ABA45E5A10C18EBE00F38C8B /* CameraViewOverlay.m */,
 				ABBA683010BC8CEE002EAB50 /* NodeDetail.h */,
@@ -362,11 +351,6 @@
 			files = (
 				28AD73600D9D9599002E5188 /* MainWindow.xib in Resources */,
 				2899E5600DE3E45000AC0155 /* RootViewController.xib in Resources */,
-				ABAD5CF110A49A1700B14D2B /* Settings.xib in Resources */,
-				ABAD5D2A10A4A50A00B14D2B /* WalkSettings.xib in Resources */,
-				ABF39B3D10AA28CF0098A457 /* MainView.xib in Resources */,
-				AB6445C510BC7717005185A9 /* MapView.xib in Resources */,
-				ABBA683410BC8CEE002EAB50 /* NodeDetail.xib in Resources */,
 				AB9919F010BD9A7900146D11 /* black-pin.png in Resources */,
 				AB9919F110BD9A7A00146D11 /* blue-pin.png in Resources */,
 				AB9919F210BD9A7A00146D11 /* brown-pin.png in Resources */,
@@ -381,8 +365,11 @@
 				AB9919FB10BD9A7A00146D11 /* red-pin.png in Resources */,
 				AB9919FC10BD9A7A00146D11 /* white-pin.png in Resources */,
 				AB9919FD10BD9A7A00146D11 /* yellow-pin.png in Resources */,
-				ABA45F2010C1A32200F38C8B /* CameraView.xib in Resources */,
-				ABA45F5010C1A59900F38C8B /* CameraMapSettings.xib in Resources */,
+				AB0B6EC510C31C5800F68A68 /* MainView.xib in Resources */,
+				AB0B6EC610C31C5800F68A68 /* MapView.xib in Resources */,
+				AB0B6EC710C31C5800F68A68 /* NodeDetail.xib in Resources */,
+				AB0B6EC810C31C5800F68A68 /* Settings.xib in Resources */,
+				AB0B6EC910C31C5800F68A68 /* WalkSettings.xib in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -414,7 +401,6 @@
 				ABA45E5D10C18EBE00F38C8B /* CameraViewController.m in Sources */,
 				ABA45E5E10C18EBE00F38C8B /* CameraViewOverlay.m in Sources */,
 				ABA45E5F10C18EBE00F38C8B /* GPS.m in Sources */,
-				ABA45F4F10C1A59900F38C8B /* CameraMapSettings.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};

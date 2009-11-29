@@ -14,6 +14,8 @@
 	NSMutableArray *walkList;
 	NSMutableArray *userWalks;
 	NSMutableArray *defaultWalks;
+	NSMutableArray *applicationSelectedWalks;
+
 	
 	// All global settings
 	CGFloat proximity;
@@ -24,10 +26,11 @@
 @property (nonatomic, retain) NSMutableArray *walkList;
 @property (nonatomic, retain) NSMutableArray *userWalks;
 @property (nonatomic, retain) NSMutableArray *defaultWalks;
+@property (nonatomic, retain) NSMutableArray *applicationSelectedWalks;
 @property (nonatomic) CGFloat proximity;
 
 // init method
--(id) initSingleton;
++(id) initSingleton;
 
 // adds a walk to the data
 // walkP is of type walkData
