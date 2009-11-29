@@ -10,9 +10,20 @@
 #import "WalkData.h"
 #import <CoreLocation/CoreLocation.h>
 
-@interface CameraViewController : UIViewController <UIImagePickerControllerDelegate> {	
+@interface CameraViewController : UIViewController <UINavigationControllerDelegate, UIImagePickerControllerDelegate> {	
 	UIImagePickerController* picker;
+	
+	NSMutableArray *walkArray;
+	UIView *cameraView;
+	
 }
+
+@property (nonatomic, retain) NSMutableArray *walkArray;
+@property (nonatomic, retain) UIImagePickerController *picker;
+@property (nonatomic, retain) UIView *cameraView;
+
+-(id)initWithWalkArray: (NSMutableArray *)walkArrayP;
+
 
 /**
  * Launches Camera Display with overlay 

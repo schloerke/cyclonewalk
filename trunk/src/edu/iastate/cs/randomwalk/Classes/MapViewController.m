@@ -19,7 +19,7 @@
 		}
     }
 	
-	self.title = @"Map View";
+	self.title = @"Map";
 	
 	nodeList = [[NSMutableArray alloc] init];
 	

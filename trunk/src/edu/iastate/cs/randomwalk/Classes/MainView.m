@@ -7,7 +7,6 @@
 //
 
 #import "MainView.h"
-#import "MapViewController.h"
 
 
 @implementation MainView
@@ -15,11 +14,40 @@
 @synthesize appData, walks;
 
 
+// Optional UITabBarControllerDelegate method
+- (void)tabBarController:(UITabBarController *)tBController didSelectViewController:(UIViewController *)viewController {
+	//	NSLog(@"Selected View Controller: %@", [viewController name]);
+	NSLog(@"Selected View Controller: %d", 	[tBController.viewControllers indexOfObject:viewController]);
+	
+	NSMutableArray *tbarControllers = (NSMutableArray *) tBController.viewControllers;
+	
+	switch ([tBController.viewControllers indexOfObject:viewController]) {
+		case 0:
+			NSLog(@"Re initializing the camera view");
+			//[tbarControllers replaceObjectAtIndex:1 withObject:[[[CameraViewController alloc] initWithWalkArray:[[AppData initSingleton] applicationSelectedWalks]] autorelease]];
+			break;
+		case 1:
+			NSLog(@"Re initializing the map view");
+			//AppData *appData = [AppData initSingleton];
+			//[tbarControllers replaceObjectAtIndex:2 withObject:[[MapViewController alloc] initWithWalkArray:appData.applicationSelectedWalks]];
+			//NSLog(@"AppData.appSelWalk.Size: %d", [appData.applicationSelectedWalks count]);
+			break;
+		default:
+			break;
+	}
+	
+	tBController.viewControllers = [NSArray arrayWithArray:(NSArray *) tbarControllers];
+	
+	
+}
+
+
+
 -(IBAction)pushedStart
 {
 	NSLog(@"Calling Start");
 	
-	int i,j;
+	/*int i,j;
 	WalkData *comboWalk = [[WalkData alloc] initNewWalk];
 	WalkData *tmpWalk;
 	NSLog(@"Default Pos 0 Node Count: %d", [[[appData.defaultWalks objectAtIndex:0] nodeList]count]);
@@ -56,13 +84,16 @@
 	//	[mview release];
 	
 	[comboWalk release];
-	
+	*/
 	/////////////////////////////////////////////////////////
 	/////////////////////////////////////////////////////////
 	/////////////////////////////////////////////////////////
 	/////////////////////////////////////////////////////////
 	/////////////////////////////////////////////////////////
 	NSMutableArray *selectedWalks = [[NSMutableArray alloc] init];
+	
+	int i,j;
+	WalkData *tmpWalk;
 	
 	for (j =0; j < [walkTableView numberOfSections]; j++) {
 		for (i = 0; i < [walkTableView numberOfRowsInSection:j]; i++) {
@@ -95,11 +126,48 @@
 	
 	NSLog(@"Combined %d walks", [selectedWalks count]);
 	
-	MapViewController *aview = [[MapViewController alloc] initWithWalkArray:selectedWalks];
-	NSLog(@"Pushing the Map View");
-	[self.navigationController pushViewController:aview animated:YES];
+	//	MapViewController *aview = [[MapViewController alloc] initWithWalkArray:selectedWalks];
+	//NSLog(@"Pushing the Map View");
+	//	[self.navigationController pushViewController:aview animated:YES];
+	//	self.navigationController.navigationBarHidden = NO;
+	
+	
+	
+	
+	UITabBarController *tabBarController = [[UITabBarController alloc] init];
+	tabBarController.delegate = self;
+	
+	
+	
+	//	MainView *mainview = [[MainView alloc] initWithAppData];
+	
+	MapViewController *mapview = [[MapViewController alloc] initWithWalkArray:selectedWalks];
+	
+	CameraViewController *cameraview = [[CameraViewController alloc] initWithWalkArray:selectedWalks];
+	
+	Settings *settingsview = [[Settings alloc] initSettings];
+	
+	//	tabBarController.viewControllers = [NSArray arrayWithObjects:mainview, cameraview, mapview, settingsview, nil];
+	tabBarController.viewControllers = [NSArray arrayWithObjects:cameraview, mapview, settingsview, nil];
+	
+	
+	//	[mainview release];
+	[mapview release];
+	[cameraview release];
+	[settingsview release];
+	
+	
+	tabBarController.title = @"Explore";
+    // Add the tab bar controller's current view as a subview of the window
+	[self.navigationController pushViewController:tabBarController animated:YES];
 	self.navigationController.navigationBarHidden = NO;
-	[aview release];
+	
+	
+	
+	
+	
+	
+	//	[aview release];
 	
 	[selectedWalks release];
 	
@@ -150,12 +218,12 @@
 }
 
 
--(id) initWithAppData:(AppData *) aDat
+-(id) initWithAppData
 {
 
 	self = [[MainView alloc] init];
 	
-	self.appData = aDat;
+	self.appData = [AppData initSingleton];
 	self.walks = self.appData.walkList;
 	
 	NSLog(@"Walk Count: %d", [self.walks count]);

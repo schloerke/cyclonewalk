@@ -7,6 +7,7 @@
 //
 
 #import <UIKit/UIKit.h>
+#import "NodeData.h"
 
 
 @interface Compass : UIViewController {

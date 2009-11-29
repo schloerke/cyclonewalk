@@ -11,13 +11,19 @@
 
 @implementation Settings
 
+@synthesize proximity;
+
 
 /*
  Pushes the Settings view on top of the navigation stack, for a given walk
  */
--(void) initSettings
+-(id) initSettings
 {
-
+	self = [[Settings alloc] init];
+	self.proximity = [[AppData initSingleton] proximity];
+	self.title = @"Settings";
+	
+	return self;
 }
 
 /*

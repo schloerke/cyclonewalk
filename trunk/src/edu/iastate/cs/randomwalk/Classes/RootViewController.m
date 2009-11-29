@@ -61,10 +61,13 @@
 	
 
 	
-	XMLParse *xmlPar = [[XMLParse alloc] init];
-	appData = [xmlPar startParsing];
+	//XMLParse *xmlPar = [[XMLParse alloc] init];
+	//appData = [xmlPar startParsing];
+	
+	[[[[XMLParse alloc] init] startParsing] autorelease];
+	
 
-	MainView *mview = [[MainView alloc] initWithAppData:appData];
+	MainView *mview = [[MainView alloc] initWithAppData];
 	NSLog(@"Pushing the MainView");
 	[self.navigationController pushViewController:mview animated:NO];
 	self.navigationController.navigationBarHidden = YES;						

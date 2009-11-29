@@ -20,7 +20,7 @@
 	//NSURL *url = [[NSURL alloc] initWithString:@"http://www.barretschloerke.com/ComS309/buildingsSmall.xml"];
 	NSURL *url = [[NSURL alloc] initWithString:@"http://www.barretschloerke.com/ComS309/buildingsXSmall.xml"];
 	
-	appData = [[AppData alloc] initSingleton];
+	appData = [AppData initSingleton];
 
     NSXMLParser *parser = [[[NSXMLParser alloc] initWithContentsOfURL:url] autorelease];
     [parser setDelegate:self];
