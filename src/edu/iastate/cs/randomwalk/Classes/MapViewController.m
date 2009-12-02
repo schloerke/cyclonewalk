@@ -77,11 +77,11 @@
 	locationManager.delegate=self;
 	locationManager.desiredAccuracy=kCLLocationAccuracyNearestTenMeters;
 	
-	//	[locationManager startUpdatingLocation];
+	[locationManager startUpdatingLocation];
 	
-	//location = [CLLocation initWithLatitude: 42.025355 longitude: -93.647116];
-	//One location is obtained.. just zoom to that location	
-
+	//set an initial location
+	location.latitude = 42.025355;
+	location.longitude = -93.647116;
 	
 }
 
@@ -140,7 +140,6 @@
 		
 		[button addTarget:self action:@selector(pushNodeDetail:) forControlEvents:UIControlEventTouchUpInside];
 		test.rightCalloutAccessoryView = button;
-		//[button autorelease];
 	}
 	[test autorelease];
 	return test;
@@ -182,8 +181,26 @@
 	region.center=location;
 	//Set Zoom level using Span
 	MKCoordinateSpan span;
-	span.latitudeDelta=.020;
-	span.longitudeDelta=.020;
+	
+	AppData *appData = [AppData initSingleton];
+	CGFloat proximity = appData.proximity;
+	
+	long feet_per_latitude = 364173.229;
+	
+	//Calculate the feet per longitude of this location 
+	int earthRadius = 6371;
+	CGFloat degreesPerRadian = 57.2958;
+	CGFloat a = cos(location.latitude/degreesPerRadian)*
+				cos(location.latitude/degreesPerRadian)*
+				sin((1/degreesPerRadian)*0.5)*
+				sin((1/degreesPerRadian)*0.5);
+	CGFloat c = 2*atan2(sqrt(a), sqrt(1-a));
+	CGFloat d = earthRadius*c;
+	CGFloat feet_per_longitude = d*3280.84;
+
+	span.latitudeDelta= proximity / feet_per_latitude;
+	span.longitudeDelta= proximity / feet_per_longitude;
+	
 	region.span=span;
 	
 	[mapView setRegion:region animated:TRUE];
@@ -199,6 +216,10 @@
 	geocoder.delegate = self;
 	[geocoder start];
 }*/
+
++ (float)degreesToRadians:(float)degrees{
+	return degrees / 57.2958;
+}
 
  
 @end

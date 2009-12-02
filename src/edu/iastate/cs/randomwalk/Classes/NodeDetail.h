@@ -55,6 +55,6 @@
 /*
  * Resizes and crops image to fit into the Detail View's image frame. Can be uses by external classes too
  */
-+ (UIImage*)cropAndResizeImage:(UIImage *)imageP toSize:(CGSize)targetSize;
++(UIImage*) cropAndResizeImage:(UIImage *)imageP toSize:(CGSize)targetSize;
 
 @end
