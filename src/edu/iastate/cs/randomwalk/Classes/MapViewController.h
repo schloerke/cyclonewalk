@@ -14,6 +14,8 @@
 #import "WalkData.h"
 #import "MapPin.h"
 #import "NodeDetail.h"
+#import "math.h"
+#import "AppData.h"
 
 @interface MapViewController : UIViewController <MKMapViewDelegate, MKReverseGeocoderDelegate, CLLocationManagerDelegate> {
 	MKMapView *mapView;
