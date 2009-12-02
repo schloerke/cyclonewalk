@@ -2,6 +2,7 @@
 
 @implementation MapViewController
 
+
 @synthesize nodeList;
 
 -(id)initWithWalkArray: (NSArray *)walkArrayOrNil{
