@@ -64,7 +64,7 @@
 	self.photo = nil;
 	self.photoURL = nil;
 	self.contactInfo = @"<none>"; // person to call, minus the phone number
-	self.proximity = 0;
+	self.proximity = -1;
 	
 	return self;
 	

@@ -9,6 +9,7 @@
 #import "WalkData.h"
 
 
+
 @implementation WalkData
 
 @synthesize name, color, favorite, selected, proximity, nodeList;
