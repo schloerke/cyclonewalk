@@ -37,7 +37,7 @@ Pushes the Settings view on top of the navigation stack, for a given walk
  95% - 50 miles
  100% - All
  */
--(IBAction) setProximityRangeBySliderValue;
+-(void) setAppDataWithProximityRange;
 
 /*
  Takes the slider value and changes it to feet.
@@ -48,7 +48,7 @@ Pushes the Settings view on top of the navigation stack, for a given walk
  Public function to convert a slider value to feet.
  Used for consistency
  */
--(CGFloat) convertValueToFeet:(float) i;
++(CGFloat) convertPercentValueToFeet:(CGFloat) i;
 
 /*
  sets the label next to the slider with the value of the converted string.
@@ -60,7 +60,7 @@ Pushes the Settings view on top of the navigation stack, for a given walk
  Public function to convert feet to string according to the scale above.  
  Used for consistency.
  */
--(NSString*) convertFeetToString:(CGFloat) feet;
++(NSString*) convertFeetToString:(CGFloat) feet;
 
 
 @end

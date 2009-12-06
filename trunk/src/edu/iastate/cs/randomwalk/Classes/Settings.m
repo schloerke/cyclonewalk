@@ -21,6 +21,8 @@
 {
 	self = [[Settings alloc] init];
 	self.proximity = [[AppData initSingleton] proximity];
+	proximityLabel.text = [Settings convertFeetToString:self.proximity];
+
 	self.title = @"Settings";
 	
 	return self;
@@ -42,9 +44,10 @@
  95% - 50 miles
  100% - All
  */
--(IBAction) setProximityRangeBySliderValue
+-(void) setAppDataWithProximityRange
 {
-	
+	AppData *appData = [AppData initSingleton];
+	appData.proximity = self.proximity;
 }
 
 /*
@@ -52,14 +55,16 @@
  */
 -(CGFloat) convertSliderValueToFeet
 {
-	return  [self convertValueToFeet:slider.value];
+	self.proximity = [Settings convertPercentValueToFeet:slider.value];
+	[self setAppDataWithProximityRange];
+	return self.proximity;
 }
 
 /*
  Public function to convert a slider value to feet.
  Used for consistency
  */
--(CGFloat ) convertValueToFeet:(float ) i
++(CGFloat ) convertPercentValueToFeet:(CGFloat ) i
 {
 	//	0% - 15 feet
 	//25% - 50 yards
@@ -67,31 +72,38 @@
 	//75% - 1 mile
 	//95% - 50 miles
 	//100% - All
-	
+	CGFloat value;
 	if(i < .25)
-		return i / 0.25 * 45 + 15;
+		value =  i / 0.25 * 45 + 15;
 	
 	else if(i < .50)
-		return  (i - .25) / 0.25 * 285;
+		value = (i - .25) / 0.25 * 285;
 	
 	 else if (i < .75) 
-		return (i - .50) / 0.25 * 5280;
+		value = (i - .50) / 0.25 * 5280;
 		 
 	 else if (i < 0.95) 
-		return (i - 0.75) / .2 * 50 * 5280;
+		value = (i - 0.75) / .2 * 50 * 5280;
 	
 	else 
-		return CGFLOAT_MAX;
+		value = CGFLOAT_MAX;
+	
+	NSInteger valueInt = value * 1000;
+	value = valueInt;
+	value = value / 1000;
+	return value;
+	
 
 }
 
 /*
  sets the label next to the slider with the value of the converted string.
- */ 
+ */
 - (IBAction) setSliderlabel
 {
-	
-	proximityLabel.text = [self convertFeetToString:[self convertSliderValueToFeet]];
+	[self convertSliderValueToFeet];
+	[self setAppDataWithProximityRange];
+	proximityLabel.text = [Settings convertFeetToString:self.proximity];
 }
 
 
@@ -99,7 +111,7 @@
  Public function to convert feet to string according to the scale above.  
  Used for consistency.
  */
--(NSString*) convertFeetToString:(CGFloat) feet
++(NSString*) convertFeetToString:(CGFloat) feet
 {
 	
 	NSString *returnString = @"";
