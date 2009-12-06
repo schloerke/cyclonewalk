@@ -9,8 +9,9 @@
 #import <Foundation/Foundation.h>
 #import <UIKit/UIKit.h>
 #import "AppData.h"
+#import "CameraViewController.h"
 
-@interface DotAndNode : NSObject {
+@interface DotAndNode : UIViewController {
 	NodeData *nodeData;
 	UIButton *button;
 	UILabel *label;
@@ -20,6 +21,7 @@
 	NSInteger ypos;
 	NSInteger xpos;
 	
+	CameraViewController *navigation;
 
 }
 
@@ -30,9 +32,10 @@
 @property (nonatomic) NSInteger xpos;
 @property (nonatomic) CGFloat radius;
 @property (nonatomic, retain) UIColor *color;
+@property (nonatomic, retain) CameraViewController *navigation;
 
 
--(id) initWithNode:(NodeData *)nodeP distanceInFeet:(CGFloat)distance color:(UIColor *) colorP xPos:(CGFloat)xposP yPos:(CGFloat)yposP;
+-(id) initWithNode:(NodeData *)nodeP navigation:(CameraViewController *)navigationP distanceInFeet:(CGFloat)distance color:(UIColor *) colorP xPos:(CGFloat)xposP yPos:(CGFloat)yposP;
 
 
 

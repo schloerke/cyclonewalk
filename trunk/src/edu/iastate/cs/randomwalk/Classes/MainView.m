@@ -7,6 +7,7 @@
 //
 
 #import "MainView.h"
+#import "CameraViewOverlay.h"
 
 
 @implementation MainView
@@ -23,11 +24,11 @@
 	
 	switch ([tBController.viewControllers indexOfObject:viewController]) {
 		case 0:
-			NSLog(@"Re initializing the camera view");
+			//NSLog(@"Re initializing the camera view");
 			//[tbarControllers replaceObjectAtIndex:1 withObject:[[[CameraViewController alloc] initWithWalkArray:[[AppData initSingleton] applicationSelectedWalks]] autorelease]];
 			break;
 		case 1:
-			NSLog(@"Re initializing the map view");
+			//NSLog(@"Re initializing the map view");
 			//AppData *appData = [AppData initSingleton];
 			//[tbarControllers replaceObjectAtIndex:2 withObject:[[MapViewController alloc] initWithWalkArray:appData.applicationSelectedWalks]];
 			//NSLog(@"AppData.appSelWalk.Size: %d", [appData.applicationSelectedWalks count]);
@@ -145,6 +146,11 @@
 	
 	CameraViewController *cameraview = [[CameraViewController alloc] initWithWalkArray:selectedWalks];
 	
+//	CameraViewOverlay *cvover = [[CameraViewOverlay alloc]init];
+//	[cvover addNode:[[[selectedWalks objectAtIndex:0] nodeList] objectAtIndex:0]];
+//	
+//	[cameraview startCamera:cvover];
+	
 	Settings *settingsview = [[Settings alloc] initSettings];
 	
 	//	tabBarController.viewControllers = [NSArray arrayWithObjects:mainview, cameraview, mapview, settingsview, nil];
@@ -259,20 +265,20 @@
     }
 	*/
 	
-	NSLog(@"1");
+//	NSLog(@"1");
 	UITableViewCell *cell = [tableView cellForRowAtIndexPath:indexPath];
-	NSLog(@"2");
+//	NSLog(@"2");
 	
 	if(cell.accessoryType == UITableViewCellAccessoryNone)
 	{
-		NSLog(@"3a");
+//		NSLog(@"3a");
 		cell.accessoryType = UITableViewCellAccessoryCheckmark;
-		NSLog(@"3b");
+//		NSLog(@"3b");
 		//		[[appData getWalkByName:cell.textLabel.text] select];
 		//[appData getWalkByName:cell.textLabel.text].selected = YES;
-		NSLog(@"Default Pos 0 Node Count: %d", [[[appData.defaultWalks objectAtIndex:0] nodeList] count]);
-		NSLog(@"User Pos 0 Node Count: %d", [[[appData.userWalks objectAtIndex:0] nodeList] count]);
-		NSLog(@"3c");
+//		NSLog(@"Default Pos 0 Node Count: %d", [[[appData.defaultWalks objectAtIndex:0] nodeList] count]);
+//		NSLog(@"User Pos 0 Node Count: %d", [[[appData.userWalks objectAtIndex:0] nodeList] count]);
+//		NSLog(@"3c");
 		
 
 		
@@ -284,7 +290,7 @@
 	}
 	else
 	{	
-		NSLog(@"4a");
+//		NSLog(@"4a");
 		cell.accessoryType = UITableViewCellAccessoryNone;
 		//[[appData getWalkByName:cell.textLabel.text] deselect];
 		//		[appData getWalkByName:cell.textLabel.text].selected = NO;
@@ -293,18 +299,18 @@
 		if(indexPath.section == 1)
 			[[appData.userWalks objectAtIndex:indexPath.row] deselect];
 		
-		NSLog(@"4b");
+//		NSLog(@"4b");
 	}
-	NSLog(@"5");
+//	NSLog(@"5");
 	
 	[tableView deselectRowAtIndexPath:indexPath animated:YES];
-	NSLog(@"6");
+//	NSLog(@"6");
 	
 	
 	//	int i;
-	NSLog(@"7");
+//	NSLog(@"7");
 	//	WalkData *tmpWalk;
-	NSLog(@"8");
+//	NSLog(@"8");
 	/*	for (i = 0; i < [appData.walkList count]; i++) {
 		NSLog(@"9");
 		 tmpWalk = [appData.walkList objectAtIndex:i];
@@ -312,9 +318,9 @@
 		NSLog(@"%@ Selected: %d", tmpWalk.name, tmpWalk.selected);
 		NSLog(@"11");
 	}*/
-	NSLog(@"12");
+//	NSLog(@"12");
 	//	[tmpWalk release];
-	NSLog(@"13");
+//	NSLog(@"13");
 	
 }
 

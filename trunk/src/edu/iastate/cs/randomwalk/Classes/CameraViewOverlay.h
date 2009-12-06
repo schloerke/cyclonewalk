@@ -8,14 +8,23 @@
 
 #import <UIKit/UIKit.h>
 #import <CoreLocation/CoreLocation.h>
+#import "DotAndNode.h"
 
 /**
  * Custom Overlay for the 
  */
-@interface CameraViewOverlay : UIView {
+@interface CameraViewOverlay : UIViewController {
 	CLLocationManager *locationManager;
 	CLLocationCoordinate2D location;
 	NSMutableArray *nodeList;
+	CameraViewController *navigation;
 }
+
+@property (nonatomic, retain) CameraViewController *navigation;
+
+-(void) addNode:(NodeData *) nodeP;
+
+-(id) initWithNavigation:(CameraViewController *) navigationP;
+
 
 @end
