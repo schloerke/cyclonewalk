@@ -6,6 +6,7 @@
 //  Copyright 2009 Iowa State University. All rights reserved.
 //
 #import "CameraViewController.h"
+#import "CameraViewOverlay.h"
 
 @implementation CameraViewController
 
@@ -17,9 +18,15 @@
 {
 	self = [[CameraViewController alloc] init];
 	self.walkArray = walkArrayP;
-	[self startCamera:cameraView];
+	//	[self startCamera:cameraView];
 	
 	self.title = @"Camera";
+	
+	NSLog(@"Adding Nodes");
+	CameraViewOverlay *cvover = [[CameraViewOverlay alloc]initWithNavigation:self];
+	[self.view addSubview:cvover.view];
+	[cvover addNode:[[[walkArrayP objectAtIndex:0] nodeList] objectAtIndex:0]];
+
 	return self;
 }
 
@@ -30,11 +37,16 @@
  */
 -(BOOL) startCamera:(UIView *)cameraOverlayView {
 	if ((cameraOverlayView == nil))
-        return NO;
+	{
+		NSLog(@"Sent a nil overlay view, returning no");
+		return NO;
+	}
 	
 	NSLog(@"Attempting to launch Camera");
-	if((![UIImagePickerController isSourceTypeAvailable:UIImagePickerControllerSourceTypeCamera])) // Verify that camera is available
+	if((![UIImagePickerController isSourceTypeAvailable:UIImagePickerControllerSourceTypeCamera])){
+		NSLog(@"Does not have a camera, returning no");
 		return NO;
+	} // Verify that camera is available
 	
     self.picker = [[UIImagePickerController alloc] init];
     self.picker.sourceType = UIImagePickerControllerSourceTypeCamera;

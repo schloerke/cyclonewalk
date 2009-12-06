@@ -127,19 +127,16 @@
 		[test setImage:[((MapPin *)annotation) pinImage]];
 
 		UIButton *button = [UIButton buttonWithType: UIButtonTypeInfoLight];
-		
 		[button setTitleColor:[UIColor whiteColor] forState:UIControlEventTouchUpInside];
-
 		[button setTitleShadowColor:[UIColor blackColor] forState:UIControlEventAllEvents];
-
-		NodeData *nodeD = ((MapPin *)annotation).nodeData;
-		NSLog(@"Node Name: %@", nodeD.name);
-		NSLog(@"NodeListCount: %d", [nodeList count]);
 		button.tag = [nodeList count];
-		[nodeList addObject:nodeD];
-		
-		
 		[button addTarget:self action:@selector(pushNodeDetail:) forControlEvents:UIControlEventTouchUpInside];
+		
+		NodeData *nodeD = ((MapPin *)annotation).nodeData;
+		//NSLog(@"Node Name: %@", nodeD.name);
+		//NSLog(@"NodeListCount: %d", [nodeList count]);
+		[nodeList addObject:nodeD];		
+		
 		test.rightCalloutAccessoryView = button;
 	}
 	[test autorelease];

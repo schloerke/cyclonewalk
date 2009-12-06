@@ -9,48 +9,43 @@
 #import "DotAndNode.h"
 #import "math.h"
 #import "NodeDetail.h"
+#import "Settings.h"
 
 @implementation DotAndNode
 
 @synthesize nodeData, xpos, ypos, color, radius;
 @synthesize button, label;
+@synthesize navigation;
 
 const double PI = 3.141592;
 
 
--(id) initWithNode:(NodeData *)nodeP distanceInFeet:(CGFloat)distance color:(UIColor *) colorP xPos:(CGFloat)xposP yPos:(CGFloat)yposP
+-(id) initWithNode:(NodeData *)nodeP navigation:(CameraViewController *)navigationP distanceInFeet:(CGFloat)distance color:(UIColor *) colorP xPos:(CGFloat)xposP yPos:(CGFloat)yposP
 {
 	
 	self = [[DotAndNode alloc] init];
 	self.nodeData = nodeP;
 	self.xpos = xposP;
 	self.ypos = yposP;
+	self.navigation = navigationP;
 	
 	self.color = colorP;
-	
-	CGSize textSize = [self.nodeData.name sizeWithFont:self.label.font];
-	self.label = [[UILabel alloc] initWithFrame:CGRectMake(self.xpos, self.ypos, textSize.width, textSize.height)];
-
-	self.label.text = self.nodeData.name;
-	
-	self.button = [UIButton buttonWithType: UIButtonTypeInfoLight];
+		
+	self.button = [UIButton buttonWithType: UIButtonTypeInfoDark];
 	[self.button setTitleColor:[UIColor whiteColor] forState:UIControlEventTouchUpInside];	
 	[self.button setTitleShadowColor:[UIColor blackColor] forState:UIControlEventAllEvents];
-		
 	[self.button addTarget:self action:@selector(pushNodeDetail:) forControlEvents:UIControlEventTouchUpInside];
+	self.button.frame = CGRectMake(self.xpos, self.ypos, self.button.frame.size.width, self.button.frame.size.height);
+
 	
+	CGSize textSize = [self.nodeData.name sizeWithFont:[UIFont systemFontOfSize: 20]];
+	NSLog(@"Label size: w:%d h:%d", textSize.width, textSize.height);
+	self.label = [[UILabel alloc] initWithFrame:CGRectMake(self.xpos + self.button.frame.size.width + 3, self.ypos - 2, textSize.width, textSize.height)];
+	self.label.backgroundColor = colorP;
+	self.label.text = [@" " stringByAppendingString:self.nodeData.name];
 	
-	
-	
-	button = [UIButton buttonWithType:UIButtonTypeRoundedRect];
-	[button addTarget:self 
-			   action:@selector(aMethod:)
-	 forControlEvents:UIControlEventTouchDown];
-	[button setTitle:@"Show View" forState:UIControlStateNormal];
-	button.frame = CGRectMake(80.0, 210.0, 160.0, 40.0);
-	
-	
-	//[view addSubview:self.button];
+	[self.view addSubview:self.button];
+	[self.view addSubview:self.label];
 	
 	return self;
 }
@@ -58,20 +53,19 @@ const double PI = 3.141592;
 -(void) pushNodeDetail:(id)sender
 {
 	NodeDetail *infoView = [[NodeDetail alloc] initWithNode:self.nodeData];
-	
+
 	NSLog(@"Pushing the NodeDetail: %@", infoView.nodeData.name);
-	//[self.navigationController pushViewController:infoView animated:YES];
-	//self.navigationController.navigationBarHidden = NO;
+//	Settings *set = [[Settings alloc] initSettings];
+//	UINavigationController *navi = [[UINavigationController alloc] init];
+	[self.navigation.navigationController pushViewController:infoView animated:YES];
+//	self.navigationController.navigationBarHidden = NO;
 	[infoView release];
 }
 
 
 -(void) draw
 {	
-	
-	
 	CGContextRef context = UIGraphicsGetCurrentContext();
-	
 	CGContextBeginPath (context); 
 	
 	
@@ -81,16 +75,15 @@ const double PI = 3.141592;
 	for (deg = 0; deg<=PI; deg+=PI/20) {
 		CGContextAddLineToPoint(context, xpos + self.radius * cos(deg), self.radius * sin(deg));
 	}
-	
-	CGContextClosePath (context);
-	
 	[self.color setFill]; 
 	[self.color setStroke]; 
 	CGContextDrawPath (context, kCGPathFillStroke);
 	
-
-	
-	
+	CGContextClosePath (context);
+//	
+//	[self.color setFill]; 
+//	[self.color setStroke]; 
+//	CGContextDrawPath (context, kCGPathFillStroke);
 }
 
 @end
