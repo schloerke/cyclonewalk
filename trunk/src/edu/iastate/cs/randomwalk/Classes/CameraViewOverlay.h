@@ -13,7 +13,7 @@
 /**
  * Custom Overlay for the 
  */
-@interface CameraViewOverlay : UIViewController {
+@interface CameraViewOverlay : UIViewController <CLLocationManagerDelegate> {
 	CLLocationManager *locationManager;
 	CLLocationCoordinate2D location;
 	NSMutableArray *nodeList;
@@ -22,7 +22,7 @@
 
 @property (nonatomic, retain) CameraViewController *navigation;
 
--(void) addNode:(NodeData *) nodeP;
+-(void) addNode:(NodeData *) nodeP xPixelPosition:(CGFloat)xposP yPixelPosition:(CGFloat)yposP;
 
 -(id) initWithNavigation:(CameraViewController *) navigationP;
 

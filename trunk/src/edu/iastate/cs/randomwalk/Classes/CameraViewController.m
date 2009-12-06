@@ -18,14 +18,17 @@
 {
 	self = [[CameraViewController alloc] init];
 	self.walkArray = walkArrayP;
-	//	[self startCamera:cameraView];
+	[self startCamera:cameraView];
 	
 	self.title = @"Camera";
 	
-	NSLog(@"Adding Nodes");
+	// Testing, draw node on screen
+	NSLog(@"Adding Test Node");
 	CameraViewOverlay *cvover = [[CameraViewOverlay alloc]initWithNavigation:self];
-	[self.view addSubview:cvover.view];
 	[cvover addNode:[[[walkArrayP objectAtIndex:0] nodeList] objectAtIndex:0]];
+	
+	//launch camera with overlauy
+	[self startCamera:cvover.view];
 
 	return self;
 }
@@ -53,7 +56,7 @@
     self.picker.delegate = self;
 	self.picker.showsCameraControls = NO; // Hide Camera Controls
     self.picker.allowsEditing = YES; // user is allowed to edit a selected still image
-	self.picker.cameraOverlayView = cameraOverlayView;
+	//self.picker.cameraOverlayView = cameraOverlayView;
 	
     [self presentModalViewController:picker animated:YES];
 	NSLog(@"Camera launched successfully!");
