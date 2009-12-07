@@ -63,4 +63,5 @@ Pushes the Settings view on top of the navigation stack, for a given walk
 +(NSString*) convertFeetToString:(CGFloat) feet;
 
 
+
 @end

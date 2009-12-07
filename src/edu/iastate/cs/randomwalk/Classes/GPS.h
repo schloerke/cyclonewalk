@@ -26,4 +26,7 @@
 //Calculates the bearing (in degrees) from two longtidue/latitude coordinates
 +(double) getBearing:(CLLocation *) point;
 
++(BOOL) isWithinDistance:(CGFloat )distanceP nodeProximity:(CGFloat)nodeProxi walkProximity:(CGFloat)walkProxi;
+
+
 @end

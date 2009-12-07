@@ -358,28 +358,27 @@
 	//	WalkData *walk = [[walks objectAtIndex:indexPath.row] name];
 	// TODO
 	NSString *name;
+	BOOL selected;
 	if (indexPath.section == 0) {
 		// application default
 		name = [[appData getWalkNames:NO] objectAtIndex:indexPath.row];
+		selected = [[appData.defaultWalks objectAtIndex:indexPath.row] selected];
 
 	}
 	else if (indexPath.section == 1) {
 		// user favorite
 		name = [[appData getWalkNames:YES] objectAtIndex:indexPath.row];
+		selected = [[appData.userWalks objectAtIndex:indexPath.row] selected];
 		
 
 	}
 	
 	NSLog(@"Getting Walk By Name");
-	if ([appData getWalkByName:name].selected) 
+	if (selected) 
 		cell.accessoryType = UITableViewCellAccessoryCheckmark;
 	else 
 		cell.accessoryType = UITableViewCellAccessoryNone;
-	
 
-	
-	
-	
     cell.textLabel.text = name;
     return cell;
 }

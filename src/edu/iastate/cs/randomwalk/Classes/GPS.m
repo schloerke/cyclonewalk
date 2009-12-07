@@ -8,6 +8,7 @@
 
 #import "GPS.h"
 #import "DeviceData.h"
+#import "AppData.h"
 
 
 @implementation GPS
@@ -32,6 +33,25 @@
 	CLLocationCoordinate2D currLoc = [self getCurrentLocation];
 	CLLocation *pointCurr = [[CLLocation alloc] initWithLatitude:currLoc.latitude longitude:currLoc.longitude];
 	return [pointCurr getDistanceFrom:point];
+}
+
++(BOOL) isWithinDistance:(CGFloat )distanceP nodeProximity:(CGFloat)nodeProxi walkProximity:(CGFloat)walkProxi
+{
+	if(nodeProxi < 0)
+		nodeProxi = CGFLOAT_MAX;
+	if(walkProxi < 0)
+		walkProxi = CGFLOAT_MAX;
+	
+	CGFloat appProxi = [[AppData initSingleton] proximity];
+	
+	CGFloat minProxi = nodeProxi;
+	if (minProxi < walkProxi) 
+		minProxi = walkProxi;
+	
+	if(minProxi < appProxi)
+		minProxi = appProxi;
+	
+	return distanceP <= minProxi;
 }
 
 

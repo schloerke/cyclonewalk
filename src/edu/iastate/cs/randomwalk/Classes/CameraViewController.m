@@ -13,6 +13,7 @@
 @synthesize walkArray;
 @synthesize picker;
 @synthesize cameraView;
+@synthesize dotArray;
 
 -(id)initWithWalkArray: (NSMutableArray *)walkArrayP
 {

@@ -123,17 +123,7 @@
 
 
 - (void)dealloc {
-	NodeData *nodeData;
 	
-	IBOutlet UILabel *name;
-	IBOutlet UITextView *description;
-	IBOutlet UILabel *address;
-	IBOutlet UITextView *phoneNumberT;
-	IBOutlet UILabel *latitude;
-	IBOutlet UILabel *longitude;
-	IBOutlet UILabel *contactInfo;
-	IBOutlet UIImage *photo;
-	IBOutlet UIImageView *photoView;
 	
 	
 	

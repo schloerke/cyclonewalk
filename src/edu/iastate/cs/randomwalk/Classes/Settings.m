@@ -21,10 +21,30 @@
 {
 	self = [[Settings alloc] init];
 	self.proximity = [[AppData initSingleton] proximity];
-	proximityLabel.text = [Settings convertFeetToString:self.proximity];
 	self.title = @"Settings";
 	
 	return self;
+}
+
+- (void)viewWillAppear:(BOOL)animated
+{
+	CGFloat value = 0;
+	if(self.proximity < 60)
+		value =  (self.proximity - 15) / 45;
+	else if(self.proximity < 300)
+		value = (self.proximity - 60) / (300 - 60) * 0.25 + .25;
+	else if (self.proximity < 5280) 
+		value = (self.proximity - 300) / (5280-300) * 0.25 + 0.5;
+	else if (self.proximity < 50*5280) 
+		value = (self.proximity - 5280) / (49*5280) * 0.25 + 0.75;
+	else 
+		value = 1.0;
+	
+	NSLog(@"Value: %f", value);
+	
+	slider.value = value;
+	
+	proximityLabel.text = [Settings convertFeetToString:self.proximity];	
 }
 
 /*
@@ -55,7 +75,7 @@
 -(CGFloat) convertSliderValueToFeet
 {
 	self.proximity = [Settings convertPercentValueToFeet:slider.value];
-	[self setAppDataWithProximityRange];
+	//	[self setAppDataWithProximityRange];
 	return self.proximity;
 }
 
@@ -76,20 +96,20 @@
 		value =  i / 0.25 * 45 + 15;
 	
 	else if(i < .50)
-		value = (i - .25) / 0.25 * 285;
+		value = (i - .25) / 0.25 * (300 - 60) + 60;
 	
 	 else if (i < .75) 
-		value = (i - .50) / 0.25 * 5280;
+		value = (i - .50) / 0.25 * (5280 - 300) + 300;
 		 
 	 else if (i < 0.95) 
-		value = (i - 0.75) / .2 * 50 * 5280;
+		value = (i - 0.75) / .2 * (50 * 5280 - 5280) + 5280;
 	
 	else 
 		value = CGFLOAT_MAX;
 	
-	NSInteger valueInt = value * 1000;
-	value = valueInt;
-	value = value / 1000;
+	//NSInteger valueInt = value * 1000;
+	//value = valueInt;
+	//	value = value / 1000;
 	return value;
 	
 
@@ -112,15 +132,19 @@
  */
 +(NSString*) convertFeetToString:(CGFloat) feet
 {
-	
+	NSLog(@"Proximity = %f", [[AppData initSingleton] proximity]);
 	NSString *returnString = @"";
 	
 	if (feet < 150) {
 		returnString = [returnString stringByAppendingFormat:@"%f feet", feet];
-	} else if (feet < 5280) {
+	} 
+	else if (feet < 5280) 
+	{
 		feet = feet / 3;
 		returnString = [returnString stringByAppendingFormat:@"%f yards", feet];
-	} else if (feet < 5280 * 50) {
+	} 
+	else if (feet < (5280 * 50)) 
+	{
 		feet = feet / 5280;
 		returnString = [returnString stringByAppendingFormat:@"%f miles", feet];
 	}

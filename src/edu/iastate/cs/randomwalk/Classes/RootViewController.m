@@ -28,7 +28,7 @@
     [super viewDidLoad];
 
 	// Set up the edit and add buttons.
-    self.navigationItem.leftBarButtonItem = self.editButtonItem;
+/*    self.navigationItem.leftBarButtonItem = self.editButtonItem;
     
     UIBarButtonItem *addButton = [[UIBarButtonItem alloc] initWithBarButtonSystemItem:UIBarButtonSystemItemAdd target:self action:@selector(insertNewObject)];
     self.navigationItem.rightBarButtonItem = addButton;
@@ -40,13 +40,13 @@
 		 Replace this implementation with code to handle the error appropriately.
 		 
 		 abort() causes the application to generate a crash log and terminate. You should not use this function in a shipping application, although it may be useful during development. If it is not possible to recover from the error, display an alert panel that instructs the user to quit the application by pressing the Home button.
-		 */
+		 * /
 		NSLog(@"Unresolved error %@, %@", error, [error userInfo]);
 		abort();
 	}
-	
+	*/
 
-	NodeData *nodeData = [NodeData alloc];
+/*	NodeData *nodeData = [NodeData alloc];
 	nodeData.name = @"Bob";
 	[nodeData setPhoneNum:@"123-456-7890"];
 	 //	nodeData.phoneNumber = @"123-456-789";
@@ -56,7 +56,7 @@
 	nodeData.latitude = (CGFloat) 46 ;
 	nodeData.contactInfo = @"Barret Schloerke";
 	nodeData.photoURL = nil;
-		
+*/		
 	
 	
 
@@ -64,7 +64,6 @@
 	//XMLParse *xmlPar = [[XMLParse alloc] init];
 	//appData = [xmlPar startParsing];
 	
-	[[[[XMLParse alloc] init] startParsing] autorelease];
 	
 
 	MainView *mview = [[MainView alloc] initWithAppData];
@@ -75,7 +74,8 @@
 	[mview release];
 	NSLog(@"Done Pushing MainView");
 	
-	nodeData = [[[appData.userWalks objectAtIndex:0] nodeList] objectAtIndex:0];
+	
+	NodeData *nodeData = [[[appData.userWalks objectAtIndex:0] nodeList] objectAtIndex:0];
 	NSLog(@"Node Name: %@", nodeData.name);
 	
 	NodeDetail *nodeInfo = [[NodeDetail alloc] initWithNode:nodeData ];
