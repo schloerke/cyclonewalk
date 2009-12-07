@@ -190,8 +190,8 @@
 	
 	CGFloat feet_per_latitude = 364173.229;
 	CGFloat feet_per_longitude = [MapViewController feetPerLongitudeAngle:location.latitude];
-	span.latitudeDelta= proximity / feet_per_latitude;
-	span.longitudeDelta= proximity / feet_per_longitude;
+	span.latitudeDelta= proximityd / feet_per_latitude;
+	span.longitudeDelta= proximityd / feet_per_longitude;
 	
 	region.span=span;
 	

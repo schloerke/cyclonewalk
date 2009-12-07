@@ -28,6 +28,7 @@
 		AB6445C310BC7717005185A9 /* Accelerometer.m in Sources */ = {isa = PBXBuildFile; fileRef = AB6445BF10BC7717005185A9 /* Accelerometer.m */; };
 		AB6445C410BC7717005185A9 /* MapPin.m in Sources */ = {isa = PBXBuildFile; fileRef = AB6445C110BC7717005185A9 /* MapPin.m */; };
 		AB849FC310CCB78000B092A4 /* Default.png in Resources */ = {isa = PBXBuildFile; fileRef = AB849FC210CCB78000B092A4 /* Default.png */; };
+		AB849FFC10CCBDBB00B092A4 /* icon.png in Resources */ = {isa = PBXBuildFile; fileRef = AB849FFB10CCBDBB00B092A4 /* icon.png */; };
 		AB9919F010BD9A7900146D11 /* black-pin.png in Resources */ = {isa = PBXBuildFile; fileRef = AB9919E210BD9A7900146D11 /* black-pin.png */; };
 		AB9919F110BD9A7A00146D11 /* blue-pin.png in Resources */ = {isa = PBXBuildFile; fileRef = AB9919E310BD9A7900146D11 /* blue-pin.png */; };
 		AB9919F210BD9A7A00146D11 /* brown-pin.png in Resources */ = {isa = PBXBuildFile; fileRef = AB9919E410BD9A7900146D11 /* brown-pin.png */; };
@@ -88,6 +89,7 @@
 		AB6445C010BC7717005185A9 /* MapPin.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = MapPin.h; sourceTree = "<group>"; };
 		AB6445C110BC7717005185A9 /* MapPin.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = MapPin.m; sourceTree = "<group>"; };
 		AB849FC210CCB78000B092A4 /* Default.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; name = Default.png; path = Classes/Default.png; sourceTree = "<group>"; };
+		AB849FFB10CCBDBB00B092A4 /* icon.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = icon.png; sourceTree = "<group>"; };
 		AB9919E210BD9A7900146D11 /* black-pin.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "black-pin.png"; sourceTree = "<group>"; };
 		AB9919E310BD9A7900146D11 /* blue-pin.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "blue-pin.png"; sourceTree = "<group>"; };
 		AB9919E410BD9A7900146D11 /* brown-pin.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "brown-pin.png"; sourceTree = "<group>"; };
@@ -195,6 +197,7 @@
 			isa = PBXGroup;
 			children = (
 				AB849FC210CCB78000B092A4 /* Default.png */,
+				AB849FFB10CCBDBB00B092A4 /* icon.png */,
 				28860B760F44E54D00985440 /* randomwalk.xcdatamodel */,
 				2899E55F0DE3E45000AC0155 /* RootViewController.xib */,
 				28AD735F0D9D9599002E5188 /* MainWindow.xib */,
@@ -369,11 +372,8 @@
 				AB0B6EC610C31C5800F68A68 /* MapView.xib in Resources */,
 				AB0B6EC710C31C5800F68A68 /* NodeDetail.xib in Resources */,
 				AB0B6EC810C31C5800F68A68 /* Settings.xib in Resources */,
-<<<<<<< HEAD:src/edu/iastate/cs/randomwalk/randomwalk.xcodeproj/project.pbxproj
-=======
-				AB0B6EC910C31C5800F68A68 /* WalkSettings.xib in Resources */,
 				AB849FC310CCB78000B092A4 /* Default.png in Resources */,
->>>>>>> added the Default.png file for a splash screen while loading:src/edu/iastate/cs/randomwalk/randomwalk.xcodeproj/project.pbxproj
+				AB849FFC10CCBDBB00B092A4 /* icon.png in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};

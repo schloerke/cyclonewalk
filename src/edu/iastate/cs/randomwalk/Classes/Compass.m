@@ -31,10 +31,10 @@
 + (double) getDegreeOffset: (NodeData *)node fromPoint:(CLLocation *)fromPoint toPoint:(CLLocation *)toPoint
 {
 	
-	double lon1 = fromPoint.coordinate.longitude;
-	double lon2 = toPoint.coordinate.longitude;
-	double lat1 = fromPoint.coordinate.latitude;
-	double lat2 = toPoint.coordinate.longitude;
+//	double lon1 = fromPoint.coordinate.longitude;
+//	double lon2 = toPoint.coordinate.longitude;
+//	double lat1 = fromPoint.coordinate.latitude;
+//	double lat2 = toPoint.coordinate.longitude;
 	//TODO
 	// For displaying directional arrow
 	//
@@ -52,7 +52,8 @@
 	
 	
 	
-	return d;
+	//return d;
+	return 0;
 }
 
 /*
