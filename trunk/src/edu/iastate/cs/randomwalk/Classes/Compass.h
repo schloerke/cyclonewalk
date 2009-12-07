@@ -8,7 +8,7 @@
 
 #import <UIKit/UIKit.h>
 #import "NodeData.h"
-
+#import "GPS.h"
 
 @interface Compass : UIViewController {
 	UILabel *directionFacing;
@@ -28,7 +28,7 @@
  * 180, -180: node is directly south of the user
  * 270, -90: node is directly left of the user
  */
-- (double) getDegreeOffset: (NodeData *) node;
++ (double) getDegreeOffset: (NodeData *)node fromPoint:(CLLocation *)fromPoint toPoint:(CLLocation *)toPoint;
 
 /*
  Makes the label text value the value of 

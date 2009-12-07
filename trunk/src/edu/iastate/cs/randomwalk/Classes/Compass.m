@@ -28,11 +28,31 @@
  * 180, -180: node is directly south of the user
  * 270, -90: node is directly left of the user
  */
-- (double) getDegreeOffset: (NodeData *) node
++ (double) getDegreeOffset: (NodeData *)node fromPoint:(CLLocation *)fromPoint toPoint:(CLLocation *)toPoint
 {
+	
+	double lon1 = fromPoint.coordinate.longitude;
+	double lon2 = toPoint.coordinate.longitude;
+	double lat1 = fromPoint.coordinate.latitude;
+	double lat2 = toPoint.coordinate.longitude;
 	//TODO
 	// For displaying directional arrow
-	return 0;
+	//
+	//tc1=mod(
+	/*atan2(sin(lon1-lon2)*cos(lat2),
+		  cos(lat1)*sin(lat2)-sin(lat1)*cos(lat2)*cos(lon1-lon2)
+		  )
+			, 2*pi)
+	*/
+	/*double a = sin(lon1-lon2)*cos(lat2);
+	double b = cos(lat1)*sin(lat2)-sin(lat1)*cos(lat2)*cos(lon1-lon2);
+	double c = atan2(a, b);
+	double d = fmod(c,(2*3.142857));*/
+	
+	
+	
+	
+	return d;
 }
 
 /*
@@ -43,6 +63,10 @@
 	double d = [self getDegreeFacing];
 	directionFacing.text = [NSString stringWithFormat:@"%d", d];
 }
+
+//tc1=mod(atan2(sin(lon1-lon2)*cos(lat2),
+//			  cos(lat1)*sin(lat2)-sin(lat1)*cos(lat2)*cos(lon1-lon2)), 2*pi)
+
 
 /*
  Calls the getDegreeFacing and returns a character value of the direction facing. i.e. N,NE,E,SE,S,SW,W,NW

@@ -36,6 +36,7 @@
 
 
 -(id) initWithNode:(NodeData *)nodeP navigation:(CameraViewController *)navigationP distanceInFeet:(CGFloat)distance color:(UIColor *) colorP xPos:(CGFloat)xposP yPos:(CGFloat)yposP;
+-(void) pushNodeDetail:(id)sender;
 
 
 

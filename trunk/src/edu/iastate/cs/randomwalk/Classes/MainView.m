@@ -24,13 +24,14 @@
 	
 	switch ([tBController.viewControllers indexOfObject:viewController]) {
 		case 0:
-			//NSLog(@"Re initializing the camera view");
-			//[tbarControllers replaceObjectAtIndex:1 withObject:[[[CameraViewController alloc] initWithWalkArray:[[AppData initSingleton] applicationSelectedWalks]] autorelease]];
+			NSLog(@"Re initializing the camera view");
+			//[tbarControllers replaceObjectAtIndex:0 withObject:[[[CameraViewController alloc] initWithWalkArray:[[AppData initSingleton] applicationSelectedWalks]] autorelease]];
 			break;
 		case 1:
-			//NSLog(@"Re initializing the map view");
+			NSLog(@"Re initializing the map view");
 			//AppData *appData = [AppData initSingleton];
-			//[tbarControllers replaceObjectAtIndex:2 withObject:[[MapViewController alloc] initWithWalkArray:appData.applicationSelectedWalks]];
+			[[tbarControllers objectAtIndex:1] updateMapWithCurrentLocation];
+			//[tbarControllers replaceObjectAtIndex:1 withObject:[[MapViewController alloc] initWithWalkArray:appData.applicationSelectedWalks]];
 			//NSLog(@"AppData.appSelWalk.Size: %d", [appData.applicationSelectedWalks count]);
 			break;
 		default:

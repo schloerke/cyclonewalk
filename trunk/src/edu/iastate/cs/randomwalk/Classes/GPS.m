@@ -26,6 +26,7 @@
 	NSLog(@"Latitude: %f  Longitude: %f", latitude, longitude);
 	return retVal;
 }
+
 //Calculate distance (in meters) from two longitude/latitude coordinates
 +(double) getDistance:(CLLocation *) point;{
 	CLLocationCoordinate2D currLoc = [self getCurrentLocation];

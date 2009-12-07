@@ -9,6 +9,7 @@
 #import <UIKit/UIKit.h>
 #import <CoreLocation/CoreLocation.h>
 #import "DotAndNode.h"
+#import "Compass.h"
 
 /**
  * Custom Overlay for the 
@@ -22,9 +23,9 @@
 
 @property (nonatomic, retain) CameraViewController *navigation;
 
--(void) addNode:(NodeData *) nodeP xPixelPosition:(CGFloat)xposP yPixelPosition:(CGFloat)yposP;
-
+-(void) addNode:(NodeData *)nodeP distanceInFeet:(CGFloat)distance xPixelPosition:(CGFloat)xposP yPixelPosition:(CGFloat)yposP; 
 -(id) initWithNavigation:(CameraViewController *) navigationP;
-
+- (void) redrawNodes:(CLLocation *)newLocation didUpdateHeading:(CLHeading *)newHeading;
+- (void)startUpdates;
 
 @end
