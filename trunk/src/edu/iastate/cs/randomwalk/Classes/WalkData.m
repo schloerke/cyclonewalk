@@ -69,5 +69,15 @@
 	
 }
 
+-(void) dealloc
+{
+	[nodeList release];
+	[name release];
+	[color	release];
+	
+	
+	[super dealloc];
+}
+
 
 @end

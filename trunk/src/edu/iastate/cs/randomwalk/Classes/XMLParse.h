@@ -40,6 +40,7 @@
 }
 
 -(AppData *) startParsing;
+-(void) startParsingThread;
 
 @property (nonatomic) BOOL  inNode;
 @property (nonatomic) BOOL  nodeName;
