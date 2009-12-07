@@ -15,10 +15,12 @@
 	
 	NSMutableArray *walkArray;
 	UIView *cameraView;
+	NSMutableArray *dotArray;
 	
 }
 
 @property (nonatomic, retain) NSMutableArray *walkArray;
+@property (nonatomic, retain) NSMutableArray *dotArray;
 @property (nonatomic, retain) UIImagePickerController *picker;
 @property (nonatomic, retain) UIView *cameraView;
 

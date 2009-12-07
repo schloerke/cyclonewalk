@@ -91,6 +91,7 @@
 	/////////////////////////////////////////////////////////
 	/////////////////////////////////////////////////////////
 	/////////////////////////////////////////////////////////
+	
 	NSMutableArray *selectedWalks = [[NSMutableArray alloc] init];
 	
 	int i,j;
@@ -132,7 +133,14 @@
 	//	[self.navigationController pushViewController:aview animated:YES];
 	//	self.navigationController.navigationBarHidden = NO;
 	
-	
+	if ([selectedWalks count] == 0) {
+		UIAlertView *alert = [[UIAlertView alloc] initWithTitle:@"No Selected Walks" message:@"You must select a walk to view the camera or map." delegate:self cancelButtonTitle:@"BACK" otherButtonTitles: nil];
+		[alert show];	
+		[alert release];
+		
+		return;
+		
+	}
 	
 	
 	UITabBarController *tabBarController = [[UITabBarController alloc] init];
@@ -216,7 +224,13 @@
 			UITableViewCell *cell = [walkTableView cellForRowAtIndexPath:indexPath];
 
 			cell.accessoryType = UITableViewCellAccessoryNone;
-			[[walks objectAtIndex:indexPath.row] deselect];
+			
+			if(j == 0)
+				[[self.appData.defaultWalks objectAtIndex:indexPath.row] deselect];
+			if(j== 1)
+				[[self.appData.userWalks objectAtIndex:indexPath.row] deselect];
+			
+			//			[[walks objectAtIndex:indexPath.row] deselect];
 		}
 	}
 	
@@ -247,41 +261,13 @@
 		didSelectRowAtIndexPath:(NSIndexPath *)indexPath {
 	NSLog(@"Selected row: %d Name: %@", indexPath.row, [[[tableView cellForRowAtIndexPath:indexPath] textLabel]text]);
 	
-    /*[theTableView deselectRowAtIndexPath:[theTableView indexPathForSelectedRow] animated:NO];
-	
-    UITableViewCell *cell = [theTableView cellForRowAtIndexPath:newIndexPath];
-    if (cell.accessoryType == UITableViewCellAccessoryNone) {
-        // update view with walk selection
-		cell.accessoryType = UITableViewCellAccessoryCheckmark;
-        
-		// update model with walk selection
-		//TODO
-		
-    } else if (cell.accessoryType == UITableViewCellAccessoryCheckmark) {
-        cell.accessoryType = UITableViewCellAccessoryNone;
-		
-		// update model with walk deselection
-		//TODO
-    }
-	*/
-	
-//	NSLog(@"1");
 	UITableViewCell *cell = [tableView cellForRowAtIndexPath:indexPath];
-//	NSLog(@"2");
-	
+
 	if(cell.accessoryType == UITableViewCellAccessoryNone)
 	{
-//		NSLog(@"3a");
 		cell.accessoryType = UITableViewCellAccessoryCheckmark;
-//		NSLog(@"3b");
-		//		[[appData getWalkByName:cell.textLabel.text] select];
-		//[appData getWalkByName:cell.textLabel.text].selected = YES;
-//		NSLog(@"Default Pos 0 Node Count: %d", [[[appData.defaultWalks objectAtIndex:0] nodeList] count]);
-//		NSLog(@"User Pos 0 Node Count: %d", [[[appData.userWalks objectAtIndex:0] nodeList] count]);
-//		NSLog(@"3c");
 		
-
-		
+	
 		if(indexPath.section == 0)
 			[[appData.defaultWalks objectAtIndex:indexPath.row] select];
 		if(indexPath.section == 1)
@@ -290,38 +276,16 @@
 	}
 	else
 	{	
-//		NSLog(@"4a");
 		cell.accessoryType = UITableViewCellAccessoryNone;
-		//[[appData getWalkByName:cell.textLabel.text] deselect];
-		//		[appData getWalkByName:cell.textLabel.text].selected = NO;
 		if(indexPath.section == 0)
 			[[appData.defaultWalks objectAtIndex:indexPath.row] deselect];
 		if(indexPath.section == 1)
 			[[appData.userWalks objectAtIndex:indexPath.row] deselect];
-		
-//		NSLog(@"4b");
 	}
-//	NSLog(@"5");
-	
+
 	[tableView deselectRowAtIndexPath:indexPath animated:YES];
-//	NSLog(@"6");
-	
-	
-	//	int i;
-//	NSLog(@"7");
-	//	WalkData *tmpWalk;
-//	NSLog(@"8");
-	/*	for (i = 0; i < [appData.walkList count]; i++) {
-		NSLog(@"9");
-		 tmpWalk = [appData.walkList objectAtIndex:i];
-		NSLog(@"10");
-		NSLog(@"%@ Selected: %d", tmpWalk.name, tmpWalk.selected);
-		NSLog(@"11");
-	}*/
-//	NSLog(@"12");
-	//	[tmpWalk release];
-//	NSLog(@"13");
-	
+
+
 }
 
 /**

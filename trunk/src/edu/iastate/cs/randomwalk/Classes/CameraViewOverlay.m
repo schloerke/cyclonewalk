@@ -78,19 +78,19 @@
  *
  */
 - (void)locationManager:(CLLocationManager *)manager didUpdateHeading:(CLHeading *)newHeading {
-	[self redrawNodes:]
+	//	[self redrawNodes:];
 	
 }
 
 
-- (void) redrawNodes:didUpdateToLocation(CLLocation *)newLocation didUpdateHeading(CLHeading *)newHeading
+/*- (void) redrawNodes: didUpdateToLocation(CLLocation *)newLocation didUpdateHeading(CLHeading *)newHeading
 {
 		//remove old nodes
 	
 		//for nodes in walk
 			// calculate if node is on screen, if so where(pixel positions), how big to draw (how close)
 	
-}
+}*/
 
 
 /**
@@ -162,8 +162,9 @@
 
 
 - (void)dealloc {
-	[release ]
-    [super dealloc];
+	[self.navigation release];
+	self.navigation =nil;
+	[super dealloc];
 }
 
 

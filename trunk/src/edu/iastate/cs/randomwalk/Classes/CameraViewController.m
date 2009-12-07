@@ -97,6 +97,11 @@
 
 
 - (void)dealloc {
+	self.picker = nil;
+	self.walkArray = nil;
+	self.cameraView = nil;
+	self.dotArray = nil;
+	
     [super dealloc];
 }
 
