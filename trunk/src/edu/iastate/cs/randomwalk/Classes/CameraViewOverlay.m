@@ -11,12 +11,13 @@
 
 @implementation CameraViewOverlay
 
-@synthesize navigation;
+@synthesize navigation;//, nodesOnScreen;
 
 -(id) initWithNavigation:(CameraViewController *) navigationP
 {
 	self = [self init];
 	self.navigation = navigationP;
+	//self.nodesOnScreen = [[NSMutableArray alloc] init];
 	return self;
 }
 
@@ -38,7 +39,7 @@
 	
 	//check if compass is available
 	if([locationManager headingAvailable]) {
-		 locationManager.headingFilter = 10.0;
+		 locationManager.headingFilter = 2.0;
 		
 		NSLog(@"Starting heading updates...");
 		[locationManager startUpdatingHeading];
@@ -53,7 +54,7 @@
  *
  */
 - (void)locationManager:(CLLocationManager *)manager didFailWithError:(NSError *)error {
-		NSLog(@"Location manager fialed...");
+		NSLog(@"Location manager fialed...%@",[error code]);
 }
 
 /**
@@ -68,8 +69,8 @@
  *
  */
 - (void)locationManager:(CLLocationManager *)manager didUpdateToLocation:(CLLocation *)newLocation fromLocation:(CLLocation *)oldLocation {
-	[self redrawNodes:newLocation didUpdateHeading:nil];
 	location = newLocation.coordinate;
+	[self redrawNodes];
 	
 }
 
@@ -78,27 +79,90 @@
  *
  */
 - (void)locationManager:(CLLocationManager *)manager didUpdateHeading:(CLHeading *)newHeading {
-	[self redrawNodes:[[CLLocation alloc] initWithLatitude:location.latitude longitude:location.longitude] didUpdateHeading:nil];
-	//	[self redrawNodes:];	
+	if (newHeading.headingAccuracy>=2) {
+		heading = newHeading.trueHeading; 
+		[self redrawNodes];
+	}
+	
 }
 
-- (void) redrawNodes:(CLLocation *)newLocation didUpdateHeading:(CLHeading *)newHeading
+- (void) redrawNodes
 {
-		//remove old nodes
-	//[self addNode:[[[navigation.walkArray objectAtIndex:0] nodeList] distanceInFeet:100 xPixelPosition:150 yPixelPosition:200]];
-	//[self addNode:[[[navigation.walkArray objectAtIndex:0] nodeList] distanceInFeet:50 xPixelPosition:150 yPixelPosition:10]];
-	//[self addNode:[[[navigation.walkArray objectAtIndex:0] nodeList] distanceInFeet:300 xPixelPosition:150 yPixelPosition:100]];
-
 	NSLog(@"Redrawing");
+	
+	// remove/release old onScreenNodes;
+	
+	//CGFloat screenHeight = 480; 
+	
+	//CGFloat screenHeight = 320; 
+	
+	//CGFloat screenAngleRange = 35; 
+	
+	//CGFloat angleOffset = getDegreeOffset(newLocation, node.location);
+	
+	//for nodes in walkList
+	
+	// if ( (getDegreeOffset(newLocation, node.location) >= 17.5) || (getDegreeOffset(newLocation, node.location) <= - 17.5)) { // node is in view
+	
+	// distance = newLocation.getDistanceFrom(node.location); 
+	
+	// yPixelPosition = screenHeight/2; // place node in align nodes in center 
+	
+	// xPixelPosition = (angleOffset+(screenAngleRange/2))(screenHeight/screenAngleRange);
+	
+	// addNode(node, distance, xPixelPosition, yPixelPosition );
+	
+	//}
+	
+	//}
+	
+	//remove all nodes from screen
+	for(UIView *subView in [self.view subviews]){
+		[subView removeFromSuperview];
+	}
+	
+	
+	CLLocation *currLocation = [[CLLocation alloc] initWithLatitude:location.latitude longitude:location.longitude];
+	CLLocation *nodeLocation;
+	double screenHeight = 480; 
+	double screenWidth = 320;
+	double screenAngleRange = 35;
+	
+	CGFloat yPixelPosition = screenHeight/2; // place node in align nodes in center 
+	
+	CGFloat xPixelPosition;// = (angleOffset+(screenAngleRange/2))(screenHeight/screenAngleRange);
+	
+	BOOL inView = NO;
+	BOOL inRange = NO;
+	
+	double distance = 0;
+	
+	AppData *appData = [AppData initSingleton];
+	CGFloat proximity = appData.proximity;
+	
+	for(WalkData *walkData in navigation.walkArray){
+		for(NodeData *node in [walkData nodeList]){
+			double offset = [self getDegreeOffset:node];
+			nodeLocation = [[CLLocation alloc] initWithLatitude:node.latitude longitude:node.longitude];
+			distance = [currLocation getDistanceFrom:nodeLocation]*3.28084;
+			xPixelPosition = (offset+(screenAngleRange/2))*(screenWidth/screenAngleRange);
+			inView = (offset<=(screenAngleRange/2) && offset>=(-screenAngleRange/2));
+			inRange = (distance <= proximity);
+			if(inView && inRange){
+				NSLog(@"Found Node. Drawing");
+				[self addNode:node distanceInFeet:distance xPixelPosition:xPixelPosition yPixelPosition:yPixelPosition];
+			}
+			inView = NO;
+			inRange = NO;
+		    [nodeLocation release];
+		}
+	}
+	
+	
+			
 	//NodeData *node = [[[navigation.walkArray objectAtIndex:0] nodeList] objectAtIndex:0];
-	//CLLocation *locationP = [[CLLocation alloc] initWithLatitude:node.latitude longitude:node.longitude];  
-	
-	//NSLog(@"%f", [Compass getDegreeOffset:[[[navigation.walkArray objectAtIndex:0] nodeList] objectAtIndex:0] fromPoint:newLocation  toPoint:locationP]);
-
-	
-	//for nodes in walk
-			// calculate if node is on screen, if so where(pixel positions), how big to draw (how close)
-	
+	//NSLog(@"%f", [self getDegreeOffset:node]);	
+	[currLocation release];
 }
 
 
@@ -107,7 +171,7 @@
  */
 -(void) addNode:(NodeData *)nodeP distanceInFeet:(CGFloat)distance xPixelPosition:(CGFloat)xposP yPixelPosition:(CGFloat)yposP
 {
-	//NSLog(@"Adding node to overlay: %@", nodeP.name);
+	NSLog(@"Adding node to overlay: %@", nodeP.name);
 	DotAndNode *dot = [[DotAndNode alloc] initWithNode:nodeP navigation:self.navigation distanceInFeet:distance color:[UIColor redColor] xPos:xposP yPos:yposP];
 	[self.view addSubview:dot.view];
 	
@@ -144,6 +208,40 @@
 //	[self addSubview:returnButton];
 }
 
+
+- (double) getDegreeOffset: (NodeData *)node
+{
+	//CLLocation *nodeLocation = [[CLLocation alloc] initWithLatitude:node.latitude longitude:node.longitude];
+	//get the angle of the node from north
+	//distance
+	//CGFloat feet_per_latitude = 364173.229;
+	//CGFloat feet_per_longitude = [MapViewController feetPerLongitudeAngle:location.latitude];	
+	
+	//convert latitude and longitde to relative to the current location
+	double lon1 = node.longitude - location.longitude;
+	double lat1 = node.latitude - location.latitude;
+	double distance = sqrt(lon1*lon1 + lat1*lat1);
+	
+	//degree offset from north
+	double degreeOffsetN;
+	if(lon1>=0 && lat1>=0){
+		degreeOffsetN = asin(lon1/distance)*57.295779;
+	}
+	else if(lon1<0 && lat1<0){
+		degreeOffsetN = 180 - asin(abs(lon1)/distance)*57.295779;
+	}
+	else if(lon1>=0 && lat1<0){
+		degreeOffsetN = 180 + asin(lon1/distance)*57.295779;
+	}
+	else if(lon1<0 && lat1>=0){
+		degreeOffsetN = 270 + asin(abs(lon1)/distance)*57.295779;
+	}
+	
+	double degreeOffset = heading - degreeOffsetN;
+	return degreeOffset;
+}
+
+
 - (void)viewDidLoad {
 	[super viewDidLoad];
 	[self startUpdates];
@@ -152,7 +250,6 @@
 -(void)action:(id)sender
 {
 	NSLog(@"UIButton was clicked");
-	//label.text = @"Bye World";
 }
 
 /*- (id)initWithFrame:(CGRect)frame {
@@ -163,9 +260,6 @@
 }*/
 
 
-- (void)drawRect:(CGRect)rect {
-    // Drawing code
-}
 
 - (void)didReceiveMemoryWarning {
 	// Releases the view if it doesn't have a superview.

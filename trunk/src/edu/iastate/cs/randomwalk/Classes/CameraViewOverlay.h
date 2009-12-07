@@ -17,15 +17,20 @@
 @interface CameraViewOverlay : UIViewController <CLLocationManagerDelegate> {
 	CLLocationManager *locationManager;
 	CLLocationCoordinate2D location;
-	NSMutableArray *nodeList;
+	double heading;
+	//NSMutableArray *nodeList;
 	CameraViewController *navigation;
+	//NSMutableArray *nodesOnScreen;
 }
 
 @property (nonatomic, retain) CameraViewController *navigation;
+//@property (nonatomic, retain) NSMutableArray *nodesOnScreen;
+
+//@property (nonatomic, retain) double heading;
 
 -(void) addNode:(NodeData *)nodeP distanceInFeet:(CGFloat)distance xPixelPosition:(CGFloat)xposP yPixelPosition:(CGFloat)yposP; 
 -(id) initWithNavigation:(CameraViewController *) navigationP;
-- (void) redrawNodes:(CLLocation *)newLocation didUpdateHeading:(CLHeading *)newHeading;
+- (void) redrawNodes;
 - (void)startUpdates;
-
+- (double) getDegreeOffset: (NodeData *)node;
 @end
