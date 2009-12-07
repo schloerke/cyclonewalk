@@ -43,10 +43,13 @@ const double PI = 3.141592;
 	CGFloat maxFont = 60;
 	CGFloat minFont = 6;
 	if (distance>1000) {
-		fontSize = 10;
+		fontSize = 6;
 	}
 	else{
-		fontSize = ((distance*(maxFont-minFont))/maxDistance) + minFont;
+		//		fontSize = ((distance*(maxFont-minFont))/maxDistance) + minFont;
+//		distance == 0, size = 60
+//		distance == 1000, size = 6
+		fontSize = maxFont - distance*(maxFont - minFont) / maxDistance;
 	}
 	
 	UIFont *labelFont = [UIFont systemFontOfSize:fontSize];

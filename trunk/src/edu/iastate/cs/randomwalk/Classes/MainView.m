@@ -25,7 +25,7 @@
 	switch ([tBController.viewControllers indexOfObject:viewController]) {
 		case 0:
 			NSLog(@"Re initializing the camera view");
-			//[tbarControllers replaceObjectAtIndex:0 withObject:[[[CameraViewController alloc] initWithWalkArray:[[AppData initSingleton] applicationSelectedWalks]] autorelease]];
+			[tbarControllers replaceObjectAtIndex:0 withObject:[[[CameraViewController alloc] initWithWalkArray:[[AppData initSingleton] applicationSelectedWalks]] autorelease]];
 			break;
 		case 1:
 			NSLog(@"Re initializing the map view");
@@ -183,7 +183,7 @@
 	
 	
 	//	[aview release];
-	
+	appData.applicationSelectedWalks = selectedWalks;
 	[selectedWalks release];
 	
 	
