@@ -15,9 +15,8 @@
 
 -(id) initWithNavigation:(CameraViewController *) navigationP
 {
-	self = [[CameraViewOverlay alloc] init];
+	self = [self init];
 	self.navigation = navigationP;
-	
 	return self;
 }
 
@@ -69,7 +68,8 @@
  *
  */
 - (void)locationManager:(CLLocationManager *)manager didUpdateToLocation:(CLLocation *)newLocation fromLocation:(CLLocation *)oldLocation {
-	
+	[self redrawNodes:newLocation didUpdateHeading:nil];
+	location = newLocation.coordinate;
 	
 }
 
@@ -78,28 +78,37 @@
  *
  */
 - (void)locationManager:(CLLocationManager *)manager didUpdateHeading:(CLHeading *)newHeading {
-	//	[self redrawNodes:];
-	
+	[self redrawNodes:[[CLLocation alloc] initWithLatitude:location.latitude longitude:location.longitude] didUpdateHeading:nil];
+	//	[self redrawNodes:];	
 }
 
-
-/*- (void) redrawNodes: didUpdateToLocation(CLLocation *)newLocation didUpdateHeading(CLHeading *)newHeading
+- (void) redrawNodes: didUpdateToLocation(CLLocation *)newLocation didUpdateHeading(CLHeading *)newHeading
 {
 		//remove old nodes
+	//[self addNode:[[[navigation.walkArray objectAtIndex:0] nodeList] distanceInFeet:100 xPixelPosition:150 yPixelPosition:200]];
+	//[self addNode:[[[navigation.walkArray objectAtIndex:0] nodeList] distanceInFeet:50 xPixelPosition:150 yPixelPosition:10]];
+	//[self addNode:[[[navigation.walkArray objectAtIndex:0] nodeList] distanceInFeet:300 xPixelPosition:150 yPixelPosition:100]];
+
+	NSLog(@"Redrawing");
+	//NodeData *node = [[[navigation.walkArray objectAtIndex:0] nodeList] objectAtIndex:0];
+	//CLLocation *locationP = [[CLLocation alloc] initWithLatitude:node.latitude longitude:node.longitude];  
 	
-		//for nodes in walk
+	//NSLog(@"%f", [Compass getDegreeOffset:[[[navigation.walkArray objectAtIndex:0] nodeList] objectAtIndex:0] fromPoint:newLocation  toPoint:locationP]);
+
+	
+	//for nodes in walk
 			// calculate if node is on screen, if so where(pixel positions), how big to draw (how close)
 	
-}*/
+}
 
 
 /**
  * Place a node on screen given Nodedata and the x y pixel positions
  */
--(void) addNode:(NodeData *) nodeP xPixelPosition:(CGFloat)xposP yPixelPosition:(CGFloat)yposP
+-(void) addNode:(NodeData *)nodeP distanceInFeet:(CGFloat)distance xPixelPosition:(CGFloat)xposP yPixelPosition:(CGFloat)yposP
 {
-	NSLog(@"Adding node to overlay: %@", nodeP.name);
-	DotAndNode *dot = [[DotAndNode alloc] initWithNode:nodeP navigation:self.navigation distanceInFeet:100 color:[UIColor redColor] xPos:xposP yPos:yposP];
+	//NSLog(@"Adding node to overlay: %@", nodeP.name);
+	DotAndNode *dot = [[DotAndNode alloc] initWithNode:nodeP navigation:self.navigation distanceInFeet:distance color:[UIColor redColor] xPos:xposP yPos:yposP];
 	[self.view addSubview:dot.view];
 	
 	// create a UIButton (UIButtonTypeRoundedRect) and play arround with settings
@@ -135,6 +144,11 @@
 //	[self addSubview:returnButton];
 }
 
+- (void)viewDidLoad {
+	[super viewDidLoad];
+	[self startUpdates];
+}
+
 -(void)action:(id)sender
 {
 	NSLog(@"UIButton was clicked");
@@ -163,7 +177,7 @@
 
 - (void)dealloc {
 	[self.navigation release];
-	self.navigation =nil;
+	self.navigation = nil;
 	[super dealloc];
 }
 

@@ -36,9 +36,20 @@ const double PI = 3.141592;
 	[self.button setTitleShadowColor:[UIColor blackColor] forState:UIControlEventAllEvents];
 	[self.button addTarget:self action:@selector(pushNodeDetail:) forControlEvents:UIControlEventTouchUpInside];
 	self.button.frame = CGRectMake(self.xpos, self.ypos, self.button.frame.size.width, self.button.frame.size.height);
-
 	
-	CGSize textSize = [self.nodeData.name sizeWithFont:[UIFont systemFontOfSize: 20]];
+	//TODO: resize font size based on distanceInFeet
+	CGFloat fontSize;
+	CGFloat maxDistance = 1000;
+	CGFloat maxFont = 60;
+	CGFloat minFont = 6;
+	if (distance>1000) {
+		fontSize = 10;
+	}
+	else{
+		fontSize = ((distance*(maxFont-minFont))/maxDistance) + minFont;
+	}
+	
+	CGSize textSize = [self.nodeData.name sizeWithFont:[UIFont systemFontOfSize: fontSize]];
 	NSLog(@"Label size: w:%d h:%d", textSize.width, textSize.height);
 	self.label = [[UILabel alloc] initWithFrame:CGRectMake(self.xpos + self.button.frame.size.width + 3, self.ypos - 2, textSize.width, textSize.height)];
 	self.label.backgroundColor = colorP;
