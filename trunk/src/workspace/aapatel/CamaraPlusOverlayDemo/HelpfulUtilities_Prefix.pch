@@ -1,0 +1,19 @@
+//
+// Prefix header for all source files of the 'HelpfulUtilities' target in the 'HelpfulUtilities' project
+//
+#import <Availability.h>
+
+#ifndef __IPHONE_3_0
+#warning "This project uses features only available in iPhone SDK 3.0 and later."
+#endif
+
+
+#ifdef __OBJC__
+    #import <Foundation/Foundation.h>
+    #import <UIKit/UIKit.h>
+#endif
+
+// Comment out this line to exclude thumbnail previews and picture sharing.
+// Sharing requires MessageUI framework to send pictures as email attachments.
+#define BTL_INCLUDE_IMAGE_SHARING 1
+
