@@ -44,6 +44,7 @@
 -(void) didLoadPhoto: (UIImage*) photoP
 {
 	[spinner stopAnimating];
+	[spinner removeFromSuperview];
 	photoView.image = photoP; //we need to retain the image, and set it in the frame, maybe set other things
 	
 }

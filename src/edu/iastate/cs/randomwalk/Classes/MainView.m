@@ -176,7 +176,7 @@
     // Add the tab bar controller's current view as a subview of the window
 	[self.navigationController pushViewController:tabBarController animated:YES];
 	self.navigationController.navigationBarHidden = NO;
-	
+	[tabBarController autorelease];
 	
 	
 	
@@ -185,6 +185,7 @@
 	//	[aview release];
 	appData.applicationSelectedWalks = selectedWalks;
 	[selectedWalks release];
+	
 	
 	
 	
