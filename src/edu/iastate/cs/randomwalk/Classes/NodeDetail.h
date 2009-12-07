@@ -21,9 +21,12 @@
 	IBOutlet UILabel *contactInfo;
 	IBOutlet UIImage *photo;
 	IBOutlet UIImageView *photoView;
+
+	IBOutlet UIActivityIndicatorView *spinner;
 }
 
 @property (nonatomic, retain) NodeData *nodeData;
+
 
 
 

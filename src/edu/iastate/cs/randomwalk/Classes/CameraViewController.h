@@ -12,7 +12,7 @@
 
 @interface CameraViewController : UIViewController <UINavigationControllerDelegate, UIImagePickerControllerDelegate> {	
 	UIImagePickerController* picker;
-	
+	IBOutlet UIImageView *imageView;
 	NSMutableArray *walkArray;
 	UIView *cameraView;
 	NSMutableArray *dotArray;
@@ -31,7 +31,7 @@
  * Launches Camera Display with overlay 
  * @returns yes on successful camera launch
  */
--(BOOL)startCamera:(UIView *)cameraOverlayView;
+-(BOOL)startCamera:(UIViewController *)cameraOverlay;
 
 /**
  * Called when the user has finished selecting an image

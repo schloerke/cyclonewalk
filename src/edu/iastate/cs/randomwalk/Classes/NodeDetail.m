@@ -30,10 +30,24 @@
 
 -(void) setPhotoImage
 {
+	
+	NSAutoreleasePool *pool = [[NSAutoreleasePool alloc] init];
+	
 	NSLog(@"Trying to set the photo image");
 	NSLog(@"Photo URL: %@",[self.nodeData.photoURL absoluteString]);	
-	photoView.image = photo; //we need to retain the image, and set it in the frame, maybe set other things
+	photo = [NodeDetail cropAndResizeImage:[self.nodeData getPhoto] toSize:photoView.frame.size];
+	
+    [self performSelectorOnMainThread:@selector(didLoadPhoto:) withObject:photo waitUntilDone:NO];
+    [pool release];	
 }
+
+-(void) didLoadPhoto: (UIImage*) photoP
+{
+	[spinner stopAnimating];
+	photoView.image = photoP; //we need to retain the image, and set it in the frame, maybe set other things
+	
+}
+
 
 /*
  Initializes the view with blank information
@@ -84,8 +98,13 @@
 	address.text = self.nodeData.address;
 	latitude.text = [@"" stringByAppendingFormat:@"%f",  self.nodeData.latitude];
 	longitude.text =  [@"" stringByAppendingFormat:@"%f",  self.nodeData.longitude];
-	photo = [NodeDetail cropAndResizeImage:[self.nodeData getPhoto] toSize:photoView.frame.size];
-	[self setPhotoImage];
+	
+	
+	[spinner startAnimating];
+	//	[self setPhotoImage];
+	[NSThread detachNewThreadSelector:@selector(setPhotoImage) toTarget:self withObject:nil];
+
+
 	contactInfo.text = self.nodeData.contactInfo;
 	
 	self.title = NSLocalizedString(self.nodeData.name , @"");
