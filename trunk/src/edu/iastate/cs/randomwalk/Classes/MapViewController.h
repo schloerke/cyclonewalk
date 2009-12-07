@@ -44,5 +44,11 @@
  */
 - (void) showNodes: (WalkData *) walkData;
 
+-(void) updateMapWithCurrentLocation;
+
+/*
+ * Returns the distance on ground per degree angle of longitude
+ */
++ (CGFloat)feetPerLongitudeAngle:(CGFloat) latitude;
 
 @end

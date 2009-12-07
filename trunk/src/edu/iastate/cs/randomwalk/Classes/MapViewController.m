@@ -154,6 +154,11 @@
 }
 
 //location manager functions
+-(void) updateMapWithCurrentLocation{
+	CLLocation *usedLocation = [[CLLocation alloc] initWithLatitude:location.latitude longitude:location.longitude];
+	[self locationManager:nil didUpdateToLocation: usedLocation fromLocation: usedLocation];
+}
+
 - (void)locationManager:(CLLocationManager *)manager didUpdateToLocation:(CLLocation *)newLocation fromLocation:(CLLocation *)oldLocation{
 	NSLog(@"Moving the screen to a new location");
 	location = newLocation.coordinate;
@@ -183,19 +188,8 @@
 	AppData *appData = [AppData initSingleton];
 	CGFloat proximity = appData.proximity;
 	
-	long feet_per_latitude = 364173.229;
-	
-	//Calculate the feet per longitude of this location 
-	int earthRadius = 6371;
-	CGFloat degreesPerRadian = 57.2958;
-	CGFloat a = cos(location.latitude/degreesPerRadian)*
-				cos(location.latitude/degreesPerRadian)*
-				sin((1/degreesPerRadian)*0.5)*
-				sin((1/degreesPerRadian)*0.5);
-	CGFloat c = 2*atan2(sqrt(a), sqrt(1-a));
-	CGFloat d = earthRadius*c;
-	CGFloat feet_per_longitude = d*3280.84;
-
+	CGFloat feet_per_latitude = 364173.229;
+	CGFloat feet_per_longitude = [MapViewController feetPerLongitudeAngle:location.latitude];
 	span.latitudeDelta= proximity / feet_per_latitude;
 	span.longitudeDelta= proximity / feet_per_longitude;
 	
@@ -203,6 +197,20 @@
 	
 	[mapView setRegion:region animated:TRUE];
 	
+}
+
++ (CGFloat)feetPerLongitudeAngle:(CGFloat) latitude
+{
+	//Calculate the feet per longitude of this location 
+	int earthRadius = 6371;
+	CGFloat degreesPerRadian = 57.2958;
+	CGFloat a = cos(latitude/degreesPerRadian)*
+	cos(latitude/degreesPerRadian)*
+	sin((1/degreesPerRadian)*0.5)*
+	sin((1/degreesPerRadian)*0.5);
+	CGFloat c = 2*atan2(sqrt(a), sqrt(1-a));
+	CGFloat d = earthRadius*c;
+	return d*3280.84; //convert kilometers to feet
 }
 
 - (void)locationManager:(CLLocationManager *)manager didFailWithError:(NSError *)error{

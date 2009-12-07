@@ -22,7 +22,6 @@
 	self = [[Settings alloc] init];
 	self.proximity = [[AppData initSingleton] proximity];
 	proximityLabel.text = [Settings convertFeetToString:self.proximity];
-
 	self.title = @"Settings";
 	
 	return self;
@@ -117,13 +116,13 @@
 	NSString *returnString = @"";
 	
 	if (feet < 150) {
-		returnString = [returnString stringByAppendingFormat:@"%d feet", feet];
+		returnString = [returnString stringByAppendingFormat:@"%f feet", feet];
 	} else if (feet < 5280) {
 		feet = feet / 3;
-		returnString = [returnString stringByAppendingFormat:@"%d yards", feet];
+		returnString = [returnString stringByAppendingFormat:@"%f yards", feet];
 	} else if (feet < 5280 * 50) {
 		feet = feet / 5280;
-		returnString = [returnString stringByAppendingFormat:@"%d miles", feet];
+		returnString = [returnString stringByAppendingFormat:@"%f miles", feet];
 	}
 	else {
 		returnString = @"Infinity";
