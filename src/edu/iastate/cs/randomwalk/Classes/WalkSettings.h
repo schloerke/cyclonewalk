@@ -33,7 +33,7 @@
 
 /*
  when the slider value has changed, the value of the slider will be sent to the proximity range, after being converted properly.
- 0% - 15 feet
+ 0% - 15 feetw
  25% - 50 yards
  50% - 100 yards
  75% - 1 mile
@@ -41,7 +41,6 @@
  100% - All
  */
 -(IBAction) setProximityRangeFromSlider;
-
 
 
 
