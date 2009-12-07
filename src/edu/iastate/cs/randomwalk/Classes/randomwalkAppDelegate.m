@@ -20,76 +20,6 @@
 #pragma mark -
 #pragma mark Application lifecycle
 
-- (void)applicationDidFinishLaunching:(UIApplication *)application {
-    
-	//prevent iPhone from sleeping
-	[[UIApplication sharedApplication] setIdleTimerDisabled:YES];
-    
-    // Override point for customization after app launch    
-
-	RootViewController *rootViewController = (RootViewController *)[navigationController topViewController];
-	rootViewController.managedObjectContext = self.managedObjectContext;
-	
-	[window addSubview:[navigationController view]];
-    [window makeKeyAndVisible];
-
-	[[[[XMLParse alloc] init] startParsing] autorelease];
-	
-	AppData *appData = [AppData initSingleton];
-	
-	int i;
-	
-	NSString *userPath = [self dataFilePath:YES];
-	if([[NSFileManager defaultManager] fileExistsAtPath:userPath])
-	{
-		NSArray *userWalksSelected = [[NSArray alloc] initWithContentsOfFile:userPath];
-		if ([userWalksSelected count] == [appData.userWalks count]) 
-		{
-			for (i = 0; i< [userWalksSelected count]; i++) {
-				if([[userWalksSelected objectAtIndex:i] boolValue])
-				{
-					[[appData.userWalks objectAtIndex:i] select];
-				}
-			}
-		}
-	}
-	
-	
-	NSString *defaultPath = [self dataFilePath:NO];
-	if([[NSFileManager defaultManager] fileExistsAtPath:defaultPath])
-	{
-		NSArray *defaultWalksSelected = [[NSArray alloc] initWithContentsOfFile:defaultPath];
-		if ([defaultWalksSelected count] == [appData.defaultWalks count]) 
-		{
-			for (i = 0; i< [defaultWalksSelected count]; i++) {
-				if([[defaultWalksSelected objectAtIndex:i] boolValue])
-				{
-					[[appData.defaultWalks objectAtIndex:i] select];
-				}
-			}
-		}
-	}
-	
-	
-	NSString *proximityPath = [self proximityPath];
-	if([[NSFileManager defaultManager] fileExistsAtPath:proximityPath])
-	{
-		NSArray *proxiArray = [[NSArray alloc] initWithContentsOfFile:proximityPath];
-		NSNumber *proxiNum = [proxiArray objectAtIndex:0];
-		CGFloat proxi  = [proxiNum floatValue];
-		NSLog(@"Loaded Proximity: %f", proxi);
-		
-		appData.proximity = proxi;
-		[proxiNum release];
-		[proxiArray release];
-	}
-	
-	
-
-}
-
-
-
 - (NSString *)proximityPath {
     NSArray *paths = NSSearchPathForDirectoriesInDomains(NSDocumentDirectory, NSUserDomainMask, YES);
     NSString *documentsDirectory = [paths objectAtIndex:0];
@@ -109,8 +39,29 @@
 	else {
 		return [documentsDirectory stringByAppendingPathComponent:dFilename];
 	}
+	
+}
+
+- (void)applicationDidFinishLaunching:(UIApplication *)application {
+    
+	//prevent iPhone from sleeping
+	[[UIApplication sharedApplication] setIdleTimerDisabled:YES];
+    
+    // Override point for customization after app launch    
+
+	RootViewController *rootViewController = (RootViewController *)[navigationController topViewController];
+	rootViewController.managedObjectContext = self.managedObjectContext;
+	
+	[window addSubview:[navigationController view]];
+    [window makeKeyAndVisible];
+
+
+	
 
 }
+
+
+
 
 /**
  applicationWillTerminate: saves changes in the application's managed object context before the application terminates.

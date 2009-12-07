@@ -23,6 +23,28 @@
 #pragma mark -
 #pragma mark View lifecycle
 
+- (NSString *)proximityPath {
+    NSArray *paths = NSSearchPathForDirectoriesInDomains(NSDocumentDirectory, NSUserDomainMask, YES);
+    NSString *documentsDirectory = [paths objectAtIndex:0];
+	return [documentsDirectory stringByAppendingPathComponent:proximityFilename];
+	
+}
+
+
+- (NSString *)dataFilePath: (BOOL) user {
+    NSArray *paths = NSSearchPathForDirectoriesInDomains(
+														 NSDocumentDirectory, NSUserDomainMask, YES);
+    NSString *documentsDirectory = [paths objectAtIndex:0];
+	if(user)
+	{
+		return [documentsDirectory stringByAppendingPathComponent:uFilename];
+	}
+	else {
+		return [documentsDirectory stringByAppendingPathComponent:dFilename];
+	}
+	
+}
+
 
 - (void)viewDidLoad {
     [super viewDidLoad];
@@ -63,7 +85,59 @@
 	
 	//XMLParse *xmlPar = [[XMLParse alloc] init];
 	//appData = [xmlPar startParsing];
-	
+
+	[[[[XMLParse alloc] init] autorelease] startParsingThread];
+	 
+	 
+	 appData = [AppData initSingleton];
+	 
+	 int i;
+	 
+	 NSString *userPath = [self dataFilePath:YES];
+	 if([[NSFileManager defaultManager] fileExistsAtPath:userPath])
+	 {
+		 NSArray *userWalksSelected = [[NSArray alloc] initWithContentsOfFile:userPath];
+		 if ([userWalksSelected count] == [appData.userWalks count]) 
+		 {
+			 for (i = 0; i< [userWalksSelected count]; i++) {
+				 if([[userWalksSelected objectAtIndex:i] boolValue])
+				 {
+					 [[appData.userWalks objectAtIndex:i] select];
+				 }
+			 }
+		 }
+	 }
+	 
+	 
+	 NSString *defaultPath = [self dataFilePath:NO];
+	 if([[NSFileManager defaultManager] fileExistsAtPath:defaultPath])
+	 {
+		 NSArray *defaultWalksSelected = [[NSArray alloc] initWithContentsOfFile:defaultPath];
+		 if ([defaultWalksSelected count] == [appData.defaultWalks count]) 
+		 {
+			 for (i = 0; i< [defaultWalksSelected count]; i++) {
+				 if([[defaultWalksSelected objectAtIndex:i] boolValue])
+				 {
+					 [[appData.defaultWalks objectAtIndex:i] select];
+				 }
+			 }
+		 }
+	 }
+	 
+	 
+	 NSString *proximityPath = [self proximityPath];
+	 if([[NSFileManager defaultManager] fileExistsAtPath:proximityPath])
+	 {
+		 NSArray *proxiArray = [[NSArray alloc] initWithContentsOfFile:proximityPath];
+		 NSNumber *proxiNum = [proxiArray objectAtIndex:0];
+		 CGFloat proxi  = [proxiNum floatValue];
+		 NSLog(@"Loaded Proximity: %f", proxi);
+		 
+		 appData.proximity = proxi;
+		 [proxiNum release];
+		 [proxiArray release];
+	 }
+	 
 	
 
 	MainView *mview = [[MainView alloc] initWithAppData];

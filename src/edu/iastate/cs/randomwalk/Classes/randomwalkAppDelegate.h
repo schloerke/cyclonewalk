@@ -5,10 +5,10 @@
 //  Created by Barret Schloerke on 11/6/09.
 //  Copyright __MyCompanyName__ 2009. All rights reserved.
 //
-
 #define dFilename        @"default.plist"
 #define uFilename        @"user.plist"
 #define proximityFilename @"proximity.plist"
+
 
 
 @interface randomwalkAppDelegate : NSObject <UIApplicationDelegate> {

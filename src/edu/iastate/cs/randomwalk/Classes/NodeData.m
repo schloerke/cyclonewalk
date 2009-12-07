@@ -70,4 +70,20 @@
 	
 }
 
+-(void)dealloc
+{
+	[name release];
+	[description release];
+	[address release];
+	[phoneNumber release];
+	[contactInfo release];
+	[photo release];
+	[photoURL release];
+	[phoneNumberString release];
+	
+
+	[super dealloc];
+	
+}
+
 @end

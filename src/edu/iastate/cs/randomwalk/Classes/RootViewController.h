@@ -7,6 +7,10 @@
 //
 
 #import "AppData.h"
+#define dFilename        @"default.plist"
+#define uFilename        @"user.plist"
+#define proximityFilename @"proximity.plist"
+
 
 @interface RootViewController : UITableViewController <NSFetchedResultsControllerDelegate> {
 	NSFetchedResultsController *fetchedResultsController;

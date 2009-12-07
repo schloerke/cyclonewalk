@@ -88,6 +88,7 @@
 		AB6445BF10BC7717005185A9 /* Accelerometer.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = Accelerometer.m; sourceTree = "<group>"; };
 		AB6445C010BC7717005185A9 /* MapPin.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = MapPin.h; sourceTree = "<group>"; };
 		AB6445C110BC7717005185A9 /* MapPin.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = MapPin.m; sourceTree = "<group>"; };
+		AB6ECC9F10CD9FE200E7DAE2 /* camera.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = camera.png; sourceTree = "<group>"; };
 		AB849FC210CCB78000B092A4 /* Default.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; name = Default.png; path = Classes/Default.png; sourceTree = "<group>"; };
 		AB849FFB10CCBDBB00B092A4 /* icon.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = icon.png; sourceTree = "<group>"; };
 		AB9919E210BD9A7900146D11 /* black-pin.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "black-pin.png"; sourceTree = "<group>"; };
@@ -159,6 +160,7 @@
 				28C286E00D94DF7D0034E888 /* RootViewController.m */,
 				1D3623240D0F684500981E51 /* randomwalkAppDelegate.h */,
 				1D3623250D0F684500981E51 /* randomwalkAppDelegate.m */,
+				AB6ECC9F10CD9FE200E7DAE2 /* camera.png */,
 			);
 			path = Classes;
 			sourceTree = "<group>";

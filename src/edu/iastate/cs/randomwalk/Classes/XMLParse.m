@@ -14,12 +14,31 @@
 @synthesize inNode, nodeName, nodeDescription, nodeAddress, nodePhoneNumber, nodeLatitude, nodeLongitude, nodePhoto, nodeContactInfo, nodeProximity, inWalk, walkName, walkColor, walkFavorite, walkSelected, walkProximity;
 
 
+-(void) startParsingThread
+{
+	
+	NSAutoreleasePool *pool = [[NSAutoreleasePool alloc] init];
+	
+	NSLog(@"Trying to set the photo image");
+	[self startParsing];
+	
+    [self performSelectorOnMainThread:@selector(didLoadData) withObject:nil waitUntilDone:NO];
+    [pool release];	
+}
+
+-(void) didLoadData
+{
+	;//do nothing	
+}
+
+
 - (AppData *)startParsing {
 	//	NSURL *url = [[NSURL alloc] initWithString:@"http://sites.google.com/site/iphonesdktutorials/xml/Books.xml"];
 	//NSURL *url = [[NSURL alloc] initWithString:@"http://www.barretschloerke.com/ComS309/buildings.xml"];
 	//NSURL *url = [[NSURL alloc] initWithString:@"http://www.barretschloerke.com/ComS309/buildingsSmall.xml"];
 	//	NSURL *url = [[NSURL alloc] initWithString:@"http://www.barretschloerke.com/ComS309/buildingsXSmall.xml"];
-	NSURL *url = [[NSURL alloc] initWithString:@"http://www.barretschloerke.com/ComS309/buildingsXSmall-New.xml"];
+	//NSURL *url = [[NSURL alloc] initWithString:@"http://www.barretschloerke.com/ComS309/buildingsXSmall-New.xml"];
+	NSURL *url = [[NSURL alloc] initWithString:@"http://www.barretschloerke.com/ComS309/buildingsXSmall-New2.xml"];
 	
 	appData = [AppData initSingleton];
 
@@ -376,7 +395,14 @@
 	
 }
 
+-(void) dealloc
+{
+	[currentElementValue release];
+	[spaces release];
 
+	[super dealloc];
+}
+ 
 
 
 
