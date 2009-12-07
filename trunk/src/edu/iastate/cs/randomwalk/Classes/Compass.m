@@ -15,7 +15,7 @@
 /*
  Direction values are measured in degrees starting at due north and continue clockwise around the compass. Thus, north is 0 degrees, east is 90 degrees, south is 180 degrees, and so on. A negative value indicates an invalid direction.
  */
-- (double) getDegreeFacing
++ (double) getDegreeFacing
 {
 	//return CLLocation.CLLocationDirection;	
 	return 0;
@@ -28,32 +28,36 @@
  * 180, -180: node is directly south of the user
  * 270, -90: node is directly left of the user
  */
-+ (double) getDegreeOffset: (NodeData *)node fromPoint:(CLLocation *)fromPoint toPoint:(CLLocation *)toPoint
++ (double) getDegreeOffset: (NodeData *)node currentLocation:(CLLocation *)currLocation
 {
+	CLLocation *nodeLocation = [[CLLocation alloc] initWithLatitude:node.latitude longitude:node.longitude];
+	//get the angle of the node from north
+	//distance
+	CGFloat feet_per_latitude = 364173.229;
+	CGFloat feet_per_longitude = [MapViewController feetPerLongitudeAngle:currLocation.latitude];	
 	
-//	double lon1 = fromPoint.coordinate.longitude;
-//	double lon2 = toPoint.coordinate.longitude;
-//	double lat1 = fromPoint.coordinate.latitude;
-//	double lat2 = toPoint.coordinate.longitude;
-	//TODO
-	// For displaying directional arrow
-	//
-	//tc1=mod(
-	/*atan2(sin(lon1-lon2)*cos(lat2),
-		  cos(lat1)*sin(lat2)-sin(lat1)*cos(lat2)*cos(lon1-lon2)
-		  )
-			, 2*pi)
-	*/
-	/*double a = sin(lon1-lon2)*cos(lat2);
-	double b = cos(lat1)*sin(lat2)-sin(lat1)*cos(lat2)*cos(lon1-lon2);
-	double c = atan2(a, b);
-	double d = fmod(c,(2*3.142857));*/
+	//convert latitude and longitde to relative to the current location
+	double lon1 = node.longitude - currLocation.coordinate.longitude;
+	double lat1 = node.latitude - currLocation.coordinate.latitude;
+	double distance = sqrt(lon1*lon1 + lat1*lat1);
 	
+	//degree offset from north
+	double degreeOffsetN;
+	if(lon1>=0 && lat1>=0){
+		degreeOffsetN = asin(lon1/distance)*57.295779;
+	}
+	else if(lon1<0 && lat1<0){
+		degreeOffsetN = 180 - asin(abs(lon1)/distance)*57.295779;
+	}
+	else if(lon1>=0 && lat1<0){
+		degreeOffsetN = 180 + asin(lon1/distance)*57.295779;
+	}
+	else if(lon1<0 && lat1>=0){
+		degreeOffsetN = 270 + asin(abs(lon1)/distance)*57.295779;
+	}
 	
-	
-	
-	//return d;
-	return 0;
+	double degreeOffset = degreeOffsetN - [Compass getDegreeFacing];
+	return degreeOffset;
 }
 
 /*

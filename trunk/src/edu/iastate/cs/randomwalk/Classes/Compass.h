@@ -19,7 +19,7 @@
 /*
  Direction values are measured in degrees starting at due north and continue clockwise around the compass. Thus, north is 0 degrees, east is 90 degrees, south is 180 degrees, and so on. A negative value indicates an invalid direction.
  */
-- (double) getDegreeFacing;
++ (double) getDegreeFacing;
 
 /*
  * Returns the degree of the node-- relative to the users current direction. e.g.:
