@@ -286,7 +286,11 @@
 								</array>
 							</array>
 							<key>PBXSmartGroupTreeModuleOutlineStateVisibleRectKey</key>
+<<<<<<< HEAD:src/edu/iastate/cs/randomwalk/randomwalk.xcodeproj/barret.mode1v3
 							<string>{{0, 340}, {288, 486}}</string>
+=======
+							<string>{{0, 516}, {288, 500}}</string>
+>>>>>>> added the Default.png file for a splash screen while loading:src/edu/iastate/cs/randomwalk/randomwalk.xcodeproj/barret.mode1v3
 						</dict>
 						<key>PBXTopSmartGroupGIDs</key>
 						<array/>
@@ -330,6 +334,13 @@
 										<string>1CE0B20406471E060097A5F4</string>
 										<key>PBXProjectModuleLabel</key>
 										<string>XMLParse.m</string>
+<<<<<<< HEAD:src/edu/iastate/cs/randomwalk/randomwalk.xcodeproj/barret.mode1v3
+=======
+										<key>_historyCapacity</key>
+										<integer>0</integer>
+										<key>bookmark</key>
+										<string>AB849FD810CCB8CE00B092A4</string>
+>>>>>>> added the Default.png file for a splash screen while loading:src/edu/iastate/cs/randomwalk/randomwalk.xcodeproj/barret.mode1v3
 										<key>history</key>
 										<array>
 											<string>ABAD5DCE10A7DD5000B14D2B</string>
@@ -422,6 +433,13 @@
 											<string>AB849F5B10CCAB7F00B092A4</string>
 											<string>AB849F6810CCAD8900B092A4</string>
 											<string>AB849F9F10CCB2E000B092A4</string>
+<<<<<<< HEAD:src/edu/iastate/cs/randomwalk/randomwalk.xcodeproj/barret.mode1v3
+=======
+											<string>AB849FC810CCB7C000B092A4</string>
+											<string>AB849FC910CCB7C000B092A4</string>
+											<string>AB849FCA10CCB7C000B092A4</string>
+											<string>AB849FCB10CCB7C000B092A4</string>
+>>>>>>> added the Default.png file for a splash screen while loading:src/edu/iastate/cs/randomwalk/randomwalk.xcodeproj/barret.mode1v3
 										</array>
 									</dict>
 									<key>SplitCount</key>
@@ -619,7 +637,17 @@
 	<integer>5</integer>
 	<key>WindowOrderList</key>
 	<array>
+<<<<<<< HEAD:src/edu/iastate/cs/randomwalk/randomwalk.xcodeproj/barret.mode1v3
 		<string>ABAD5CD910A484F500B14D2B</string>
+=======
+		<string>AB849F3D10CCA27600B092A4</string>
+		<string>AB849F5E10CCAB7F00B092A4</string>
+		<string>AB849F3910CCA26400B092A4</string>
+		<string>1C530D57069F1CE1000CFCEE</string>
+		<string>1CD10A99069EF8BA00B06720</string>
+		<string>ABAD5CD910A484F500B14D2B</string>
+		<string>1C78EAAD065D492600B07095</string>
+>>>>>>> added the Default.png file for a splash screen while loading:src/edu/iastate/cs/randomwalk/randomwalk.xcodeproj/barret.mode1v3
 		<string>/Users/barret/cyclonewalk/cyclonewalk/src/edu/iastate/cs/randomwalk/randomwalk.xcodeproj</string>
 	</array>
 	<key>WindowString</key>
