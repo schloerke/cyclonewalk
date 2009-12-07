@@ -82,7 +82,7 @@
 	//	[self redrawNodes:];	
 }
 
-- (void) redrawNodes: didUpdateToLocation(CLLocation *)newLocation didUpdateHeading(CLHeading *)newHeading
+- (void) redrawNodes:(CLLocation *)newLocation didUpdateHeading:(CLHeading *)newHeading
 {
 		//remove old nodes
 	//[self addNode:[[[navigation.walkArray objectAtIndex:0] nodeList] distanceInFeet:100 xPixelPosition:150 yPixelPosition:200]];

@@ -49,11 +49,13 @@ const double PI = 3.141592;
 		fontSize = ((distance*(maxFont-minFont))/maxDistance) + minFont;
 	}
 	
-	CGSize textSize = [self.nodeData.name sizeWithFont:[UIFont systemFontOfSize: fontSize]];
+	UIFont *labelFont = [UIFont systemFontOfSize:fontSize];
+	CGSize textSize = [self.nodeData.name sizeWithFont:labelFont];
 	NSLog(@"Label size: w:%d h:%d", textSize.width, textSize.height);
 	self.label = [[UILabel alloc] initWithFrame:CGRectMake(self.xpos + self.button.frame.size.width + 3, self.ypos - 2, textSize.width, textSize.height)];
 	self.label.backgroundColor = colorP;
 	self.label.text = [@" " stringByAppendingString:self.nodeData.name];
+	self.label.font = labelFont;
 	
 	[self.view addSubview:self.button];
 	[self.view addSubview:self.label];
