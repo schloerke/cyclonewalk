@@ -23,6 +23,6 @@
 //Calculate distance (in meters) from two longitude/latitude coordinates
 +(double) getDistance:(CLLocation *) point;
 
-
++(double) getBearing:(CLLocation *) point;
 
 @end
