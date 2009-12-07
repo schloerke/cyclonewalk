@@ -187,6 +187,9 @@
 	
 	AppData *appData = [AppData initSingleton];
 	double proximityd = [[[NSNumber alloc] initWithFloat:appData.proximity] doubleValue];
+	if (proximityd > (5280*50)) {
+		proximityd = 5280*50;
+	}
 	
 	CGFloat feet_per_latitude = 364173.229;
 	CGFloat feet_per_longitude = [MapViewController feetPerLongitudeAngle:location.latitude];

@@ -20,7 +20,7 @@
 const double PI = 3.141592;
 
 
--(id) initWithNode:(NodeData *)nodeP navigation:(CameraViewController *)navigationP distanceInFeet:(CGFloat)distance color:(UIColor *) colorP xPos:(CGFloat)xposP yPos:(CGFloat)yposP
+-(id) initWithNode:(NodeData *)nodeP navigation:(UINavigationController *)navigationP distanceInFeet:(CGFloat)distance color:(UIColor *) colorP xPos:(CGFloat)xposP yPos:(CGFloat)yposP
 {
 	
 	self = [[DotAndNode alloc] init];
@@ -73,7 +73,7 @@ const double PI = 3.141592;
 	NSLog(@"Pushing the NodeDetail: %@", infoView.nodeData.name);
 //	Settings *set = [[Settings alloc] initSettings];
 //	UINavigationController *navi = [[UINavigationController alloc] init];
-	[self.navigation.navigationController pushViewController:infoView animated:YES];
+	[self.navigation pushViewController:infoView animated:YES];
 //	self.navigationController.navigationBarHidden = NO;
 	[infoView release];
 }

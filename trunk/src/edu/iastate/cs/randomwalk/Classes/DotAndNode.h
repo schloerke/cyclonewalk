@@ -21,7 +21,7 @@
 	NSInteger ypos;
 	NSInteger xpos;
 	
-	CameraViewController *navigation;
+	UINavigationController *navigation;
 
 }
 
@@ -32,10 +32,10 @@
 @property (nonatomic) NSInteger xpos;
 @property (nonatomic) CGFloat radius;
 @property (nonatomic, retain) UIColor *color;
-@property (nonatomic, retain) CameraViewController *navigation;
+@property (nonatomic, retain) UINavigationController *navigation;
 
 
--(id) initWithNode:(NodeData *)nodeP navigation:(CameraViewController *)navigationP distanceInFeet:(CGFloat)distance color:(UIColor *) colorP xPos:(CGFloat)xposP yPos:(CGFloat)yposP;
+-(id) initWithNode:(NodeData *)nodeP navigation:(UINavigationController *)navigationP distanceInFeet:(CGFloat)distance color:(UIColor *) colorP xPos:(CGFloat)xposP yPos:(CGFloat)yposP;
 -(void) pushNodeDetail:(id)sender;
 
 

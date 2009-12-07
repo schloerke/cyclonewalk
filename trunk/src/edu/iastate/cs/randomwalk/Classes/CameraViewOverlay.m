@@ -148,7 +148,8 @@
 			xPixelPosition = (offset+(screenAngleRange/2))*(screenWidth/screenAngleRange);
 			inView = (offset<=(screenAngleRange/2) && offset>=(-screenAngleRange/2));
 			inRange = (distance <= proximity);
-			if(inView && inRange){
+			//if(inView && inRange){
+			if(YES){
 				NSLog(@"Found Node. Drawing");
 				[self addNode:node distanceInFeet:distance xPixelPosition:xPixelPosition yPixelPosition:yPixelPosition];
 			}
@@ -172,7 +173,7 @@
 -(void) addNode:(NodeData *)nodeP distanceInFeet:(CGFloat)distance xPixelPosition:(CGFloat)xposP yPixelPosition:(CGFloat)yposP
 {
 	NSLog(@"Adding node to overlay: %@", nodeP.name);
-	DotAndNode *dot = [[DotAndNode alloc] initWithNode:nodeP navigation:self.navigation distanceInFeet:distance color:[UIColor redColor] xPos:xposP yPos:yposP];
+	DotAndNode *dot = [[DotAndNode alloc] initWithNode:nodeP navigation:self.navigation.picker.navigationController distanceInFeet:distance color:[UIColor redColor] xPos:xposP yPos:yposP];
 	[self.view addSubview:dot.view];
 	
 	// create a UIButton (UIButtonTypeRoundedRect) and play arround with settings
