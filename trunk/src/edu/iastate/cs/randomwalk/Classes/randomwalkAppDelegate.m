@@ -20,7 +20,10 @@
 #pragma mark -
 #pragma mark Application lifecycle
 
-- (void)applicationDidFinishLaunching:(UIApplication *)application {    
+- (void)applicationDidFinishLaunching:(UIApplication *)application {
+    
+	//prevent iPhone from sleeping
+	[[UIApplication sharedApplication] setIdleTimerDisabled:YES];
     
     // Override point for customization after app launch    
 
@@ -113,6 +116,10 @@
  applicationWillTerminate: saves changes in the application's managed object context before the application terminates.
  */
 - (void)applicationWillTerminate:(UIApplication *)application {
+	
+	//enable iPhone's sleeping timer
+	[[UIApplication sharedApplication] setIdleTimerDisabled:NO];
+
 	
 	NSLog(@"trying to save data");
 	
