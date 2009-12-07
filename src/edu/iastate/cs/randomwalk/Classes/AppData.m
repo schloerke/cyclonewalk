@@ -33,9 +33,8 @@
 			singltonAppData.applicationSelectedWalks = [[NSMutableArray alloc] init];
 			//singltonAppData.naviController = [[UINavigationController alloc] init];
 			
-			singltonAppData.proximity = 500;// feet
-			
-			
+			singltonAppData.proximity = 5000;// feet
+		
 		}
 	}
 	

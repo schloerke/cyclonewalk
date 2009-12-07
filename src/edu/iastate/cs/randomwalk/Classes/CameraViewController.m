@@ -26,15 +26,9 @@
 	NSLog(@"Adding Test Node");
 	CameraViewOverlay *cvover = [[CameraViewOverlay alloc] initWithNavigation:self];
 	
-	[cvover addNode:(NodeData *)[[[walkArrayP objectAtIndex:0] nodeList] objectAtIndex:0] distanceInFeet:100 xPixelPosition:150 yPixelPosition:200];
-	[cvover addNode:(NodeData *)[[[walkArrayP objectAtIndex:0] nodeList] objectAtIndex:0] distanceInFeet:0 xPixelPosition:150 yPixelPosition:10];
-	[cvover addNode:(NodeData *)[[[walkArrayP objectAtIndex:0] nodeList] objectAtIndex:0] distanceInFeet:10000 xPixelPosition:150 yPixelPosition:100];
-	
-	[self.view addSubview:cvover.view];
-	//[cvover addNode:[[[walkArrayP objectAtIndex:0] nodeList] objectAtIndex:0]];
-	
+	//[self.view addSubview:cvover.view];	
 	//launch camera with overlauy
-	//[self startCamera:cvover.view];
+	[self startCamera:cvover.view];
 
 	return self;
 }
@@ -62,7 +56,7 @@
     self.picker.delegate = self;
 	self.picker.showsCameraControls = NO; // Hide Camera Controls
     self.picker.allowsEditing = YES; // user is allowed to edit a selected still image
-	//self.picker.cameraOverlayView = cameraOverlayView;
+	self.picker.cameraOverlayView = cameraOverlayView;
 	
     [self presentModalViewController:picker animated:YES];
 	NSLog(@"Camera launched successfully!");

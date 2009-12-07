@@ -22,15 +22,6 @@
 + (double) getDegreeFacing;
 
 /*
- * Returns the degree of the node-- relative to the users current direction. e.g.:
- * 0, 360, -360: node is directly in front of the user 
- * 90, -270 : node is directly right of the user
- * 180, -180: node is directly south of the user
- * 270, -90: node is directly left of the user
- */
-+ (double) getDegreeOffset: (NodeData *)node fromPoint:(CLLocation *)fromPoint toPoint:(CLLocation *)toPoint;
-
-/*
  Makes the label text value the value of 
  */
 -(IBAction) updateLabel:(id) sender;
