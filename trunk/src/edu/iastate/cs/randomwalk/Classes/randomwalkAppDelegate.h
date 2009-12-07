@@ -6,6 +6,11 @@
 //  Copyright __MyCompanyName__ 2009. All rights reserved.
 //
 
+#define dFilename        @"default.plist"
+#define uFilename        @"user.plist"
+#define proximityFilename @"proximity.plist"
+
+
 @interface randomwalkAppDelegate : NSObject <UIApplicationDelegate> {
     
     NSManagedObjectModel *managedObjectModel;
@@ -24,6 +29,8 @@
 @property (nonatomic, retain) IBOutlet UINavigationController *navigationController;
 
 - (NSString *)applicationDocumentsDirectory;
+- (NSString *)dataFilePath: (BOOL) user;
+- (NSString *)proximityPath;
 
 @end
 

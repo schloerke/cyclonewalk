@@ -22,7 +22,6 @@
 		AB0B6EC610C31C5800F68A68 /* MapView.xib in Resources */ = {isa = PBXBuildFile; fileRef = AB0B6EC110C31C5800F68A68 /* MapView.xib */; };
 		AB0B6EC710C31C5800F68A68 /* NodeDetail.xib in Resources */ = {isa = PBXBuildFile; fileRef = AB0B6EC210C31C5800F68A68 /* NodeDetail.xib */; };
 		AB0B6EC810C31C5800F68A68 /* Settings.xib in Resources */ = {isa = PBXBuildFile; fileRef = AB0B6EC310C31C5800F68A68 /* Settings.xib */; };
-		AB0B6EC910C31C5800F68A68 /* WalkSettings.xib in Resources */ = {isa = PBXBuildFile; fileRef = AB0B6EC410C31C5800F68A68 /* WalkSettings.xib */; };
 		AB4AF92410C613A30071A0D3 /* DotAndNode.m in Sources */ = {isa = PBXBuildFile; fileRef = AB4AF92310C613A30071A0D3 /* DotAndNode.m */; };
 		AB64459B10BC75FE005185A9 /* CoreLocation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = AB64459A10BC75FD005185A9 /* CoreLocation.framework */; };
 		AB64459D10BC75FE005185A9 /* MapKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = AB64459C10BC75FE005185A9 /* MapKit.framework */; };
@@ -49,7 +48,6 @@
 		ABAD5CE010A48ED100B14D2B /* Compass.m in Sources */ = {isa = PBXBuildFile; fileRef = ABAD5CDE10A48ED100B14D2B /* Compass.m */; };
 		ABAD5CF010A49A1700B14D2B /* Settings.m in Sources */ = {isa = PBXBuildFile; fileRef = ABAD5CEE10A49A1700B14D2B /* Settings.m */; };
 		ABAD5CFF10A49E8D00B14D2B /* DescriptionDialog.m in Sources */ = {isa = PBXBuildFile; fileRef = ABAD5CFE10A49E8D00B14D2B /* DescriptionDialog.m */; };
-		ABAD5D2910A4A50A00B14D2B /* WalkSettings.m in Sources */ = {isa = PBXBuildFile; fileRef = ABAD5D2710A4A50A00B14D2B /* WalkSettings.m */; };
 		ABBA683310BC8CEE002EAB50 /* NodeDetail.m in Sources */ = {isa = PBXBuildFile; fileRef = ABBA683110BC8CEE002EAB50 /* NodeDetail.m */; };
 		ABC9F05E10A9C03C00877555 /* NodeData.m in Sources */ = {isa = PBXBuildFile; fileRef = ABC9F05D10A9C03C00877555 /* NodeData.m */; };
 		ABC9F0DB10A9CB9000877555 /* WalkData.m in Sources */ = {isa = PBXBuildFile; fileRef = ABC9F0DA10A9CB9000877555 /* WalkData.m */; };
@@ -80,7 +78,6 @@
 		AB0B6EC110C31C5800F68A68 /* MapView.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = MapView.xib; sourceTree = "<group>"; };
 		AB0B6EC210C31C5800F68A68 /* NodeDetail.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = NodeDetail.xib; sourceTree = "<group>"; };
 		AB0B6EC310C31C5800F68A68 /* Settings.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = Settings.xib; sourceTree = "<group>"; };
-		AB0B6EC410C31C5800F68A68 /* WalkSettings.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = WalkSettings.xib; sourceTree = "<group>"; };
 		AB4AF92210C613A30071A0D3 /* DotAndNode.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = DotAndNode.h; sourceTree = "<group>"; };
 		AB4AF92310C613A30071A0D3 /* DotAndNode.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = DotAndNode.m; sourceTree = "<group>"; };
 		AB64459A10BC75FD005185A9 /* CoreLocation.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = CoreLocation.framework; path = System/Library/Frameworks/CoreLocation.framework; sourceTree = SDKROOT; };
@@ -117,8 +114,6 @@
 		ABAD5CEE10A49A1700B14D2B /* Settings.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = Settings.m; sourceTree = "<group>"; };
 		ABAD5CFD10A49E8D00B14D2B /* DescriptionDialog.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = DescriptionDialog.h; sourceTree = "<group>"; wrapsLines = 1; };
 		ABAD5CFE10A49E8D00B14D2B /* DescriptionDialog.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = DescriptionDialog.m; sourceTree = "<group>"; };
-		ABAD5D2610A4A50A00B14D2B /* WalkSettings.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = WalkSettings.h; sourceTree = "<group>"; };
-		ABAD5D2710A4A50A00B14D2B /* WalkSettings.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = WalkSettings.m; sourceTree = "<group>"; };
 		ABBA683010BC8CEE002EAB50 /* NodeDetail.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = NodeDetail.h; sourceTree = "<group>"; };
 		ABBA683110BC8CEE002EAB50 /* NodeDetail.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = NodeDetail.m; sourceTree = "<group>"; };
 		ABC9F05C10A9C03C00877555 /* NodeData.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = NodeData.h; sourceTree = "<group>"; };
@@ -225,7 +220,6 @@
 				AB0B6EC110C31C5800F68A68 /* MapView.xib */,
 				AB0B6EC210C31C5800F68A68 /* NodeDetail.xib */,
 				AB0B6EC310C31C5800F68A68 /* Settings.xib */,
-				AB0B6EC410C31C5800F68A68 /* WalkSettings.xib */,
 			);
 			name = View;
 			sourceTree = "<group>";
@@ -294,8 +288,6 @@
 				ABAD5CEE10A49A1700B14D2B /* Settings.m */,
 				ABAD5CDD10A48ED100B14D2B /* Compass.h */,
 				ABAD5CDE10A48ED100B14D2B /* Compass.m */,
-				ABAD5D2610A4A50A00B14D2B /* WalkSettings.h */,
-				ABAD5D2710A4A50A00B14D2B /* WalkSettings.m */,
 				AB4AF92210C613A30071A0D3 /* DotAndNode.h */,
 				AB4AF92310C613A30071A0D3 /* DotAndNode.m */,
 			);
@@ -374,7 +366,6 @@
 				AB0B6EC610C31C5800F68A68 /* MapView.xib in Resources */,
 				AB0B6EC710C31C5800F68A68 /* NodeDetail.xib in Resources */,
 				AB0B6EC810C31C5800F68A68 /* Settings.xib in Resources */,
-				AB0B6EC910C31C5800F68A68 /* WalkSettings.xib in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -392,7 +383,6 @@
 				ABAD5CE010A48ED100B14D2B /* Compass.m in Sources */,
 				ABAD5CF010A49A1700B14D2B /* Settings.m in Sources */,
 				ABAD5CFF10A49E8D00B14D2B /* DescriptionDialog.m in Sources */,
-				ABAD5D2910A4A50A00B14D2B /* WalkSettings.m in Sources */,
 				ABC9F05E10A9C03C00877555 /* NodeData.m in Sources */,
 				ABC9F0DB10A9CB9000877555 /* WalkData.m in Sources */,
 				ABF39B3310AA21880098A457 /* AppData.m in Sources */,

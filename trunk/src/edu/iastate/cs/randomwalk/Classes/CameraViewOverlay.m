@@ -112,16 +112,16 @@
 	[self.view addSubview:dot.view];
 	
 	// create a UIButton (UIButtonTypeRoundedRect) and play arround with settings
-	UIButton *button = [UIButton buttonWithType:UIButtonTypeRoundedRect];   
-	button.frame = CGRectMake(100, 100, 100, 50); // size and position of button
-	[button setTitle:@"Add" forState:UIControlStateNormal];
-	button.backgroundColor = [UIColor clearColor];
-	button.adjustsImageWhenHighlighted = YES;    
-	
-	//Add action handler and set current class as target
-	[button addTarget:self action:@selector(action:) forControlEvents:UIControlEventTouchUpInside];
-	[self.view addSubview:button];
-	
+//	UIButton *button = [UIButton buttonWithType:UIButtonTypeRoundedRect];   
+//	button.frame = CGRectMake(100, 100, 100, 50); // size and position of button
+//	[button setTitle:@"Add" forState:UIControlStateNormal];
+//	button.backgroundColor = [UIColor clearColor];
+//	button.adjustsImageWhenHighlighted = YES;    
+//	
+//	//Add action handler and set current class as target
+//	[button addTarget:self action:@selector(action:) forControlEvents:UIControlEventTouchUpInside];
+//	[self.view addSubview:button];
+//	
 	
 	
 	

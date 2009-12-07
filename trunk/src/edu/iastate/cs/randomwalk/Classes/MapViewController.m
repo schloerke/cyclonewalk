@@ -186,7 +186,7 @@
 	MKCoordinateSpan span;
 	
 	AppData *appData = [AppData initSingleton];
-	CGFloat proximity = appData.proximity;
+	double proximityd = [[[NSNumber alloc] initWithFloat:appData.proximity] doubleValue];
 	
 	CGFloat feet_per_latitude = 364173.229;
 	CGFloat feet_per_longitude = [MapViewController feetPerLongitudeAngle:location.latitude];
@@ -195,7 +195,11 @@
 	
 	region.span=span;
 	
+	
+	
 	[mapView setRegion:region animated:TRUE];
+	
+	
 	
 }
 
