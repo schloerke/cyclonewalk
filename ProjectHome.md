@@ -1,0 +1,1 @@
+This application will utilize a smart-phone with a camera, GPS, and compass to create an immersive, context-aware user experience. The user interface has two views, Camera and Map, and supports several Iowa State guided activities(walks) .
